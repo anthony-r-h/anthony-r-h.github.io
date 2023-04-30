@@ -45,7 +45,7 @@ show_get_theme_btn: false
 
 
 # Advanced Settings
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "jekflix-template" # the subpath of your site, e.g. /blog
 url: "https://anthony-r-h.github.io/jekflix-template" # the base hostname & protocol for your site
 google_analytics: ""
 language: "en"
