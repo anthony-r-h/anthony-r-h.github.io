@@ -11,7 +11,7 @@ body {
   width: 100%;
   z-index: 10;
   transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
-  
+
   @include media(">=sm") {
     padding: rem(15px) rem(0px);
   }
@@ -35,7 +35,7 @@ body {
       width: rem(120px);
       height: rem(30px);
       transition: all .4s;
-  
+
       @include media(">=sm") {
         width: rem(205px);
       }
@@ -86,29 +86,13 @@ body {
     margin: rem(5px);
   }
 
-  .get-theme {
-    display: none;
-    font-size: rem(13px);
-    font-weight: bold;
-    text-decoration: none;
-    background-color: $themeColor;
-    color: $accentDark;
-    padding: rem(5px) rem(10px);
-    border-radius: rem(5px);
-    float: right;
-    margin: rem(5px) rem(15px) rem(5px) rem(5px);
-
-    @include media(">=sm") {
-      display: inline-block;
-    }
-  }
 }
 
 body.main-page {
-  background-color: #141414;
+  background-color: #1c3329;
 
   .bar-header {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(19, 30, 25, 0.85);
   }
 }
 
