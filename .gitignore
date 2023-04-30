@@ -1,3 +1,6 @@
+files/_UNSTRUCTURED
+files/*/_INSPIRATION/
+files/*/_PLAN/
 .idea
 .DS_Store
 .sass-cache
@@ -6,3 +9,13 @@ package-json.lock
 _site
 node_modules
 _drafts
+*.cr3
+*.tif
+*.xmp
+*.psd
+*.mov
+*.docx
+*.ai
+*.pdf
+*.zip
+*.dwg

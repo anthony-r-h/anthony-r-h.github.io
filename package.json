@@ -7,7 +7,7 @@
   "homepage": "https://github.com/thiagorossener/jekflix-template.git#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thiagorossener/jekflix-template.git"
+    "url": "git+https://github.com/thiagorossener/jekflix-template.git"
   },
   "keywords": [
     "jekyll",
@@ -41,5 +41,12 @@
   },
   "engines": {
     "node": "^16"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
