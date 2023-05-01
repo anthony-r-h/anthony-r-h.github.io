@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Chalk bucekt"
+title: "Chalk bucket planning"
 subtitle: "" 
 optimized_image: /files/CHALKBUCKET100/plan.jpg
 category: Leather
