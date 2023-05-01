@@ -1,4 +1,4 @@
-files/_UNSTRUCTURED
+files/0UNSTRUCTURED
 files/*/_INSPIRATION/
 files/*/_PLAN/
 .idea
@@ -6,9 +6,9 @@ files/*/_PLAN/
 .sass-cache
 Gemfile.lock
 package-json.lock
-_site
 node_modules
 _drafts
+_site
 *.cr3
 *.tif
 *.xmp
