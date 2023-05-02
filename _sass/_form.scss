@@ -47,7 +47,7 @@
     font-size: rem(18px);
     width: 100%;
     border: 1px solid darken($themeColor, 30%);
-    border-width: 1px 1px 3px;
+    border-width: 0px 0px 0px;
     margin-top: rem(50px);
     margin-bottom: rem(10px);
     cursor: pointer;
@@ -55,7 +55,7 @@
     outline: none;
 
     &:hover {
-      background: darken($themeColor, 20%);
+      background: lighten($themeColor, 10%);
     }
 
     @include media(">=sm") {
