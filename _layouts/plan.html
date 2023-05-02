@@ -14,43 +14,17 @@ layout: main
     {% assign offset = 0 %}
 {% endif %}
 
-<main class="home {% if site.show_hero and paginator == nil or paginator.page == 1 %}no-padding{% endif %}" role="main">
-    {% if site.show_hero and paginator == nil or paginator.page == 1 %}
-        <!-- Hero -->
-        {% assign featured = posts.first %}
-        <section class="hero" style="background-image: url({{ featured.optimized_image }})">
-            <div class="pixels"></div>
-            <div class="gradient"></div>
-            <div class="content">
-                <time datetime="{{ featured.date | date_to_xmlschema }}" class="date">
-                    {% if site.date_format == nil %}
-                        {{ featured.date | date: "%m.%d.%Y" }}
-                    {% else %}
-                        {{ featured.date | date: site.date_format }}
-                    {% endif %}
-                </time>
-                <h1 class="title">{{ featured.title }}</h1>
-                <p class="description">{{ featured.subtitle }}</p>
-                <div class="buttons">
-                    <a href="{{ featured.url | prepend: site.baseurl }}" role="button" class="button">
-                        <svg><use xlink:href="#icon-read"></use></svg>
-                        <span>{{ site.translations.button.read_now | default: "Read Now" }}</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    {% endif %}
-    <!-- Posts -->
+<main class="home" role="main">
 
 
 
-    <!-- Regular posts: hiding tag Plan -->
+
+    <!-- Planning Posts:  lists all posts with tag Plan -->
+
     <section id="grid" class="row flex-grid">
-        {% for post in posts offset: offset %}
-        {% if post.tags contains 'Plan' %}
 
-        {% else %}
-
+            <!-- Has Plan tag -->
+            {% for post in site.tags.Plan limit: 20 %}
 
             <article class="box-item">
 
@@ -99,14 +73,25 @@ layout: main
                         </div>
                     </div>
                 </div>
+
+
             </article>
-        {% endif %}    
-        {% endfor %}
+
+
+
+            {% endfor %}
+
+
+
+
     </section>
+
+
     <!-- Pagination -->
     {% if site.paginate %}
         {% include pagination-home.html %}
     {% endif %}
+    
 </main>
 
 {% assign social_urls = '' %}
