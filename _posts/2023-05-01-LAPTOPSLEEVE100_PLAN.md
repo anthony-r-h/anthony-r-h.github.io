@@ -28,8 +28,11 @@ Construction
 
 <img src="/files/LAPTOPSLEEVE100/0INSPIRATION/Screenshot_16.png">
 
+## Material
 
-
+- https://buyleatheronline.com/en/design-fashion-leather-hides/280-5313-epsom-alpine-printed-calfskin.html#/34-average_size_of_the_piece-14_m_155_ft/47-color-cognac
+- https://www.rmleathersupply.com/products/saffiano-luxury-calfskin-leather-hides
+- https://www.rmleathersupply.com/products/copy-of-riviera-matte-luxury-calfskin-leather-hides?variant=40226064695405
 
 
 ## Details

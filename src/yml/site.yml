@@ -11,10 +11,15 @@ show_hero: false
 menu:
   - title: Home
     url: /
+  - title: Project Planning
+    url: /plan
+  - title: Supplies
+    url: /supplies
   - title: About
     url: /about
   - title: Contact
     url: /contact
+
 email: anthony.hong@gmail.com
 # See: https://disqus.com/
 disqus_username:
