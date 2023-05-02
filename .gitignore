@@ -1,6 +1,6 @@
 files/0UNSTRUCTURED
-files/*/_INSPIRATION/
-files/*/_PLAN/
+#files/*/_INSPIRATION/
+#files/*/_PLAN/
 .idea
 .DS_Store
 .sass-cache
