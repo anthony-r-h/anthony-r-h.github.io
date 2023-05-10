@@ -40,7 +40,7 @@ tags:
   - Tubular handles to distribute weight
     - Handles attached to webbing which is attached to the base
     - Reinforcement for sidewalls
-    
+
 
 
 
@@ -63,3 +63,5 @@ tags:
 <img src="/files/DOCTORBAG100/0INSPIRATION/17171778_8.jpg">
 
 <img src="/files/DOCTORBAG100/0INSPIRATION/il_1140xN.2073280912_tomx.jpg">
+
+Internals: https://www.youtube.com/watch?v=BV0jOQVjuWk
