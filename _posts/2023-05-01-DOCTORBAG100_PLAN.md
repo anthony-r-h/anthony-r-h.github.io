@@ -28,3 +28,38 @@ tags:
   - https://www.aliexpress.com/item/32911530943.html
 - Corner
   - https://www.aliexpress.com/item/1005002372164043.html?spm=a2g0o.productlist.main.15.7fc8f63ezdvhvk&algo_pvid=fc6eb11e-5435-4598-b1ed-79e382c5c5bc&algo_exp_id=fc6eb11e-5435-4598-b1ed-79e382c5c5bc-7&pdp_npi=3%40dis%21CAD%2117.43%218.37%21%21%21%21%21%4021224cdb16830470489372460d074e%2112000020386044680%21sea%21CA%212412546832&curPageLogUid=uaKGygoa3G96
+
+
+## Planning
+
+- Hardboard base
+  - Pre drilled holes (every 6mm - round dent then drill every other)
+  - 
+
+- Weight and application considerations
+  - Tubular handles to distribute weight
+    - Handles attached to webbing which is attached to the base
+    - Reinforcement for sidewalls
+    
+
+
+
+## Inspiration
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_1.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_2.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_3.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_4.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_5.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_6.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_7.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/17171778_8.jpg">
+
+<img src="/files/DOCTORBAG100/0INSPIRATION/il_1140xN.2073280912_tomx.jpg">
