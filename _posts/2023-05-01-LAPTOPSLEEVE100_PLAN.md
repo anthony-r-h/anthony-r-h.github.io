@@ -11,6 +11,14 @@ tags:
 
 
 
+# Specs
+
+## Gussets
+
+28cm
+
+
+
 ## Help
 
 - https://dribbble.com/shots/20676028-CLUTCH-280-COURSE
@@ -50,7 +58,7 @@ Accent piece is used to hide the zipper tape. Therefore
 
 <img src="/files/LAPTOPSLEEVE100/0INSPIRATION/Screenshot_8.png">
 
-###  Gusset
+### Gusset
 
 There are several ways to construct the gusset.
 
@@ -81,4 +89,4 @@ Folded edge gusset
 <img src="/files/LAPTOPSLEEVE100/0INSPIRATION/Screenshot_6.png">
 
 
-##  Unknowns
+## Unknowns
