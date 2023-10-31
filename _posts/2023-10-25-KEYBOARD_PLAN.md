@@ -22,9 +22,18 @@ Goals:
 
 
 https://www.youtube.com/watch?v=8WXpGTIbxlQ
+https://www.youtube.com/watch?v=UKfeJrRIcxw
+https://www.youtube.com/watch?app=desktop&v=iznKltVU1yw
 
 https://github.com/ruiqimao/keyboard-pcb-guide
 
 http://www.keyboard-layout-editor.com/#/gists/e8a35ecce7d783bf37bf501e41540bbf
 
 https://www.reddit.com/r/ErgoMechKeyboards/comments/uuuitz/custom_keyboard_pcb_design_ergogen_and_kicad_full/
+
+
+https://github.com/ergogen/ergogen
+
+https://www.reddit.com/r/ErgoMechKeyboards/comments/lerzu4/has_anyone_attempted_to_build_the_corne_keyboard/
+
+https://github.com/KeyClicks/Split-Keyboard/tree/main/W-Corne
