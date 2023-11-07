@@ -50,7 +50,7 @@ Pointing devices are not currently not supported in the release version of ZMK, 
 
 While it is generally possible to integrate a pointing device with the MCU, there are not enough free _accessible_ pins to do so. Three GPIO pins are needed. Since I will not be using a rotary encoder, `ROT_A` and `ROT_B` provide two pins. The third will need to be repurposed from another component. 4pplet recommends using the buzzer or caplock LED, however, modifications are necessary.
 
-> <img src="/files/CYBER60/4pplet_email.png">
+<img src="/files/CYBER60/4pplet_email.png">
 
 Instead, I will implement pointing mouse emulation via IJKL keys.
 
@@ -144,9 +144,15 @@ All of the layers unstacked
 
 <img src="/files/CYBER60/draw1.png">
 
+Top plate (with slight fillet) and leather stack
+
+<img src ="/files/CYBER60/draw11.png">
+
 PCB is tray mounted to the standoffs and the sides sit on the acrylic lip
 
 <img src="/files/CYBER60/draw3.png">
+
+<img src="/files/CYBER60/draw10.png">
 
 The base plate has a cutout for a battery and the inner area is index to facilitate construction of the leather body via a manufactured spacing jig
 
@@ -160,8 +166,6 @@ The base wedge is the most complicated part and requires machining from two face
 <img src="/files/CYBER60/draw6.png">
 
 <img src="/files/CYBER60/draw7.png">
-
-<img src="/files/CYBER60/draw4.png">
 
 ## Construction Considerations
 
