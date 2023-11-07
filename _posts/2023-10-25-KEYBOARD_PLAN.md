@@ -59,7 +59,7 @@ While it is generally possible to integrate a pointing device with the MCU, ther
 > LEDs: R508, R512, R513
 > Buzzer: R510
 > A second option if you want to use buzzer and RGB led below the capslock switch is to make the battery measurement circuit always on (it's not uncommon in other projects) and use the gpio that normally enable battery measurement:
-> <img src="/files/CYBER60/cyber60-MX_Rev_D1_Tray.png">
+> <img src="/files/CYBER60/4pplet.png">
 > You will then have a slightly higher battery drain, but batterylife will still be pretty good.
 
 Instead, I will implement pointing mouse emulation via IJKL keys.
@@ -90,7 +90,7 @@ Poseidon Defender - thick
 Brutal V2 - angles
 <img src="/files/CYBER60/BrutalV2.png">
 
-Stacked leather for the body
+Stacked leather and satin finish for the body
 <img src="/files/CYBER60/Stackedleather.png">
 
 PBTfans Retro Dark Light keycaps
