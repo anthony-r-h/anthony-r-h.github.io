@@ -50,7 +50,7 @@ Pointing devices are not currently not supported in the release version of ZMK, 
 
 While it is generally possible to integrate a pointing device with the MCU, there are not enough free _accessible_ pins to do so. Three GPIO pins are needed. Since I will not be using a rotary encoder, `ROT_A` and `ROT_B` provide two pins. The third will need to be repurposed from another component. 4pplet recommends using the buzzer or caplock LED, however, modifications are necessary.
 
-> <img src="/files/CYBER60/4pplet_email.png.png">
+> <img src="/files/CYBER60/4pplet_email.png">
 
 Instead, I will implement pointing mouse emulation via IJKL keys.
 
