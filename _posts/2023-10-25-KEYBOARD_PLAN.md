@@ -2,7 +2,7 @@
 layout: post
 title: "Keyboard Plan"
 subtitle: "" 
-optimized_image: /files/thumb.png
+optimized_image: /files/CYBER60/thumb.png
 category: Project Planning
 tags:
   - Plan
@@ -11,7 +11,9 @@ tags:
 
 # About
 
-# Cyber60 PCB
+TODO
+
+# PCB
 
 This project uses the <a href="https://github.com/4pplet/cyber60">Cyber60</a> board by 4pplet. The board features 
 
@@ -49,25 +51,18 @@ Pointing devices are not currently not supported in the release version of ZMK, 
 While it is generally possible to integrate a pointing device with the MCU, there are not enough free _accessible_ pins to do so. Three GPIO pins are needed. Since I will not be using a rotary encoder, `ROT_A` and `ROT_B` provide two pins. The third will need to be repurposed from another component. 4pplet recommends using the buzzer or caplock LED, however, modifications are necessary.
 
 > Hi Anthony,
-
 > I'm glad you are liking it and that the millmax sockets worked out well!
-
 > Interesting question, I've not tried implementing a trackpoint. Please let me know how it goes :) The NRF is veriy flexible in it's GPIO use, so you can use SPI/I2C etc on any pin (except for JTAG and pins that is not a general GPIO)
-​
-> You can use the rotary encoder GPIOs (ROT_A and ROT_B). Getting a third GPIO will be a bit trickier. All outer pins on the Holyiot-module are in use on the PCB. P0.18 is used for reset and is also used to enter the bootloader. I'd not recommend to use that pin. 
- 
->I'd recommend to either use the buzzer GPIO if you are not using that, or one of the GPIOs used for the RGB led below capslock. You would need to remove one of the resistors to dissconnect it from it's function.
 
+> You can use the rotary encoder GPIOs (ROT_A and ROT_B). Getting a third GPIO will be a bit trickier. All outer pins on the Holyiot-module are in use on the PCB. P0.18 is used for reset and is also used to enter the bootloader. I'd not recommend to use that pin. 
+>I'd recommend to either use the buzzer GPIO if you are not using that, or one of the GPIOs used for the RGB led below capslock. You would need to remove one of the resistors to dissconnect it from it's function.
 > LEDs: R508, R512, R513
 > Buzzer: R510
-
 > A second option if you want to use buzzer and RGB led below the capslock switch is to make the battery measurement circuit always on (it's not uncommon in other projects) and use the gpio that normally enable battery measurement:
-
 > <img src="/files/CYBER60/cyber60-MX_Rev_D1_Tray.png">
-
 > You will then have a slightly higher battery drain, but batterylife will still be pretty good.
 
-Instead, I will implement pointing mouse emulation via IJKL.
+Instead, I will implement pointing mouse emulation via IJKL keys.
 
 ### Implementation
 
@@ -78,24 +73,31 @@ https://github.com/urob/zmk-config/tree/main/config">(Reference)</a>
 - https://rfong.github.io/rflog/2021/10/26/r61-trackpoint-pt2/
 - https://github.com/manna-harbour/crkbd/tree/master/trackpoint#driver-board
 
-# Case Ideas
+# Inspiration
 
 Thick frame, hard edges, angular, and heavy. Inspiration:
 
-Keychron Q4
+Keychron - thick case, sculpted base
+<img src="/files/CYBER60/keychronq1.png">
 <img src="/files/CYBER60/keychronq4.png">
 
-ZT60 
+ZT60 - clean
 <img src="/files/CYBER60/ZT60.png">
 
-Poseidon Defender
+Poseidon Defender - thick
 <img src="/files/CYBER60/Defender.png">
 
-Brutal V2
+Brutal V2 - angles
 <img src="/files/CYBER60/BrutalV2.png">
 
-Stacked leather
+Stacked leather for the body
 <img src="/files/CYBER60/Stackedleather.png">
+
+PBTfans Retro Dark Light keycaps
+<img src="/files/CYBER60/large_10314_large_KBDPT17-3_1.jpg>
+
+
+
 
 # Case
 
