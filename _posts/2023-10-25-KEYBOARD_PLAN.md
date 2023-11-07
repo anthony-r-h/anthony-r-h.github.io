@@ -98,7 +98,7 @@ I think that to minimize raw material cost and constrain machining complexity, a
 | Top plate            | 5mm                 | Metal    |
 | Body                 | 7mm                 | Leather  |
 | Transparent diffuser | 1/8"                | Acrylic  |
-| Base (wedge)         | 11mm (at thickness) | Metal    |
+| Base (wedge)         | 11mm (at thickest)  | Metal    |
 
 ## Materials
 
@@ -120,7 +120,7 @@ For the metal and acrylic, each plate requires minimally 13"x5" of material.
     - https://www.mcmaster.com/9246K524
     - For wedge
 
-- Clear Scratch- and UV-Resistant Cast Acrylic
+- Clear Scratch- and UV-Resistant Cast Acrylic ($17.70)
   - 12"x24"x1/8"
     - https://www.mcmaster.com/8560K257
     - For diffuser
