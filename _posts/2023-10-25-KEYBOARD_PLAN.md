@@ -53,7 +53,6 @@ While it is generally possible to integrate a pointing device with the MCU, ther
 > Hi Anthony,
 > I'm glad you are liking it and that the millmax sockets worked out well!
 > Interesting question, I've not tried implementing a trackpoint. Please let me know how it goes :) The NRF is veriy flexible in it's GPIO use, so you can use SPI/I2C etc on any pin (except for JTAG and pins that is not a general GPIO)
-
 > You can use the rotary encoder GPIOs (ROT_A and ROT_B). Getting a third GPIO will be a bit trickier. All outer pins on the Holyiot-module are in use on the PCB. P0.18 is used for reset and is also used to enter the bootloader. I'd not recommend to use that pin. 
 >I'd recommend to either use the buzzer GPIO if you are not using that, or one of the GPIOs used for the RGB led below capslock. You would need to remove one of the resistors to dissconnect it from it's function.
 > LEDs: R508, R512, R513
