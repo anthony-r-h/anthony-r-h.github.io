@@ -132,13 +132,17 @@ For the metal and acrylic, each plate requires minimally 13"x5" of material.
 
 ## Design
 
-All of the layers unstacked
-
-<img src="/files/CYBER60/draw1.png">
-
 Profile
 
 <img src="/files/CYBER60/draw2.png">
+
+<img src="/files/CYBER60/draw8.png">
+
+<img src="/files/CYBER60/draw9.png">
+
+All of the layers unstacked
+
+<img src="/files/CYBER60/draw1.png">
 
 PCB is tray mounted to the standoffs and the sides sit on the acrylic lip
 
