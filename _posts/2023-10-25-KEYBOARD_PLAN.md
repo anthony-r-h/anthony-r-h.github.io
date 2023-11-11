@@ -10,22 +10,15 @@ tags:
 math: true
 ---
 
+This project uses readily available, open-source components as the starting point to bridge the the requisite skills to design and build a completely custom keyboard, starting from the the PCB design phase. The goal of this project is to build a premium, wireless, split spacebar keyboard powered by ZMK.
 
 <h2>Table Of Contents</h2>
 <p style="margin-bottom:29px;"></p>
 
+
 * toc
 {:toc}
 
-
-# About
-
-This project uses readily available, open-source components as the starting point to bridge the the requisite skills to design and build a completely custom keyboard, starting from the the PCB design phase. The goal of this project is to build a keyboard with
-
-- Premium construction
-- Wireless
-- Split spacebar
-- ZMK with mouse pointer support
 
 # PCB and Firmware
 
