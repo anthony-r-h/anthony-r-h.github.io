@@ -123,9 +123,9 @@ The most complicated piece is the base which provides the keyboard a 5-degree ti
 
 The bottom plate is machined from a single sheet of 1/4" material down to 5mm.
 
-<img src="/files/CYBER60/Renders/base1.png">
-
 On the top side:
+
+<img src="/files/CYBER60/Renders/base1.png">
 
 - PCB tray area recessed by 1mm
 - 120mm x 40mm cutout for battery
@@ -137,9 +137,9 @@ On the top side:
   - M2
   - Drill through
 
-<img src="/files/CYBER60/Renders/base2.png">
-
 On the bottom side:
+
+<img src="/files/CYBER60/Renders/base2.png">
 
 - 1mm chamfer around the outer perimeter
 - 12 countersunk holes for the body assembly
@@ -166,9 +166,9 @@ Note the overhang lip on the shorter side: the PCB sits on this surface. In the 
 
 The top plate is machined from a single sheet of 1/4" material down to 5mm.
 
-<img src="/files/CYBER60/Renders/top1.png">
-
 On the top side:
+
+<img src="/files/CYBER60/Renders/top1.png">
 
 - 1mm chamfer around the outer perimeter
 
