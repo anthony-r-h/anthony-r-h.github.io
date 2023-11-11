@@ -77,7 +77,8 @@
     @include media(">=sm") {
       font-size: rem(20px);
       line-height: rem(40px);
-      margin: rem(29px) auto 0;
+      // this is the one that controls spacing btwn h1 and hx
+      margin: rem(0px) auto 0;
     }
   }
 
@@ -153,10 +154,11 @@
   }
 
   li {
-    padding: rem(10px) 0;
+    //padding: rem(10px) 0;
+    padding: 0;
 
     ul {
-      margin-bottom: 0;
+      margin-bottom: 100;
     }
 
     p {
@@ -221,6 +223,7 @@
   }
   ul,
   ol {
+    // this is the indent of a list
     padding-left: rem(60px);
   }
 
@@ -622,15 +625,16 @@
     @include center(rem(800px));
     @include mainFont(400);
     font-size: rem(18px);
-    margin: 0 auto rem(29px);
+    //margin: 0 auto rem(29px);
+    margin: auto;
     margin-top: rem(30px);
     letter-spacing: 0.025rem;
     line-height: rem(40px);
-    padding: 0 rem(10px);
-
+    //padding: 0 rem(10px);
+    padding: 1.5rem;
     @include media(">=sm") {
       font-size: rem(20px);
-      padding: 0;
+      padding: 29;
     }
 
     a {
