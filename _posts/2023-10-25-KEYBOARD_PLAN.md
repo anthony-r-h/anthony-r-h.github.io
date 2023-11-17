@@ -276,6 +276,5 @@ For the metal and acrylic, each plate requires minimally 13"x5" of material.
 
 - USB C to JST connector
   - https://cannonkeys.com/products/unified-c4-daughterboard
-  - Yes this is compatible
-  - [Molex to JST cable](https://cannonkeys.com/products/unified-s1-daughterboard-and-molex-cable?pr_prod_strat=use_description&pr_rec_id=28807589f&pr_rec_pid=7087153021039&pr_ref_pid=7117023379567&pr_seq=uniform
-  - https://cannonkeys.com/products/molex-and-jst-cables?variant=41098401972335)
+  - <a href = "https://cannonkeys.com/products/unified-s1-daughterboard-and-molex-cable?pr_prod_strat=use_description&pr_rec_id=28807589f&pr_rec_pid=7087153021039&pr_ref_pid=7117023379567&pr_seq=uniform
+  - https://cannonkeys.com/products/molex-and-jst-cables?variant=41098401972335">Molex to JST cable</a>
