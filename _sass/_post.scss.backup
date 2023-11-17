@@ -9,6 +9,27 @@
   }
 }
 
+.post.two-columns {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(40px);
+
+  @include media(">=sm") {
+    max-width: rem(1100px);
+    flex-direction: row;
+    margin: 0 auto;
+    padding: rem(40px) 0;
+  }
+
+  .post-content {
+    padding-bottom: rem(10px);
+
+    @include media(">=sm") {
+      flex-basis: 70%;
+      padding: 0 rem(30px) 0 rem(10px);
+    }
+  }
+}
 
 .post-content {
   overflow-x: auto;
@@ -20,13 +41,13 @@
 
   img {
     max-width: 100%;
-    margin: 1rem auto;
+    margin: rem(0px) auto;
     display: block;
-    //padding: 10px 0;
+    padding: 10px 0;
   }
 
   figure {
-    margin: 2rem auto 0;
+    margin: rem(20px) auto 0;
   }
 
   figcaption,
@@ -36,7 +57,6 @@
     text-align: center;
     @include mainFont(300);
   }
-  
 
   p,
   h1,
@@ -53,18 +73,16 @@
     font-size: rem(17px);
     line-height: rem(30px);
     letter-spacing: 0.025rem;
-    padding: rem(0px) rem(20px);
-    margin: rem(0px) auto;
+    //padding: 0 rem(20px);
+    padding: 10px;
+    margin: rem(20px) auto 0;
 
     @include media(">=sm") {
       font-size: rem(20px);
       line-height: rem(40px);
-      margin: 0rem auto;
+      // this is the one that controls spacing btwn h1 and hx
+      margin: rem(0px) auto 0;
     }
-  }
-
-  p {
-    margin: rem(35px) auto;
   }
 
   h1.post-title {
@@ -124,7 +142,6 @@
   li {
     color: $texts;
 
-    // This is for inline code denoted by `abc`
     code {
       font-size: rem(15px);
       background: #282a36;
@@ -139,22 +156,20 @@
     }
   }
 
-  // List properties
   li {
     //padding: rem(10px) 0;
-    padding: 0rem;
+    padding: 0;
 
     ul {
-      margin-bottom: 0rem;
+      margin-bottom: 100;
     }
 
     p {
-      margin-bottom: 0rem;
-      margin-top: 0rem;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
-  // Link properties
   a {
     color: $themeColor;
     text-decoration: none;
@@ -212,7 +227,7 @@
   ul,
   ol {
     // this is the indent of a list
-    padding-left: 2rem;
+    padding-left: rem(60px);
   }
 
   ul.post-list {
@@ -615,14 +630,14 @@
     font-size: rem(18px);
     //margin: 0 auto rem(29px);
     margin: auto;
-    margin-top: rem(10px);
+    margin-top: rem(30px);
     letter-spacing: 0.025rem;
     line-height: rem(40px);
     //padding: 0 rem(10px);
     padding: 1.5rem;
     @include media(">=sm") {
       font-size: rem(20px);
-      //padding: 29;
+      padding: 29;
     }
 
     a {
