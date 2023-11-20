@@ -13,8 +13,7 @@ math: true
 This project uses readily available, open-source components as the starting point to bridge the the requisite skills to design and build a completely custom keyboard, starting from the the PCB design phase. The goal of this project is to build a premium, wireless, split spacebar keyboard powered by ZMK.
 
 <h2>Table Of Contents</h2>
-<p style="margin-bottom:29px;"></p>
-
+<p style="margin-bottom:10px;"></p>
 
 * toc
 {:toc}
@@ -278,3 +277,7 @@ For the metal and acrylic, each plate requires minimally 13"x5" of material.
   - https://cannonkeys.com/products/unified-c4-daughterboard
   - <a href = "https://cannonkeys.com/products/unified-s1-daughterboard-and-molex-cable?pr_prod_strat=use_description&pr_rec_id=28807589f&pr_rec_pid=7087153021039&pr_ref_pid=7117023379567&pr_seq=uniform">Molex to JST cable</a>
   - https://cannonkeys.com/products/molex-and-jst-cables?variant=41098401972335"
+
+
+
+- https://www.youtube.com/watch?v=DJULiA1aTtM&list=PLrZ2zKOtC_-C4rWfapgngoe9o2-ng8ZBr&index=28
