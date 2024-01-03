@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Goodform General Fireproofing tanker chair"
+title: "Goodform General Fireproofing Tanker Chair"
 subtitle: "" 
 optimized_image: /files/TANKERCHAIR/1/post/chair-2.jpg
 category: Leather

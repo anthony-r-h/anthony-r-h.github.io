@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Textured card organizer wallet"
+title: "Textured Card Wallet"
 subtitle: "" 
 optimized_image: /files/CARDORGANIZER101/1/post/1_Front.jpg
 category: Leather

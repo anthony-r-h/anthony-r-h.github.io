@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Buttero card wallet"
+title: "Buttero Card Wallet"
 subtitle: "" 
 optimized_image: /files\CARDORGANIZER100\1\post\IMG_0301.JPG
 category: Leather
