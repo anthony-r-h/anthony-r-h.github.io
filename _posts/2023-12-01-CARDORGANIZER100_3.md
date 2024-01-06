@@ -6,13 +6,16 @@ optimized_image: /files/CARDORGANIZER100/3/post/EOSR1617-Edit.jpg
 category: Leather
 tags:
   - CARDORGANIZER100
+
 ---
 
 ## About
 
-TODO
-
 ## Posts
+
+Minimalist four pocket card wallet in vegetable tanned Walpier Buttero leather in chestut.
+
+#leatherwallet #minimalistwallet #buyonce #buyforlife #patina #handcrafted #mensstyle #shopsmall #leatherwork #leathertools #edc #edcgear #madebyhand #buyhandmade #leather #everydaycarry #hamiltonhandmade #ontariomakers #handmadeincanada #handmademarketplace #hamiltonhandmade #HamOnt #dundasont #Leatherwork #handmade #Leatherworking #Leathercraft #handcrafted #CanadianCreatives
 
 <img src="/files/CARDORGANIZER100/3/post/EOSR1617-Edit.jpg">
 
