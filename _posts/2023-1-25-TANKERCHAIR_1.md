@@ -28,4 +28,3 @@ A few notes for future me (when I reupholster this again), or whoever:⁠
 
 {% include image-gallery.html folder="/files/TANKERCHAIR/1/post/" %}
 
-## Notes
