@@ -2,7 +2,7 @@
 layout: post
 title: "King Seiko Homage Build"
 subtitle: "" 
-optimized_image: /files/WATCHSTRAP100/5/king_feiko--7.jpg
+optimized_image: /files/WATCHSTRAP100/5/king_feiko-8.jpg
 category: Watch Mod
 tags:
   - WATCHSTRAP100
@@ -29,12 +29,10 @@ tags:
 
 King Seiko, a significant symbol in 1960s watchmaking, is celebrated for its clean lines, faceted indices, and sharp dauphine hands create a timeless aesthetic. This build pays homage to its legacy. 
 
-<img src="/files/WATCHSTRAP100/5/king_feiko--8.jpg">
+<img src="/files/WATCHSTRAP100/5/king_feiko-8.jpg">
 
 From its faceted indices to its sharp dauphine hands, this build honors King Seiko's enduring legacy.
 
-<img src="/files/WATCHSTRAP100/5/king_feiko--7.jpg">
-
-<img src="/files/WATCHSTRAP100/5/king_feiko--5.jpg">
+<img src="/files/WATCHSTRAP100/5/king_feiko-7.jpg">
 
 <img src="/files/WATCHSTRAP100/5/king_feiko--4.jpg">
