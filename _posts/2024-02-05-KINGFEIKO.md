@@ -2,7 +2,7 @@
 layout: post
 title: "Ghost Bridle Belt"
 subtitle: "" 
-optimized_image: /files/WATCHSTRAP100/5/king_feiko--8.jpg
+optimized_image: /files/WATCHSTRAP100/5/king_feiko--7.jpg
 category: Watch Mod
 tags:
   - WATCHSTRAP100
