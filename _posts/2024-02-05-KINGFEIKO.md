@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ghost Bridle Belt"
+title: "King Seiko Homag Build"
 subtitle: "" 
 optimized_image: /files/WATCHSTRAP100/5/king_feiko--7.jpg
 category: Watch Mod
