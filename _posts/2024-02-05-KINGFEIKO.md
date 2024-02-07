@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "King Seiko Homag Build"
+title: "King Seiko Homage Build"
 subtitle: "" 
 optimized_image: /files/WATCHSTRAP100/5/king_feiko--7.jpg
 category: Watch Mod
