@@ -116,3 +116,7 @@ I mounted my desktop under the table using a bracket from AliExpress that accomm
 Being a standing desk, its generally a good idea for there to be only one and only one cable running from the desk. This can get a bit challenging especially when there are a large number of peripherals in play. To solve this, I also mounted a power bar and server rack cable management duct to the bottom of the table.
 
 <img src="/files/GertonBekant/GertonBekant-9.jpg">
+
+# Finished
+
+<img src ="/files/GertonBekant/EOSR5845.jpg">
