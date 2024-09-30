@@ -28,7 +28,7 @@ Hunter Ct (2021): Drawers added for leatherworking supplies.
 
 <img src="/files/GertonBekant/setup2021-2.jpg">
 
-Brigadoon Dr (2024): Just before the current update.
+Now (2024): Just before the current update.
 
 <img src="/files/GertonBekant/setup2024.jpg">
 
@@ -75,7 +75,7 @@ Applying sufficient downward pressure while driving the insert also helps preven
 
 ## Finishing
 
-Originally finished with polyurethane and although the finish wa still in great condition, I took this opportunity to refinish the tabletop and to smooth out the original imperfections due to uneven wood joints.
+Originally finished with polyurethane and although the finish was still in great condition, I took this opportunity to refinish the tabletop and to smooth out the original imperfections due to uneven wood joints.
 
 <img src="/files/GertonBekant/IMG_20240713_154442.jpg">
 
