@@ -43,7 +43,7 @@ The IKEA Bekant frame is a powered sit-stand desk, introduced in 2014. It became
 
 Assembly instructions for the Bekant frame can be found <a href="/files/GertonBekant/bekant.pdf">here</a>.
 
-To account for the lateral load from the monitors and accessories, I mounted the frame as far off-center as possible while ensuring the legs stayed within the footprint of the tabletop. \
+To account for the lateral load from the monitors and accessories, I mounted the frame as far off-center as possible while ensuring the legs stayed within the footprint of the tabletop.
 
 <img src="/files/GertonBekant/layout.png">
 
