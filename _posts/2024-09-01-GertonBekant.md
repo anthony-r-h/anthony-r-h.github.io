@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ikea Gerton Tabletop and Bekant Standing Desk"
+title: "Ikea Gerton table top and Bekant Standing Desk"
 subtitle: "" 
 optimized_image: /files/GertonBekant/EOSR5845.jpg
 category: Misc
@@ -10,32 +10,32 @@ tags:
 
 # About
 
-In 2015, my dad and I assembled a desk using the IKEA Gerton birch tabletop and Lerberg legs. Over the past decade, through four moves and several major life changes, this desk has served me for tens of thousands of hours: school, work, play and everything in between. It was first upgraded in 2020 with under-mounted drawers, followed by cable management trays in 2022 for a USB hub and KVM. Now, it's getting new legs.
+In 2015, my dad and I assembled a desk using the IKEA Gerton birch table top and Lerberg legs. Over the past decade, through four moves and several major life changes, this desk has served me for tens of thousands of hours: school, work, play and everything in between. It was first upgraded in 2020 with under-mounted drawers, followed by cable management trays in 2022 for a USB hub and KVM. Now, it's getting new legs.
 
 <img src="/files/GertonBekant/EOSR5844.jpg">
 
-## The Archives
+## Throughout the years
 
-Pearl St (2015): The original desk.
+2015: The original desk.
 
 <img src="/files/GertonBekant/setup2015-2.jpg">
 
-Glen Rd (2017): Same desk, but in grad school.
+2017: Same desk, but in grad school.
 
 <img src="/files/GertonBekant/setup2017.JPG">
 
-Hunter Ct (2021): Drawers added for leatherworking supplies.
+2021: Drawers added for leatherworking supplies.
 
 <img src="/files/GertonBekant/setup2021-2.jpg">
 
-Now (2024): Just before the current update.
+2024: Just before the current update.
 
 <img src="/files/GertonBekant/setup2024.jpg">
 
 
-# IKEA Bekant
+# The IKEA Bekant problem
 
-The IKEA Bekant frame is a powered sit-stand desk, introduced in 2014. It became popular due to its affordability compared to higher-end options. The original tabletop is a lightweight composite attached using friction-fit plastic hardware, but unsuitable for attaching a much heavier wood top.
+The IKEA Bekant frame is a powered sit-stand desk introduced in 2014, gaining popularity for its affordability compared to higher-end models. However, many users reported stability issues. A contributing factor was the play introduced by the friction-fit plastic hardware used to secure the standard Bekant table top. This mounting system, designed for lightweight composite materials, lacks the strength and rigidity needed to support the added weight and stress of a heavier wood table top.
 
 # Assembly
 
@@ -43,51 +43,53 @@ The IKEA Bekant frame is a powered sit-stand desk, introduced in 2014. It became
 
 Assembly instructions for the Bekant frame can be found <a href="/files/GertonBekant/bekant.pdf">here</a>.
 
-To account for the lateral load from the monitors and accessories, I mounted the frame as far off-center as possible while ensuring the legs stayed within the footprint of the tabletop.
+To account for the lateral load from the monitors and accessories, I mounted the frame as far off-center as possible while ensuring the legs stayed within the footprint of the table top.
 
 <img src="/files/GertonBekant/layout.png">
 
-I used an abundance of masking tape to mark off guidelines and measurements.
+Masking tape, a long rule and a carpenter square are super useful for planning the hole layout for mounting the frame and accessories.
 
 <img src="/files/GertonBekant/IMG_20240716_201619.jpg">
 
-Threaded inserts were used to attach the frame to the tabletop. Because of the large pre-drilled holes in the frame, I used flange-head M8 screws.
+Due to the large pre-drilled holes in the frame, I chose to use flange-head M8 screws to mount the table top using stainless steel threaded inserts. For the accessories, I used M6 screws.
 
 <img src="/files/GertonBekant/GertonBekant-1.jpg">
 
-Driving these large threaded inserts into dense wood presents challenges, such as keeping the insert straight and ensuring proper threading without stripping the hole.
+Driving the larger threaded inserts into the table top proved challenging. The coarse, single-thread design made it difficult to align the insert square with the surface, and the wood's density required substantial downward pressure and rotational force to thread the inserts without stripping the hole.
 
 <img src="/files/GertonBekant/threaded_insert.png">
 
-Here is the process I used:
+With some experimentation, I was able to find a reliable process
 
-1. Initial hole drilled to the nominal diameter of the threaded insert.
-2. Reamed the top third of the hole by 1mm.
-3. Countersank the hole to ensure the insert sits below the wood surface.
+1. Drill initial hole to the nominal diameter of the threaded insert
+2. Use a reaming bit to expand the top third of the hole by 1mm to form a taper
+3. Countersink the hole to form another taper
 
 <img src="/files/GertonBekant/GertonBekant-4.jpg">
 
-This method helps the threaded insert establish a few threads before fully biting into the wood. A drill guide helped maintain perpendicularity with the initial hole. I also used epoxy to glue in the threaded inserts.
+I used a drill guide to ensure the initial hole was drilled perpendicular to the surface. The two tapers make it easier to cut the first few threads, allowing the insert to align properly before fully engaging with the wood. To secure the inserts, I applied epoxy.
 
 <img src="/files/GertonBekant/GertonBekant-3.jpg">
 
-Applying sufficient downward pressure while driving the insert also helps prevent stripping. A ratchet, T-handle driver or powered options are better choices for this than a screw driver. Although it would probably be best to do this manually, I opted for an installation driver.
+Applying sufficient downward pressure while driving the insert is super important to prevent stripping the wood. A ratchet, T-handle driver or drill driver are better options for this than a screw driver.
 
 ## Finishing
 
-Originally finished with polyurethane and although the finish was still in great condition, I took this opportunity to refinish the tabletop and to smooth out the original imperfections due to uneven wood joints.
+The table top was originally finished in polyurethane and while the finish was still in great condition, the surface had a number of uneven spots in the wood joints. So, I took this opportunity to flatten out the factory surface and refinish the table top. 
 
 <img src="/files/GertonBekant/IMG_20240713_154442.jpg">
 
-Using an orbital sander, I smoothed the surface to 800 grit, starting from 50 grit.
+I used an orbital sander to smooth the surface to 800 grit, starting from 50 grit and progressing upwards.
 
-Given the lack of a dust-free environment, I chose a wipe-on hard was oil finish over polyurethane. Application is super straightforward:
+This time, without a suitable dust-free environment, I chose not to use polyurethane. Instead, I used wipe-on hard wax oil which is supposed to be easy and idiot proof. I used Natura Onecoat which is reported to be comparable to Rubio Monocoat, but half the price.
 
-1. Apply with a putty knife.
-2. Wait a few minutes.
-3. Wipe off excess.
-4. Repeat after a few hours.
-5. Buff the surface.
+Application is super straightforward:
+
+1. Apply with a putty knife
+2. Wait a few minutes
+3. Wipe off excess
+4. Repeat after a few hours
+5. Buff the surface
 
 <img src="/files/GertonBekant/IMG_20240721_191930.jpg">
 
