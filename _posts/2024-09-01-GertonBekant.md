@@ -20,7 +20,7 @@ In 2015, my dad and I assembled a desk using the IKEA Gerton birch table top and
 
 <img src="/files/GertonBekant/setup2015-2.jpg">
 
-2017: Same desk, but in grad school.
+2017: Unchanged, but different appartment.
 
 <img src="/files/GertonBekant/setup2017.JPG">
 
@@ -51,7 +51,7 @@ Masking tape, a long rule and a carpenter square are super useful for planning t
 
 <img src="/files/GertonBekant/IMG_20240716_201619.jpg">
 
-Due to the large pre-drilled holes in the frame, I chose to use flange-head M8 screws to mount the table top using stainless steel threaded inserts. For the accessories, I used M6 screws.
+Due to the large pre-drilled holes in the frame, I chose to use flange-head M8 screws along with stainless steel threaded inserts to mount the table top. I used M6 screws for the smaller accessories.
 
 <img src="/files/GertonBekant/GertonBekant-1.jpg">
 
@@ -67,7 +67,7 @@ With some experimentation, I was able to find a reliable process
 
 <img src="/files/GertonBekant/GertonBekant-4.jpg">
 
-I used a drill guide to ensure the initial hole was drilled perpendicular to the surface. The two tapers make it easier to cut the first few threads, allowing the insert to align properly before fully engaging with the wood. To secure the inserts, I applied epoxy.
+I used a drill guide to help keep the the initial hole perpendicular. Then, the two tapers make it easier to insert and establish the first few threads into the hole. This helps ensure that the insert is properly aligned before fully engaging with the wood. To secure the inserts, I applied epoxy.
 
 <img src="/files/GertonBekant/GertonBekant-3.jpg">
 
@@ -75,13 +75,13 @@ Applying sufficient downward pressure while driving the insert is super importan
 
 ## Finishing
 
-The table top was originally finished in polyurethane and while the finish was still in great condition, the surface had a number of uneven spots in the wood joints. So, I took this opportunity to flatten out the factory surface and refinish the table top. 
+The table top was originally finished in polyurethane and while the finish was still in great condition, the wood surface had a number of uneven spots between wood joints. So, I took this opportunity to flatten out the factory surface as well.
 
 <img src="/files/GertonBekant/IMG_20240713_154442.jpg">
 
 I used an orbital sander to smooth the surface to 800 grit, starting from 50 grit and progressing upwards.
 
-This time, without a suitable dust-free environment, I chose not to use polyurethane. Instead, I used wipe-on hard wax oil which is supposed to be easy and idiot proof. I used Natura Onecoat which is reported to be comparable to Rubio Monocoat, but half the price.
+This time, without a suitable dust-free environment, I used wipe-on hard wax oil instead of polyurethane. Hard wax oils are supposed to be easy and completely idiot proof (and it was). I used Natura Onecoat which is reported to be comparable to Rubio Monocoat, but half the price.
 
 Application is super straightforward:
 
