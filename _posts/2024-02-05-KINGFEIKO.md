@@ -31,8 +31,6 @@ King Seiko, a significant symbol in 1960s watchmaking, is celebrated for its cle
 
 <img src="/files/WATCHSTRAP100/5/king_feiko-8.jpg">
 
-From its faceted indices to its sharp dauphine hands, this build honors King Seiko's enduring legacy.
-
 <img src="/files/WATCHSTRAP100/5/king_feiko-7.jpg">
 
 <img src="/files/WATCHSTRAP100/5/king_feiko--4.jpg">

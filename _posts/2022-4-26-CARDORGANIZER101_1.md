@@ -10,8 +10,6 @@ tags:
 
 ## About
 
-Half wallet featuring five pockets: three in the front for cards, a hidden compartment for bills and a stuff pocket in the back for anything else you need to be a superstar all day.
-
 - Embossed calf croc
 - Riviera calf
 -  Badalassi Carlo pueblo
