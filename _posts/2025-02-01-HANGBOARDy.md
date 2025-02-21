@@ -2,7 +2,7 @@
 layout: post
 title: "Hangboard"
 subtitle: "" 
-optimized_image: /files/Hangboard/Intro.jpg
+optimized_image: /files/Hangboard/intro.jpg
 category: Climbing
 tags:
   - Training
