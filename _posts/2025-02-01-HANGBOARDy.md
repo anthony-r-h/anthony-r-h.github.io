@@ -17,31 +17,58 @@ tags:
 * toc
 {:toc}
 
+# Introduction
 
-# Overview
+- Certain assumptions have been accepted about training finger strength, including that hanging from a hangboard is the most effective way to improve finger strength. 
+
+- Hangboard training is undoubtably a valuable climbing tool, however, long held beliefs on training techniques and how to use it, including that you should train in a full crimp or that hangs need to last for a certain duration (think 10-second max hangs), can be limiting.
+
+- training doesn't have to look like climbing, it isn't necessary to hang from something
+
+
+- The following primarily summarizes the body of work of Tyler Nelson and onwards.
+
+
+
 
 ## Background
 
 - Off-the-wall training is more objective and reproducible than on-the-wall training 
-- non-climbing training movements are useful to us because they are simpler to reproduce and help us train more general movement patterns that apply to a wide array of climbing movements. They are also more stable, easier to modify, and far more measurable .
+- non-climbing training movements are useful to us because they are simpler to reproduce and help us train more general movement patterns that apply to a wide array of climbing movements. They are also more stable, easier to modify, and far more measurable.
+- reduce injury via exposure to measurable intensity, in a controlled fashion and structured volume
 - The goal of training is to
-  - a
-  - b
-  - c
-- exercise doesn't have to look like climbing
+  - Hypertrophy
+  - improve volintary activation
+  - Tissue stiffness
+  - ... power?
 
-## Current Science
 
 ### C4HP
 
-- isometrics: training with weights too heavy to lift is beneficial 
+- isometrics: training with weights too heavy to lift is beneficial -- isometric muscle contractions represent force levels incapable of moving a given resistance. Under these circumstances, the neuromuscular system has the potential to generate maximum neural drive
   - why isomettrics?
+    - Isometric contractions recruit a high percentage of muscle fibers.
+    - Improves the ability to generate maximal force in a controlled manner.
 
-- Movements 
-  - Isometric (yielding)
-  - Concentric (muscle-shortening) 
+
+
+- Movements (https://www.camp4humanperformance.com/blog-2/2020/12/14/think-before-you-hang-there-really-is-a-difference)
+  - Eccentric (yielding)
+    - hold onto something until our muscles fail
+    - _weighted_ hangs
+  - Concentric (overcoming)
+    - actively pulling on something at max effort
+    - finger curl
+
+
+
+
+
+
 
 ### Abrahangs
+
+
 
 
 
@@ -55,7 +82,6 @@ tags:
 - https://www.climbing.com/skills/strength-training-misunderstood-by-climbers-1/
 - Strength training must involve progressive overload to be effective
   - Expose tissue to progressively  more intense load -> progressive overload -> develop greater envelope of function, ie, capacity to do more
-    <img src="/files/Hangboard/MXedge/DA1C4FF3.png">
 - Strength training improves quality and quantity of climbing practice, allow you to practice harder movements and thereby, climb harder *through* that practice
 
 #### Adaptations
@@ -126,3 +152,47 @@ tags:
 
 # Believe
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+- transferability
+  - improve coordination
+  - improve volintary activation
+    - cns, recruitment of muscles
+  - hypography -> larger mucle -> incr strength
+  - Rate of force developmemnt: rate at which force is generated in the finger flexors. Just as the name implies, it is literally the rate (time in milliseconds) at which force is exerted through the muscle-tendon unit to the joints of the fingers.  By training force production rapidly, the tendons stretch less while the muscles shorten as quickly as they can. This produces an overall slight reduction in force but creates the contact strength and stiffness necessary to be dynamic on the wall. 
+  - stiffness of tissue: tendon, pulleys, joints
+
+
+- on coordination: getting better at doing hangboard doesn't fully translate to climbing because the movement is differnt
+  - gains via coordination aspect dont matter
+  - therefore, hang position, elbow position, and hold size doesn't really matter
+  - so the above should be whatever results in most finger involvement 
+  - unlevel edge: allows FDP and FDS to be slightly stretched to produce as much contractile force.  eddge/positon that generates the most force
+
+- yielding, eccentric-like (pull) 
+  - passive tension
+  - relies on connective tissue strength
+  - load on finger is greater than what the fingers can produce
+  - 30-50% more force than curl
+- overcoming isometric, concentrilc--like (curl)
+  - the force that the muscles themselves can produce
+  - literal finger strength
+  - only finger flexor (tries to be)
+
+- but what about small holds and such? 
+  - that's coordination from climbing
+  - again coordination from hangobard doesn't fully translate here, but other adaptations _enable_ working on these types of things 
+
+- increase peak force, not stamina
+  - stamina via on-the-wall
