@@ -24,6 +24,7 @@ tags:
 - Training doesn’t have to mimic climbing or involve hanging to be effective.  
 - Isometrics, including eccentric and concentric movements, are essential for finger training.  
 - Effective finger strength training maximizes **finger involvement** without conflating it with coordination, endurance, or hold variety.  
+  - Currently this ignores endurance, critical force, and anything else that is not strength or power.
 
 ## Fundamentals of Strength Training
 
@@ -59,7 +60,7 @@ tags:
 - Isolates finger flexors, targeting raw strength.  
 - Force exerted matches what the fingers alone can produce.  
 
-Both styles of movement patterns are necessary. Concentric pulls typically measure 50\% to 70\% of eccentric pulls. In practice, active finger strength is the difference between staying on a hold and being able to action  it.
+Both styles of movement patterns are necessary. Concentric pulls typically measure 50% to 70% of eccentric pulls. In practice, active finger strength is the difference between staying on a hold and being able to action  it.
 
 ## Coordination 
 
@@ -79,25 +80,25 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
 
 - **Hypertrophy (Muscle Growth):**  
   - More muscle mass = greater strength capacity.  
-  - Not achieved through high-volume, low-intensity climbing—requires progressive overload.  
+  - Not achieved through high-volume, low-intensity climbing - requires progressive overload.  
 
 - **Voluntary Activation:**  
   - The nervous system plays a critical role in generating maximal force.  
-  - Strength training improves **voluntary activation**, meaning the ability to **fully engage muscle fibers on demand**.  
+  - Strength training improves **voluntary activation**, meaning the ability to fully engage muscle fibers on demand.  
   - More activation = greater force production without additional muscle mass.  
   - This is especially important for **maximal contact strength and force recruitment on holds**.  
 
 - **Tissue Stiffness:**  
   - Changes in tissue quality (not just size) improve strength and resilience.  
   - Slow, heavy loading over time strengthens tendons and ligaments.  
-  - Load type doesn’t matter—consistency and progressive overload do.  
+  - Load type doesn’t matter - consistency and progressive overload do.  
 
 - **Power:**  
   - Strength improvements enable power gains.  
 
 #### Actionables
 
-- Method of load doesn't matter much—choose the most effective tool.  
+- Method of load doesn't matter much - choose the most effective tool.  
 - **Edge size selection matters:**  
   - Too small = limits potential loading, better for coordination.  
   - Too large = doesn’t effectively target fingers.  
@@ -110,7 +111,7 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
 ### On Power
 
 - https://www.climbing.com/skills/power-training-off-the-wall-part-i/
-- Strength alone is not enough—**applying force quickly** is key to climbing performance.
+- Strength alone is not enough - **applying force quickly** is key to climbing performance.
 - Power is critical for appling force quickly, decelerate efficiently, and move through space effectively.
 - Power is the ability to generate force **fast**, which translates to improved **contact strength, explosive movement, and dynamic control** on the wall.
 - Key elements of power in climbing
@@ -119,15 +120,15 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
   - Reactive strength:  The ability to absorb force and redirect it efficiently. 
   - Tissue stiffness (tendon, pulley, joints): Tissue stifness improves force transmission and minimize energy loss, making explosive movements more effective.  
 
-#### Power Training Actionables
-- **Lower intensity** than strength training, typically x\% of max effort load.
-- Reduce **fatigue** to ensure quality of movement.
-- Maintain **high intent for velocity**—each rep should be as explosive as possible.
-- **Dynamic Exercises for Power Training:**  
+#### Actionables
+- Lower intensity than strength training, typically x% of max effort load.
+- Reduce fatigue to ensure quality of movement.
+- Maintain **high intent for velocity** - each rep should be as explosive as possible.
+- Dynamic Exercises for Power Training 
   - Fast **concentric contractions** (e.g., explosive finger curls or assisted plyometric hangs).  
-  - **Drop-catch drills** (rapid release and re-grip on a hangboard).  
-  - **Campus board training** (focused on short bursts, not endurance).  
-  - **Short, powerful deadpoints** or max-effort limit bouldering.  
-  - Weighted pull-ups with **intentional acceleration** (not slow, grinding reps).  
+  - Drop-catch drills (rapid release and re-grip on a hangboard).  
+  - Campus board training (focused on short bursts, not endurance).  
+  - Short, powerful deadpoints or max-effort limit bouldering.  
+  - Weighted pull-ups with **intentional acceleration**.
 
 Power training is the conversion of that strength into usable performance on the wall.
