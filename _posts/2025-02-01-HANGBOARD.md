@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hangboard"
+title: "Finger Training"
 subtitle: "" 
 optimized_image: /files/Hangboard/Intro.png
 category: Climbing
@@ -119,7 +119,7 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
   - Reactive strength:  The ability to absorb force and redirect it efficiently. 
   - Tissue stiffness (tendon, pulley, joints): Tissue stifness improves force transmission and minimize energy loss, making explosive movements more effective.  
 
-#### *Power Training Actionables
+#### Power Training Actionables
 - **Lower intensity** than strength training, typically x\% of max effort load.
 - Reduce **fatigue** to ensure quality of movement.
 - Maintain **high intent for velocity**—each rep should be as explosive as possible.
