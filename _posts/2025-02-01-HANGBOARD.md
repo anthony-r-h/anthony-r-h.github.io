@@ -20,7 +20,7 @@ tags:
 # Introduction 
 
 - Hangboard training is widely accepted as the best method for improving finger strength, but recent research challenges conventional protocols (e.g., full crimp training, strict duration-based hangs).  
-- This summary is primarily based on the work of Dr. Tyler Nelson.  
+- This summary is primarily based on the work of [Dr. Tyler Nelson at C4HP](https://www.camp4humanperformance.com/).
 - Training doesn’t have to mimic climbing or involve hanging to be effective.  
 - Isometrics, including eccentric and concentric movements, are essential for finger training.  
 - Effective finger strength training maximizes **finger involvement** without conflating it with coordination, endurance, or hold variety.  
