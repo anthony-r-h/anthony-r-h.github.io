@@ -132,7 +132,6 @@
       word-wrap: break-word;
       padding: rem(3px) rem(5px);
       border-radius: 3px;
-
       @include media(">=sm") {
         font-size: rem(17px);
       }
