@@ -1,140 +1,51 @@
-pre {
+.highlight {
+  @include center(rem(1080px));
   background: #282a36;
-  width: 100%;
-  padding: rem(20px) 0;
-  color: $accentDark;
-  margin: rem(30px) 0;
-  font-size: rem(14px);
+  border-radius: rem(6px);
+  overflow-x: auto;
+  padding: rem(20px);
+  margin: rem(30px) auto;
 
   @include media(">=sm") {
-    font-size: rem(16px);
-    padding: rem(40px) 0;
-    margin: rem(50px) 0;
+    padding: rem(30px);
+    margin: rem(50px) auto;
   }
 
-  code {
-    @include center(rem(800px));
-    padding: 0 rem(20px);
+  pre {
+    margin: 0;
+    background: none;
+    padding: 0;
+    overflow-x: auto;
 
-    @include media("<sm") {
-      overflow-x: scroll;
+    code {
+      background: none;
+      padding: 0;
+      display: block;
+      font-size: rem(16px);
+      color: $accentDark;
+    }
+
+    span {
+      line-height: 1.5rem;
+      font-family: "Monaco", "Consolas", "Menlo", monospace;
     }
   }
 
-  span {
-    line-height: 1.5rem;
-    font-family: "Monaco", "Consolas", "Menlo", monospace;
-  }
-}
+  .hll { background-color: #282a36; }
 
-.highlight {
-  margin: rem(20px) 0;
-
-  @include media(">=sm") {
-    word-wrap: break-word;
-    margin: rem(29px) 0;
-  }
-
-  .hll {
-    background-color: #282a36;
-  }
-
-  .c,     // Comment
-  .cm,    // Comment.Multiline
-  .cp,    // Comment.Preproc
-  .c1,    // Comment.Single
-  .cs {   // Comment.Special
-    color: #6272a4;
-  }
-
-  .err {  // Error
-    color: #ff5555;
-    background-color: #282a36;
-  }
-
-  .kc,    // Keyword.Constant
-  .kp,    // Keyword.Pseudo
-  .kr,    // Keyword.Reserved
-  .kt,    // Keyword.Type
-  .no {   // Name.Constant
-    color: #66d9ef;
-  }
-
-  .l,     // Literal 
-  .mf,    // Literal.Number.Float
-  .mh,    // Literal.Number.Hex
-  .mi,    // Literal.Number.Integer
-  .mo,    // Literal.Number.Oct
-  .se,    // Literal.String.Escape
-  .il {   // Literal.Number.Integer.Long
-    color: #ae81ff;
-  }
-
-  .p,     // Punctuation
-  .nx {   // Name.Other
-    color: #f7f7f2;
-  }
-
-  .ni,    // Name.Entity
-  .nn,    // Name.Namespace
-  .py,    // Name.Property
-  .nv,    // Name.Variable
-  .w,     // Text.Whitespace
-  .bp,    // Name.Builtin.Pseudo
-  .vc,    // Name.Variable.Class
-  .vg,    // Name.Variable.Global
-  .vi {   // Name.Variable.Instance
-    color: #50fa7b;
-  }
-
-  .nl {   // Name.Label
-    color: #8be9fd;
-  }
-
-  .n,     // Name
-  .nb,    // Name.Builtin
-  .m {    // Literal.Number
-    color: #bd93f9;
-  }
-
-  .nt,    // Name.Tag
-  .k,     // Keyword
-  .kn,    // Keyword.Namespace
-  .kd,    // Keyword.Declaration
-  .o,     // Operator
-  .ow {   // Operator.Word
-    color: #ff79c6;
-  }
-
-  .ge {   // Generic.Emph
-    font-style: italic;
-  }
-
-  .gs {   // Generic.Strong
-    font-weight: bold;
-  }
-
-  .ld,     // Literal.Date
-  .s,      // Literal.String
-  .sb,     // Literal.String.Backtick
-  .sc,     // Literal.String.Char
-  .sd,     // Literal.String.Doc
-  .s2,     // Literal.String.Double
-  .sh,     // Literal.String.Heredoc
-  .si,     // Literal.String.Interpol
-  .sx,     // Literal.String.Other
-  .sr,     // Literal.String.Regex
-  .s1,     // Literal.String.Single
-  .ss,     // Literal.String.Symbol
-  .vglnk { // Link
-    color: #f1fa8c;
-  }
-
-  .na,    // Name.Attribute
-  .nc,    // Name.Class
-  .nd,    // Name.Decorator
-  .ne,    // Name.Exception
-  .nf {   // Name.Function
-    color: #50fa7b;
-  }
+  .c, .cm, .cp, .c1, .cs         { color: #6272a4; }
+  .err                          { color: #ff5555; background-color: #282a36; }
+  .kc, .kp, .kr, .kt, .no       { color: #66d9ef; }
+  .l, .mf, .mh, .mi, .mo, .se, .il { color: #ae81ff; }
+  .p, .nx                       { color: #f7f7f2; }
+  .ni, .nn, .py, .nv, .w, .bp,
+  .vc, .vg, .vi                 { color: #50fa7b; }
+  .nl                          { color: #8be9fd; }
+  .n, .nb, .m                   { color: #bd93f9; }
+  .nt, .k, .kn, .kd, .o, .ow    { color: #ff79c6; }
+  .ge                          { font-style: italic; }
+  .gs                          { font-weight: bold; }
+  .ld, .s, .sb, .sc, .sd, .s2, .sh, .si,
+  .sx, .sr, .s1, .ss, .vglnk    { color: #f1fa8c; }
+  .na, .nc, .nd, .ne, .nf       { color: #50fa7b; }
 }
