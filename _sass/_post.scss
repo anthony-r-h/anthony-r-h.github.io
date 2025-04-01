@@ -48,7 +48,7 @@
   ul,
   ol,
   iframe {
-    @include center(rem(1200px));
+    @include center(rem(1080px));
     @include mainFont(400);
     font-size: rem(17px);
     line-height: rem(30px);
@@ -224,7 +224,7 @@
   }
 
   blockquote {
-    @include center(rem(1200px));
+    @include center(rem(1080px));
     border-left: rem(5px) solid $texts;
     padding: 0 rem(10px);
     margin: rem(30px) auto;
@@ -610,7 +610,7 @@
 
 .post-content {
   .tags {
-    @include center(rem(1200px));
+    @include center(rem(1080px));
     @include mainFont(400);
     font-size: rem(18px);
     //margin: 0 auto rem(29px);
@@ -630,7 +630,7 @@
       color: $primaryDark;
       display: inline-block;
       border: 1px solid $primaryDark;
-      border-radius: rem(20px);
+      border-radius: rem(5px);
       padding: 0 rem(10px);
       margin-right: rem(2px);
       margin-bottom: rem(8px);
@@ -649,7 +649,7 @@
 
   .tag-title {
     @include mainFont(300);
-    @include center(rem(1200px));
+    @include center(rem(1080px));
     font-size: rem(30px);
     margin-top: rem(20px);
     padding: 0 rem(10px);

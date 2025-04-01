@@ -7,6 +7,9 @@ category: Keyboard
 tags:
   - Plan
   - KB60
+  - Keyboard
+  - CNC
+  
 math: true
 ---
 
