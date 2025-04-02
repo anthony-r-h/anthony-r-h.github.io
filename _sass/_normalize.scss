@@ -1,6 +1,9 @@
 // Based on Kouto Swiss normalize function
 // https://github.com/leny/kouto-swiss/edit/master/lib/kouto-swiss/reset/normalize.styl
 
+@import "theme";
+@import "variables";
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -10,7 +13,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #e8eae6; // Or whatever you want
+  background-color: $contentBg; // Or whatever you want
 }
 
 article,

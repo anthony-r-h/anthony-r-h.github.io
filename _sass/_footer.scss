@@ -11,7 +11,7 @@
 footer {
   @include center(rem(800px));
   border-top: 1px solid darken($accentDark, 10%);
-  background: #e8eae6;
+  background: $contentBg;
   padding: rem(20px) rem(25px);
   margin-top: rem(50px);
   margin-bottom: rem(120px);
@@ -56,7 +56,7 @@ footer {
     fill: #808080;
     transition: all 0.3s ease;
     text-decoration: none;
-    color: #808080;
+    color: $lightGray;
     
     &:hover {
       fill: $themeColor;
