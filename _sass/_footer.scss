@@ -56,7 +56,7 @@ footer {
     fill: #808080;
     transition: all 0.3s ease;
     text-decoration: none;
-    color: $lightGray;
+    color: $texts;
     
     &:hover {
       fill: $themeColor;
@@ -94,5 +94,13 @@ footer {
     p {
       color: $accentDark;
     }
+
+    a {
+      color: $accentDark;
+    }
   }
 }
+
+
+
+
