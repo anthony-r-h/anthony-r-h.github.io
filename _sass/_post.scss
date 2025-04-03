@@ -32,9 +32,10 @@
   figcaption,
   img + em {
     display: block;
-    color: darken($lightGray, 30%);
+    color: lighten($texts, 30%);
     text-align: center;
-    @include mainFont(300);
+    font-size: rem(17px);
+    // @include mainFont(300);
   }
   
 
@@ -74,7 +75,7 @@
   }
 
   p.post-subtitle {
-    color: darken($lightGray, 30%);
+    color: darken($lightGray, 70%);
     font-size: rem(17px);
     margin: rem(10px) auto;
     line-height: 1.6;
@@ -156,7 +157,7 @@
   // Link properties
   a {
     color: $themeColor;
-    text-decoration: none;
+    text-decoration: underline;
 
     &:hover {
       color: #a9a9a9;

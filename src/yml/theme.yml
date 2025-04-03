@@ -5,10 +5,10 @@ themeColor: '#1c3329'
 
 
 primaryDark: '#1c3329'
-accentDark: '#ffffff'
+accentDark: '#efe7de'
 lightGray: '#f2f2f2'
 texts: '#333333'
-
+contentBg: '#efe7de'
 
 
 #greenhish
