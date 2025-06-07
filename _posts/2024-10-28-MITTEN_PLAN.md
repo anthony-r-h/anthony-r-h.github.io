@@ -19,7 +19,7 @@ https://www.etsy.com/ca/listing/1378182350/simple-leather-mitten-pattern-for?ga_
 
 https://www.etsy.com/ca/listing/1603769703/moccasins-pattern-shoe-templates-leather?ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+mitten+patterns&ref=sr_gallery-2-29&pro=1&dd=1&content_source=cbb83c878f1e1064af3ff948b4871c17c4f55d4f%253A1603769703&organic_search_click=1
 
-<img src="/files/MITTEN/KBI-32402_7EBlack.jpg>
+<img src="/files/MITTEN/KBI-32402_7EBlack.jpg">
 
 
 
