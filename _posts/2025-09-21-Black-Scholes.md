@@ -142,7 +142,7 @@ Later approaches allow for additional flexibility:
 
 # Ito's Lemma (stochastic chain rule)
 
-Ordinary calculus uses the chain rule. In stochastic calculus, because Brownian motion has variance that scales with $dt$, we need an extra correction term.
+Ordinary calculus uses the chain rule. Because Brownian motion has variance that scales with $dt$, in stochastic calculus, we need an extra correction term.
 
 If $f(S,t)$ is a smooth function of stock price and time and follows $dS_t = \mu S_t dt + \sigma S_t dW_t$, then Ito’s Lemma says:
 
@@ -342,6 +342,16 @@ The Greeks quantify how option value responds to risk factors.
         - For short-dated options, rho is negligible
         - For long-dated currency or bond options, rho matters a lot because it directly shapes forward prices.
 
+## Indicators and strategy
 
+The Greeks tell us about the option market expectations, positioning, and risk sensitivity.
 
+- Find high-Gamma names (susceptible to squeezes).
+    - Stocks with crowded option markets (e.g., TSLA, NVDA, SPY) show big Gamma exposures - dealers hedging creates "Gamma squeezes."
+    - Screening stocks with large aggregate Gamma exposure can signal potential for sharp moves if hedging flows unwind.
+- Spot high-Vega setups (earnings trades).
+    - Screen for stocks with elevated Vega to trade implied volatility moves (e.g., earnings crush).
+- Target Theta-rich environments (premium selling).
+    - Screen for high-Theta environments (options overpriced relative to realized volatility).
+- Compare IV vs realized volatility to see if options are cheap/expensive.
 
