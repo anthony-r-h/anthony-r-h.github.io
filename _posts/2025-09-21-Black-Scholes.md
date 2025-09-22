@@ -173,11 +173,15 @@ Interpretation:
 
 # Construct a hedged portfolio
 
-We now form a portfolio that combines an option and the stock:
+We now form a portfolio that combines an option and the stock. The portfolio can be constructed in many different ways, but the trick here is to construct the portfolio such that the random terms from price changes in option, $dC$ and stock $dS$ cancel out. 
 
 $$
 \Pi = C - \Delta S
 $$
+
+Convention is that we long the option and short the stock. That is, the porfolio is construted from buying the option and borrowing the stock. It can also be written the other way around. The portfolio is _hedged_ such that the random components go in opposite directions and _can_ cancel out, given the right combination units. 
+
+In contrast, if we write the portfolio long options and long stocks, the randomness is additive because they move in the same direction. Price increases will increase both the value of options and stocks.
 
 Change in portfolio:
 
@@ -304,12 +308,54 @@ Interpretation:
 - Option price equals expected stock value if exercised minus present value of strike payment
     - or, benefit of owning stock minus cost of paying strike
 
+## Example
+
+Suppose a stock is trading for $100. A one-month ATM call option with
+
+- strike price: $100
+- time to expiry $\tau$: 30/365
+- volatility $\sigma$: 20%
+- risk-free rate $r$: 5%
+
+From Black-Scholes we have
+
+- $d_1 = 0.1003$, interpet what is d1
+- $d_2 = 0.0430$, interpret what is d2
+- Therefore, the fair call price $C \approx 2.4934$
+- Delta: 0.5400
+- Gamma: 0.06923
+- Theta: -0.0450 per day
+
+The Delta-hedged portfolio is: long one call and short Delta shares
+
+$$
+\Pi = C - \DeltaS = $2.4934 - 0.5400 \times $100
+$$
+
+By choosing $\Delta = \frac{\partial C}{\partial S}$, the determininistic change is
+
+$$
+d \Pi = \left(\frac{\partial C}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 C}{\partial C^2} \right) dt
+$$
+
+which is time decay (theta) plus convexity (gamma), which per day is $\frac{d \Pi}{dt} \approx -0.007055$.
+
+Which equals exactly $\frac{r\Pi}{365}$, the risk-free return rate. So the portfolio earns exactly the risk-free rate $r$ on its value.
+
+
 # Key insights
+
+The big idea here is: stocks are dynamic, in $dS_t = \mu S_t dt + \sigma S_t d W_t$, the $dWt$ term is irreducible and can't be eliminated. While options are also risky, under certain condititions, if you combine an option with the right fraction of stocks (Delta), then the random terms cancel out. That means that if you continuously rebalance via stock holdings (Delta hedge), you can replicate the option payoff with certainty. As a consequence, the option's fair price is the cost of the replication strategy.
 
 - **Ito's Lemma** explains how option prices evolve when underlying follows Brownian motion.
 - **Delta-hedging** removes randomness, creating a risk-free portfolio.
 - **No arbitrage** forces option prices to satisfy the PDE.
 - **Implied Volatility** given the market option price, solve for $\sigma$ that makes Black-Scholes match it
+
+**So why bother**? Black-Scholes is a pricing model, not an investment strategy, but rather a pricing model for fair option prices. When an option is mispriced relative to the stock, then there is an arbitrage opportunity which forces option prices back into line. Black-Scholes tells us what happens in equilibrium.
+
+Options allow traders to _express their views_ on volatility, jumps, rail risk by trading options relative to that fair value.
+
 
 ## The Greeks
 
@@ -342,6 +388,7 @@ The Greeks quantify how option value responds to risk factors.
         - For short-dated options, rho is negligible
         - For long-dated currency or bond options, rho matters a lot because it directly shapes forward prices.
 
+
 ## Indicators and strategy
 
 The Greeks tell us about the option market expectations, positioning, and risk sensitivity.
@@ -354,4 +401,25 @@ The Greeks tell us about the option market expectations, positioning, and risk s
 - Target Theta-rich environments (premium selling).
     - Screen for high-Theta environments (options overpriced relative to realized volatility).
 - Compare IV vs realized volatility to see if options are cheap/expensive.
+
+
+### Practical Examples
+
+* **Earnings trade (IV crush)**
+
+  * Before earnings: IV high, options expensive.
+  * Speculator thinks actual move will be smaller than implied, so sells straddle/strangle.
+  * After earnings: IV collapses, they pocket the difference.
+
+* **Crisis hedge**
+
+  * Market calm: IV low, options cheap.
+  * Speculator expects volatility spike (Fed, geopolitical event, crash).
+  * Buys puts or straddles → small daily losses from Theta, but massive payoff if vol spikes.
+
+* **Directional leverage**
+
+  * Buy OTM calls (Delta \~0.2) if bullish: small upfront cost, huge payoff if stock rallies.
+  * Equivalent for bearish view with OTM puts.
+
 
