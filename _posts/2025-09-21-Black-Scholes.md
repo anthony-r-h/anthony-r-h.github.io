@@ -60,7 +60,6 @@ Question: *What's the correct price at time $t<T$?*
 # Setup and definitions
 
 Let 
-
 - $S_t$: stock price at time $t$.
 - $K$: strike price.
 - $T$: expiration time.
@@ -75,7 +74,7 @@ Let
 
 ## Brownian motion
 
-Intution: Brownian Motion describes a stochastic process as a function of time where every step is random. Where a random variable is a single draw from a distribution, Brownian motion describes uncertainty over time.
+Intuition: Brownian Motion describes a stochastic process as a function of time where every step is random. Where a random variable is a single draw from a distribution, Brownian motion describes uncertainty over time.
 
 A standard Brownian motion $W_t$ is
 
@@ -92,7 +91,7 @@ The assumption of Brownian motion is useful because
 
 ## Setup
 
-Assume geometric Brownian motion
+Assume geometric Brownian motion (GBM)
 
 $$
 dS_t = \mu S_t\, dt + \sigma S_t\, dW_t
@@ -100,8 +99,7 @@ $$
 
 Interpretation:
 
-A tiny change in the stock price over a small interval is
-
+A tiny change in the stock price over a small interval is:
 - Deterministic drift, $\mu S_t dt$
     - Predictable component
     - If $\mu = 0.05$, then we're saying the stock grows at 5\% per year (scaled by the interval length $dt$)
@@ -110,19 +108,19 @@ A tiny change in the stock price over a small interval is
     - $\sigma$ is the volatility coefficient and scales randomness
     - $dW_t$: increment of Brownian motion, distributed as $dW_t \sim \mathcal{N}(0, \Delta dt)$
     - Randomness accumulates over time
-        - Mean of zero, $\mathbb{E}[(dS_t)] = 0$
+        - Mean of zero, $\mathbb{E}[dS_t] = 0$
         - Variance of the sock $\text{Var}(dS_t) = \mathbb{E}[(dS_t - \mathbb{E}dS_t)^2] = \sigma^2 S_t^2 dt$ 
             - Variance grows linearly in elapsted time
             - The scale of uncetainty grows in proportion to the current stock price
 
 ## Is Brownian motion a good assumption?
 
-Evidence for
+Evidence that supports stocks follow GBM
 
 - Log returns are roughly normal int he short-term (daily, or weekly scales)
 - Volatility shown to be proportional to time over _moderate_ horizons
 
-Evidence against
+However, evidence against:
 
 - Fat tails (kurtosis)
     - Empiercal return distributions have more extreme outcomes than Gaussian predicts
@@ -135,7 +133,7 @@ Evidence against
     - Prices gap due to earnings, news, memes, etc
     - Brownian paths are continuous, implying no jumps
 
-Later approaches allow for additional flexibility
+Later approaches allow for additional flexibility:
 
 - Stochastic volatility models: volatility itself is random
 - Jump-diffusion: allow sudden jump in prices
@@ -196,7 +194,7 @@ $$
 
 # Eliminate randomness (Delta Hedging)
 
-Choose:
+If we choose
 
 $$
 \Delta = \frac{\partial C}{\partial S}
@@ -311,6 +309,39 @@ Interpretation:
 - **Ito's Lemma** explains how option prices evolve when underlying follows Brownian motion.
 - **Delta-hedging** removes randomness, creating a risk-free portfolio.
 - **No arbitrage** forces option prices to satisfy the PDE.
--  The closed-form solution is Black–Scholes.
+- **Implied Volatility** given the market option price, solve for $\sigma$ that makes Black-Scholes match it
+
+## The Greeks
+
+The Greeks quantify how option value responds to risk factors. 
+
+- **Delta**, $\frac{\partial C}{\partial S}$: sensitivity to stock price
+    - How many shares you need to hedge one option, ie, hedge delta with stock
+    - Practical benchmarks
+        - Near zero when option is deep OTM because the option is worthless and a dollar move in the stock price doesn't change the fact that it is still worthless.
+        - 0.5 when ATM because the option has a 50/50 chance of expiring in or out.
+        - 1, moves dollar-for-dollar with stock because the option is basically the stock itself, minus strike.
+- **Gamma**, $\frac{\partial^2 C}{\partial S^2}$: sensitivity of delta to stock price
+    - Convexity of option value with respect to stock moves and tells you how unstable delta is.
+    - Practical benchmarks
+        - High for short-dated options that are ATM. This is the knife edge where small moves flip the option ITM or OTM
+        - Very low for deep ITM/OTM because a $1 change in the stock price doesn't change that fact. 'Delta is saturated'. 
+- **Theta**, $\frac{\partial C}{\partial t}$: sensitivity to time
+    - How much value the option loses per day. If you buy an option, you're paying theta, and if you're selling an option, you collect theta.
+    - Practical benchmarks
+        - Long-dated, or deep OTM options: small theta, so option value is invariant to time
+        - Short-dated ATM options: large theta since expiry is near.
+- **Vega**, $\frac{\partial C}{\partial \sigma}$: sensitivity to volatility
+    - Change in option price per 1% change in volatility. Tells you how exposed you are to changes in volatility. 
+    - Practical benchmarks
+        - For long-dated options, vega is highest (benefit from volatility spikes: earnings, crises). There is more time for volatility to play out.
+        - For short-dated options, vega is small since even if volatility rises, there is no time for big moves to materialize.
+- **Rho**, $\frac{\partial C}{\partial r}$: sensitivity to interest rate
+    - Change in option price per 1% change in the risk-free rate. This matters for FX and bonds (not equities).
+    - Benchmarks
+        - For short-dated options, rho is negligible
+        - For long-dated currency or bond options, rho matters a lot because it directly shapes forward prices.
+
+
 
 
