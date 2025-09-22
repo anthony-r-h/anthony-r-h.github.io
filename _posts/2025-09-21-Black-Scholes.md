@@ -303,14 +303,36 @@ Solving the PDE involves
 
 Solving it isn't super important though.
 
-Interpretation:
 
-- $S_t \Phi(d_1)$: expected value (under risk-neutral measure) of holding stock.
-- $K e^{-r(T-t)} \Phi(d_2)$: present value of strike, weighted by exercise probability.
+## Interpretation
+
+Option price structure
+
+$$
+C(S,t) = \underbrace{S_t \,\Phi(d_1)}_{\text{benefit of stock if exercised}}
+        - \underbrace{K e^{-r(T-t)} \,\Phi(d_2)}_{\text{cost of paying strike}}
+$$
+
+- First term: expected value (under the risk-neutral measure) of holding the stock, conditional on exercise.
+- Second term: present value of the strike, weighted by the risk-neutral exercise probability.
 - Difference = fair call price.
-- Put price comes from put–call parity.
-- Option price equals expected stock value if exercised minus present value of strike payment
-    - or, benefit of owning stock minus cost of paying strike
+
+What is **$d_1$ and $d_2$**?
+
+- Both are **z-scores** in the lognormal distribution of future stock prices.
+- $d_2$: standardized distance of the strike $K$ under the risk-neutral distribution of $\ln S_T$.
+- $d_1 = d_2 + \sigma\sqrt{T-t}$: shifted upward by one volatility unit, because the stock expectation is “stock-weighted.”
+
+Probabilistic interpretation
+
+- $\Phi(d_2)$: risk-neutral probability that the option finishes in the money.
+- $\Phi(d_1)$: the call option’s **Delta**, i.e. hedge ratio, interpretable as a stock-weighted probability of exercise.
+
+Put value follows from **put–call parity**:
+
+$$
+P(S,t) = K e^{-r(T-t)} \Phi(-d_2) - S_t \Phi(-d_1)
+$$
 
 ## Example
 
