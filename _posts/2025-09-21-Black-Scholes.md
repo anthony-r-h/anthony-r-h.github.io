@@ -227,9 +227,13 @@ Implication
 Now:
 
 $$
-d\Pi = \Big( \frac{\partial C}{\partial t} + \tfrac{1}{2}\sigma^2 S^2 \frac{\partial^2 C}{\partial S^2} \Big) dt
+d\Pi = \Big( \frac{\partial C}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 C}{\partial S^2} \Big) dt
 $$
 
+where
+
+- Theta, $\frac{\partial C}{\partial t}$ is time-rent and
+- Gamma, $\frac{\partial^2 C}{\partial S^2}$ captures convexity with respect to the underlying stock price.
 
 # No-arbitrage condition
 
@@ -329,7 +333,7 @@ From Black-Scholes we have
 The Delta-hedged portfolio is: long one call and short Delta shares
 
 $$
-\Pi = C - \DeltaS = $2.4934 - 0.5400 \times $100
+\Pi = C - \Delta S = $2.4934 - 0.5400 \times $100
 $$
 
 By choosing $\Delta = \frac{\partial C}{\partial S}$, the determininistic change is
@@ -338,7 +342,7 @@ $$
 d \Pi = \left(\frac{\partial C}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 C}{\partial C^2} \right) dt
 $$
 
-which is time decay (theta) plus convexity (gamma), which per day is $\frac{d \Pi}{dt} \approx -0.007055$.
+which is time decay (theta) plus convexity (gamma), which per day is $\frac{d \Pi}{dt} \approx -\$0.007055$.
 
 Which equals exactly $\frac{r\Pi}{365}$, the risk-free return rate. So the portfolio earns exactly the risk-free rate $r$ on its value.
 
