@@ -7,7 +7,6 @@ category: Climbing
 tags:
   - Training
   - Edcuation
-  - Plan
   
 ---
 
@@ -74,9 +73,9 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
   - **Unlevel-style edges** slightly stretch FDP and FDS tendons, optimizing force production.
   - Focussing on peak force, not stamina. Stamina is better trained through climbing-specific endurance work.
 
-## Strength and Power
+# Strength and Power
 
-### On Strength
+## On Strength
 
 - **Hypertrophy (Muscle Growth):**  
   - More muscle mass = greater strength capacity.  
@@ -96,7 +95,7 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
 - **Power:**  
   - Strength improvements enable power gains.  
 
-#### Actionables
+### Actionables
 
 - Method of load doesn't matter much - choose the most effective tool.  
 - **Edge size selection matters:**  
@@ -108,7 +107,7 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
   - Max effort with long rests  
   - Low volume (few reps, long recovery)  
 
-### On Power
+## On Power
 
 - https://www.climbing.com/skills/power-training-off-the-wall-part-i/
 - Strength alone is not enough - **applying force quickly** is key to climbing performance.
@@ -120,7 +119,7 @@ Both styles of movement patterns are necessary. Concentric pulls typically measu
   - Reactive strength:  The ability to absorb force and redirect it efficiently. 
   - Tissue stiffness (tendon, pulley, joints): Tissue stifness improves force transmission and minimize energy loss, making explosive movements more effective.  
 
-#### Actionables
+### Actionables
 - Lower intensity than strength training, typically x% of max effort load.
 - Reduce fatigue to ensure quality of movement.
 - Maintain **high intent for velocity** - each rep should be as explosive as possible.
