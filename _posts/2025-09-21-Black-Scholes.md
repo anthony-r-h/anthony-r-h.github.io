@@ -56,10 +56,10 @@ At expiry $T$, payoff is known:
 
 Question: *What's the correct price at time $t<T$?*
 
-
 # Setup and definitions
 
 Let 
+
 - $S_t$: stock price at time $t$.
 - $K$: strike price.
 - $T$: expiration time.
@@ -74,7 +74,7 @@ Let
 
 ## Brownian motion
 
-Intuition: Brownian Motion describes a stochastic process as a function of time where every step is random. Where a random variable is a single draw from a distribution, Brownian motion describes uncertainty over time.
+Brownian Motion describes a stochastic process as a function of time where every step is random. Where a random variable is a single draw from a distribution, Brownian motion describes uncertainty over time.
 
 A standard Brownian motion $W_t$ is
 
@@ -83,13 +83,15 @@ A standard Brownian motion $W_t$ is
 3. Paths are continuous but nowhere differentiable
 4. Variance grows linearly with time, $\mathbb{E}[W_t] = 0$, $\text{Var}[W_t] = t$
 
-The assumption of Brownian motion is useful because
+Why assume Brownian motion for stocks?
 
-- It cpatures the intuiton that stock returns are random, but scale with time
+- It captures the intuiton that stock returns are random, but scale with time
 - Leads to lognormal distribution of prices
 - Makes the math easy (Ito's Lemma, PDEs)
 
-## Setup
+The intuition behind Brownian motion in finance is that stock prices result from the cumulative effect of many small, random buying and selling decisions. Each trade is like a small random step. In the limit of many rapid, independent steps, this process converges to Brownian motion, a continuous random process with normally distributed increments.
+
+## GBM setup
 
 Assume geometric Brownian motion (GBM)
 
@@ -100,32 +102,34 @@ $$
 Interpretation:
 
 A tiny change in the stock price over a small interval is:
+
 - Deterministic drift, $\mu S_t dt$
     - Predictable component
-    - If $\mu = 0.05$, then we're saying the stock grows at 5\% per year (scaled by the interval length $dt$)
+    - If $\mu = 0.05$, then we're saying the stock grows at 5% per year (scaled by the interval length $dt$)
 - Random shock (diffusion term), $\sigma S_t dW_t$
     - Captures unpredictable movements
     - $\sigma$ is the volatility coefficient and scales randomness
-    - $dW_t$: increment of Brownian motion, distributed as $dW_t \sim \mathcal{N}(0, \Delta dt)$
+    - $dW_t$: increment of Brownian motion, distributed as $dW_t \sim \mathcal{N}(0, dt)$
     - Randomness accumulates over time
-        - Mean of zero, $\mathbb{E}[dS_t] = 0$
-        - Variance of the sock $\text{Var}(dS_t) = \mathbb{E}[(dS_t - \mathbb{E}dS_t)^2] = \sigma^2 S_t^2 dt$ 
+        - $\mathbb{E}[dS_t] = \mu S_t dt$
+        - Variance of the sock $\text{Var}(dS_t) = \sigma^2 S_t^2 dt$ 
             - Variance grows linearly in elapsted time
             - The scale of uncetainty grows in proportion to the current stock price
 
-## Is Brownian motion a good assumption?
 
-Evidence that supports stocks follow GBM
+## Is GBM a good assumption?
+
+**Evidence for**
 
 - Log returns are roughly normal int he short-term (daily, or weekly scales)
 - Volatility shown to be proportional to time over _moderate_ horizons
 
-However, evidence against:
+**Evidence against**
 
 - Fat tails (kurtosis)
-    - Empiercal return distributions have more extreme outcomes than Gaussian predicts
+    - empirical return distributions have more extreme outcomes than Gaussian predicts
     - $10 \sigma$ events occur, which are near impossible under Gaussian distributions
-- Volatility is clusered
+- Volatility is clustered
     - Brownian motion assumes a constant volatility factor $\sigma$
     - In the data, periods of high volatility tend to follow each other
 - Negative returns often increase volatility
@@ -133,12 +137,12 @@ However, evidence against:
     - Prices gap due to earnings, news, memes, etc
     - Brownian paths are continuous, implying no jumps
 
-Later approaches allow for additional flexibility:
+**Extensions**
 
-- Stochastic volatility models: volatility itself is random
-- Jump-diffusion: allow sudden jump in prices
-- GARCH: volatility clustering in discrete time
-- And so on.
+- Stochastic volatility (e.g., Heston)
+- Jump–diffusion (Merton)
+- GARCH (discrete-time clustering)
+- Rough volatility (long-memory in vol)
 
 # Ito's Lemma (stochastic chain rule)
 
@@ -167,21 +171,20 @@ $$
 
 Interpretation:
 
-* First big bracket: deterministic drift of the option.
-* Second term: random component proportional to $dW_t$.
-
+- First big bracket: deterministic drift of the option.
+- Second term: random component proportional to $dW_t$.
 
 # Construct a hedged portfolio
 
-We now form a portfolio that combines an option and the stock. The portfolio can be constructed in many different ways, but the trick here is to construct the portfolio such that the random terms from price changes in option, $dC$ and stock $dS$ cancel out. 
+We now form a portfolio that combines an option and the stock in such a way that the random part of its value change disappears.
 
 $$
 \Pi = C - \Delta S
 $$
 
-Convention is that we long the option and short the stock. That is, the porfolio is construted from buying the option and borrowing the stock. It can also be written the other way around. The portfolio is _hedged_ such that the random components go in opposite directions and _can_ cancel out, given the right combination units. 
+This corresponds to being long one option and short $\Delta$ shares of stock. The reason for the minus sign is that a call option already behaves like a partial long stock position (its Delta). To cancel that exposure, we must take the opposite side in the stock.
 
-In contrast, if we write the portfolio long options and long stocks, the randomness is additive because they move in the same direction. Price increases will increase both the value of options and stocks.
+If instead we went long both the option and the stock, their risks would reinforce each other and stock rises increase the value of both, so the randomness would be additive rather than hedged. By choosing $\Delta$, we can cancel the random parts out, leaving the portfolio riskless.
 
 Change in portfolio:
 
@@ -253,7 +256,7 @@ $$
 
 # Equating both expressions
 
-We now equate the two expressions for $d\Pi$:
+We now equate the two expressions for $d\Pi$. We are explicity linking the changes in portfolio value with the risk-free return.
 
 $$
 \frac{\partial C}{\partial t} + \tfrac{1}{2}\sigma^2 S^2 \frac{\partial^2 C}{\partial S^2} 
@@ -334,41 +337,6 @@ $$
 P(S,t) = K e^{-r(T-t)} \Phi(-d_2) - S_t \Phi(-d_1)
 $$
 
-## Example
-
-Suppose a stock is trading for $100. A one-month ATM call option with
-
-- strike price: $100
-- time to expiry $\tau$: 30/365
-- volatility $\sigma$: 20%
-- risk-free rate $r$: 5%
-
-From Black-Scholes we have
-
-- $d_1 = 0.1003$, interpet what is d1
-- $d_2 = 0.0430$, interpret what is d2
-- Therefore, the fair call price $C \approx 2.4934$
-- Delta: 0.5400
-- Gamma: 0.06923
-- Theta: -0.0450 per day
-
-The Delta-hedged portfolio is: long one call and short Delta shares
-
-$$
-\Pi = C - \Delta S = $2.4934 - 0.5400 \times $100
-$$
-
-By choosing $\Delta = \frac{\partial C}{\partial S}$, the determininistic change is
-
-$$
-d \Pi = \left(\frac{\partial C}{\partial t} + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 C}{\partial C^2} \right) dt
-$$
-
-which is time decay (theta) plus convexity (gamma), which per day is $\frac{d \Pi}{dt} \approx -\$0.007055$.
-
-Which equals exactly $\frac{r\Pi}{365}$, the risk-free return rate. So the portfolio earns exactly the risk-free rate $r$ on its value.
-
-
 # Key insights
 
 The big idea here is: stocks are dynamic, in $dS_t = \mu S_t dt + \sigma S_t d W_t$, the $dWt$ term is irreducible and can't be eliminated. While options are also risky, under certain condititions, if you combine an option with the right fraction of stocks (Delta), then the random terms cancel out. That means that if you continuously rebalance via stock holdings (Delta hedge), you can replicate the option payoff with certainty. As a consequence, the option's fair price is the cost of the replication strategy.
@@ -397,7 +365,7 @@ The Greeks quantify how option value responds to risk factors.
     - Convexity of option value with respect to stock moves and tells you how unstable delta is.
     - Practical benchmarks
         - High for short-dated options that are ATM. This is the knife edge where small moves flip the option ITM or OTM
-        - Very low for deep ITM/OTM because a $1 change in the stock price doesn't change that fact. 'Delta is saturated'. 
+        - Very low for deep ITM/OTM because a dollar change in the stock price doesn't change that fact. 'Delta is saturated'. 
 - **Theta**, $\frac{\partial C}{\partial t}$: sensitivity to time
     - How much value the option loses per day. If you buy an option, you're paying theta, and if you're selling an option, you collect theta.
     - Practical benchmarks
@@ -428,24 +396,59 @@ The Greeks tell us about the option market expectations, positioning, and risk s
     - Screen for high-Theta environments (options overpriced relative to realized volatility).
 - Compare IV vs realized volatility to see if options are cheap/expensive.
 
+Some strategies may be
 
-### Practical Examples
-
-* **Earnings trade (IV crush)**
-
-  * Before earnings: IV high, options expensive.
-  * Speculator thinks actual move will be smaller than implied, so sells straddle/strangle.
-  * After earnings: IV collapses, they pocket the difference.
-
-* **Crisis hedge**
-
-  * Market calm: IV low, options cheap.
-  * Speculator expects volatility spike (Fed, geopolitical event, crash).
-  * Buys puts or straddles → small daily losses from Theta, but massive payoff if vol spikes.
-
-* **Directional leverage**
-
-  * Buy OTM calls (Delta \~0.2) if bullish: small upfront cost, huge payoff if stock rallies.
-  * Equivalent for bearish view with OTM puts.
+- Earnings trade (IV crush)
+  - Before earnings: IV high, options expensive.
+  - Speculator thinks actual move will be smaller than implied, so sells straddle/strangle.
+  - After earnings: IV collapses, they pocket the difference.
+- Crisis hedge
+  - Market calm: IV low, options cheap.
+  - Speculator expects volatility spike (Fed, geopolitical event, crash).
+  - Buys puts or straddles → small daily losses from Theta, but massive payoff if vol spikes.
+- Directional leverage
+  - Buy OTM calls (Delta \~0.2) if bullish: small upfront cost, huge payoff if stock rallies.
+  - Equivalent for bearish view with OTM puts.
 
 
+# Practical Examples
+
+## NVDA Sept. 26 call option
+
+The contract
+
+- Strike $182.50 (ATM option)
+- Expiry: Sept. 26 (very short maturity)
+- Market price: $3.95 (midpoint between bid/ask)
+- Breakeven: $186.45 (strike plus premium)
+
+The Greeks
+
+- Delta = 0.5651
+    - The option behaves like 0.57 shares of stock
+    - If NVDA rises a dollar then option prices rise by $0.57
+- Gamma = 0.0465
+    - Delta will increase by 0.0465 per $1 stock move
+    - Gamma is high because it is ATM and short dated, so it is at a knife edge, small moves will flip ITM/OTM 
+- Theta = -0.4267
+    - Option loses about $0.43 of value per day
+    - Time decay is steep because the option has very short maturity
+    - Buying option means you pay Theta in rent
+- Vega = 0.0757
+    - If IV rises by 1%, then the option gains $0.076
+    - IV is 44.01%, market expects an annualized volatility of 44%
+    - Vega is small due to the fact that the option is nearly expired and there is little time for shocks to the price
+- Rho is irrelevant here
+
+Implications
+
+- This is a near-term ATM call
+    - High Gamma (sensitive to every wiggle)
+    - Steep Theta (loses nearly 10% of value per day)
+    - Low Vega (IV changes don't matter this close to expiry)
+- As a speculator:
+    - Buying this call means betting NVDA jumps quickly above breakeven
+    - Selling this call means betting tht NVDA stays flat, so you collect Theta, but risk unlimited upside losses if NVDA jumps
+- As a hedger
+    - You short 0.57 shares per option to hedge
+    - Because Gamma is high, Delta changes rapidly, so you need to rebalance frequently
