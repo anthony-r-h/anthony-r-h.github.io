@@ -4,9 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% assign title = '' %}
-    {% if page.layout == 'author' %}
-        {% assign title = page.display_name %}
-    {% elsif page.title %}
+    {% if page.title %}
         {% assign title = page.title | append: " | " | append: site.name %}
     {% else %}
         {% assign title = site.title %}

@@ -23,25 +23,6 @@
     }
   });
 
-  // Modals
-
-  var $closeBtn = $('.modal .close');
-  $closeBtn.on('click', function() {
-      $closeBtn.parent().parent().addClass('closed');
-  });
-
-  var $exitModal = $('.modal.exit');
-  if ($exitModal.length) {
-    ouibounce($exitModal[0], {
-      aggressive: true,
-      callback: function() {
-        $exitModal.find('.close').on('click', function() {
-          $exitModal.hide();
-        });
-      }
-    });
-  }
-
   // Search
   var bs = {
     close: $(".icon-remove-sign"),
