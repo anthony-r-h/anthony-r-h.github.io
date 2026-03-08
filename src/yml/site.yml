@@ -7,7 +7,6 @@ tags:
   - jekyll
   - theme
   - netlify
-show_hero: false
 menu:
   - title: Home
     url: /
@@ -19,10 +18,41 @@ menu:
     url: /contact
 
 email: anthony.hong@gmail.com
-# See: https://disqus.com/
-disqus_username:
-# Contact Form Setting
-# See: https://formspree.io/
-formspree_form_id:
+
+# Footer defaults
+footer_ui:
+  show_menu_links: false
+  show_social_links: true
+  tagline: ""
+
+# Home listing defaults
+home_listing:
+  include_tags: []
+  exclude_tags:
+    - Plan
+
+# Home grid layout defaults
+# Override per-page in front matter with:
+# home_grid_min_card_width, home_grid_column_gap, home_grid_row_gap,
+# home_grid_mobile_padding, home_grid_desktop_padding
+home_grid:
+  min_card_width: "315px"
+  column_gap: "60px"
+  row_gap: "100px"
+  mobile_padding: "23px"
+  desktop_padding: "40px"
+
+# Reusable list page styling defaults
+# Any list_view page can override these values in front matter.
+list_view_ui:
+  mobile_padding: "23px"
+  desktop_padding: "40px"
+  item_spacing: "28px"
+  divider_color: "rgba(255, 255, 255, 0.2)"
+  title_size: "30px"
+  title_color: "#efe7de"
+  title_hover_color: "#efe7de"
+  meta_color: "#f2f2f2"
+  description_color: "#f2f2f2"
 
 

@@ -1,103 +1,93 @@
 .comments {
   @include center(rem(800px));
   padding: 0 rem(20px);
-  
+
   h3 {
     margin: 0 0 rem(30px);
     font-size: rem(30px);
   }
 }
 
-footer {
-  @include center(rem(800px));
-  border-top: 1px solid darken($accentDark, 10%);
-  background: $contentBg;
-  padding: rem(20px) rem(25px);
-  margin-top: rem(50px);
-  margin-bottom: rem(120px);
-  @include mainFont(300);
+.site-footer {
+  @include center(rem(1080px));
+  @include mainFont(400);
+  border-top: 1px solid rgba(28, 51, 41, 0.35);
+  background: transparent;
+  padding: rem(20px) rem(23px) rem(24px);
+  margin-top: rem(64px);
+  margin-bottom: rem(80px);
 
   @include media(">=sm") {
-    margin-top: rem(100px);
-  }
-
-  p {
-    text-decoration: none;
-    color: $primaryDark;
-    font-size: rem(16px);
-    line-height: rem(25px);
-  }
-
-  span {
-    font-weight: 700;
-  }
-
-  svg {
-    @include size(28, 28);
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: rem(10px);
-
-    @include media(">=sm") {
-      margin-right: rem(20px);
-    }
-
-    &.love {
-      @include size(20, 20);
-      fill: $themeColor;
-      margin-top: rem(-2px);
-      margin-left: rem(3px);
-      margin-right: rem(3px);
-    }
+    padding-left: rem(40px);
+    padding-right: rem(40px);
   }
 
   a {
-    display: inline-block;
-    fill: #808080;
-    transition: all 0.3s ease;
     text-decoration: none;
-    color: $texts;
-    
-    &:hover {
-      fill: $themeColor;
-    }
-    
-    &.creator:hover {
-      text-decoration: underline;
-    }
-  }
-
-  ul {
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      margin-bottom: rem(10px);
-    }
-
-    a {
-      text-decoration: none;
-      font-size: rem(15px);
-      
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    color: $primaryDark;
   }
 }
 
-.main-page {
-  footer {
-    background: $primaryDark;
-    border-top: 1px solid lighten($primaryDark, 10%);
-    
-    p {
-      color: $accentDark;
-    }
+.site-footer .footer-tagline {
+  margin: 0 0 rem(12px);
+  color: rgba(28, 51, 41, 0.9);
+  font-size: rem(15px);
+  line-height: 1.5;
+}
 
-    a {
-      color: $accentDark;
-    }
+.site-footer .footer-social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: rem(12px);
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(34px);
+  height: rem(34px);
+  border: 1px solid rgba(28, 51, 41, 0.45);
+  border-radius: rem(999px);
+  color: $primaryDark;
+  fill: $primaryDark;
+  transition: border-color 0.2s ease, color 0.2s ease, fill 0.2s ease;
+
+  &:hover {
+    border-color: $primaryDark;
+    color: $primaryDark;
+    fill: $primaryDark;
+  }
+}
+
+.site-footer .footer-social svg {
+  @include size(18, 18);
+}
+
+.footer-on-dark .site-footer {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.footer-on-dark .site-footer .footer-tagline {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-on-dark .site-footer a {
+  color: $accentDark;
+}
+
+.footer-on-dark .site-footer .footer-social a {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: $accentDark;
+  fill: $accentDark;
+
+  &:hover {
+    border-color: $accentDark;
+    color: $accentDark;
+    fill: $accentDark;
   }
 }
 

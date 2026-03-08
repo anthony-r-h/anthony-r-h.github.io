@@ -3,7 +3,7 @@
 
 <html lang="{{ site.language }}" class="no-js">
     {% include head.html %}
-    <body class="has-push-menu">
+    <body class="has-push-menu post-page header-on-light footer-on-light">
 
 
         {% include minutes-to-read.html %}
@@ -11,7 +11,66 @@
         {% include header.html %}
 
 
-        <section class="post {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}">
+        {% assign post_ui = site.post_ui %}
+        {% assign csv_table_ui = post_ui.csv_table %}
+        {% assign schema_author_name = page.author | default: site.name %}
+        {% assign schema_author_url = site.url | append: site.baseurl | append: "/" %}
+        {% assign schema_image = page.image | default: "/assets/img/_blog-image.png" | prepend: site.baseurl | prepend: site.url %}
+        {% capture post_view_vars %}
+        --post-content-max-width: {{ page.post_content_max_width | default: post_ui.content_max_width | default: "1080px" }};
+        --post-content-padding-mobile: {{ page.post_content_padding_mobile | default: post_ui.content_padding_mobile | default: "20px" }};
+        --post-content-padding-desktop: {{ page.post_content_padding_desktop | default: post_ui.content_padding_desktop | default: "20px" }};
+        --post-font-size-mobile: {{ page.post_font_size_mobile | default: post_ui.font_size_mobile | default: "17px" }};
+        --post-font-size-desktop: {{ page.post_font_size_desktop | default: post_ui.font_size_desktop | default: "20px" }};
+        --post-line-height-mobile: {{ page.post_line_height_mobile | default: post_ui.line_height_mobile | default: "30px" }};
+        --post-line-height-desktop: {{ page.post_line_height_desktop | default: post_ui.line_height_desktop | default: "40px" }};
+        --post-title-size-mobile: {{ page.post_title_size_mobile | default: post_ui.title_size_mobile | default: "36px" }};
+        --post-title-size-desktop: {{ page.post_title_size_desktop | default: post_ui.title_size_desktop | default: "50px" }};
+        --post-section-title-size-mobile: {{ page.post_section_title_size_mobile | default: post_ui.section_title_size_mobile | default: "32px" }};
+        --post-section-title-size-desktop: {{ page.post_section_title_size_desktop | default: post_ui.section_title_size_desktop | default: "42px" }};
+        --post-section-heading-space-mobile: {{ page.post_section_heading_space_mobile | default: post_ui.section_heading_space_mobile | default: "44px" }};
+        --post-section-heading-space-desktop: {{ page.post_section_heading_space_desktop | default: post_ui.section_heading_space_desktop | default: "52px" }};
+        --post-heading-body-gap-mobile: {{ page.post_heading_body_gap_mobile | default: post_ui.heading_body_gap_mobile | default: "12px" }};
+        --post-heading-body-gap-desktop: {{ page.post_heading_body_gap_desktop | default: post_ui.heading_body_gap_desktop | default: "14px" }};
+        --post-paragraph-spacing-mobile: {{ page.post_paragraph_spacing_mobile | default: post_ui.paragraph_spacing_mobile | default: "24px" }};
+        --post-paragraph-spacing-desktop: {{ page.post_paragraph_spacing_desktop | default: post_ui.paragraph_spacing_desktop | default: "28px" }};
+        --post-list-spacing-mobile: {{ page.post_list_spacing_mobile | default: post_ui.list_spacing_mobile | default: "24px" }};
+        --post-list-spacing-desktop: {{ page.post_list_spacing_desktop | default: post_ui.list_spacing_desktop | default: "28px" }};
+        --post-list-item-spacing-mobile: {{ page.post_list_item_spacing_mobile | default: post_ui.list_item_spacing_mobile | default: "10px" }};
+        --post-list-item-spacing-desktop: {{ page.post_list_item_spacing_desktop | default: post_ui.list_item_spacing_desktop | default: "12px" }};
+        --post-list-indent: {{ page.post_list_indent | default: post_ui.list_indent | default: "2rem" }};
+        --post-section-scroll-margin-mobile: {{ page.post_section_scroll_margin_mobile | default: post_ui.section_scroll_margin_mobile | default: "110px" }};
+        --post-section-scroll-margin-desktop: {{ page.post_section_scroll_margin_desktop | default: post_ui.section_scroll_margin_desktop | default: "130px" }};
+        --post-toc-spacing-mobile: {{ page.post_toc_spacing_mobile | default: post_ui.toc_spacing_mobile | default: "18px" }};
+        --post-toc-spacing-desktop: {{ page.post_toc_spacing_desktop | default: post_ui.toc_spacing_desktop | default: "22px" }};
+        --post-toc-item-spacing-mobile: {{ page.post_toc_item_spacing_mobile | default: post_ui.toc_item_spacing_mobile | default: "8px" }};
+        --post-toc-item-spacing-desktop: {{ page.post_toc_item_spacing_desktop | default: post_ui.toc_item_spacing_desktop | default: "10px" }};
+        --post-subtitle-color: {{ page.post_subtitle_color | default: post_ui.subtitle_color | default: "#4d4d4d" }};
+        --post-meta-color: {{ page.post_meta_color | default: post_ui.meta_color | default: "#a6a6a6" }};
+        --post-meta-icon-color: {{ page.post_meta_icon_color | default: post_ui.meta_icon_color | default: "#a6a6a6" }};
+        --post-link-hover-color: {{ page.post_link_hover_color | default: post_ui.link_hover_color | default: "#a9a9a9" }};
+        --post-tag-color: {{ page.post_tag_color | default: post_ui.tag_color | default: "#1c3329" }};
+        --post-tag-hover-bg: {{ page.post_tag_hover_bg | default: post_ui.tag_hover_bg | default: "#1c3329" }};
+        --post-tag-hover-color: {{ page.post_tag_hover_color | default: post_ui.tag_hover_color | default: "#efe7de" }};
+        --csv-table-bg: {{ page.csv_table_background_color | default: csv_table_ui.background_color | default: "#efe7de" }};
+        --csv-table-text-color: {{ page.csv_table_text_color | default: csv_table_ui.text_color | default: "#333333" }};
+        --csv-table-border-color: {{ page.csv_table_border_color | default: csv_table_ui.border_color | default: "#b7b0a8" }};
+        --csv-table-header-bg: {{ page.csv_table_header_bg | default: csv_table_ui.header_bg | default: "#1c3329" }};
+        --csv-table-header-color: {{ page.csv_table_header_color | default: csv_table_ui.header_color | default: "#efe7de" }};
+        --csv-table-row-hover-bg: {{ page.csv_table_row_hover_bg | default: csv_table_ui.row_hover_bg | default: "#e2dbd2" }};
+        --csv-table-status-color: {{ page.csv_table_status_color | default: csv_table_ui.status_color | default: "#4d4d4d" }};
+        --csv-table-max-height: {{ page.csv_table_max_height | default: csv_table_ui.max_height | default: "520px" }};
+        --csv-table-font-size: {{ page.csv_table_font_size | default: csv_table_ui.font_size | default: "14px" }};
+        --csv-chart-aspect-ratio: {{ page.csv_chart_aspect_ratio | default: csv_table_ui.chart_aspect_ratio | default: "16 / 9" }};
+        {% endcapture %}
+        {% assign has_csv_tables = false %}
+        {% if page.csv_url and page.csv_url != "" %}
+            {% assign has_csv_tables = true %}
+        {% endif %}
+        {% if page.csv_tables and page.csv_tables.size > 0 %}
+            {% assign has_csv_tables = true %}
+        {% endif %}
+        <section class="post post-view {% if site.two_columns_layout %}two-columns{% else %}one-column{% endif %}" style="{{ post_view_vars | strip_newlines | strip }}">
             <article role="article" class="post-content">
 
                 <p class="post-info">
@@ -25,16 +84,26 @@
                     <span>{{ minutesText }}</span>
                 </p>
                 <h1 class="post-title">{{ page.title }}</h1>
-                <p class="post-subtitle">{{ page.subtitle }}</p>
+                {% if page.subtitle and page.subtitle != "" %}
+                    <p class="post-subtitle">{{ page.subtitle }}</p>
+                {% endif %}
 
-
-                <div class="tags">
-                    {% for tag in page.tags %}
-                        {% if tag != "" %}
-                            <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">#{{ tag }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                {% assign has_tags = false %}
+                {% for tag in page.tags %}
+                    {% if tag != "" %}
+                        {% assign has_tags = true %}
+                        {% break %}
+                    {% endif %}
+                {% endfor %}
+                {% if has_tags %}
+                    <div class="tags">
+                        {% for tag in page.tags %}
+                            {% if tag != "" %}
+                                <a href="{{ site.baseurl }}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
 
 
 
@@ -43,6 +112,64 @@
                 {% include toc.html %}
 
                 {{ content }}
+
+                {% if has_csv_tables %}
+                    <div class="post-csv-tables" id="post-csv-tables">
+                        {% if page.csv_url and page.csv_url != "" %}
+                            <section
+                                class="csv-table-block"
+                                data-csv-table
+                                data-csv-url="{{ page.csv_url | relative_url }}"
+                                data-page-size="{{ page.csv_table_page_size | default: csv_table_ui.page_size | default: 20 }}"
+                                data-max-height="{{ page.csv_table_max_height | default: csv_table_ui.max_height | default: '520px' }}"
+                                data-table-target="{{ page.csv_table_target | default: '' }}"
+                                data-chart-target="{{ page.csv_chart_target | default: '' }}"
+                                data-chart-config="{{ page.csv_chart | default: empty | jsonify | escape }}"
+                                data-chart-show-gridlines="{{ page.csv_chart_show_gridlines | default: csv_table_ui.chart_show_gridlines | default: false }}"
+                                data-show-table="{% if page.csv_show_table == false %}false{% else %}true{% endif %}"
+                                data-filter="{{ page.csv_filter | default: page.csv_chart.filter | default: empty | jsonify | escape }}"
+                            >
+                                {% if page.csv_title and page.csv_title != "" %}
+                                    <h3 class="csv-table-title">{{ page.csv_title }}</h3>
+                                {% endif %}
+                                <p class="csv-table-status">Loading table...</p>
+                                <div class="csv-table-grid"></div>
+                                <div class="csv-table-chart-wrap">
+                                    <canvas class="csv-table-chart"></canvas>
+                                </div>
+                            </section>
+                        {% endif %}
+
+                        {% if page.csv_tables and page.csv_tables.size > 0 %}
+                            {% for csv in page.csv_tables %}
+                                {% if csv.csv_url and csv.csv_url != "" %}
+                                    <section
+                                        class="csv-table-block"
+                                        data-csv-table
+                                        data-csv-url="{{ csv.csv_url | relative_url }}"
+                                        data-page-size="{{ csv.page_size | default: page.csv_table_page_size | default: csv_table_ui.page_size | default: 20 }}"
+                                        data-max-height="{{ csv.max_height | default: page.csv_table_max_height | default: csv_table_ui.max_height | default: '520px' }}"
+                                        data-table-target="{{ csv.table_target | default: page.csv_table_target | default: '' }}"
+                                        data-chart-target="{{ csv.chart_target | default: page.csv_chart_target | default: '' }}"
+                                        data-chart-config="{{ csv.chart | default: page.csv_chart | default: empty | jsonify | escape }}"
+                                        data-chart-show-gridlines="{{ csv.chart.show_gridlines | default: page.csv_chart_show_gridlines | default: csv_table_ui.chart_show_gridlines | default: false }}"
+                                        data-show-table="{% if csv.show_table == false or page.csv_show_table == false %}false{% else %}true{% endif %}"
+                                        data-filter="{{ csv.filter | default: page.csv_filter | default: page.csv_chart.filter | default: empty | jsonify | escape }}"
+                                    >
+                                        {% if csv.title and csv.title != "" %}
+                                            <h3 class="csv-table-title">{{ csv.title }}</h3>
+                                        {% endif %}
+                                        <p class="csv-table-status">Loading table...</p>
+                                        <div class="csv-table-grid"></div>
+                                        <div class="csv-table-chart-wrap">
+                                            <canvas class="csv-table-chart"></canvas>
+                                        </div>
+                                    </section>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endif %}
 
                 {% include pagination-post.html %}
                 
@@ -79,6 +206,717 @@
 
         {% include footer.html %}
 
+        {% if has_csv_tables %}
+        <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+        <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+        <script>
+            (function () {
+                var blocks = document.querySelectorAll('[data-csv-table]');
+                if (!blocks.length || !window.Papa || !window.gridjs) return;
+
+                function resolveFieldIndex(field, headers, fallbackIndex) {
+                    if (typeof field === 'number' && Number.isInteger(field) && field >= 0 && field < headers.length) {
+                        return field;
+                    }
+                    if (typeof field === 'string') {
+                        var exact = headers.indexOf(field);
+                        if (exact !== -1) return exact;
+                        var lowered = field.toLowerCase();
+                        for (var i = 0; i < headers.length; i++) {
+                            if (String(headers[i]).toLowerCase() === lowered) return i;
+                        }
+                    }
+                    return fallbackIndex;
+                }
+
+                function toNumber(value) {
+                    var n = Number(value);
+                    return Number.isFinite(n) ? n : null;
+                }
+
+                function numberFromRowValue(value) {
+                    if (value === null || typeof value === 'undefined') return null;
+                    var raw = String(value).trim();
+                    if (raw === '') return null;
+                    var n = Number(raw);
+                    return Number.isFinite(n) ? n : null;
+                }
+
+                function evaluateExpression(expr, row, headers) {
+                    if (!expr || typeof expr !== 'string') return null;
+
+                    // Keep expression language intentionally small and predictable.
+                    var allowed = /^[A-Za-z0-9_\s+\-*/().,]+$/;
+                    if (!allowed.test(expr)) return null;
+
+                    var funcs = {
+                        mean: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            var total = vals.reduce(function (acc, v) { return acc + v; }, 0);
+                            return total / vals.length;
+                        },
+                        sum: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return vals.reduce(function (acc, v) { return acc + v; }, 0);
+                        },
+                        min: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return Math.min.apply(null, vals);
+                        },
+                        max: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return Math.max.apply(null, vals);
+                        },
+                        abs: function (v) { return Number.isFinite(v) ? Math.abs(v) : null; },
+                        round: function (v) { return Number.isFinite(v) ? Math.round(v) : null; }
+                    };
+
+                    var reserved = Object.keys(funcs);
+
+                    var compiled = expr.replace(/\b[A-Za-z_][A-Za-z0-9_]*\b/g, function (token) {
+                        if (reserved.indexOf(token) !== -1) return token;
+                        return 'get("' + token + '")';
+                    });
+
+                    function get(fieldName) {
+                        for (var i = 0; i < headers.length; i++) {
+                            if (headers[i] === fieldName || String(headers[i]).toLowerCase() === String(fieldName).toLowerCase()) {
+                                return toNumber(row[headers[i]]);
+                            }
+                        }
+                        return null;
+                    }
+
+                    try {
+                        var fn = new Function(
+                            'get',
+                            'mean',
+                            'sum',
+                            'min',
+                            'max',
+                            'abs',
+                            'round',
+                            'return (' + compiled + ');'
+                        );
+                        var result = fn(get, funcs.mean, funcs.sum, funcs.min, funcs.max, funcs.abs, funcs.round);
+                        return Number.isFinite(result) ? result : null;
+                    } catch (e) {
+                        return null;
+                    }
+                }
+
+                function evaluateContextExpression(expr, context) {
+                    if (!expr || typeof expr !== 'string') return null;
+                    var allowed = /^[A-Za-z0-9_\s+\-*/().,]+$/;
+                    if (!allowed.test(expr)) return null;
+
+                    var funcs = {
+                        mean: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            var total = vals.reduce(function (acc, v) { return acc + v; }, 0);
+                            return total / vals.length;
+                        },
+                        sum: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return vals.reduce(function (acc, v) { return acc + v; }, 0);
+                        },
+                        min: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return Math.min.apply(null, vals);
+                        },
+                        max: function () {
+                            var vals = Array.prototype.slice.call(arguments).filter(function (v) { return Number.isFinite(v); });
+                            if (!vals.length) return null;
+                            return Math.max.apply(null, vals);
+                        },
+                        abs: function (v) { return Number.isFinite(v) ? Math.abs(v) : null; },
+                        round: function (v) { return Number.isFinite(v) ? Math.round(v) : null; }
+                    };
+
+                    var reserved = Object.keys(funcs);
+                    var compiled = expr.replace(/\b[A-Za-z_][A-Za-z0-9_]*\b/g, function (token) {
+                        if (reserved.indexOf(token) !== -1) return token;
+                        return 'get("' + token + '")';
+                    });
+
+                    function get(name) {
+                        if (!Object.prototype.hasOwnProperty.call(context, name)) return null;
+                        var v = Number(context[name]);
+                        return Number.isFinite(v) ? v : null;
+                    }
+
+                    try {
+                        var fn = new Function(
+                            'get',
+                            'mean',
+                            'sum',
+                            'min',
+                            'max',
+                            'abs',
+                            'round',
+                            'return (' + compiled + ');'
+                        );
+                        var result = fn(get, funcs.mean, funcs.sum, funcs.min, funcs.max, funcs.abs, funcs.round);
+                        return Number.isFinite(result) ? result : null;
+                    } catch (e) {
+                        return null;
+                    }
+                }
+
+                function formatDateKey(dateObj) {
+                    var y = dateObj.getFullYear();
+                    var m = String(dateObj.getMonth() + 1).padStart(2, '0');
+                    var d = String(dateObj.getDate()).padStart(2, '0');
+                    return y + '-' + m + '-' + d;
+                }
+
+                function startOfWeek(dateObj) {
+                    // ISO-style week start (Monday)
+                    var d = new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate());
+                    var day = d.getDay(); // 0..6 where 0 is Sunday
+                    var diff = (day === 0 ? -6 : 1 - day);
+                    d.setDate(d.getDate() + diff);
+                    d.setHours(0, 0, 0, 0);
+                    return d;
+                }
+
+                function aggregateValues(values, op) {
+                    var nums = values.filter(function (v) { return Number.isFinite(v); });
+                    if (!nums.length) return null;
+                    if (op === 'min') return Math.min.apply(null, nums);
+                    if (op === 'mean') return nums.reduce(function (acc, v) { return acc + v; }, 0) / nums.length;
+                    if (op === 'sum') return nums.reduce(function (acc, v) { return acc + v; }, 0);
+                    return Math.max.apply(null, nums); // default max
+                }
+
+                function rowMatchesFilter(row, filter) {
+                    if (!filter || typeof filter !== 'object') return true;
+                    var field = filter.field;
+                    if (!field) return true;
+                    var op = String(filter.op || (typeof filter.equals !== 'undefined' ? 'equals' : 'equals')).toLowerCase();
+                    var expected = (typeof filter.equals !== 'undefined') ? filter.equals : filter.value;
+                    var raw = row[field];
+                    if (typeof raw === 'undefined') {
+                        var keys = Object.keys(row || {});
+                        for (var i = 0; i < keys.length; i++) {
+                            if (String(keys[i]).toLowerCase() === String(field).toLowerCase()) {
+                                raw = row[keys[i]];
+                                break;
+                            }
+                        }
+                    }
+                    var actual = (raw === null || typeof raw === 'undefined') ? '' : String(raw).trim();
+                    var expectedStr = (expected === null || typeof expected === 'undefined') ? '' : String(expected).trim();
+
+                    if (op === 'contains') return actual.toLowerCase().indexOf(expectedStr.toLowerCase()) !== -1;
+                    if (op === 'not_equals') return actual.toLowerCase() !== expectedStr.toLowerCase();
+                    return actual.toLowerCase() === expectedStr.toLowerCase();
+                }
+
+                blocks.forEach(function (block) {
+                    var url = block.getAttribute('data-csv-url');
+                    var gridTarget = block.querySelector('.csv-table-grid');
+                    var chartCanvas = block.querySelector('.csv-table-chart');
+                    var chartWrap = block.querySelector('.csv-table-chart-wrap');
+                    var tableTargetSelector = block.getAttribute('data-table-target');
+                    var chartTargetSelector = block.getAttribute('data-chart-target');
+                    var chartConfigRaw = block.getAttribute('data-chart-config') || '{}';
+                    var filterRaw = block.getAttribute('data-filter') || '{}';
+                    var statusEl = block.querySelector('.csv-table-status');
+                    var pageSize = parseInt(block.getAttribute('data-page-size'), 10);
+                    var maxHeight = block.getAttribute('data-max-height') || '520px';
+                    var showGridlines = String(block.getAttribute('data-chart-show-gridlines')).toLowerCase() === 'true';
+                    var showTable = String(block.getAttribute('data-show-table')).toLowerCase() !== 'false';
+                    var chartConfig = {};
+                    var rowFilter = {};
+                    try {
+                        chartConfig = JSON.parse(chartConfigRaw);
+                    } catch (e) {
+                        chartConfig = {};
+                    }
+                    try {
+                        rowFilter = JSON.parse(filterRaw);
+                    } catch (e) {
+                        rowFilter = {};
+                    }
+
+                    if (!url || !gridTarget || !statusEl) return;
+                    if (!Number.isFinite(pageSize) || pageSize < 1) pageSize = 20;
+                    if (!showTable) {
+                        gridTarget.style.display = 'none';
+                        statusEl.style.display = 'none';
+                    }
+
+                    if (tableTargetSelector) {
+                        var tableTarget = document.querySelector(tableTargetSelector);
+                        if (tableTarget) {
+                            tableTarget.appendChild(block);
+                        }
+                    }
+
+                    fetch(url)
+                        .then(function (response) {
+                            if (!response.ok) throw new Error('Failed to load CSV');
+                            return response.text();
+                        })
+                        .then(function (csvText) {
+                            var parsed = Papa.parse(csvText, {
+                                header: true,
+                                skipEmptyLines: true
+                            });
+
+                            var rows = (parsed.data || []).filter(function (r) {
+                                return rowMatchesFilter(r, rowFilter);
+                            });
+                            var fields = (parsed.meta && parsed.meta.fields) ? parsed.meta.fields : [];
+
+                            if (!fields.length && rows.length) {
+                                fields = Object.keys(rows[0]);
+                            }
+
+                            if (!rows.length || !fields.length) {
+                                statusEl.textContent = 'No rows found in CSV.';
+                                return;
+                            }
+
+                            var data = rows.map(function (row) {
+                                return fields.map(function (field) {
+                                    var value = row[field];
+                                    if (value === null || typeof value === 'undefined') return '';
+                                    var raw = String(value).trim();
+                                    if (raw === '') return '';
+                                    var num = Number(raw);
+                                    if (Number.isFinite(num)) {
+                                        return (Math.round(num * 10) / 10).toFixed(1);
+                                    }
+                                    return raw;
+                                });
+                            });
+
+                            if (showTable) {
+                                new gridjs.Grid({
+                                    columns: fields.map(function (field) {
+                                        return { name: field, sort: true };
+                                    }),
+                                    data: data,
+                                    search: true,
+                                    sort: true,
+                                    pagination: {
+                                        enabled: true,
+                                        limit: pageSize,
+                                        summary: true
+                                    },
+                                    fixedHeader: true,
+                                    resizable: true,
+                                    height: maxHeight
+                                }).render(gridTarget);
+                                statusEl.remove();
+                            }
+
+                            if (chartWrap && chartCanvas && window.Chart) {
+                                if (chartTargetSelector) {
+                                    var chartTarget = document.querySelector(chartTargetSelector);
+                                    if (chartTarget) {
+                                        chartTarget.appendChild(chartWrap);
+                                    }
+                                }
+
+                                var xIdx = resolveFieldIndex(chartConfig.x, fields, 0);
+                                var yAgg = chartConfig.y_agg;
+                                if (!Array.isArray(yAgg)) yAgg = [];
+                                yAgg = yAgg.filter(function (series) {
+                                    return series && (series.field || series.expr || series.from_agg_expr);
+                                });
+                                var yExprs = chartConfig.y_expr;
+                                if (typeof yExprs === 'string') {
+                                    yExprs = [{ label: yExprs, expr: yExprs }];
+                                }
+                                if (Array.isArray(yExprs)) {
+                                    yExprs = yExprs.map(function (item) {
+                                        if (typeof item === 'string') {
+                                            return { label: item, expr: item };
+                                        }
+                                        return item;
+                                    }).filter(function (item) {
+                                        return item && typeof item.expr === 'string' && item.expr.trim() !== '';
+                                    });
+                                } else {
+                                    yExprs = [];
+                                }
+
+                                var yFields = chartConfig.y;
+                                if (typeof yFields === 'string' || typeof yFields === 'number') {
+                                    yFields = [yFields];
+                                }
+                                if (!Array.isArray(yFields) || !yFields.length) {
+                                    yFields = [];
+                                    if (!yExprs.length) {
+                                        for (var i = 0; i < fields.length; i++) {
+                                            if (i === xIdx) continue;
+                                            var sample = rows[0] ? rows[0][fields[i]] : null;
+                                            if (Number.isFinite(Number(sample))) {
+                                                yFields.push(fields[i]);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                var datasets = [];
+                                var labels = [];
+
+                                if (yAgg.length) {
+                                    var groupBy = String(chartConfig.group_by || '').toLowerCase();
+                                    var buckets = {};
+                                    var bucketKeys = [];
+
+                                    rows.forEach(function (r, idx) {
+                                        var rawX = r[fields[xIdx]];
+                                        var key = null;
+                                        var sortTs = null;
+
+                                        if (groupBy === 'week') {
+                                            var dt = new Date(rawX);
+                                            if (isNaN(dt.getTime())) return;
+                                            var wk = startOfWeek(dt);
+                                            key = formatDateKey(wk);
+                                            sortTs = wk.getTime();
+                                        } else {
+                                            key = (rawX === null || typeof rawX === 'undefined' || String(rawX).trim() === '') ? String(idx + 1) : String(rawX);
+                                            sortTs = idx;
+                                        }
+
+                                        if (!buckets[key]) {
+                                            buckets[key] = { rows: [], sortTs: sortTs };
+                                            bucketKeys.push(key);
+                                        }
+                                        buckets[key].rows.push(r);
+                                    });
+
+                                    bucketKeys.sort(function (a, b) {
+                                        return buckets[a].sortTs - buckets[b].sortTs;
+                                    });
+                                    labels = bucketKeys;
+
+                                    var palette = [
+                                        { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
+                                        { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
+                                        { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
+                                        { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
+                                    ];
+
+                                    var aggSeriesValues = {};
+
+                                    datasets = yAgg.map(function (series, dsIdx) {
+                                        var yIdx = resolveFieldIndex(series.field, fields, -1);
+                                        var usesExpr = typeof series.expr === 'string' && series.expr.trim() !== '';
+                                        var usesAggExpr = typeof series.from_agg_expr === 'string' && series.from_agg_expr.trim() !== '';
+                                        if (!usesExpr && !usesAggExpr && yIdx === -1) return null;
+                                        var op = String(series.op || 'max').toLowerCase();
+                                        var color = palette[dsIdx % palette.length];
+                                        var lineColor = series.color || color.line;
+                                        var fillColor = series.fill_color || color.fill;
+                                        var axisId = String(series.axis || '').toLowerCase() === 'right' ? 'y1' : 'y';
+                                        var dsType = series.type || chartConfig.type || 'scatter';
+                                        if (['scatter', 'line', 'bar'].indexOf(dsType) === -1) dsType = 'scatter';
+                                        var borderWidth = Number(series.border_width);
+                                        if (!Number.isFinite(borderWidth)) borderWidth = (dsType === 'line' ? 2 : 1);
+                                        var unit = (typeof series.unit === 'string') ? series.unit : (axisId === 'y' ? (chartConfig.y_unit || '') : (chartConfig.y2_unit || ''));
+                                        var fill = (typeof series.fill === 'boolean') ? series.fill : false;
+                                        var label = series.label || (usesAggExpr ? series.from_agg_expr : (usesExpr ? series.expr : fields[yIdx]));
+
+                                        var seriesData = bucketKeys.map(function (key) {
+                                            if (usesAggExpr) {
+                                                var ctx = {};
+                                                Object.keys(aggSeriesValues).forEach(function (k) {
+                                                    ctx[k] = aggSeriesValues[k][bucketKeys.indexOf(key)];
+                                                });
+                                                var derived = evaluateContextExpression(series.from_agg_expr, ctx);
+                                                return Number.isFinite(derived) ? Math.round(derived * 10) / 10 : null;
+                                            }
+
+                                            var vals = buckets[key].rows.map(function (row) {
+                                                if (usesExpr) return evaluateExpression(series.expr, row, fields);
+                                                return numberFromRowValue(row[fields[yIdx]]);
+                                            });
+                                            var agg = aggregateValues(vals, op);
+                                            return Number.isFinite(agg) ? Math.round(agg * 10) / 10 : null;
+                                        });
+
+                                        aggSeriesValues[label] = seriesData.slice();
+
+                                        if (dsType === 'scatter') {
+                                            seriesData = seriesData.map(function (val, idx) {
+                                                return Number.isFinite(val) ? { x: labels[idx], y: val } : null;
+                                            }).filter(function (p) { return p !== null; });
+                                        }
+
+                                        return {
+                                            type: dsType,
+                                            yAxisID: axisId,
+                                            _unit: unit,
+                                            label: label,
+                                            data: seriesData,
+                                            borderColor: lineColor,
+                                            backgroundColor: dsType === 'scatter' ? lineColor : fillColor,
+                                            borderWidth: borderWidth,
+                                            fill: fill,
+                                            showLine: dsType === 'line',
+                                            spanGaps: false,
+                                            tension: dsType === 'line' ? 0.2 : 0,
+                                            pointRadius: dsType === 'scatter' ? 3 : 2,
+                                            pointHoverRadius: dsType === 'scatter' ? 4 : 3
+                                        };
+                                    }).filter(function (d) { return d !== null; });
+                                } else if (yExprs.length) {
+                                    labels = rows.map(function (r, idx) {
+                                        var label = r[fields[xIdx]];
+                                        return (label === null || typeof label === 'undefined' || String(label).trim() === '') ? String(idx + 1) : String(label);
+                                    });
+
+                                    var palette = [
+                                        { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
+                                        { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
+                                        { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
+                                        { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
+                                    ];
+
+                                    datasets = yExprs.map(function (exprObj, dsIdx) {
+                                        var color = palette[dsIdx % palette.length];
+                                        return {
+                                            type: chartConfig.type || 'scatter',
+                                            yAxisID: 'y',
+                                            _unit: chartConfig.y_unit || '',
+                                            label: exprObj.label || exprObj.expr,
+                                            data: rows.map(function (r) {
+                                                var n = evaluateExpression(exprObj.expr, r, fields);
+                                                return Number.isFinite(n) ? Math.round(n * 10) / 10 : null;
+                                            }),
+                                            borderColor: color.line,
+                                            backgroundColor: color.fill,
+                                            fill: false,
+                                            tension: 0.2,
+                                            spanGaps: false,
+                                            pointRadius: 2
+                                        };
+                                    });
+                                } else {
+                                    var yIndexes = yFields
+                                        .map(function (yf) { return resolveFieldIndex(yf, fields, -1); })
+                                        .filter(function (idx, pos, arr) { return idx !== -1 && idx !== xIdx && arr.indexOf(idx) === pos; });
+
+                                    if (yIndexes.length) {
+                                        labels = rows.map(function (r, idx) {
+                                            var label = r[fields[xIdx]];
+                                            return (label === null || typeof label === 'undefined' || String(label).trim() === '') ? String(idx + 1) : String(label);
+                                        });
+
+                                        var palette = [
+                                            { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
+                                            { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
+                                            { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
+                                            { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
+                                        ];
+
+                                        datasets = yIndexes.map(function (yIdx, dsIdx) {
+                                            var color = palette[dsIdx % palette.length];
+                                            return {
+                                                type: chartConfig.type || 'scatter',
+                                                yAxisID: 'y',
+                                                _unit: chartConfig.y_unit || '',
+                                                label: fields[yIdx],
+                                                data: rows.map(function (r) {
+                                                    var n = Number(r[fields[yIdx]]);
+                                                    return Number.isFinite(n) ? Math.round(n * 10) / 10 : null;
+                                                }),
+                                                borderColor: color.line,
+                                                backgroundColor: color.fill,
+                                                fill: false,
+                                                tension: 0.2,
+                                                spanGaps: false,
+                                                pointRadius: 2
+                                            };
+                                        });
+                                    }
+                                }
+
+                                if (datasets.length) {
+                                    var chartType = chartConfig.type || 'scatter';
+                                    if (['scatter', 'line', 'bar'].indexOf(chartType) === -1) chartType = 'scatter';
+                                    var showTitle = chartConfig.show_title !== false;
+                                    var showAxisTitles = chartConfig.show_axis_titles !== false;
+                                    var showYTicks = chartConfig.show_y_ticks !== false;
+                                    var legendMode = chartConfig.legend_position || 'top';
+                                    var insideBottomRightLegend = legendMode === 'inside_bottom_right';
+                                    var legendPosition = ['top', 'left', 'bottom', 'right', 'chartArea'].indexOf(legendMode) !== -1 ? legendMode : 'top';
+                                    var legendAlign = ['start', 'center', 'end'].indexOf(chartConfig.legend_align) !== -1 ? chartConfig.legend_align : 'start';
+
+                                    var yUnit = chartConfig.y_unit || '';
+                                    var yLabel = chartConfig.y_label || '';
+                                    var yTitle = '';
+                                    if (yLabel && yUnit) yTitle = yLabel + ' (' + yUnit + ')';
+                                    else if (yLabel) yTitle = yLabel;
+                                    else if (yUnit) yTitle = yUnit;
+                                    var y2Unit = chartConfig.y2_unit || '';
+                                    var y2Label = chartConfig.y2_label || '';
+                                    var y2Title = '';
+                                    if (y2Label && y2Unit) y2Title = y2Label + ' (' + y2Unit + ')';
+                                    else if (y2Label) y2Title = y2Label;
+                                    else if (y2Unit) y2Title = y2Unit;
+                                    var hasRightAxis = datasets.some(function (d) { return d.yAxisID === 'y1'; });
+                                    var xTickMode = String(chartConfig.x_tick || '').toLowerCase();
+
+                                    var chartDatasets = datasets;
+                                    if (chartType === 'scatter') {
+                                        chartDatasets = datasets.map(function (ds) {
+                                            if (ds.type && ds.type !== 'scatter') return ds;
+                                            return {
+                                                type: 'scatter',
+                                                yAxisID: ds.yAxisID || 'y',
+                                                _unit: ds._unit || '',
+                                                label: ds.label,
+                                                data: ds.data.map(function (val, idx) {
+                                                    return Number.isFinite(val) ? { x: labels[idx], y: val } : null;
+                                                }).filter(function (p) { return p !== null; }),
+                                                borderColor: ds.borderColor,
+                                                backgroundColor: ds.borderColor,
+                                                showLine: false,
+                                                pointRadius: 3,
+                                                pointHoverRadius: 4
+                                            };
+                                        });
+                                    }
+
+                                    if (!showTable) {
+                                        block.style.display = 'none';
+                                    }
+
+                                    new Chart(chartCanvas, {
+                                        type: chartType,
+                                        data: {
+                                            labels: labels,
+                                            datasets: chartDatasets
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            maintainAspectRatio: true,
+                                            scales: {
+                                                x: {
+                                                    type: chartType === 'scatter' ? 'category' : undefined,
+                                                    grid: { display: showGridlines },
+                                                    border: { display: false },
+                                                    ticks: {
+                                                        maxRotation: 0,
+                                                        autoSkip: true,
+                                                        callback: function (value, index) {
+                                                            if (xTickMode !== 'month') return this.getLabelForValue(value);
+                                                            var current = new Date(labels[index]);
+                                                            if (isNaN(current.getTime())) return labels[index];
+                                                            var currentLabel = current.toLocaleString('en-US', { month: 'short' });
+                                                            if (index === 0) return currentLabel;
+                                                            var prev = new Date(labels[index - 1]);
+                                                            if (isNaN(prev.getTime())) return currentLabel;
+                                                            var sameMonth = current.getFullYear() === prev.getFullYear() && current.getMonth() === prev.getMonth();
+                                                            return sameMonth ? '' : currentLabel;
+                                                        }
+                                                    }
+                                                },
+                                                y: {
+                                                    beginAtZero: false,
+                                                    grid: { display: showGridlines },
+                                                    border: { display: false },
+                                                    ticks: { display: showYTicks },
+                                                    title: {
+                                                        display: showAxisTitles && !!yTitle,
+                                                        text: yTitle
+                                                    }
+                                                },
+                                                y1: {
+                                                    display: hasRightAxis,
+                                                    position: 'right',
+                                                    beginAtZero: false,
+                                                    grid: { display: false },
+                                                    border: { display: false },
+                                                    ticks: { display: showYTicks },
+                                                    title: {
+                                                        display: showAxisTitles && !!y2Title,
+                                                        text: y2Title
+                                                    }
+                                                }
+                                            },
+                                            plugins: {
+                                                legend: { display: !insideBottomRightLegend, position: legendPosition, align: legendAlign },
+                                                title: {
+                                                    display: showTitle && !!chartConfig.title,
+                                                    text: chartConfig.title || ''
+                                                },
+                                                tooltip: {
+                                                    callbacks: {
+                                                        label: function (ctx) {
+                                                            var label = ctx.dataset.label ? ctx.dataset.label + ': ' : '';
+                                                            var value = (ctx.parsed && typeof ctx.parsed.y !== 'undefined') ? ctx.parsed.y : ctx.raw;
+                                                            if (Number.isFinite(value)) {
+                                                                value = (Math.round(value * 10) / 10).toFixed(1);
+                                                            }
+                                                            var unit = (ctx.dataset && typeof ctx.dataset._unit === 'string') ? ctx.dataset._unit : '';
+                                                            return unit ? (label + value + ' ' + unit) : (label + value);
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    });
+
+                                    if (insideBottomRightLegend && chartWrap) {
+                                        var existingLegend = chartWrap.querySelector('.csv-chart-legend');
+                                        if (existingLegend) existingLegend.remove();
+
+                                        var legendEl = document.createElement('div');
+                                        legendEl.className = 'csv-chart-legend';
+
+                                        chartDatasets.forEach(function (ds) {
+                                            var item = document.createElement('div');
+                                            item.className = 'csv-chart-legend-item';
+
+                                            var swatch = document.createElement('span');
+                                            swatch.className = 'csv-chart-legend-swatch';
+                                            swatch.style.backgroundColor = ds.borderColor || '#333';
+
+                                            var label = document.createElement('span');
+                                            label.className = 'csv-chart-legend-label';
+                                            label.textContent = ds.label || '';
+
+                                            item.appendChild(swatch);
+                                            item.appendChild(label);
+                                            legendEl.appendChild(item);
+                                        });
+
+                                        chartWrap.appendChild(legendEl);
+                                    }
+                                } else {
+                                    chartWrap.style.display = 'none';
+                                }
+                            }
+                        })
+                        .catch(function () {
+                            statusEl.textContent = 'Could not load CSV: ' + url;
+                            statusEl.classList.add('error');
+                            if (chartWrap) chartWrap.style.display = 'none';
+                        });
+                });
+            })();
+        </script>
+        {% endif %}
+
         {% if page.math %}
         <script>
             MathJax = {
@@ -100,7 +938,7 @@
             "name": "{{ page.title }}",
             "headline": "{{ page.subtitle }}",
             "description": "{{ page.description }}",
-            "image": "{{ page.image }}",
+            "image": "{{ schema_image }}",
             "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
             "articleBody": "{{ content | strip_html | xml_escape | textilize }}",
             "wordcount": "{{ content | number_of_words }}",
@@ -110,17 +948,8 @@
             "dateModified": "{{ page.date | date: '%Y-%m-%d/' }}",
             "author": {
                 "@type": "Person",
-                "name": "{{ author.display_name }}",
-                {% if author.photo %}
-                "image": "{{ author.photo }}",
-                {% else %}
-                "image": {{ "/assets/img/user.jpg" | prepend: site.baseurl | prepend: site.url }},
-                {% endif %}
-                "jobTitle": "{{ author.position }}",
-                "url": "{{ author.url | prepend: site.baseurl | prepend: site.url }}",
-                "sameAs": [
-                    {{ author_urls | split: "," | join: "," }}
-                ]
+                "name": "{{ schema_author_name }}",
+                "url": "{{ schema_author_url }}"
             },
             "publisher": {
                 "@type": "Organization",
@@ -128,7 +957,7 @@
                 "url": "{{ site.url }}{{site.baseurl}}/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "{{ site.url }}{{site.baseurl}}/assets/img/blog-image.png",
+                    "url": "{{ site.url }}{{site.baseurl}}/assets/img/_blog-image.png",
                     "width": "600",
                     "height": "315"
                 }

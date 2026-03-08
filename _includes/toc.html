@@ -1,1 +1,11 @@
-<!-- Add your table of contents here -->
+{% if page.toc == true %}
+  {% assign toc_title = page.toc_title | default: "Contents" %}
+  {% assign toc_source = page.content %}
+  {% assign toc_html = toc_source | toc_only | strip %}
+  {% if toc_html != "" and toc_html contains "<li" %}
+    <nav class="post-toc" aria-label="Table of contents">
+      <h2 class="post-toc-title">{{ toc_title }}</h2>
+      {{ toc_html }}
+    </nav>
+  {% endif %}
+{% endif %}

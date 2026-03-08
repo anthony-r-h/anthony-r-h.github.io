@@ -1,10 +1,10 @@
 .search-wrapper {
   position: fixed;
-  top: 30px;
+  top: rem(30px);
   width: 100%;
   padding-right: 5%;
   padding-left: 5%;
-  transform: translateY(-200px);
+  transform: translateY(rem(-200px));
   z-index: 19;
 
   &.active {
@@ -16,7 +16,7 @@
   position: relative;
   top: 0;
   width: 100%;
-  transform: translateX(-200px);
+  transform: translateX(rem(-200px));
   transition: all 200ms 100ms cubic-bezier(0, 0.6, 0.4, 1);
   opacity: 0;
   z-index: 19;
@@ -32,10 +32,6 @@
     border: 0;
     border-radius: rem(20px);
     padding: rem(5px) rem(25px);
-    outline: 0;
-  }
-
-  &:focus {
     outline: 0;
   }
 
@@ -55,7 +51,7 @@
     list-style-type: none;
 
     @include media("<sm") {
-      height: 380px;
+      height: rem(380px);
       overflow: scroll;
     }
 
@@ -73,17 +69,6 @@
       }
     }
 
-    .entry-category {
-      text-transform: uppercase;
-      background-color: $themeColor;
-      margin-right: rem(5px);
-      height: rem(20px);
-      border-radius: rem(10px);
-      font-size: rem(12px);
-      padding: rem(2px) rem(8px);
-      color: #ffffff;
-    }
-
     a {
       color: $accentDark;
       text-decoration: none;
@@ -95,11 +80,15 @@
       line-height: rem(25px);
 
       &:hover {
-        color: $themeColor;
-        .entry-category {
-          color: #ffffff;
-        }
+        color: $accentDark;
+        opacity: 0.85;
       }
+    }
+
+    .search-no-results {
+      color: $accentDark;
+      padding: rem(15px) 0;
+      margin: 0;
     }
   }
 
@@ -113,7 +102,7 @@
     padding: rem(5px);
     fill: $accentDark;
     background-color: $themeColor;
-    border-radius: 13px;
+    border-radius: rem(13px);
     margin: rem(7px);
     cursor: pointer;
     outline: 0;

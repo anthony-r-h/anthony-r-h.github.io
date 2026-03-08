@@ -7,13 +7,14 @@ body {
   background-color: $primaryDark;
   padding: rem(10px) rem(15px);
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
   // transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
 
   @include media(">=sm") {
-    padding: rem(15px) rem(0px);
+    padding: rem(15px) 0;
   }
 
   .logo {
@@ -40,19 +41,6 @@ body {
         width: rem(205px);
       }
     }
-  }
-
-  .version {
-    color: $accentDark;
-    font-size: rem(10px);
-    font-weight: normal;
-    line-height: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    transform: translateX(110%);
-    opacity: 0.3;
   }
 
   .icon-menu {
@@ -88,7 +76,7 @@ body {
 
 }
 
-body.main-page {
+body.header-on-dark {
   background-color: #1c3329;
 
   .bar-header {
@@ -96,9 +84,9 @@ body.main-page {
   }
 }
 
-body.light:not(.main-page) {
+body.header-on-light.light {
   .bar-header {
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 rem(1px) rem(1px) rgba(0, 0, 0, 0.1);
     background-color: $contentBg;
 
     .icon-search,
@@ -106,8 +94,7 @@ body.light:not(.main-page) {
       fill: $themeColor;
     }
 
-    .logo a,
-    .version {
+    .logo a {
       color: $themeColor;
     }
   }
