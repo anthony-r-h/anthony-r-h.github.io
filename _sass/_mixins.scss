@@ -49,3 +49,25 @@
     clear: both;
   }
 }
+
+@mixin tagPillLinks(
+  $text-color: $accentDark,
+  $border-color: $accentDark,
+  $hover-text-color: $primaryDark,
+  $hover-bg: $accentDark
+) {
+  height: rem(30px);
+  line-height: rem(26px);
+  color: $text-color;
+  padding: 0 rem(10px);
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 rem(10px) rem(10px) 0;
+
+  &:hover {
+    color: $hover-text-color;
+    background: $hover-bg;
+    border-color: $hover-bg;
+  }
+}

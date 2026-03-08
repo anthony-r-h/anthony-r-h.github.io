@@ -1,5 +1,54 @@
-show_time_bar: false
-show_modal_on_exit: false
-show_modal_on_finish_post: false
 two_columns_layout: false
-show_get_theme_btn: false
+
+# Post page UI defaults
+# Any post can override these values in front matter with `post_*` keys.
+post_ui:
+  content_max_width: "1080px"
+  content_padding_mobile: "20px"
+  content_padding_desktop: "20px"
+  font_size_mobile: "17px"
+  font_size_desktop: "20px"
+  line_height_mobile: "30px"
+  line_height_desktop: "40px"
+  title_size_mobile: "36px"
+  title_size_desktop: "50px"
+  section_title_size_mobile: "32px"
+  section_title_size_desktop: "42px"
+  section_heading_space_mobile: "44px"
+  section_heading_space_desktop: "52px"
+  heading_body_gap_mobile: "12px"
+  heading_body_gap_desktop: "14px"
+  paragraph_spacing_mobile: "24px"
+  paragraph_spacing_desktop: "28px"
+  list_spacing_mobile: "24px"
+  list_spacing_desktop: "28px"
+  list_item_spacing_mobile: "10px"
+  list_item_spacing_desktop: "12px"
+  list_indent: "2rem"
+  section_scroll_margin_mobile: "110px"
+  section_scroll_margin_desktop: "130px"
+  toc_spacing_mobile: "18px"
+  toc_spacing_desktop: "22px"
+  toc_item_spacing_mobile: "8px"
+  toc_item_spacing_desktop: "10px"
+  subtitle_color: "#4d4d4d"
+  meta_color: "#4d4d4d"
+  meta_icon_color: "#4d4d4d"
+  link_hover_color: "#a9a9a9"
+  tag_color: "#1c3329"
+  tag_hover_bg: "#1c3329"
+  tag_hover_color: "#efe7de"
+  csv_table:
+    page_size: 20
+    max_height: "520px"
+    font_size: "14px"
+    chart_aspect_ratio: "16 / 9"
+    chart_show_gridlines: false
+    background_color: "#efe7de"
+    text_color: "#333333"
+    border_color: "#b7b0a8"
+    header_bg: "#1c3329"
+    header_color: "#efe7de"
+    row_hover_bg: "#e2dbd2"
+    status_color: "#4d4d4d"
+

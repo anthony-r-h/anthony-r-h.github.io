@@ -2,43 +2,6 @@
   display: flex;
   align-items: center;
 
-  &.pagination-home {
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-
-    a.next,
-    a.previous {
-      width: rem(40px);
-      height: rem(40px);
-
-      svg {
-        width: calc(100% - 20px);
-        height: calc(100% - 20px);
-        fill: #fff;
-        margin: 10px;
-        transition: all 0.3s ease;
-      }
-
-      &:hover > svg {
-        fill: $themeColor;
-      }
-    }
-
-    a.previous {
-      svg {
-        transform: rotate(180deg);
-      }
-    }
-
-    .page_number {
-      color: #fff;
-      font-size: rem(17px);
-      line-height: rem(22px);
-      margin: 0 rem(10px);
-    }
-  }
-
   &.pagination-post {
     justify-content: space-between;
     padding: rem(15px) rem(20px) rem(30px);

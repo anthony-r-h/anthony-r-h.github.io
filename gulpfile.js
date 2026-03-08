@@ -50,9 +50,16 @@ function config() {
 function jekyll(done) {
   notify('Building Jekyll...');
   let bundle = process.platform === "win32" ? "bundle.bat" : "bundle";
-  return cp
-    .spawn(bundle, ['exec', 'jekyll build'], { stdio: 'inherit' })
-    .on('close', done);
+  const child = cp.spawn(bundle, ['exec', 'jekyll build'], { stdio: 'inherit' });
+  child.on('error', done);
+  child.on('close', (code) => {
+    if (code === 0) {
+      done();
+      return;
+    }
+    done(new Error(`Jekyll build failed with exit code ${code}`));
+  });
+  return child;
 }
 
 /**
@@ -193,7 +200,7 @@ function watch() {
   gulp.watch('src/img/**/*', gulp.series(images, config, jekyll, reload));
 
   // Watch html/md files, rebuild config, run Jekyll & reload BrowserSync
-  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*', '_authors/*', 'pages/*', 'category/*'], gulp.series(config, jekyll, reload));
+  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*', 'pages/*'], gulp.series(config, jekyll, reload));
 }
 
 /**
