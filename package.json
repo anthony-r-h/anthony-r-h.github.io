@@ -1,29 +1,19 @@
 {
-  "name": "jekflix-template",
+  "name": "local-nonsatiation-site",
   "version": "3.1.2",
-  "description": "A Jekyll theme inspired by Netflix",
+  "description": "Personal project repository site built with Jekyll and Gulp",
   "type": "module",
   "main": "gulpfile.js",
-  "homepage": "https://github.com/thiagorossener/jekflix-template.git#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thiagorossener/jekflix-template.git"
-  },
+  "private": true,
   "keywords": [
     "jekyll",
-    "template",
-    "theme",
     "blog",
-    "netlify"
+    "personal-site"
   ],
-  "author": "Thiago Rossener",
+  "author": "Anthony",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thiagorossener/jekflix-template/issues"
-  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "child_process": "^1.0.2",
     "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -35,18 +25,14 @@
     "gulp-uglify": "^3.0.0",
     "gulp-yaml": "^2.0.4",
     "json-sass": "^1.3.5",
-    "lodash": "^4.17.21",
-    "lodash.merge": "^4.6.2",
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {
-    "node": "^16"
-  },
-  "directories": {
-    "doc": "docs"
+    "node": ">=16"
   },
   "dependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp",
+    "build": "gulp build"
   }
 }

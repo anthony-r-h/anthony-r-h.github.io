@@ -2,11 +2,11 @@
     $.fn.simpleJekyllSearch = function(options) {
         var settings = $.extend({
             jsonFile        : '/search.json',
-            jsonFormat      : 'title,tags,categories,url,date',
-            template : '<li><article><a href="{url}"><span class="entry-category">{categories}</span> {title} <span class="entry-date"><time datetime="{date}">{date}</time></span></a></article></li>',
+            jsonFormat      : 'title,tags,categories,url,date,description',
+            template : '<li><article><a href="{url}">{title}<span class="entry-date"><time datetime="{date}">{date}</time></span></a></article></li>',
             searchResults   : '.search-results',
             limit           : '10',
-            noResults       : '<p>Oh no! We didn\'t find anything :(</p>'
+            noResults       : '<p class="search-no-results">No results found.</p>'
         }, options);
 
         var properties = settings.jsonFormat.split(',');
@@ -50,7 +50,7 @@
 
             $.each(jsonData,function(i,entry){
                 for(var i=0;i<properties.length;i++)
-                    if(entry[properties[i]] !== undefined && entry[properties[i]].toLowerCase().indexOf(str.toLowerCase()) !== -1){
+                    if(entry[properties[i]] !== undefined && String(entry[properties[i]]).toLowerCase().indexOf(str.toLowerCase()) !== -1){
                         matches.push(entry);
                         i=properties.length;
                     }
@@ -69,7 +69,7 @@
                         var output=settings.template;
                         for(var i=0;i<properties.length;i++){
                             var regex = new RegExp("\{" + properties[i] + "\}", 'g');
-                            output = output.replace(regex, entry[properties[i]]);
+                            output = output.replace(regex, entry[properties[i]] !== undefined ? entry[properties[i]] : '');
                         }
                         searchResults.append($(output));
                     }

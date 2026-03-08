@@ -2,17 +2,18 @@
 
 .post {
   position: relative;
-  top: rem(30px);
+  top: 0;
+  padding-top: rem(80px);
 
   @include media(">=sm") {
-    top: rem(50px);
+    padding-top: rem(100px);
   }
 }
 
 
 .post-content {
-  overflow-x: auto;
-  padding: 0px;
+  overflow-x: visible;
+  padding: 0;
 
   &.fullwidth {
     padding: rem(60px) rem(10px) 0;
@@ -49,33 +50,54 @@
   ul,
   ol,
   iframe {
-    @include center(rem(1080px));
+    @include center(var(--post-content-max-width, 1080px));
     @include mainFont(400);
     font-size: rem(17px);
+    font-size: var(--post-font-size-mobile, 17px);
     line-height: rem(30px);
+    line-height: var(--post-line-height-mobile, 30px);
     letter-spacing: 0.025rem;
-    padding: rem(0px) rem(20px);
-    margin: rem(0px) auto;
+    max-width: var(--post-content-max-width, 1080px);
+    padding: 0 rem(20px);
+    padding-left: var(--post-content-padding-mobile, 20px);
+    padding-right: var(--post-content-padding-mobile, 20px);
+    margin: 0 auto;
 
     @include media(">=sm") {
       font-size: rem(20px);
+      font-size: var(--post-font-size-desktop, 20px);
       line-height: rem(40px);
-      margin: 0rem auto;
+      line-height: var(--post-line-height-desktop, 40px);
+      padding-left: var(--post-content-padding-desktop, 20px);
+      padding-right: var(--post-content-padding-desktop, 20px);
+      margin: 0 auto;
     }
   }
 
   p {
-    margin: rem(35px) auto;
+    margin: var(--post-paragraph-spacing-mobile, 24px) auto;
+
+    @include media(">=sm") {
+      margin: var(--post-paragraph-spacing-desktop, 28px) auto;
+    }
   }
 
   h1.post-title {
+    font-size: rem(36px);
+    font-size: var(--post-title-size-mobile, 36px);
     line-height: 1.2;
     margin: rem(5px) auto rem(10px);
     padding-top: 0;
+
+    @include media(">=sm") {
+      font-size: rem(50px);
+      font-size: var(--post-title-size-desktop, 50px);
+    }
   }
 
   p.post-subtitle {
     color: darken($lightGray, 70%);
+    color: var(--post-subtitle-color, #{darken($lightGray, 70%)});
     font-size: rem(17px);
     margin: rem(10px) auto;
     line-height: 1.6;
@@ -101,6 +123,7 @@
     font-size: rem(13px);
     letter-spacing: 0;
     color: darken($lightGray, 30%);
+    color: var(--post-meta-color, #{darken($lightGray, 30%)});
     margin: rem(20px) auto;
 
     @include media(">=sm") {
@@ -141,16 +164,25 @@
 
   // List properties
   li {
-    //padding: rem(10px) 0;
-    padding: 0rem;
+    padding: 0;
+    margin: var(--post-list-item-spacing-mobile, 10px) 0;
+
+    @include media(">=sm") {
+      margin: var(--post-list-item-spacing-desktop, 12px) 0;
+    }
 
     ul {
-      margin-bottom: 0rem;
+      margin-top: var(--post-list-item-spacing-mobile, 10px);
+      margin-bottom: 0;
+
+      @include media(">=sm") {
+        margin-top: var(--post-list-item-spacing-desktop, 12px);
+      }
     }
 
     p {
-      margin-bottom: 0rem;
-      margin-top: 0rem;
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 
@@ -160,7 +192,7 @@
     text-decoration: underline;
 
     &:hover {
-      color: #a9a9a9;
+      color: var(--post-link-hover-color, #a9a9a9);
     }
   }
 
@@ -176,19 +208,24 @@
   h5,
   h6 {
     @include mainFont(700);
-    margin-top: 0;
-    padding-top: rem(50px);
+    margin-top: var(--post-section-heading-space-mobile, 44px);
+    margin-bottom: var(--post-heading-body-gap-mobile, 12px);
+    padding-top: 0;
+    scroll-margin-top: var(--post-section-scroll-margin-mobile, 110px);
 
     @include media(">=sm") {
-      margin-top: 0;
-      padding-top: rem(60px);
+      margin-top: var(--post-section-heading-space-desktop, 52px);
+      margin-bottom: var(--post-heading-body-gap-desktop, 14px);
+      scroll-margin-top: var(--post-section-scroll-margin-desktop, 130px);
     }
   }
   h1 {
-    font-size: rem(36px);
+    font-size: rem(32px);
+    font-size: var(--post-section-title-size-mobile, 32px);
     line-height: 1.4;
     @include media(">=sm") {
-      font-size: rem(50px);
+      font-size: rem(42px);
+      font-size: var(--post-section-title-size-desktop, 42px);
     }
   }
 
@@ -212,7 +249,12 @@
   ul,
   ol {
     // this is the indent of a list
-    padding-left: 2rem;
+    padding-left: var(--post-list-indent, 2rem);
+    margin: var(--post-list-spacing-mobile, 24px) auto;
+
+    @include media(">=sm") {
+      margin: var(--post-list-spacing-desktop, 28px) auto;
+    }
   }
 
   ul.post-list {
@@ -224,11 +266,11 @@
   }
 
   blockquote {
-    @include center(rem(1080px));
+    @include center(var(--post-content-max-width, 1080px));
     border-left: rem(5px) solid $texts;
     padding: 0 rem(10px);
     margin: rem(30px) auto;
-    width: 90%;
+    width: 100%;
 
     @include media(">=sm") {
       width: 100%;
@@ -249,7 +291,7 @@
   hr {
     @include center(rem(760px));
     border: 1px solid $lightGray;
-    margin: 50px auto;
+    margin: rem(50px) auto;
   }
 
   pre {
@@ -302,7 +344,7 @@
       display: none;
       height: rem(16px);
       left: 0;
-      margin-top: rem(30px);
+      margin-top: 0;
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -382,7 +424,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 38px;
+  height: rem(38px);
   padding: rem(30px) 0;
   border-bottom: 1px solid $themeColor;
   background-color: #fff;
@@ -419,287 +461,350 @@
   }
 }
 
-/* Time bar */
-
-.time-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: -100%;
-  display: block;
-  width: 100%;
-  padding: rem(10px) rem(20px) rem(5px);
-  transition: bottom 0.5s;
-  background-color: rgba(0, 0, 0, 0.85);
-
-  @include media(">=sm") {
-    padding: rem(16px) rem(20px) rem(9px);
-  }
-
-  .bar {
-    display: block;
-    width: 100%;
-    padding: rem(8px) rem(60px);
-    &:after {
-      clear: both;
-      display: block;
-      content: "";
-    }
-  }
-
-  .completed {
-    float: left;
-    display: block;
-    height: rem(5px);
-    background-color: $themeColor;
-  }
-
-  .remaining {
-    float: left;
-    display: block;
-    height: rem(5px);
-    background-color: #ccc;
-  }
-
-  .time-completed,
-  .time-remaining {
-    @include mainFont(400);
-    font-size: rem(18px);
-    color: #fff;
-  }
-
-  .time-completed {
-    float: left;
-  }
-
-  .time-remaining {
-    float: right;
-  }
-}
-
-/* Recommendation */
-
-.recommendation {
-  @include mainFont(400);
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: -100%;
-  display: block;
-  width: 100%;
-  padding: rem(10px);
-  transition: bottom 0.5s;
-  background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: space-between;
-
-  @include media(">=sm") {
-    padding: rem(15px);
-  }
-
-  .message {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: rem(16px);
-    color: #fff;
-    padding-right: rem(20px);
-
-    @include media(">=sm") {
-      font-size: rem(20px);
-    }
-
-    strong {
-      display: block;
-      margin: rem(10px) 0;
-    }
-
-    button {
-      background-color: transparent;
-      border: 0;
-      color: #fff;
-      cursor: pointer;
-      display: inline-block;
-      font-size: rem(13px);
-      text-decoration: none;
-      outline: 0;
-
-      @include media(">=sm") {
-        font-size: rem(15px);
-      }
-    }
-
-    svg {
-      fill: #fff;
-      width: rem(22px);
-      height: rem(22px);
-      transform: rotate(-90deg);
-      border: 1px solid #fff;
-      border-radius: 50%;
-      padding: 5px;
-      margin-right: 10px;
-      vertical-align: middle;
-
-      @include media(">=sm") {
-        width: rem(28px);
-        height: rem(28px);
-      }
-    }
-
-    span {
-      vertical-align: middle;
-    }
-  }
-  .post-preview {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #000;
-    padding: rem(5px);
-    max-width: 35%;
-    text-decoration: none;
-
-    @include media(">=sm") {
-      flex-direction: row;
-      padding: rem(5px) rem(50px) rem(5px) rem(5px);
-      max-width: 50%;
-    }
-
-    &:hover {
-      .title {
-        color: rgba(255, 255, 255, 0.5);
-      }
-
-      .image > img {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-      }
-    }
-
-    .image,
-    .image > img {
-      display: block;
-      width: 100%;
-      max-width: rem(200px);
-      transition: all 0.3s;
-    }
-
-    .title {
-      font-size: rem(16px);
-      color: #fff;
-      margin: rem(5px) 0;
-      transition: all 0.3s;
-      @include media(">=sm") {
-        font-size: rem(23px);
-        margin: 0 0 0 rem(20px);
-      }
-    }
-  }
-}
-
 .icon-clock,
 .icon-calendar {
   width: rem(14px);
   height: rem(14px);
   fill: darken($lightGray, 30%);
+  fill: var(--post-meta-icon-color, #{darken($lightGray, 30%)});
   vertical-align: middle;
   margin-right: rem(3px);
 }
 
 /* Tags */
 
-.post-content {
-  .tags {
-    @include center(rem(1080px));
-    @include mainFont(400);
+.post-content .tags {
+  @include center(var(--post-content-max-width, 1080px));
+  @include mainFont(400);
+  margin: auto;
+  margin-top: rem(10px);
+  letter-spacing: 0.025rem;
+  line-height: rem(40px);
+  padding: 1.5rem;
+
+  a {
+    color: var(--post-tag-color, #{$primaryDark});
+    border-color: var(--post-tag-color, #{$primaryDark});
+    @include tagPillLinks(
+      var(--post-tag-color, #{$primaryDark}),
+      var(--post-tag-color, #{$primaryDark}),
+      var(--post-tag-hover-color, #{$accentDark}),
+      var(--post-tag-hover-bg, #{$primaryDark})
+    );
+    text-decoration: none;
+  }
+}
+
+.post-content .tag-title {
+  @include mainFont(300);
+  @include center(var(--post-content-max-width, 1080px));
+  font-size: rem(30px);
+  margin-top: rem(20px);
+  padding: 0 rem(10px);
+
+  span {
+    padding: rem(3px) rem(10px);
+    background-color: $themeColor;
+    border-radius: rem(5px);
+    color: #fff;
+  }
+
+  @include media(">=sm") {
+    font-size: rem(22px);
+    margin-top: rem(80px);
+    padding: 0;
+  }
+}
+
+.post-content a.post-anchor {
+  display: block;
+  height: rem(40px);
+
+  @include media(">=sm") {
+    height: rem(10px);
+  }
+}
+
+.post-content ul.post-list {
+  list-style: none;
+  margin: rem(25px) auto 0;
+  padding: 0 rem(10px);
+
+  @include media(">=sm") {
+    padding: 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darken($lightGray, 10%);
+    padding: rem(10px) 0;
+    text-decoration: none;
     font-size: rem(18px);
-    //margin: 0 auto rem(29px);
-    margin: auto;
-    margin-top: rem(10px);
-    letter-spacing: 0.025rem;
-    line-height: rem(40px);
-    //padding: 0 rem(10px);
-    padding: 1.5rem;
-    @include media(">=sm") {
-      font-size: rem(20px);
-      //padding: 29;
+  }
+
+  .entry-date {
+    float: right;
+    @include media("<sm") {
+      display: none;
     }
+  }
+}
 
-    a {
-      font-size: rem(14px);
-      color: $primaryDark;
-      display: inline-block;
-      border: 1px solid $primaryDark;
-      border-radius: rem(5px);
-      padding: 0 rem(10px);
-      margin-right: rem(2px);
-      margin-bottom: rem(8px);
-      text-decoration: none;
+/* CSV tables */
 
-      @include media(">=sm") {
-        border-width: 2px;
-      }
+.post-content .post-csv-tables {
+  @include center(var(--post-content-max-width, 1080px));
+  margin: rem(40px) auto;
+  padding-left: var(--post-content-padding-mobile, 20px);
+  padding-right: var(--post-content-padding-mobile, 20px);
+  max-width: var(--post-content-max-width, 1080px);
 
-      &:hover {
-        color: $accentDark;
-        background-color: $primaryDark;
-      }
+  @include media(">=sm") {
+    padding-left: var(--post-content-padding-desktop, 20px);
+    padding-right: var(--post-content-padding-desktop, 20px);
+  }
+}
+
+.post-content .csv-table-block {
+  margin: rem(24px) auto rem(38px);
+}
+
+.post-content .csv-table-title {
+  @include mainFont(700);
+  margin: 0 0 rem(10px);
+  padding: 0;
+  font-size: rem(24px);
+  line-height: 1.3;
+  color: var(--csv-table-text-color, #{$texts});
+}
+
+.post-content .csv-table-status {
+  margin: 0 0 rem(12px);
+  padding: 0;
+  color: var(--csv-table-status-color, #{$texts});
+  font-size: rem(14px);
+}
+
+.post-content .csv-table-status.error {
+  color: #a63535;
+}
+
+.post-content .csv-table-grid .gridjs-wrapper {
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.post-content .csv-table-grid .gridjs-head {
+  box-shadow: none;
+  margin-bottom: rem(10px);
+}
+
+.post-content .csv-table-grid .gridjs-container {
+  @include mainFont(400);
+  font-size: var(--post-font-size-mobile, 17px);
+  line-height: var(--post-line-height-mobile, 30px);
+  color: var(--csv-table-text-color, #{$texts});
+
+  @include media(">=sm") {
+    font-size: var(--post-font-size-desktop, 20px);
+    line-height: var(--post-line-height-desktop, 40px);
+  }
+}
+
+.post-content .csv-table-grid .gridjs-search {
+  float: none;
+  margin-bottom: rem(10px);
+}
+
+.post-content .csv-table-grid .gridjs-search-input {
+  border: none;
+  border-radius: rem(6px);
+  background: var(--csv-table-bg, #fff);
+  color: var(--csv-table-text-color, #{$texts});
+  box-shadow: none;
+  width: 100%;
+  max-width: rem(420px);
+}
+
+.post-content .csv-table-grid .gridjs-table {
+  background: var(--csv-table-bg, #fff);
+  color: var(--csv-table-text-color, #{$texts});
+  font-size: inherit;
+}
+
+.post-content .csv-table-grid th.gridjs-th {
+  background: var(--csv-table-header-bg, #{$primaryDark});
+  color: var(--csv-table-header-color, #{$accentDark});
+  border: none;
+  font-weight: 700;
+  font-size: inherit;
+  padding: rem(8px) rem(10px);
+  white-space: nowrap;
+}
+
+.post-content .csv-table-grid td.gridjs-td {
+  background: var(--csv-table-bg, #fff);
+  color: var(--csv-table-text-color, #{$texts});
+  border: none;
+  padding: rem(7px) rem(10px);
+  line-height: inherit;
+  vertical-align: top;
+}
+
+.post-content .csv-table-grid tr:hover td.gridjs-td {
+  background: var(--csv-table-row-hover-bg, #f5f5f5);
+}
+
+.post-content .csv-table-grid .gridjs-footer {
+  border-top: none;
+  background: var(--csv-table-bg, #fff);
+  box-shadow: none;
+}
+
+.post-content .csv-table-grid .gridjs-pagination {
+  color: var(--csv-table-text-color, #{$texts});
+  font-size: rem(13px);
+}
+
+.post-content .csv-table-grid .gridjs-pages button {
+  border: none;
+  background: var(--csv-table-bg, #{$accentDark});
+  color: var(--csv-table-text-color, #{$texts});
+  border-radius: rem(4px);
+  min-width: rem(34px);
+  box-shadow: none;
+  background-color: var(--csv-table-bg, #{$accentDark}) !important;
+  color: var(--csv-table-text-color, #{$texts}) !important;
+}
+
+.post-content .csv-table-grid .gridjs-pages button.gridjs-currentPage {
+  background: var(--csv-table-header-bg, #{$primaryDark});
+  color: var(--csv-table-header-color, #{$accentDark});
+}
+
+.post-content .csv-table-grid button.gridjs-sort {
+  color: var(--csv-table-bg, #{$accentDark}) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.post-content .csv-table-grid button.gridjs-sort:hover {
+  color: var(--csv-table-bg, #{$accentDark}) !important;
+  opacity: 0.9;
+}
+
+.post-content .csv-table-grid button.gridjs-sort svg,
+.post-content .csv-table-grid button.gridjs-sort svg * {
+  fill: var(--csv-table-bg, #{$accentDark}) !important;
+  stroke: var(--csv-table-bg, #{$accentDark}) !important;
+}
+
+.post-content .csv-table-grid .gridjs-th-content,
+.post-content .csv-table-grid .gridjs-td {
+  overflow-wrap: anywhere;
+}
+
+.post-content .csv-table-chart-wrap {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: var(--post-content-max-width, 1080px);
+  padding-left: var(--post-content-padding-mobile, 20px);
+  padding-right: var(--post-content-padding-mobile, 20px);
+
+  @include media(">=sm") {
+    padding-left: var(--post-content-padding-desktop, 20px);
+    padding-right: var(--post-content-padding-desktop, 20px);
+  }
+
+  box-sizing: border-box;
+  aspect-ratio: var(--csv-chart-aspect-ratio, 16 / 9);
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+}
+
+.post-content .csv-table-chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none !important;
+  outline: none !important;
+}
+
+.post-content .csv-chart-legend {
+  position: absolute;
+  right: rem(14px);
+  bottom: rem(12px);
+  background: rgba(239, 231, 222, 0.85);
+  border-radius: rem(6px);
+  padding: rem(6px) rem(8px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(4px);
+  pointer-events: none;
+}
+
+.post-content .csv-chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: rem(6px);
+  color: #1c3329;
+  font-size: rem(12px);
+  line-height: 1.2;
+}
+
+.post-content .csv-chart-legend-swatch {
+  width: rem(10px);
+  height: rem(10px);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Table of contents */
+
+.post-content .post-toc {
+  @include center(var(--post-content-max-width, 1080px));
+  margin: var(--post-toc-spacing-mobile, 18px) auto var(--post-paragraph-spacing-mobile, 24px);
+  padding-left: var(--post-content-padding-mobile, 20px);
+  padding-right: var(--post-content-padding-mobile, 20px);
+
+  @include media(">=sm") {
+    margin: var(--post-toc-spacing-desktop, 22px) auto var(--post-paragraph-spacing-desktop, 28px);
+    padding-left: var(--post-content-padding-desktop, 20px);
+    padding-right: var(--post-content-padding-desktop, 20px);
+  }
+
+  ul {
+    margin: var(--post-toc-item-spacing-mobile, 8px) 0 0;
+    padding-left: var(--post-list-indent, 2rem);
+    line-height: 1.45;
+
+    @include media(">=sm") {
+      margin-top: var(--post-toc-item-spacing-desktop, 10px);
     }
   }
 
-  .tag-title {
-    @include mainFont(300);
-    @include center(rem(1080px));
-    font-size: rem(30px);
-    margin-top: rem(20px);
-    padding: 0 rem(10px);
-
-    span {
-      padding: rem(3px) rem(10px);
-      background-color: $themeColor;
-      border-radius: rem(5px);
-      color: #fff;
-    }
+  li {
+    margin: var(--post-toc-item-spacing-mobile, 8px) 0;
+    padding: 0;
 
     @include media(">=sm") {
-      font-size: rem(22px);
-      margin-top: rem(80px);
-      padding: 0;
+      margin: var(--post-toc-item-spacing-desktop, 10px) 0;
     }
   }
 
-  a.post-anchor {
-    display: block;
-    height: rem(40px);
-
-    @include media(">=sm") {
-      height: rem(10px);
-    }
+  a {
+    text-decoration: none;
   }
+}
 
-  ul.post-list {
-    list-style: none;
-    margin: rem(25px) auto 0;
-    padding: 0 rem(10px);
-
-    @include media(">=sm") {
-      padding: 0;
-    }
-
-    a {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid darken($lightGray, 10%);
-      padding: rem(10px) 0;
-      text-decoration: none;
-      font-size: rem(18px);
-    }
-
-    .entry-date {
-      float: right;
-      @include media("<sm") {
-        display: none;
-      }
-    }
-  }
+.post-content .post-toc-title {
+  margin: 0;
+  padding: 0;
+  font-size: rem(24px);
+  line-height: 1.25;
 }
