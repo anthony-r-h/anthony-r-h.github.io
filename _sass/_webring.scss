@@ -1,0 +1,131 @@
+.webring-page {
+  background:
+    radial-gradient(circle at 16px 16px, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 100%),
+    linear-gradient(180deg, #091247 0%, #32105d 48%, #6b147a 100%);
+  background-size: 32px 32px, 100% 100%;
+  color: #f7f2c8;
+
+  .content {
+    padding: 110px 18px 72px;
+  }
+
+  .bar-header,
+  .site-footer {
+    background: linear-gradient(90deg, #1237b7 0%, #c81b8b 100%);
+    box-shadow: 0 0 0 3px #f8ef6b;
+  }
+
+  .bar-header .logo a,
+  .bar-header svg,
+  .site-footer,
+  .site-footer a,
+  .site-footer svg {
+    color: #ffffff;
+    fill: currentColor;
+  }
+
+  .site-footer {
+    margin-top: 0;
+  }
+
+  .site-footer .footer-tagline {
+    color: #fff9bf;
+  }
+}
+
+.webring-shell {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.webring-card {
+  padding: 26px 22px;
+  border: 4px ridge #dfdfdf;
+  background:
+    linear-gradient(180deg, rgba(9, 18, 71, 0.94), rgba(43, 12, 73, 0.95)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0 8px, rgba(255, 255, 255, 0) 8px 16px);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14), 0 18px 42px rgba(0, 0, 0, 0.35);
+  color: #f7f2c8;
+  font-family: "Verdana", "Geneva", sans-serif;
+}
+
+.webring-card h1,
+.webring-card h2,
+.webring-card h3 {
+  color: #fff58a;
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+  line-height: 1.15;
+  text-shadow: 2px 2px 0 #d11f8c;
+}
+
+.webring-card h1 {
+  margin-top: 0;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+}
+
+.webring-card h2 {
+  margin-top: 1.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px dotted rgba(255, 245, 138, 0.5);
+}
+
+.webring-card h1,
+.webring-card h2,
+.webring-card h3,
+.webring-card h4,
+.webring-card h5,
+.webring-card h6 {
+  position: relative;
+
+  .anchor {
+    display: inline-block;
+    width: 0.95rem;
+    height: 0.95rem;
+    margin-right: 0.45rem;
+    vertical-align: baseline;
+    opacity: 0.55;
+  }
+
+  .anchor img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+.webring-card p,
+.webring-card li {
+  line-height: 1.75;
+}
+
+.webring-card ul {
+  padding-left: 1.4rem;
+}
+
+.webring-card li + li {
+  margin-top: 0.45rem;
+}
+
+.webring-card a {
+  color: #7df9ff;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+}
+
+.webring-card a:hover,
+.webring-card a:focus {
+  color: #fff58a;
+}
+
+.webring-card hr {
+  border: 0;
+  border-top: 2px dashed rgba(255, 245, 138, 0.45);
+  margin: 2rem 0;
+}
+
+@include media("<sm") {
+  .webring-card {
+    padding: 22px 16px;
+  }
+}
