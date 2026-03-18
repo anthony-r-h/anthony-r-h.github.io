@@ -33,6 +33,8 @@
   "dependencies": {},
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "preview": "node scripts/preview.mjs",
+    "preview:build": "npm run build && npm run preview"
   }
 }
