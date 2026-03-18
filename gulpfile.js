@@ -49,8 +49,11 @@ function config() {
  */
 function jekyll(done) {
   notify('Building Jekyll...');
-  let bundle = process.platform === "win32" ? "bundle.bat" : "bundle";
-  const child = cp.spawn(bundle, ['exec', 'jekyll build'], { stdio: 'inherit' });
+  const command = process.platform === "win32" ? "cmd" : "bundle";
+  const args = process.platform === "win32"
+    ? ['/c', 'bundle', 'exec', 'jekyll', 'build']
+    : ['exec', 'jekyll', 'build'];
+  const child = cp.spawn(command, args, { stdio: 'inherit' });
   child.on('error', done);
   child.on('close', (code) => {
     if (code === 0) {
