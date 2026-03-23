@@ -62,28 +62,75 @@ layout: main
       --list-description-color: {{ page.list_description_color | default: list_cfg.description_color | default: "#f2f2f2" }};
     {% endcapture %}
     <section class="row" style="{{ list_view_vars | strip_newlines | strip }}">
-        <ul class="section-post-list">
-            {% for post in filtered_posts %}
-                <li class="section-post-item">
-                    <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-                        {% include date.html date=post.date %}
-                    </time>
-                    <h2>
-                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </h2>
-                    {% if post.description %}
-                        <p>{{ post.description }}</p>
+        {% if page.planning_sections %}
+            {% assign planning_sections = "Ideation|Planning|In Progress|On Hold" | split: "|" %}
+            {% for section_name in planning_sections %}
+                {% assign section_key = section_name | downcase | replace: " ", "-" %}
+                {% assign section_posts = "" | split: "" %}
+
+                {% for post in filtered_posts %}
+                    {% assign raw_planning_tag = post.planning_tag | default: post.tags.first | default: "" %}
+                    {% assign planning_key = raw_planning_tag | downcase | strip | replace: "_", "-" | replace: " ", "-" %}
+
+                    {% unless planning_key == "ideation" or planning_key == "planning" or planning_key == "in-progress" or planning_key == "on-hold" %}
+                        {% assign planning_key = "ideation" %}
+                    {% endunless %}
+
+                    {% if planning_key == section_key %}
+                        {% assign section_posts = section_posts | push: post %}
                     {% endif %}
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            {% if tag != "" %}
-                                <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
-                            {% endif %}
+                {% endfor %}
+
+                <div class="section-post-group">
+                    <h2 class="section-post-group-title">{{ section_name }}</h2>
+                    <ul class="section-post-list">
+                        {% for post in section_posts %}
+                            <li class="section-post-item">
+                                <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                                    {% include date.html date=post.date %}
+                                </time>
+                                <h2>
+                                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                                </h2>
+                                {% if post.description %}
+                                    <p>{{ post.description }}</p>
+                                {% endif %}
+                                <div class="tags">
+                                    {% for tag in post.tags %}
+                                        {% if tag != "" %}
+                                            <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </li>
                         {% endfor %}
-                    </div>
-                </li>
+                    </ul>
+                </div>
             {% endfor %}
-        </ul>
+        {% else %}
+            <ul class="section-post-list">
+                {% for post in filtered_posts %}
+                    <li class="section-post-item">
+                        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                            {% include date.html date=post.date %}
+                        </time>
+                        <h2>
+                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </h2>
+                        {% if post.description %}
+                            <p>{{ post.description }}</p>
+                        {% endif %}
+                        <div class="tags">
+                            {% for tag in post.tags %}
+                                {% if tag != "" %}
+                                    <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     </section>
 </main>
 

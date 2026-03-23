@@ -4,7 +4,6 @@ title: "Github Pages and Jekyll Notes"
 subtitle: "" 
 category: Tech
 tags:
-  - Plan
   - Docs
   - Jekyll
 ---

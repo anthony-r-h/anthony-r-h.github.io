@@ -1,0 +1,10 @@
+---
+name: literature-extraction
+description: Extract claims, methods, assumptions, limitations, and reusable citations from academic papers. Do not use for prose polishing or final manuscript editing.
+---
+
+When invoked:
+1. Identify the paper's research question.
+2. Extract method, dataset, assumptions, and main findings.
+3. Separate direct evidence from interpretation.
+4. Output a compact note in the repository template.

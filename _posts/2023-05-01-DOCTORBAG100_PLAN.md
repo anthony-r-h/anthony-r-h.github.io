@@ -7,6 +7,7 @@ category: Leather
 tags:
   - Plan
   - DOCTORBAG100
+planning_tag: Planning
 ---
 
 
