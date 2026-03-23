@@ -1,0 +1,24 @@
+Tag in agents
+
+
+Use parallel subagents:
+- `project_lead` to define the synthesis structure
+- `lit_reviewer` to extract evidence from the source set
+- `writing_refiner` only after the evidence summary is complete
+
+Wait for all of them, then produce a merged plan.
+
+Spawn the `lit_reviewer` agent to review the papers in sources/behavioral/.
+Have it extract claims, methods, assumptions, and limitations.
+Wait for its summary, then hand the result to `summarizer`.
+
+
+
+
+If you want a clean answer:
+
+Use AGENTS.md for shared rules
+Use skills for reusable workflows/reference bundles
+Use .codex/agents/*.toml for actual role differentiation
+Call those roles explicitly in your prompt by agent name
+Use subdirectories/worktrees plus local AGENTS.md when you want stronger context separation

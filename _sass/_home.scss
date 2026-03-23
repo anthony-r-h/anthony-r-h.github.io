@@ -214,6 +214,38 @@
 }
 
 .list-view {
+  .section-post-group {
+    margin: 0 0 rem(42px);
+    padding: rem(22px) 0 rem(8px);
+    border: 1px solid rgba($lightGray, 0.12);
+    border-left: rem(4px) solid rgba($accentDark, 0.72);
+    border-radius: rem(6px);
+    background: linear-gradient(180deg, rgba($lightGray, 0.06), rgba($lightGray, 0.02));
+    box-shadow: 0 rem(8px) rem(24px) rgba(0, 0, 0, 0.08);
+
+    @include media(">=sm") {
+      padding: rem(26px) 0 rem(10px);
+    }
+  }
+
+  .section-post-group-title {
+    @include mainFont(700);
+    margin: 0 0 rem(22px);
+    padding: 0 var(--list-mobile-padding, 23px) rem(14px);
+    border-bottom: 1px solid rgba($lightGray, 0.14);
+    color: $accentDark;
+    font-size: rem(18px);
+    line-height: rem(24px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    @include media(">=sm") {
+      padding: 0 var(--list-desktop-padding, 40px) rem(14px);
+      font-size: rem(20px);
+      line-height: rem(26px);
+    }
+  }
+
   .section-post-list {
     list-style: none;
     padding: 0 var(--list-mobile-padding, 23px);
@@ -228,6 +260,12 @@
     border-bottom: 1px solid var(--list-divider-color, rgba(255, 255, 255, 0.2));
     padding: 0 0 var(--list-item-spacing, 28px);
     margin: 0 0 var(--list-item-spacing, 28px);
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
 
     .date {
       color: var(--list-meta-color, #{darken($lightGray, 0%)});
