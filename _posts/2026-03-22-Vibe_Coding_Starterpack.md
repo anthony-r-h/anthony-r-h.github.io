@@ -14,6 +14,8 @@ toc: true
 
 - https://www.bassimeledath.com/blog/levels-of-agentic-engineering
 
+- https://openai.com/index/harness-engineering/
+
 # Workflow
 
 - https://llmx.tech/blog/ai-ready-codebase-claude-cursor-integration-guide/
