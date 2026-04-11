@@ -8,10 +8,16 @@ layout: minimal
   {% assign tags_list = site.tags %}
     {% if tags_list.first[0] == null %}
       {% for tag in tags_list %}
+          {% if tag == "Hidden" %}
+            {% continue %}
+          {% endif %}
           <a href="#{{ tag | slugify }}">#{{ tag }}</a>
       {% endfor %}
     {% else %}
       {% for tag in tags_list %}
+          {% if tag[0] == "Hidden" %}
+            {% continue %}
+          {% endif %}
           <a href="#{{ tag[0] | slugify }}">#{{ tag[0] }}</a>
       {% endfor %}
     {% endif %}
@@ -19,6 +25,9 @@ layout: minimal
 </div>
 
 {% for tag in site.tags  %}
+  {% if tag[0] == "Hidden" %}
+    {% continue %}
+  {% endif %}
   <a class="post-anchor" id="{{ tag[0] | slugify }}"></a>
   <div class="tag-title">
     <span>#{{ tag[0] }}</span>
@@ -26,7 +35,14 @@ layout: minimal
   <ul class="post-list">
       {% assign pages_list = tag[1] %}
       {% for post in pages_list reversed %}
-          {% if post.title != null and post.is_generated != true %}
+          {% assign hidden_hit = false %}
+          {% for post_tag in post.tags %}
+            {% if post_tag == "Hidden" %}
+              {% assign hidden_hit = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if post.title != null and post.is_generated != true and hidden_hit == false %}
             {% if group == null or group == post.group %}
               <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time></a></li>
             {% endif %}

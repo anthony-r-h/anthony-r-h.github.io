@@ -1,6 +1,19 @@
 <!-- Pagination links -->
 {% if paginator.page_trail %}
-    {% assign next_posts = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" | where_exp:"post","post.date <= page.date" %}
+    {% assign next_posts_source = site.posts | where_exp:"post","post.is_generated != true" | where_exp:"post","post.path != page.path" | where_exp:"post","post.date <= page.date" %}
+    {% assign next_posts = '' | split: '' %}
+    {% for post in next_posts_source %}
+        {% assign hidden_hit = false %}
+        {% for post_tag in post.tags %}
+            {% if post_tag == "Hidden" %}
+                {% assign hidden_hit = true %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        {% unless hidden_hit %}
+            {% assign next_posts = next_posts | push: post %}
+        {% endunless %}
+    {% endfor %}
     <div class="pagination pagination-post {{ include.extra_classes }}">
         {% if paginator.is_last != true %}
             <a href="{{ paginator.next_page_path }}">

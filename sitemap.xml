@@ -16,13 +16,23 @@ layout: null
             {% endif %}
         </url>
     {% endfor %}
-    {% for post in site.posts %}
+    {% assign sitemap_posts = site.posts | where_exp:"post","post.is_generated != true" %}
+    {% for post in sitemap_posts %}
+        {% assign hidden_hit = false %}
+        {% for post_tag in post.tags %}
+            {% if post_tag == "Hidden" %}
+                {% assign hidden_hit = true %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+        {% unless hidden_hit %}
         <url>
             <loc>{{ post.url | prepend: site.baseurl | prepend: site.url }}</loc>
             <changefreq>weekly</changefreq>
             <priority>0.8</priority>
             <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
         </url>
+        {% endunless %}
     {% endfor %}
     {% for author in site.authors %}
         <url>
