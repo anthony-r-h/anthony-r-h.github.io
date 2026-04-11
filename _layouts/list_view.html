@@ -8,6 +8,14 @@ layout: main
 {% assign filtered_posts = '' | split: '' %}
 
 {% for post in source_posts %}
+    {% assign hidden_hit = false %}
+    {% for post_tag in post.tags %}
+        {% if post_tag == "Hidden" %}
+            {% assign hidden_hit = true %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
     {% assign include_ok = true %}
     {% if include_tags and include_tags.size > 0 %}
         {% assign include_ok = false %}
@@ -43,7 +51,7 @@ layout: main
         {% endfor %}
     {% endif %}
 
-    {% if include_ok and exclude_hit == false %}
+    {% if include_ok and exclude_hit == false and hidden_hit == false %}
         {% assign filtered_posts = filtered_posts | push: post %}
     {% endif %}
 {% endfor %}
