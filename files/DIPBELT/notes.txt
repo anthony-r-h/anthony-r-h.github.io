@@ -1,0 +1,63 @@
+What that means in practice
+
+A rough first-pass calculation for an unperforated strip is:
+
+breaking force ≈ tensile strength × cross-sectional area
+where area = width × thickness
+
+So if your load path ever transfers into a 1.5 in / 38 mm wide leather section:
+
+4 oz leather is about 1.6 mm thick
+Area = 38 × 1.6 = 60.8 mm²
+At 10 N/mm², theoretical break is about 608 N, or 137 lbf
+At 20 N/mm², theoretical break is about 1216 N, or 273 lbf
+
+For thicker leather:
+
+8 oz ≈ 3.2 mm → area 121.6 mm² → about 273 to 547 lbf theoretical
+10 oz ≈ 4.0 mm → area 152 mm² → about 342 to 684 lbf theoretical
+12 oz ≈ 4.8 mm → area 182.4 mm² → about 410 to 820 lbf theoretical
+The important catch
+
+Those numbers are best-case strip tensile numbers, not safe design loads. They do not account for:
+
+holes for Chicago screws
+stitch perforation
+edge tear-out
+bending around hardware
+uneven load sharing
+dynamic loading
+sweat, flex fatigue, abrasion, wet/dry cycling
+
+That is why your instinct is right: the webbing should carry the load, not the leather.
+
+For comparison, even ordinary 1.5 inch polyester webbing is commonly sold with breaking strengths around 3000 to 5000 lb, with recommended working loads around 1000 to 1660 lb, far above your target load.
+
+
+Best options
+1. Folded webbing tab, box-X stitched into the main webbing
+
+This is the cleanest softgoods approach.
+
+Use a separate piece of polyester webbing, fold it through the ring, then lay the two tails back onto the underlying harness belt at the angle you want. Stitch the tails down with a long attachment zone.
+
+What this buys you:
+
+load goes into webbing-to-webbing interface
+ring angle can be set by tab geometry
+the leather never has to carry primary tension
+easy to prototype
+
+What matters:
+
+use a long stitch footprint, not a short one
+use box-X plus multiple bar tacks or a long rectangular stitch field
+keep the ring on a radiused bend, not a sharp fold
+back the main belt with another webbing layer if needed so the tab is stitched into a thicker laminate
+
+This is basically how many harness and tactical assemblies solve odd load angles.
+
+
+thin HDPE or Tegris style stiffener
+
+NO CHICAGO SCREWS
