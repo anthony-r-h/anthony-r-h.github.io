@@ -27,7 +27,15 @@
   }
 
   figure {
+    @include center(var(--post-content-max-width, 1080px));
+    padding-left: var(--post-content-padding-mobile, 20px);
+    padding-right: var(--post-content-padding-mobile, 20px);
     margin: 2rem auto 0;
+
+    @include media(">=sm") {
+      padding-left: var(--post-content-padding-desktop, 20px);
+      padding-right: var(--post-content-padding-desktop, 20px);
+    }
   }
 
   figcaption,
