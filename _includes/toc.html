@@ -8,7 +8,8 @@
       {{ toc_html }}
     </nav>
   {% else %}
-    {% assign heading_parts = toc_source | split: "<h" %}
+    {% assign rendered_toc_source = toc_source | markdownify %}
+    {% assign heading_parts = rendered_toc_source | split: "<h" %}
     {% capture fallback_toc %}
       <ul id="toc" class="section-nav">
         {% for heading_part in heading_parts offset:1 %}
@@ -16,7 +17,7 @@
           {% if "123456" contains heading_level and heading_part contains 'id="' %}
             {% assign heading_id = heading_part | split: 'id="' | last | split: '"' | first %}
             {% assign heading_close = "</h" | append: heading_level | append: ">" %}
-            {% assign heading_text = heading_part | split: ">" | last | split: heading_close | first | strip_html | strip %}
+            {% assign heading_text = heading_part | split: heading_close | first | split: ">" | last | strip_html | strip %}
             {% if heading_id != "" and heading_text != "" %}
               <li class="toc-entry toc-h{{ heading_level }}"><a href="#{{ heading_id }}">{{ heading_text }}</a></li>
             {% endif %}
