@@ -170,7 +170,6 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-paginate-content
-  - jekyll-toc
 
 # Exclude my node related stuff
 exclude: [

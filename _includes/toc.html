@@ -1,36 +1,47 @@
 {% if page.toc == true %}
   {% assign toc_title = page.toc_title | default: "Contents" %}
-  {% assign toc_source = page.content %}
-  {% assign toc_html = toc_source | toc_only | strip %}
-  {% if toc_html != "" and toc_html contains "toc-entry" %}
+  {% assign rendered_toc_source = page.content | markdownify %}
+  {% assign heading_parts = rendered_toc_source | split: "<h" %}
+  {% assign previous_heading_level = 0 %}
+  {% assign has_fallback_toc = false %}
+  {% capture fallback_toc %}
+    <ul id="toc" class="section-nav">
+      {% for heading_part in heading_parts offset:1 %}
+        {% assign heading_level_text = heading_part | slice: 0, 1 %}
+        {% assign heading_level = heading_level_text | plus: 0 %}
+        {% if "123456" contains heading_level_text and heading_part contains 'id="' %}
+          {% assign heading_id = heading_part | split: 'id="' | last | split: '"' | first %}
+          {% assign heading_close = "</h" | append: heading_level_text | append: ">" %}
+          {% assign heading_text = heading_part | split: heading_close | first | split: ">" | last | strip_html | strip %}
+          {% if heading_id != "" and heading_text != "" %}
+            {% if has_fallback_toc %}
+              {% if heading_level > previous_heading_level %}
+                <ul>
+              {% elsif heading_level == previous_heading_level %}
+                </li>
+              {% else %}
+                </li>
+                {% assign close_level = heading_level | plus: 1 %}
+                {% for level in (close_level..previous_heading_level) %}</ul></li>{% endfor %}
+              {% endif %}
+            {% endif %}
+            <li class="toc-entry toc-h{{ heading_level_text }}"><a href="#{{ heading_id }}">{{ heading_text }}</a>
+            {% assign previous_heading_level = heading_level %}
+            {% assign has_fallback_toc = true %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      {% if has_fallback_toc %}
+        </li>
+        {% for level in (2..previous_heading_level) %}</ul></li>{% endfor %}
+      {% endif %}
+    </ul>
+  {% endcapture %}
+  {% assign fallback_toc = fallback_toc | strip %}
+  {% if fallback_toc contains "toc-entry" %}
     <nav class="post-toc" aria-label="Table of contents">
       <h2 class="post-toc-title">{{ toc_title }}</h2>
-      {{ toc_html }}
+      {{ fallback_toc }}
     </nav>
-  {% else %}
-    {% assign rendered_toc_source = toc_source | markdownify %}
-    {% assign heading_parts = rendered_toc_source | split: "<h" %}
-    {% capture fallback_toc %}
-      <ul id="toc" class="section-nav">
-        {% for heading_part in heading_parts offset:1 %}
-          {% assign heading_level = heading_part | slice: 0, 1 %}
-          {% if "123456" contains heading_level and heading_part contains 'id="' %}
-            {% assign heading_id = heading_part | split: 'id="' | last | split: '"' | first %}
-            {% assign heading_close = "</h" | append: heading_level | append: ">" %}
-            {% assign heading_text = heading_part | split: heading_close | first | split: ">" | last | strip_html | strip %}
-            {% if heading_id != "" and heading_text != "" %}
-              <li class="toc-entry toc-h{{ heading_level }}"><a href="#{{ heading_id }}">{{ heading_text }}</a></li>
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    {% endcapture %}
-    {% assign fallback_toc = fallback_toc | strip %}
-    {% if fallback_toc contains "toc-entry" %}
-      <nav class="post-toc" aria-label="Table of contents">
-        <h2 class="post-toc-title">{{ toc_title }}</h2>
-        {{ fallback_toc }}
-      </nav>
-    {% endif %}
   {% endif %}
 {% endif %}
