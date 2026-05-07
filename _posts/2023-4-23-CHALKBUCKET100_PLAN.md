@@ -15,3 +15,7 @@ planning_tag: Planning
 ## Posts
 
 ## Notes
+
+https://www.youtube.com/watch?v=kuC-HPIq_g0
+
+https://www.youtube.com/watch?v=VDRs1EkVOTg
