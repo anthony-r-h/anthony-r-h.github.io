@@ -2,11 +2,10 @@
 layout: post
 title: "XREAL Daka Case"
 subtitle: "" 
-optimized_image: 
+optimized_image: /files/XREAL/1/EOSR8571-Edit.jpg
 category: 
 tags:
-  - Plan
-planning_tag: In Progress
+  - XREAL
 math: true
 toc: true
 ---
@@ -214,7 +213,17 @@ I finished the exposed edges with Uniters edge paint. This is mostly a finishing
    <figcaption>Edge painting with Uniters.</figcaption>
 </figure>
 
+### Assembled
 
+Overall, not without issues. What I would do differently:
+
+- Microfiber cloth holder is not practical
+- Cable compartment is too tight, so insertion/removal of the glasses isn't smooth
+- The divider doesn't need to be padded
+
+<figure>
+  <img src="/files/XREAL/1/EOSR8571-Edit.jpg">
+</figure>
 
 
 
