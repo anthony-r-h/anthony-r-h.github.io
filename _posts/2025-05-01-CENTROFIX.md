@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Centrofix"
+title: "Adapting the Wiha Centrofix"
 subtitle: "" 
 optimized_image: /files/Centrofix/title.png
 category: Tools
