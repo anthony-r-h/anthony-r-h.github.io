@@ -2,7 +2,7 @@
 layout: post
 title: "Centrofix"
 subtitle: "" 
-optimized_image: /files/Centrofix/title.png
+optimized_image: /files/Centrofix/EOSR8557.jpg
 category: Tools
 tags:
   - Tools
