@@ -2,7 +2,7 @@
 layout: post
 title: "XREAL Daka Case"
 subtitle: "" 
-optimized_image: /files/XREAL/1/EOSR8571-Edit.jpg
+optimized_image: /files/XREAL/1/EOSR8580-Edit.jpg
 category: 
 tags:
   - XREAL
@@ -14,32 +14,24 @@ toc: true
 
 ## XREAL One
 
-### XR
 
-The XREAL One is a pair of XR display glasses. In practical terms, it is a portable external monitor worn like glasses and connected over USB-C.
+The XREAL One glasses are highly capable XR glasses that go beyond gaming and entertainment. With a wider field of view, better screen quality, improved comfort, and native 3 DoF tracking, they are plausibly something one could use for everyday productivity.
 
-While far from a desktop replacememt, they are incredible for mobile use: travel, site visits, temporary desks, and other and other places where a laptop is available but the screen is limiting. The glasses provide a larger working area without carrying a larger computer, and the ultrawide mode makes them even more useful.
+They are still far from a desktop replacement, but they are excellent for mobile productivity: travel, site visits, temporary desks, and anywhere else a laptop is available but the screen is limiting. The appeal is simple: an ultrawide monitor beamed right into your eyes.
 
-#### Specs
+## Problem with stock carrying case
 
-- 50 degree field of view
-- 0.68" Sony Micro-OLED display
-- 1920x1080 resolution
-- 120 Hz refresh rate
-
-### Problem with stock carrying case
-
-The weak point is the stock carrying case. It is larger than it needs to be, has no separate cable compartment, and the closure is not secure enough for loose bag use.
+The stock carrying case isn't great. It is larger than it needs to be, has no separate cable compartment, and the closure is not secure enough for loose bag use.
 
 It protects the glasses when handled deliberately, but is not sufficient to be able to put the glasses in a bag and stop thinking about them.
 
-### Aftermarket EVA foam cases
+## Aftermarket EVA foam cases
 
-Aftermarket EVA foam cases improve some of this. The better options have smaller form factors, zipper closures, and cable compartments.
+Aftermarket EVA foam cases improve some of this. The better ones are smaller, use zipper closures, and include cable compartments.
 
-However, the several products I tried are all EVA foam cases. Despite being advertised as a hard shell, the case is very much crushable. It is better organized than the stock case, but it is still not something I would bury in a bag under tools, chargers, or other objects.
+But after buying and returning several of them, I found they all had the same problem: they are still soft cases. Despite being advertised as hard shell, they are very much crushable. They are better organized than the stock case, but I still would not bury one in a bag under tools, chargers, or anything heavy.
 
-### Pelican Inspired Case
+## Pelican-Style Case
 
 The first solution I tried was a derived Pelican-inspired 3D printed case. I added reinforced ribs for crush protection, a separate cable storage compartment, and designed a silicone cradle for the glasses.
 
@@ -81,7 +73,6 @@ The shell is reinforced polymer, so it addresses the main failure point of the E
 
 The interior volume is tight enough to keep the case compact, but large enough for an insert, a soft contact surface, and a cable divider. That makes the Daka Can a better base than designing the entire enclosure from scratch.
 
-
 # Custom Insert
 
 This was my first leather project after a long hiatus, so I wanted something small and controlled. The goal was a simple insert that would make the Daka Can usable for the XREAL One without changing the case itself.
@@ -105,7 +96,7 @@ I tried drawing it from measurements first, but the geometry was awkward enough 
 
 ### Main Panel
 
-The main panel started with the traced pattern transferred onto 1mm Salpa. I punched the indexing notches and placement markers before adding the softer layers, since those reference points become harder to locate once the panel is built up.
+The main panel is built around a 1 mm Salpa stiffener, cut from the traced pattern. I punched the indexing notches and placement markers before adding the softer layers, since those reference points become harder to locate once the panel is built up.
 
 <figure>
   <img src="/files/XREAL/1/xreal-8361.jpg">
@@ -133,7 +124,7 @@ After the layers were assembled, I trimmed the panel to final size and checked t
    <figcaption>Trimmed main panel during mock fit.</figcaption>
 </figure>
 
-One issue came from the stretch in the calf skin. When pull cutting for trimming, the material stretched ahead of the blade and then shrank back after the cut, leaving one side over-cut. I patched that edge with a turned-edge trim piece rather than rebuilding the panel.
+I forgot how stretchy calfskin can be. Between the contact cement layer and the pull cut, the softer material dragged and stretched as the blade passed through it. Once the cut was finished, it relaxed back into shape, leaving one side overcut. Rather than rebuild the panel, I patched the edge with a turned-edge trim piece. 
 
 <figure>
   <img src="/files/XREAL/1/xreal-8389.jpg">
@@ -142,7 +133,7 @@ One issue came from the stretch in the calf skin. When pull cutting for trimming
 
 ### Lid insert
 
-The lid insert holds the microfiber cloth and finishes the inside of the case lid. This part was built cut-to-size.
+The lid insert holds the microfiber cloth and finishes the inside of the case lid. This part was built trim-to-size as well.
 
 <figure>
   <img src="/files/XREAL/1/xreal-8362.jpg">
@@ -217,13 +208,20 @@ I finished the exposed edges with Uniters edge paint. This is mostly a finishing
 
 Overall, not without issues. What I would do differently:
 
-- Microfiber cloth holder is not practical
+- Microfiber cloth holder is not practical, the pocket needs a lot more slack.
 - Cable compartment is too tight, so insertion/removal of the glasses isn't smooth
-- The divider doesn't need to be padded
+  - The divider doesn't need to be padded
+  - Revised divider pattern is reflected in the CAD drawing
 
 <figure>
-  <img src="/files/XREAL/1/EOSR8571-Edit.jpg">
+  <img src="/files/XREAL/1/EOSR8620-Edit.jpg">
 </figure>
 
+<figure>
+  <img src="/files/XREAL/1/EOSR8580-Edit.jpg">
+</figure>
 
+<figure>
+  <img src="/files/XREAL/1/EOSR8597.jpg">
+</figure>
 
