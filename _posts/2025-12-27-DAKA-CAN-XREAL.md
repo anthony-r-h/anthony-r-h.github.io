@@ -17,6 +17,11 @@ toc: true
 
 The XREAL One glasses are highly capable XR glasses that go beyond gaming and entertainment. With a wider field of view, better screen quality, improved comfort, and native 3 DoF tracking, they are plausibly something one could use for everyday productivity.
 
+<figure>
+  <img src="/files/XREAL/1/Screenshot_2.jpg">
+   <figcaption>XREAL One</figcaption>
+</figure>
+
 They are still far from a desktop replacement, but they are excellent for mobile productivity: travel, site visits, temporary desks, and anywhere else a laptop is available but the screen is limiting. The appeal is simple: an ultrawide monitor beamed right into your eyes.
 
 ## Problem with stock carrying case
