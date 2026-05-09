@@ -197,7 +197,7 @@ There were a few small detail pieces after the main insert was assembled. The co
    <figcaption>Corner gusset for the insert.</figcaption>
 </figure>
 
-I finished the exposed edges with Uniters edge paint. This is mostly a finishing step, but it also helps the small layered parts read as intentional rather than improvised.
+I finished the exposed edges with Uniters edge paint.
 
 <figure>
   <img src="/files/XREAL/1/xreal-8394.jpg">
