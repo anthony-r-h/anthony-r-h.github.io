@@ -3,7 +3,7 @@ layout: post
 title: "XREAL Daka Case"
 subtitle: "" 
 optimized_image: /files/XREAL/1/EOSR8580-Edit.jpg
-category: 
+category: Leather
 tags:
   - XREAL
 math: true
