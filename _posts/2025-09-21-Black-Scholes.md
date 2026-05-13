@@ -2,7 +2,7 @@
 layout: post
 title: "Black-Scholes From The Ground Up"
 subtitle: "" 
-optimized_image: /files/Finance5Dummies/black-scholes.png
+optimized_image: /files/generic.png
 category: Writings
 tags:
   - Edcuation
