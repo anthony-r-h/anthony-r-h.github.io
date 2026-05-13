@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "XREAL Daka Case"
+title: "XREAL One Custom Daka Can Insert"
 subtitle: "" 
 optimized_image: /files/XREAL/1/EOSR8580-Edit.jpg
 category: Leather
