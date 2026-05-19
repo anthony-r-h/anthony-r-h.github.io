@@ -38,6 +38,20 @@
     }
   }
 
+  .video-embed {
+    video {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      background: #111;
+    }
+
+    figcaption {
+      margin-top: rem(8px);
+    }
+  }
+
   figcaption,
   img + em {
     display: block;
