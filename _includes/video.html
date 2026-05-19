@@ -1,0 +1,24 @@
+{% assign video_src = include.src | default: include.video | default: "" %}
+{% assign video_type = include.type | default: "video/mp4" %}
+{% assign video_preload = include.preload | default: "metadata" %}
+{% assign video_autoplay = include.autoplay | default: false %}
+{% assign video_loop = include.loop | default: false %}
+
+{% if video_src != "" %}
+<figure class="video-embed{% if include.class %} {{ include.class }}{% endif %}">
+  <video
+    {% unless include.controls == false %}controls{% endunless %}
+    preload="{{ video_preload }}"
+    {% if video_autoplay %}autoplay{% endif %}
+    {% if video_loop %}loop{% endif %}
+    {% if include.muted or video_autoplay %}muted{% endif %}
+    {% unless include.playsinline == false %}playsinline{% endunless %}
+  >
+    <source src="{{ video_src | relative_url }}" type="{{ video_type }}">
+    <a href="{{ video_src | relative_url }}">Download the video</a>
+  </video>
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>
+{% endif %}
