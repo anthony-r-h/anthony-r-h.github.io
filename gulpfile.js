@@ -49,10 +49,27 @@ function config() {
  */
 function jekyll(done) {
   notify('Building Jekyll...');
+  const rubyGlobCompat = [
+    'class << Dir',
+    'alias_method :jekyll_original_glob, :[] unless method_defined?(:jekyll_original_glob)',
+    'def [](*patterns)',
+    'results = jekyll_original_glob(*patterns)',
+    'return results unless results.empty? && patterns.length == 1',
+    'pattern = patterns.first',
+    'return results unless pattern.match?(/[?*\\[\\{]/)',
+    'dir = File.dirname(pattern)',
+    'return results unless File.directory?(dir)',
+    'names = [File.basename(pattern)]',
+    'names = names.flat_map { |name| name.include?("{_,}") ? [name.sub("{_,}", "_"), name.sub("{_,}", "")] : [name] }',
+    'Dir.children(dir).select { |entry| names.any? { |name| File.fnmatch?(name, entry) } }.map { |entry| File.join(dir, entry) }.sort',
+    'end',
+    'end',
+    'load Gem.bin_path("jekyll", "jekyll")',
+  ].join('; ');
   const command = process.platform === "win32" ? "cmd" : "bundle";
   const args = process.platform === "win32"
-    ? ['/c', 'bundle', 'exec', 'jekyll', 'build']
-    : ['exec', 'jekyll', 'build'];
+    ? ['/c', 'bundle', 'exec', 'ruby', '-e', rubyGlobCompat, 'build']
+    : ['exec', 'ruby', '-e', rubyGlobCompat, 'build'];
   const child = cp.spawn(command, args, { stdio: 'inherit' });
   child.on('error', done);
   child.on('close', (code) => {
