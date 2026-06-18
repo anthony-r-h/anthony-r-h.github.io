@@ -39,6 +39,8 @@ paginate_content:
 
 # SASS
 sass:
+  load_paths:
+    - _sass
   style: compressed
 
 # Plugins
