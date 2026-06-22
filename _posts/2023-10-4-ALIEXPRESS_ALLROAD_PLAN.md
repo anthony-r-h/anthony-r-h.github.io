@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aliexpress All-Road Bike"
+title: "AliExpress All-Road Bike"
 subtitle: "" 
 optimized_image: /files/ALIEXPRESS_ALLROAD/bike-1_5.jpg
 category: Bikes
@@ -14,13 +14,13 @@ tags:
 
 I am not a serious cyclist, my interest in bikes comes mostly from appreciating them as machines, and I like working on them.
 
-My first bike as an adult was a second-hand [Georgina Terry Chrom](https://sheldonbrown.com/harris/terry/history.html) steel road bike built with Tange double-butted chromoly tubing. It had a full Shimano 105 8 speed drivetrain with downtube shifters and Shimano wheels. A few weeks after buying it, I rode my first metric century on it. It was an uncomfortable, grueling and prolonged experience.
+My first bike as an adult was a second-hand [Georgina Terry Chrom](https://sheldonbrown.com/harris/terry/history.html) steel road bike built with Tange double-butted chromoly tubing. It had a full Shimano 105 8-speed drivetrain with downtube shifters and Shimano wheels. A few weeks after buying it, I rode my first metric century on it. It was an uncomfortable, grueling and prolonged experience.
 
-Being generally mechanically inclined, within months, I had stripped the bike down to the bare frame for a complete service which turned into a drivetrain overhaul. Having read the entirety of the late [Sheldon Brown's website](https://sheldonbrown.com) (the Godfather of bike wrenching), I started to appreciate bicycles as a long-running argument between standards, eras, and mechanical compromises. One name kept coming up: Campagnolo. It had a reputation that was hard to ignore: deeply tied to road cycling history, slightly impractical, and mechanically distinct. I decided to upgrade the bike with a modern Campagnolo groupset. My first attempt was an early-2000s Chorus groupset, but the shifters were in poor working condition. I looked into rebuilding them, only to find that the replacement parts were either unavailable or unreasonably expensive. I returned the Chorus groupset and instead bought a 2012 Veloce groupset, along with Campagnolo Scirocco aluminum wheels. 
+Being generally mechanically inclined, within months, I had stripped the bike down to the bare frame for a complete service which turned into a drivetrain overhaul. Having read the entirety of the late [Sheldon Brown's website](https://sheldonbrown.com) (the Godfather of bike wrenching), I started to appreciate bicycles as a long-running argument between standards, eras, and mechanical compromises. One name kept coming up: Campagnolo. It had a reputation that was hard to ignore: deeply tied to road cycling history, slightly impractical, and mechanically distinct. I decided to upgrade the bike with a modern Campagnolo groupset. My first attempt was an early-2000s Chorus groupset, but the shifters were in poor working condition. I looked into rebuilding them, only to find that the replacement parts were either unavailable or unreasonably expensive. I returned the Chorus groupset and instead bought a 2012 Veloce groupset, along with Campagnolo Scirocco aluminium wheels.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/campy_chorus_2003.png">
-   <figcaption>Campagnolo Chorus from [2003 Campagnolo catalogue]("/files/ALIEXPRESS_ALLROAD/2003CampagnoloCatalogue.pdf")</figcaption>
+   <figcaption>Campagnolo Chorus from [2003 Campagnolo catalog]("/files/ALIEXPRESS_ALLROAD/2003CampagnoloCatalogue.pdf")</figcaption>
 </figure>
 
 [Retro roadies- old frames with STI's or Ergos](https://www.bikeforums.net/classic-vintage/361558-retro-roadies-old-frames-sti-s-ergos.html.)
@@ -46,7 +46,7 @@ Overview of the parts.  All prices are listed in CAD.
 
 Brands like Incolor, Yoeleo, Winspace, Tavelo, and Serk have built real reputations, and are now discussed less as "cheap Chinese frames" and more as bike brands in their own right. There are also long-running OEM manufacturers, such as [FiberTek Composite in Xiamen](https://www.youtube.com/watch?v=p5EhSpZ3cug), that have produced carbon frames for international brands for years.
 
-Spcycle sits in a different part of the market. They sell affordable carbon frames and definitely do belong on the same playing field. They also have a fairly mixed reputation. I bought the Spcycle SP-053D which is heavily inspired by the Cipollini Dolomia.
+Spcycle sits in a different part of the market. They sell affordable carbon frames, but they do not belong on the same playing field. They also have a fairly mixed reputation. I bought the Spcycle SP-053D which is heavily inspired by the Cipollini Dolomia.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/spcycle1.png">
@@ -55,7 +55,7 @@ Spcycle sits in a different part of the market. They sell affordable carbon fram
 
 The 2023 version is listed with the following specifications:
 
-- T1000 carbon fibre
+- T1000 carbon fiber
 - Full internal cable routing
 - 1.5 inch headset
 - Clearance for up to 700x32C tires
@@ -73,14 +73,14 @@ I paid $743.63 for the frameset which included the fork, seatpost, headset, hand
 
 ## Groupset
 
-### L-TWOO RX 12 speed mechanical groupset
+### L-TWOO RX 12-speed mechanical groupset
 
 The RX series is L-TWOO's flagship 12-speed road groupset. It uses mechanical cable-actuated shifting with hydraulic disc brakes.
 
 I purchased the original RX R5010 release for $374.83, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has released the R5012, which appears to have a more refined shape and finish, along with a Shimano-style shift option.
 
 <figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/Ltwoo1.png">
+  <img src="/files/ALIEXPRESS_ALLROAD/canvas.png">
    <figcaption></figcaption>
 </figure>
 
@@ -99,7 +99,7 @@ The appeal was mostly cost. The PP5 power meter spider itself is around $100, wh
 
 [Shane Miller (GPLama) reviewed the PP5 power meter](https://gplama.com/2026/02/18/thinkrider-pp5-power-meter-review/) and found accuracy problems, especially after hard efforts where the zero offset can drift and make the unit read high for the rest of the ride. For my use, as a non-serious cyclist, having rough power reference sure beats vibes.
 
-The chainring is a ZRACE Unchained 50/34T set. These machined out of 7075 aluminum and are heavily profiled for weight reduction. The chainrings were $67.30.
+The chainring is a ZRACE Unchained 50/34T set. These are machined out of 7075 aluminium and are heavily profiled for weight reduction. The chainrings were $67.30.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Zrace Unchained_1.png">
@@ -130,7 +130,7 @@ The original build out used L-TWOO RX hydraulic calipers which worked wonderfull
    <figcaption></figcaption>
 </figure>
 
-The calipers have a one-piece machined aluminum body with an anodized finish, and they feel very high quality in hand. ZRACE offers them in several colors, and the same calipers are also sold under brands like IIIPro and ONIRII with even more finish options. The design is heavily inspired by the Hope RX4 calipers and use the same brake pads.
+The calipers have a one-piece machined aluminium body with an anodized finish, and they feel very high quality in hand. ZRACE offers them in several colours, and the same calipers are also sold under brands like IIIPro and ONIRII with even more finish options. The design is heavily inspired by the Hope RX4 calipers and uses the same brake pads.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Hope_RX4+.png">
@@ -148,16 +148,13 @@ I am using a ZRACE 12-speed 11-34T cassette. It is a very utilitarian cassette: 
 Elitewheels are no longer an obscure AliExpress wheel brand. Their higher-end Drive line is well regarded, but this build uses their entry-level ENT gravel wheels.
 
 <figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/elitewheels_ent_gravel_1.png">
-   <figcaption></figcaption>
-</figure>
-
-These are carbon gravel wheels with centerlock rotor mounts, basic aluminum hubs, and NBK bearings. I chose the gravel version because this build aspires to be for some light all-road use. My assumption was that a gravel wheelset would be less fragile than a lightweight road wheelset.
-
-<figure>
   <img src="/files/ALIEXPRESS_ALLROAD/elitewheels_ent_gravel_2.png">
    <figcaption></figcaption>
 </figure>
+
+These are carbon gravel wheels with centerlock rotor mounts, basic aluminium hubs, and NBK bearings. I chose the gravel version because this build aspires to be for some light all-road use. My assumption was that a gravel wheelset would be less fragile than a lightweight road wheelset.
+
+
 
 ## Other parts
 
@@ -178,6 +175,11 @@ Shimano SPD pedals
 
 
 # Assembly Notes
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8738.jpg">
+   <figcaption>The majority of the tools used.</figcaption>
+</figure>
 
 ## Bottom bracket
 
@@ -203,14 +205,14 @@ In a standard BB86 setup, each cup is independently pressed into the frame. The 
 - Properly faced / parallel
 - Not locally tight enough to distort the cup or bearing
 
-Forming press-fit aperatures is probably pretty hard. Press-fit bottom brackets have a fairly negative reputation. [Hambini Engineering argues that the standard itself is not inherently bad, the issue is that it relies heavily on frame manufacturing precision](https://www.hambini.com/bottom-bracket-pressfit-and-creaking-an-engineering-analysis/).  
+Forming press-fit apertures is probably pretty hard. Press-fit bottom brackets have a fairly negative reputation. [Hambini Engineering argues that the standard itself is not inherently bad, the issue is that it relies heavily on frame manufacturing precision](https://www.hambini.com/bottom-bracket-pressfit-and-creaking-an-engineering-analysis/).
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/angularmisalignment-1536x1187.png">
    <figcaption>Example of angular misalignment</figcaption>
 </figure>
 
-A common mitigation strategy is a **thread-together** press-fit bottom bracket. In this design, the cups still sit inside a press-fit shell, but the two sides thread into each other through the centre. That turns two independent cups into a semi-joined assembly.
+A common mitigation strategy is a **thread-together** press-fit bottom bracket. In this design, the cups still sit inside a press-fit shell, but the two sides thread into each other through the center. That turns two independent cups into a semi-joined assembly.
 
 A thread-together bottom bracket mainly tries to solve two problems:
 
@@ -219,7 +221,7 @@ A thread-together bottom bracket mainly tries to solve two problems:
 
 This can improve retention and may reduce creaking, but it does not automatically create a perfect independent bearing line. The frame shell still matters. If the shell is locally undersized or oval, the cup can still be squeezed and the bearing can still be distorted.
 
-Nominally, a BB86 shell measures 41mm in diamater. Common fit guidance puts the acceptable bore range at approximately 40.95mm to 41.00mm.
+Nominally, a BB86 shell measures 41mm in diameter. Common fit guidance puts the acceptable bore range at approximately 40.95mm to 41.00mm.
 
 I measured this shell with a digital caliper. These are reference measurements, but they are useful enough to compare against the symptom. Several areas measured below 40.95mm, especially on the drive side, suggesting that parts of the shell are undersized and possibly out of round.
 
@@ -228,7 +230,13 @@ I measured this shell with a digital caliper. These are reference measurements, 
    <figcaption></figcaption>
 </figure>
 
-Originally, I installed a thread-together press-fit bottom bracket, but the non-drive side bearing did not turn freely once installed, wheras the bearing felt fine outside the frame. That suggests the bearing or cup was being squeezed by the shell after installation. The likely issue is not just left/right alignment. Because the roughness appears even with one side installed, the stronger suspicion is local bore distortion: the shell may be undersized or oval enough to compress the cup or bearing race.
+Originally, I installed a thread-together press-fit bottom bracket, but the non-drive side bearing did not turn freely once installed, whereas the bearing felt fine outside the frame. That suggests the bearing or cup was being squeezed by the shell after installation. The likely issue is not just left/right alignment. Because the roughness appears even with one side installed, the stronger suspicion is local bore distortion: the shell may be undersized or oval enough to compress the cup or bearing race.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8702.jpg">
+   <figcaption>Removal of the ZTTO thread-together bottom bracket. Since the splines are so shallow, I am using a bearing press tool to apply pressure to the bottom bracket tool to ensure engagement.</figcaption>
+</figure>
+
 
 There are a few possible ways to respond:
 
@@ -253,89 +261,102 @@ Practically, the main implication is premature bottom bracket wear, small power 
    <figcaption></figcaption>
 </figure>
 
-I pursued an unsuccessful claim with AliExpress. The seller offered a refund on the frame, but I would have to pay return shipping, which would have costed more than the frame, so I decided to keep it. I think that's a very appropriate outcome for having bought an alarmingly low priced carbon frame from an unknown company. 
+I pursued an unsuccessful claim with AliExpress. The seller offered a refund on the frame, but I would have to pay return shipping, which would have cost more than the frame, so I decided to keep it. I think that's a very appropriate outcome for having bought an alarmingly low priced carbon frame from an unknown company.
 
 ## Headset
 
 The expander plug in a carbon steerer acts as both the headset preload anchor and internal support for the stem clamp. The plug should extend through the full clamping zone so the stem compresses the steerer against a supported internal surface. If the plug is too short, positioned too high, or does not overlap the stem clamp, the stem can squeeze an unsupported section of carbon steerer. This can ovalize or locally crush the tube, creating a stress concentration. Under braking, steering, sprinting, or impact loads, that damaged area can crack and may eventually fail. Major brands have issued recalls or service fixes around this type of failure mode, including Specialized’s Tarmac SL7 extended-expander recall and Canyon’s Speedmax CF V21 Aerostem steerer reinforcement recall.
 
-I replaced the original expander plug with a longer 50mm unit. The new plug extends past the full stem clamp zone and into the spacer stack. In general, a longer expander plug is beneficial when it properly fits the steerer, supports the full stem clamp, and does not interfere with routing or internal steerer geometry.
+I replaced the original expander plug with a longer 55mm unit. The new plug extends past the full stem clamp zone and into the spacer stack. In general, a longer expander plug is beneficial when it properly fits the steerer, supports the full stem clamp, and does not interfere with routing or internal steerer geometry.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8721.jpg">
+   <figcaption>55mm expander plug which extends past the stem clamping zone for the top and bottom pinch bolts.</figcaption>
+</figure>
 
 The area near the upper headset bearing is also highly loaded, but for a different reason. That region sees bending and bearing reaction loads as the fork transmits braking and road impacts into the head tube. The expander plug does not usually need to extend into the head tube itself. The more important requirement is that it supports the stem clamp area and that the spacer stack remains within the fork or frame manufacturer’s limit.
 
 I cut the steerer tube approximately 1 to 2mm longer than ideal, so I added a 2mm spacer above the stem to allow proper headset compression.
 
+
+## L-TWOO RX Groupset
+
+Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is still to be determined, but so far the shifting has been as good as anything I have used. The shifter shape works well for my hands, the rubber hoods feel high quality and grippy, and I like the Campagnolo-style thumb lever.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/ltwoo_rx_new.png">
+   <figcaption></figcaption>
+</figure>
+
+The shifting is snappy, though I do think this needs some context: a well-maintained and properly indexed mechanical groupset should shift well. The more noticeable differences are in refinement. There is a small amount of free play before the shift lever engages. It is not mushy, but there is some slop, and it is noticeable compared with higher-end groupsets. The thumb lever appears to be nylon, and the shift paddle is some sort of plastic. They work fine, but they are obvious places where the feel could be improved.
+
+On my version, the brake levers are forged carbon fiber, though the standard version has aluminium levers. The pre-travel adjustment (which comes up again later with bleeding) allows one to fine-tune the responsiveness of the brakes.
+
+The derailleurs are less exciting than the shifters. Functionally, they're fine, but just a bit pedestrian. I replaced the high/low limit, adjustment, and pinch bolt screws because the fasteners felt cheap.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/R1212_rd.jpg">
+   <figcaption></figcaption>
+</figure>
+
+Mechanically, installation was straightforward. The only part that was new to me was setting up and bleeding hydraulic road brakes.
+
+Installing the groupset was straightforward, except there were two things new to me:
+
+1. Routing fully internal cables
+2. Installing hydraulic brakes
+
+With routing tools, magnets, and gravity, routing the cable housing and hydraulic hoses was easy. The result is very clean, but the tradeoff is serviceability. Because the lines run through the handlebar and stem spacers, many future changes require pulling and rerouting them, including changing stem height, servicing the headset, or replacing the handlebar.
+
+Installing hydraulic brakes was a bit more work. The [manual provides guidance](/files/ALIEXPRESS_ALLROAD/Disc-Series_User-Manual_V2.0_EN.pdf).
+
+One detail worth emphasizing: the pre-travel screw on the shift lever needs to be backed out before bleeding. It does not need to be backed out all the way, but it does need to be open enough for the bleed procedure to work properly.
+
+Bleeding the brakes means pushing mineral oil through the system while giving trapped air a way out. I used a syringe at the caliper to push oil upward, with a reservoir cup installed at the shifter bleed port.
+
+Before bleeding, I removed the wheels and brake pads to avoid contaminating the braking surfaces, and installed a bleed block in the caliper. The bleed block keeps the pistons from moving too far out and sets the correct pad spacing while the system is open.
+
+Once oil was pushed through the line and into the reservoir cup, I closed the caliper bleed port. Then I cycled the brake lever and rotated the shifter through a few angles to help trapped bubbles move up into the cup. The goal is to remove air from the system, since air compresses and mineral oil effectively does not.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8708.jpg">
+   <figcaption></figcaption>
+</figure>
+
 ## Crankset
 
-The crank uses a 95mm spindle. With the bottom bracket installed, the frame measured 91.5mm from cup to cup, leaving 3.5mm of total spacing to account for.
+The crank arms are torqued to the spindle and retained in place via a larger reverse-thread bolt and lockring. Preload is set using a threaded collar on the non-drive side.
 
-I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8704.jpg">
+   <figcaption>The lockring is installed using a 20-tooth bottom bracket tool.</figcaption>
+</figure>
 
-
-[Manual](/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.pdf)
+Here's how that all looks like:
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/crank_installation_diagram_transparent_1x.png">
    <figcaption></figcaption>
 </figure>
 
-## L-TWOO RX Groupset
+The crank uses a 95mm spindle. With the bottom bracket installed, the frame measured 91.5mm from cup to cup, leaving 3.5mm of total spacing to account for. I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
 
-Installing the groupset was generally straightforward. Two things were new to me:
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8728.jpg">
+   <figcaption></figcaption>
+</figure>
 
-1. Routing fully internal cables
-2. Installing hydraulic brakes
+Four chainring bolts are titanium bolts threading into titanium nuts. This is a high cyclic-load area, so retention matters more than easy future disassembly. Titanium-on-titanium galling is still a concern, but mostly during installation or removal rather than normal riding. Stainless steel bolts probably would have been the more sensible choice here. I used medium-strength threadlocker, prioritizing bolt retention over maximum anti-galling protection.
 
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8714.jpg">
+   <figcaption></figcaption>
+</figure>
 
-The L-TWOO manual is here:
-
-[Manual](/files/ALIEXPRESS_ALLROAD/Disc-Series_User-Manual_V2.0_EN.pdf)
-
-One detail worth noting: the pre-travel screw on the shift lever needs to be backed out before bleeding. It does not need to be backed out all the way, but it does need to be open enough for the bleed procedure to work properly.
-
-
-
-
-
-### Fasteners and Torque
-
-Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected.
-
-My original plan was to replace all the screws with 316 stainless steel. The problem was buying them in sensible quantities. I needed several sizes, lengths, and head types, and most suppliers sold them in packs of 50 to 100.
-
-So I ended up sourcing specialty titanium fastener from AliExpress. I do not care about the weight savings, but I like titanium, I strongly prefer Torx heads, and I did not want hundreds of spare screws sitting around. So paying silly prices for titanium screws was justifiably practical.
-
-Using titanium fasteners also means paying attention to what they thread into. This bike has a mix of titanium, aluminum, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
-
-- Galling: metal-to-metal adhesion under pressure. Threads feel rough, bind, then can tear or seize. Titanium and aluminum are more prone than plain steel.
-- Corrosion: chemical/electrochemical attack. Mixed metals can create galvanic corrosion, especially with water/salt. Aluminum usually loses that fight against steel or titanium.
-
-This table is a simple reference for static threaded metal joints on the bike. It compares common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly.
-
-| Metal Pair | Anti-Seize | Threadlocker | Dry |
-| --- | --- | --- | --- |
-| Aluminum, aluminum | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: medium |
-| Aluminum, titanium | Galling: low<br>Corrosion: low to medium | Galling: medium<br>Corrosion: medium | Galling: high<br>Corrosion: high |
-| Aluminum, steel | Galling: low<br>Corrosion: low to medium | Galling: low<br>Corrosion: low to medium | Galling: low to medium<br>Corrosion: high |
-| Titanium, titanium | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: low |
-| Titanium, steel | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: low | Galling: medium to high<br>Corrosion: medium |
-| Steel, steel | Galling: low<br>Corrosion: low | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: medium to high |
-
-[Grease is not shown separately. For static threaded metal interfaces, anti-seize generally offers better galling and corrosion protection than grease.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
+[For future reference, here is the manual for the Thinkrider PP5 power meter.](/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.pdf)
 
 
-
-
-
-
-
-
-
-
-
-
-
-## Gearing
+### Gearing
 
 This is a compact 50/34T crankset paired with an 11-34T cassette. The result is a wide but conventional road/all-road range: a 4.55 top gear for fast descents or tailwinds, and a 1:1 lowest gear for climbing.
 
@@ -364,9 +385,9 @@ This is a compact 50/34T crankset paired with an 11-34T cassette. The result is 
 |      50 x 30 |       1.67 |         21.4 |
 |      50 x 34 |       1.47 |         18.8 |
 
-Coming from a 10 speed, I don't see the benefit of 12 speed. Mechanically, 12 speed uses a thiner chain and narrower spacing between casette cogs which in theory should be more fragile, and harder to index. I had no issues with locking in the indexing.
+Coming from a 10-speed, I don't see the benefit of 12-speed. Mechanically, 12-speed uses a thinner chain and narrower spacing between cassette cogs which in theory should be more fragile, and harder to index. I had no issues with locking in the indexing.
 
-What I would value is wider gearing. Since the L-TWOO RX cable pull length is compatible with Shimano 12 speed and L-TWOO gravel groupsets, it is possible to use a long cage derailleur with a larger casette. I may explore this later.
+What I would value is wider gearing. Since the L-TWOO RX cable pull length is compatible with Shimano 12-speed and L-TWOO gravel groupsets, it is possible to use a long cage derailleur with a larger cassette. I may explore this later.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/ltwoo-grt-2.png">
@@ -375,26 +396,77 @@ What I would value is wider gearing. Since the L-TWOO RX cable pull length is co
 
 
 
+### Fasteners and Torque
+
+Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected.
+
+My original plan was to replace all the screws with 316 stainless steel. The problem was buying them in sensible quantities. I needed several sizes, lengths, and head types, and most suppliers sold them in packs of 50 to 100.
+
+So I ended up sourcing specialty titanium fasteners from AliExpress. I do not care about the weight savings, but I like titanium, I strongly prefer Torx heads, and I did not want hundreds of spare screws sitting around. So paying silly prices for titanium screws was justifiably practical.
+
+Using titanium fasteners also means paying attention to what they thread into. This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
+
+- Galling: metal-to-metal adhesion under pressure. Threads feel rough, bind, then can tear or seize. Titanium and aluminium are more prone than plain steel.
+- Corrosion: chemical/electrochemical attack. Mixed metals can create galvanic corrosion, especially with water/salt. Aluminium usually loses that fight against steel or titanium.
+
+This table is a simple reference for static threaded metal joints on the bike. It compares common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly.
+
+| Metal Pair | Anti-Seize/ Grease | Threadlocker | Dry |
+| --- | --- | --- | --- |
+| Aluminium, aluminium | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: medium |
+| Aluminium, titanium | Galling: low<br>Corrosion: low to medium | Galling: medium<br>Corrosion: medium | Galling: high<br>Corrosion: high |
+| Aluminium, steel | Galling: low<br>Corrosion: low to medium | Galling: low<br>Corrosion: low to medium | Galling: low to medium<br>Corrosion: high |
+| Titanium, titanium | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: low |
+| Titanium, steel | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: low | Galling: medium to high<br>Corrosion: medium |
+| Steel, steel | Galling: low<br>Corrosion: low | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: medium to high |
+
+[Further reference.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
 
 
+## Tube or tubeless?
 
+I tried tubeless first. Setup was not as bad as its reputation suggested, and riding tubeless was genuinely amazing. Being able to run lower pressure without worrying about pinch flats made the bike feel more comfortable and more capable on rough surfaces.
 
-## Other notes
+The problem was storage and maintenance. I do not ride this bike consistently year-round, and tubeless sealant does not like sitting. It dries out, congeals, and can pool at the bottom of the tire, which makes the wheel feel unbalanced. You can remove the sealant before long storage, but at that point the convenience starts to disappear.
 
-- I tried tubeless. Setting them up wasn't as bad as their reputation would suggest. Riding tubeless is incredible! The ability to run super low pressure and the confidence of not worrying about pinch flats is incredible. Catastrophic blowouts are a possibility, but I never experienced it. When not in use, tubeless is a headache. Sealant will try out and congeal. When not in use, that means it pools at the bottom of the tire making it unbalanced. It is possible to remove sealant when its not in use for a prolonged period of time. Were I regularly cycling throughout the year, I would probably stick with tubeless, but in my situation, it doesn't make sense. I'm trying TPU tubes now.
+I am trying TPU tubes now.
 
-- Chain waxing promises a clean, grime-free drive train. 
+## Chain waxing
 
-- 
+Chain waxing promises a clean, grime-free drivetrain. I was starting with a drivetrain that already had a few hundred kilometers on it, so the main work was stripping out old oil and contamination before waxing. The chain and cassette both fit in my 2L ultrasonic cleaner. The jockey wheels on the rear derailleur use press-fit bearings and I wasn't prepared to replace them, so I manually cleaned those.
 
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8729.jpg">
+   <figcaption>Slightly chewed up derailleur cage due to circumstances unrelated to this adventure.</figcaption>
+</figure>
 
+I first ran the cassette and chain for an hour at 50 degrees Celsius in Simple Green Aircraft diluted 50%. To keep the cleaner itself cleaner, I put the parts and degreaser in a Ziploc bag, then placed the bag in the ultrasonic bath with water around it. After that, I rinsed and dried the parts.
 
+For the chain, I followed with an acetone cleaning step: an overnight soak in 100% acetone in a glass jar, then repeated wipe-downs until the chain stopped leaving residue. I also ran the chain in acetone in the ultrasonic cleaner, using a closed glass jar sitting in the water bath.
 
+For wax, I used Silca Secret Chain Blend, which is paraffin wax with tungsten disulfide [(link to SDS)](don't delete my placeholder please) and other additives. The wax comes in a sous-vide bag, which I heated in the ultrasonic cleaner set to 75 degrees Celsius. The cleaner could not actually reach that temperature; after about 1.5 hours it topped out around 67 degrees Celsius, likely because the bag did not fully fit in the vessel and the lid could not close properly.
 
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8730.jpg">
+   <figcaption>Melting the wax in the ultrasonic cleaner</figcaption>
+</figure>
 
+Measured with an IR thermometer, the wax appeared melted around 63 degrees Celsius. An IR thermometer is not ideal, so temperatures are approximate guidance. There was still a large unmelted clump in the center of the bag, but enough wax had liquefied to use.
 
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8734.jpg">
+   <figcaption>Unmelted wax in the center, with liquid wax agitated by the ultrasonic cleaner</figcaption>
+</figure>
 
+I preheated the chain with a heat gun before dipping. The goal was to avoid dropping a cold chain into wax that was already close to its solidifying point, which could form a surface film before the wax had a chance to penetrate the rollers. I placed the chain in the wax, manually agitated it, and ran the ultrasonic cleaner.
 
+I then turned the heat off and let the wax cool toward 60 degrees Celsius. As the surface started to skin over, I pushed the film aside before lifting the chain so it would not pull out excess cooled wax. I hung the chain above the bag to drip, though there was very little runoff, then broke the links free after cooling.
+
+### Other notes
+
+- PVD or DLC coated chains (the ones with fun colours) are not ideal for wax adhesion
+- It is possible to apply too much or too little wax.  Excess wax will flake off, and gum up the rear derailleur and cassette, cleaning off excess from exterior plates when drying is OK.  Too little is ineffective.
+- Single application is good up to around 500km in most circumstances.
 
 
 
