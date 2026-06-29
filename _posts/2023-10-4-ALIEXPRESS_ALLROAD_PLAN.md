@@ -36,7 +36,7 @@ Chinese carbon bike frames have been around for years, but I was cautious about 
 
 The same thing is happening with drivetrains and components. Shimano, SRAM, and Campagnolo are still the familiar names, but brands like Sensah, L-TWOO, Wheeltop, and Magene are now part of the conversation. They are not coming from nowhere. Many of these companies have roots in the same manufacturing ecosystem that has supported the major brands for years.
 
-I am more willing than most people to buy parts that require some research and mechanical sympathy. Moving from a 1990s steel road bike, modernized with 2010-era components, to a mostly Chinese parts build made sense for me. I knew the tradeoffs: limited support, unclear long-term reliability, and some chance of paying to beta-test someone else’s product. But I also like tinkering, and I wanted to see what these parts are actually like to live with. This build is my documentation of affordable Chinese bike components sourced mainly through AliExpress.
+I am more willing than most people to buy parts that require some research and mechanical sympathy. Moving from a 1990s steel road bike, modernized with 2010-era components, to a mostly Chinese parts build seems like a reasonable arc. I knew the tradeoffs: limited support, unclear long-term reliability, and some chance of paying to beta-test someone else’s product. But I also like tinkering, and I wanted to see what these parts are actually like to live with. This build is my documentation of affordable Chinese bike components sourced mainly through AliExpress.
 
 # Part List
 
@@ -79,7 +79,7 @@ I paid $743.63 for the frameset which included the fork, seatpost, headset, hand
 
 The RX series is L-TWOO's flagship 12-speed road groupset. It uses mechanical cable-actuated shifting with hydraulic disc brakes.
 
-I purchased the original RX release for $374.83, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has iterated on the shifters, rear derailleur and brake calipers. The shifters are now also availalbe with a Shimano-style shift option.
+I purchased the original RX release for $374.83, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has iterated on the shifters, rear derailleur and brake calipers. The shifters are now also available with a Shimano-style shift option.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/canvas.png">
@@ -298,7 +298,7 @@ Where the L-TWOO feels less refined is in the lever action. There is a little fr
 
 On my version, the brake levers are forged carbon fiber, though the standard version has aluminium levers. The pre-travel adjustment (which comes up again later with bleeding) allows one to fine-tune the responsiveness of the brakes.
 
-The derailleurs are less exciting than the shifters. Functionally, they're fine, but just a bit pedestrian. I replaced the high/low limit, adjustment, and pinch bolt screws because the fasteners felt low quality.
+The derailleurs are less exciting than the shifters. Functionally, they're fine, but just a bit pedestrian. I replaced the high/low limit, adjustment, and pinch bolt screws with titanium fasteners becaused the originals felt low quality.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/R1212_rd.jpg">
@@ -339,14 +339,14 @@ Here's how that all looks like:
    <figcaption></figcaption>
 </figure>
 
-The crank uses a 95mm spindle. With the bottom bracket installed, the frame measured 91.5mm from cup to cup which leaves 3.5mm of total spacing to account for. I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
+With the bottom bracket installed, the frame measured 91.5mm from cup to cup. Since the spindle is 95mm, that leaves leaves 3.5mm of total spacing to account for. I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8728.jpg">
    <figcaption></figcaption>
 </figure>
 
-The four titanium chainring bolts thread into titanium nuts.  Titanium-on-titanium galling is a concern, but mostly during installation or removal rather than normal riding.  This is a high cyclic-load area, so retention matters more than easy future disassembly. Stainless steel bolts probably would have been the more sensible choice here. 
+The four titanium chainring bolts thread into titanium nuts.  Titanium-on-titanium galling is a concern, but mostly during installation or removal rather than normal riding.  This is a high cyclic-load area, so retention matters more than easy future disassembly, therefore, I used retaining compound. Stainless steel bolts probably would have been the more sensible choice here. 
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8714.jpg">
@@ -358,9 +358,9 @@ The four titanium chainring bolts thread into titanium nuts.  Titanium-on-titani
 
 ### Gearing
 
-This is a compact 50/34T crankset paired with an 11-34T cassette. The result is a wide but conventional road/all-road range: a 4.55 top gear for fast descents or tailwinds, and a 1:1 lowest gear for climbing.
+This is a compact 50/34T crankset paired with an 11-34T cassette. The result is a wide but conventional road/all-road range: a 4.55 top gear and a 1:1 lowest gear for climbing.
 
-Coming from 10-speed, I get why 12-speed exists, but I do not think the extra gears matter. Mechanically, 12-speed uses a thinner chain and narrower spacing between cassette cogs which in theory aremore fragile, and harder to index due to tighter tollerance. So far, I have had had no issues with locking in the indexing.
+Coming from 10-speed, I get why 12-speed exists, but I do not think the extra gears are consequential (to me). Mechanically, 12-speed uses a thinner chain and narrower spacing between cassette cogs which in theory aremore fragile, and harder to index due to tighter tollerance. So far, I have had had no issues with locking in the indexing.
 
 | Combination | Gear ratio | Speed at 100 RPM (km/h) |
 | ----------: | ---------: | -----------: |
@@ -399,69 +399,150 @@ What I would value is wider gearing. Since the L-TWOO RX cable pull length is co
 
 ### Fasteners and Torque
 
-Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected.
+Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected. My original plan was to replace all the screws with 316 stainless steel. The problem was buying them in sensible quantities. I needed several sizes, lengths, and head types, and most suppliers sold them in packs of 50 to 100.
 
-My original plan was to replace all the screws with 316 stainless steel. The problem was buying them in sensible quantities. I needed several sizes, lengths, and head types, and most suppliers sold them in packs of 50 to 100.
+So I ended up sourcing specialty titanium fasteners from AliExpress. Weight savings wasn't a factor, I just did not want hundreds of spare screws sitting around, I like titanium, and have a strong preference for Torx heads. So paying silly prices for titanium bling was justifiably practical.
 
-So I ended up sourcing specialty titanium fasteners from AliExpress. I do not care about the weight savings, but I like titanium, I strongly prefer Torx heads, and I did not want hundreds of spare screws sitting around. So paying silly prices for titanium screws was justifiably practical.
-
-Using titanium fasteners also means paying attention to what they thread into. This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
+This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
 
 - Galling: metal-to-metal adhesion under pressure. Threads feel rough, bind, then can tear or seize. Titanium and aluminium are more prone than plain steel.
 - Corrosion: chemical/electrochemical attack. Mixed metals can create galvanic corrosion, especially with water/salt. Aluminium usually loses that fight against steel or titanium.
 
 This table is a simple reference for static threaded metal joints on the bike. It compares common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly.
 
-| Metal Pair | Anti-Seize/ Grease | Threadlocker | Dry |
-| --- | --- | --- | --- |
-| Aluminium, aluminium | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: medium |
-| Aluminium, titanium | Galling: low<br>Corrosion: low to medium | Galling: medium<br>Corrosion: medium | Galling: high<br>Corrosion: high |
-| Aluminium, steel | Galling: low<br>Corrosion: low to medium | Galling: low<br>Corrosion: low to medium | Galling: low to medium<br>Corrosion: high |
-| Titanium, titanium | Galling: low<br>Corrosion: low | Galling: medium<br>Corrosion: low | Galling: high<br>Corrosion: low |
-| Titanium, steel | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: low | Galling: medium to high<br>Corrosion: medium |
-| Steel, steel | Galling: low<br>Corrosion: low | Galling: low<br>Corrosion: low | Galling: low to medium<br>Corrosion: medium to high |
+<style>
+  .risk-table {
+    width: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+
+  .risk-table th,
+  .risk-table td {
+    border: 1px solid #b7b0a8;
+    padding: 0.45rem 0.65rem;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  .risk-badge {
+    display: inline-block;
+    margin: 0.1rem 0.45rem 0.1rem 0;
+    padding: 0.12rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    line-height: 1.3;
+    text-transform: lowercase;
+  }
+
+  .risk-low {
+    background: #d7ead2;
+    color: #1f4a28;
+  }
+
+  .risk-medium {
+    background: #f3df9d;
+    color: #5b4400;
+  }
+
+  .risk-high {
+    background: #efb0a8;
+    color: #681f19;
+  }
+</style>
+
+<table class="risk-table">
+  <thead>
+    <tr>
+      <th>Metal pair</th>
+      <th>Anti-seize / Grease</th>
+      <th>Threadlocker</th>
+      <th>Dry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aluminium, aluminium</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+    </tr>
+    <tr>
+      <td>Aluminium, titanium</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+    </tr>
+    <tr>
+      <td>Aluminium, steel</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+    </tr>
+    <tr>
+      <td>Titanium, titanium</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+    </tr>
+    <tr>
+      <td>Titanium, steel</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+    </tr>
+    <tr>
+      <td>Steel, steel</td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+    </tr>
+  </tbody>
+</table>
+
 
 [Further reference.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
 
 
 ## Tube or tubeless?
 
-I tried tubeless first. Setup was not as bad as its reputation suggested, and riding tubeless was genuinely amazing. Being able to run lower pressure without worrying about pinch flats made the bike feel more comfortable and more capable on rough surfaces.
+Initially I was running tubeless. Setup was not as bad as its reputation suggested, and riding tubeless was genuinely amazing. Being able to run lower pressure without worrying about pinch flats made the bike feel more comfortable and more capable on rough surfaces.
 
 The problem was storage and maintenance. I do not ride this bike consistently year-round, and tubeless sealant does not like sitting. It dries out, congeals, and can pool at the bottom of the tire, which makes the wheel feel unbalanced. You can remove the sealant before long storage, but at that point the convenience starts to disappear.
 
-I am trying TPU tubes now.
+I am now using RideNow TPU tubes.
 
 ## Chain waxing
 
-Chain waxing promises a clean, grime-free drivetrain. I was starting with a drivetrain that already had a few hundred kilometers on it, so the main work was stripping out old oil and contamination before waxing. The chain and cassette both fit in my 2L ultrasonic cleaner. The jockey wheels on the rear derailleur use press-fit bearings and I wasn't prepared to replace them, so I manually cleaned those.
+Chain waxing promises a clean, grime-free drivetrain. I was starting with a drivetrain that already had a few hundred kilometers on it, so the main work was stripping out old oil and contamination before waxing. The chain and cassette both fit in my 2L ultrasonic cleaner. The jockey wheels on the rear derailleur use press-fit bearings and I wasn't prepared to replace them, so I cleaned those by hand.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8729.jpg">
    <figcaption>Slightly chewed up derailleur cage due to circumstances unrelated to this adventure.</figcaption>
 </figure>
 
-I first ran the cassette and chain for an hour at 50 degrees Celsius in Simple Green Aircraft diluted 50%. To keep the cleaner itself cleaner, I put the parts and degreaser in a Ziploc bag, then placed the bag in the ultrasonic bath with water around it. After that, I rinsed and dried the parts.
+I ran the cassette and chain for an hour at 50 degrees Celsius in a 50% dilution of Simple Green Aircraft. To keep the ultrasonic cleaner clean, I put the parts and degreaser in a Ziploc bag, then placed the bag in the water bath. After that, I rinsed and dried the parts.
 
-For the chain, I followed with an acetone cleaning step: an overnight soak in 100% acetone in a glass jar, then repeated wipe-downs until the chain stopped leaving residue. I also ran the chain in acetone in the ultrasonic cleaner, using a closed glass jar sitting in the water bath.
+For the chain, I followed with acetone: an overnight soak in a glass jar, then repeated wipe-downs until it stopped leaving residue. I also ran the chain in acetone in the ultrasonic cleaner, with the acetone sealed in a glass jar sitting in the water bath.
 
-For wax, I used Silca Secret Chain Blend, which is paraffin wax with tungsten disulfide [(link to SDS)](don't delete my placeholder please) and other additives. The wax comes in a sous-vide bag, which I heated in the ultrasonic cleaner set to 75 degrees Celsius. The cleaner could not actually reach that temperature; after about 1.5 hours it topped out around 67 degrees Celsius, likely because the bag did not fully fit in the vessel and the lid could not close properly.
+For wax, I used Silca Secret Chain Blend [(SDS)](/files/ALIEXPRESS_ALLROAD/MSDS_SILCA_Hot_Wax.pdf), which is paraffin wax with tungsten disulfide [(SDS)](/files/ALIEXPRESS_ALLROAD/tungsten_disulfide.pdf) and other additives. It comes in a sous-vide bag, so I heated the bag directly in the ultrasonic cleaner. I set the cleaner to 75 degrees Celsius, but it topped out around 67 degrees after about 1.5 hours. The bag did not fully fit in the vessel, so the lid could not close properly.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8730.jpg">
    <figcaption>Melting the wax in the ultrasonic cleaner</figcaption>
 </figure>
 
-Measured with an IR thermometer, the wax appeared melted around 63 degrees Celsius. An IR thermometer is not ideal, so temperatures are approximate guidance. There was still a large unmelted clump in the center of the bag, but enough wax had liquefied to use.
+Measured with an IR thermometer, the wax looked melted around 63 degrees Celsius. That is not a perfect measurement, but close enough for this. There was still a large unmelted clump in the middle of the bag, but enough wax had liquefied to use.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8734.jpg">
    <figcaption>Unmelted wax in the center, with liquid wax agitated by the ultrasonic cleaner</figcaption>
 </figure>
 
-I preheated the chain with a heat gun before dipping. The goal was to avoid dropping a cold chain into wax that was already close to its solidifying point, which could form a surface film before the wax had a chance to penetrate the rollers. I placed the chain in the wax, manually agitated it, and ran the ultrasonic cleaner.
+I warmed the chain with a heat gun before dipping it. The wax was already close to its solidifying point, and I did not want a cold chain to make the wax skin over before it reached the rollers. Once the chain was in the wax, I agitated it by hand and ran the ultrasonic cleaner.
 
-I then turned the heat off and let the wax cool toward 60 degrees Celsius. As the surface started to skin over, I pushed the film aside before lifting the chain so it would not pull out excess cooled wax. I hung the chain above the bag to drip, though there was very little runoff, then broke the links free after cooling.
+After that, I turned the heat off and let the wax cool toward 60 degrees Celsius. As the surface started to skin over, I pushed the film aside and lifted the chain out. I hung it above the bag to drip, then broke the links free once it had cooled.
 
 ### Other notes
 
