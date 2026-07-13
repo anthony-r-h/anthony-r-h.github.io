@@ -94,20 +94,20 @@ layout: main
 
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "WebPage",
   "mainEntity": {
     "@type": "Blog",
-    "name": "{{ site.name }}",
-    "headline": "{{ site.title }}",
-    "description": "{{ site.description }}",
-    "url": "{{ site.url }}{{site.baseurl}}/",
-    "inLanguage": "{{ site.language }}",
-    "isFamilyFriendly": "true",
+    "name": {{ site.name | jsonify }},
+    "headline": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+    "inLanguage": {{ site.language | jsonify }},
+    "isFamilyFriendly": true,
     "creator": {
         "@type": "Organization",
-        "name": "{{ site.name }}",
-        "url": "{{ site.url }}{{site.baseurl}}/",
+        "name": {{ site.name | jsonify }},
+        "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
         "sameAs": [
             {{ social_urls | split: "," | join: "," }}
         ]
@@ -119,35 +119,35 @@ layout: main
         {% for post in filtered_posts limit: limit %}
             {
                 "@type": "BlogPosting",
-                "name": "{{ post.title }}",
-                "headline": "{{ post.subtitle }}",
-                "description": "{{ post.description }}",
-                "image": "{{ post.image }}",
-                "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
-                "inLanguage": "{{ site.language }}",
-                "dateCreated": "{{ post.date | date: '%Y-%m-%d/' }}",
-                "datePublished": "{{ post.date | date: '%Y-%m-%d/' }}",
-                "dateModified": "{{ post.date | date: '%Y-%m-%d/' }}",
+                "name": {{ post.title | jsonify }},
+                "headline": {{ post.subtitle | jsonify }},
+                "description": {{ post.description | jsonify }},
+                "image": {{ post.image | jsonify }},
+                "url": {{ post.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+                "inLanguage": {{ site.language | jsonify }},
+                "dateCreated": {{ post.date | date_to_xmlschema | jsonify }},
+                "datePublished": {{ post.date | date_to_xmlschema | jsonify }},
+                "dateModified": {{ post.date | date_to_xmlschema | jsonify }},
                 "author": {
                     "@type": "Person",
-                    "name": "{{ post.author | default: site.name }}",
-                    "url": "{{ site.url }}{{site.baseurl}}/"
+                    "name": {{ post.author | default: site.name | jsonify }},
+                    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }}
                 },
                 "publisher": {
                     "@type": "Organization",
-                    "name": "{{ site.name }}",
-                    "url": "{{ site.url }}{{site.baseurl}}/",
+                    "name": {{ site.name | jsonify }},
+                    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
                     "logo": {
                         "@type": "ImageObject",
-                        "url": "{{ site.url }}{{site.baseurl}}/assets/img/_blog-image.png",
-                        "width": "600",
-                        "height": "315"
+                        "url": {{ site.url | append: site.baseurl | append: "/assets/img/_blog-image.png" | jsonify }},
+                        "width": 600,
+                        "height": 315
                     }
                 },
-                "mainEntityOfPage": "True",
-                "genre": "{{ post.category | capitalize }}",
-		        "articleSection": "{{ post.category | capitalize }}",
-                "keywords": [{{ post.tags | join: '","' | append: '"' | prepend: '"' }}]
+                "mainEntityOfPage": {{ post.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+                "genre": {{ post.category | capitalize | jsonify }},
+		        "articleSection": {{ post.category | capitalize | jsonify }},
+                "keywords": {{ post.tags | jsonify }}
             }{% if forloop.last == false  %},{% endif %}
         {% endfor %}
         ]

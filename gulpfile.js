@@ -2,19 +2,13 @@
 
 import gulp from "gulp";
 import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
 import include from "gulp-include";
 import plumber from "gulp-plumber";
-import rename from "gulp-rename";
-import sourcemaps from "gulp-sourcemaps";
 import uglify from "gulp-uglify";
 import yaml from "gulp-yaml";
 import browserSync from "browser-sync";
 import cp from "child_process";
-import { deleteAsync } from "del";
 import fs from "fs";
-import jsonSass from "json-sass";
-import source from "vinyl-source-stream";
 
 
 /**
@@ -66,10 +60,14 @@ function jekyll(done) {
     'end',
     'load Gem.bin_path("jekyll", "jekyll")',
   ].join('; ');
-  const command = process.platform === "win32" ? "cmd" : "bundle";
+  const hasMiseRuby = process.platform !== "win32"
+    && cp.spawnSync('mise', ['current', 'ruby'], { stdio: 'ignore' }).status === 0;
+  const command = process.platform === "win32" ? "cmd" : hasMiseRuby ? "mise" : "bundle";
   const args = process.platform === "win32"
     ? ['/c', 'bundle', 'exec', 'ruby', '-e', rubyGlobCompat, 'build']
-    : ['exec', 'ruby', '-e', rubyGlobCompat, 'build'];
+    : hasMiseRuby
+      ? ['exec', 'ruby', '--', 'bundle', 'exec', 'ruby', '-e', rubyGlobCompat, 'build']
+      : ['exec', 'ruby', '-e', rubyGlobCompat, 'build'];
   const child = cp.spawn(command, args, { stdio: 'inherit' });
   child.on('error', done);
   child.on('close', (code) => {
@@ -129,18 +127,18 @@ function yamlTheme() {
     .pipe(gulp.dest('src/tmp/'));
 }
 
-function jsonTheme() {
-  return fs.createReadStream('src/tmp/theme.json')
-    .pipe(jsonSass({
-      prefix: '$theme: ',
-    }))
-    .pipe(source('src/tmp/theme.json'))
-    .pipe(rename('_sass/_theme.scss'))
-    .pipe(gulp.dest('./'));
+async function jsonTheme() {
+  const themeJson = await fs.promises.readFile('src/tmp/theme.json', 'utf8');
+  const theme = JSON.parse(themeJson);
+  const entries = Object.entries(theme)
+    .map(([name, value]) => `  ${name}: ${value}`)
+    .join(',\n');
+
+  await fs.promises.writeFile('_sass/_theme.scss', `$theme: (\n${entries}\n);`, 'utf8');
 }
 
 async function cleanTheme() {
-  return await deleteAsync(['src/tmp']);
+  await fs.promises.rm('src/tmp', { recursive: true, force: true });
 }
 
 const theme = gulp.series(yamlTheme, jsonTheme, cleanTheme);
@@ -154,11 +152,9 @@ const theme = gulp.series(yamlTheme, jsonTheme, cleanTheme);
 function mainJs() {
   notify('Building JS files...');
   return gulp.src('src/js/main/**/*.js')
-    .pipe(sourcemaps.init())
+    .pipe(plumber())
     .pipe(uglify())
     .pipe(concat('scripts.min.js'))
-    .pipe(plumber())
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('_site/assets/js/'))
     .pipe(browserSync.reload({ stream: true }))
     .pipe(gulp.dest('assets/js'));
@@ -183,19 +179,6 @@ function previewJs() {
 const js = gulp.parallel(mainJs, previewJs);
 
 /**
- * Images Task
- * 
- * All images are optimized and copied to assets folder.
- */
-function images() {
-  notify('Copying image files...');
-  return gulp.src('src/img/**/*.{jpg,png,gif,svg}')
-    .pipe(plumber())
-    .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('assets/img/'));
-}
-
-/**
  * Watch Task
  * 
  * Watch files to run proper tasks.
@@ -216,9 +199,6 @@ function watch() {
   // Watch preview JS files for changes, copy files & reload
   gulp.watch('src/js/preview/**/*.js', gulp.series(previewJs, reload));
 
-  // Watch images for changes, optimize & recompile
-  gulp.watch('src/img/**/*', gulp.series(images, config, jekyll, reload));
-
   // Watch html/md files, rebuild config, run Jekyll & reload BrowserSync
   gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '_posts/*', 'pages/*'], gulp.series(config, jekyll, reload));
 }
@@ -228,22 +208,20 @@ function watch() {
  *
  * Running just `gulp` will:
  * - Compile the theme, SASS and JavaScript files
- * - Optimize and copy images to its folder
  * - Build the config file
  * - Compile the Jekyll site
  * - Launch BrowserSync & watch files
  */
-const run = gulp.series(gulp.parallel(js, theme, images), config, jekyll, gulp.parallel(server, watch));
+const run = gulp.series(gulp.parallel(js, theme), config, jekyll, gulp.parallel(server, watch));
 
 /**
  * Build Task
  * 
  * Running just `gulp build` will:
  * - Compile the theme, SASS and JavaScript files
- * - Optimize and copy images to its folder
  * - Build the config file
  * - Compile the Jekyll site
  */
-const build = gulp.series(gulp.parallel(js, theme, images), config, jekyll);
+const build = gulp.series(gulp.parallel(js, theme), config, jekyll);
 
 export { run as default, build };

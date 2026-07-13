@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+ruby "3.2.11"
+
 gem "kramdown"
 gem "kramdown-parser-gfm"
 gem "rouge"

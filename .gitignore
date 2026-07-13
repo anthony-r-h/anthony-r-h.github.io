@@ -2,23 +2,49 @@ files/0UNSTRUCTURED
 #files/*/_INSPIRATION/
 #files/*/_PLAN/
 src/img/blog-image.png
-.idea
+
+# Generated site and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Installed dependencies and local dependency configuration
+node_modules/
+vendor/bundle/
+.bundle/
+
+# Editor and OS files
 .DS_Store
-.sass-cache
-Gemfile.lock
-package-json.lock
-node_modules
-_drafts
-_site
-*.cr3
-*.tif
-*.xmp
-*.psd
-*.mov
-*.mkv
-*.docx
-*.ai
-*.pdf
-*.zip
-*.dwg
+.idea/
+.vscode/
+.ruby-lsp/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Tool logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 .codex*.log
+
+_drafts
+
+# Raw and disposable files under files/
+files/**/*.[cC][rR]2
+files/**/*.[cC][rR]3
+files/**/*.bak
+files/**/*.log
+files/**/*.[tT][iI][fF]
+files/**/*.[xX][mM][pP]
+files/**/*.[pP][sS][dD]
+files/**/*.[mM][oO][vV]
+files/**/*.[mM][kK][vV]
+files/**/*.[dD][oO][cC][xX]
+files/**/*.[aA][iI]
+files/**/*.[pP][dD][fF]
+files/**/*.[zZ][iI][pP]
+files/**/*.[dD][wW][gG]

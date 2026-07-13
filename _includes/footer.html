@@ -32,16 +32,16 @@
 
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org",
+  "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "{{ site.name }}",
-  "description": "{{ site.description }}",
-  "url": "{{ site.url }}{{site.baseurl}}/",
+  "name": {{ site.name | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
   "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}{{site.baseurl}}/assets/img/icons/mediumtile.png",
-      "width": "600",
-      "height": "315"
+      "url": {{ site.url | append: site.baseurl | append: "/assets/img/icons/mediumtile.png" | jsonify }},
+      "width": 600,
+      "height": 315
   },
   "sameAs": [
     {{ social_urls | split: "," | join: "," }}
@@ -54,9 +54,6 @@
 
 <!-- Include the website scripts -->
 <script src="{{ '/assets/js/scripts.min.js' | prepend: site.baseurl }}"></script>
-
-<!-- Include Google Analytics script -->
-{% include stats.html %}
 
 <!-- Include extra scripts -->
 {% include extra-js.html %}
