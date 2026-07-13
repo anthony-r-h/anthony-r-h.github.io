@@ -930,55 +930,41 @@
         </script>
         {% endif %}
 
-        {% if page.math %}
-        <script>
-            MathJax = {
-                tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-                }
-            };
-        </script>
-        <script type="text/javascript" id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-        </script>
-        {% endif %}
-
-
         <script type="application/ld+json">
         {
-            "@context": "http://schema.org",
+            "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "name": "{{ page.title }}",
-            "headline": "{{ page.subtitle }}",
-            "description": "{{ page.description }}",
-            "image": "{{ schema_image }}",
-            "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-            "articleBody": "{{ content | strip_html | xml_escape | textilize }}",
-            "wordcount": "{{ content | number_of_words }}",
-            "inLanguage": "{{ site.language }}",
-            "dateCreated": "{{ page.date | date: '%Y-%m-%d/' }}",
-            "datePublished": "{{ page.date | date: '%Y-%m-%d/' }}",
-            "dateModified": "{{ page.date | date: '%Y-%m-%d/' }}",
+            "name": {{ page.title | jsonify }},
+            "headline": {{ page.subtitle | jsonify }},
+            "description": {{ page.description | jsonify }},
+            "image": {{ schema_image | jsonify }},
+            "url": {{ page.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+            "articleBody": {{ content | strip_html | strip_newlines | jsonify }},
+            "wordCount": {{ content | number_of_words }},
+            "inLanguage": {{ site.language | jsonify }},
+            "dateCreated": {{ page.date | date_to_xmlschema | jsonify }},
+            "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+            "dateModified": {{ page.date | date_to_xmlschema | jsonify }},
             "author": {
                 "@type": "Person",
-                "name": "{{ schema_author_name }}",
-                "url": "{{ schema_author_url }}"
+                "name": {{ schema_author_name | jsonify }},
+                "url": {{ schema_author_url | jsonify }}
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "{{ site.name }}",
-                "url": "{{ site.url }}{{site.baseurl}}/",
+                "name": {{ site.name | jsonify }},
+                "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "{{ site.url }}{{site.baseurl}}/assets/img/_blog-image.png",
-                    "width": "600",
-                    "height": "315"
+                    "url": {{ site.url | append: site.baseurl | append: "/assets/img/_blog-image.png" | jsonify }},
+                    "width": 600,
+                    "height": 315
                 }
             },
-            "mainEntityOfPage": "True",
-            "genre": "{{ page.category }}",
-            "articleSection": "{{ page.category }}",
-            "keywords": [{{ page.tags | join: '","' | append: '"' | prepend: '"' }}]
+            "mainEntityOfPage": {{ page.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+            "genre": {{ page.category | jsonify }},
+            "articleSection": {{ page.category | jsonify }},
+            "keywords": {{ page.tags | jsonify }}
         }
         </script>
 

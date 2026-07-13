@@ -131,8 +131,7 @@ post_ui:
 
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-google_analytics: ""
+url: "https://nonsatiation.believe.cv" # the base hostname & protocol for your site
 language: "en"
 
 
@@ -181,6 +180,12 @@ exclude: [
   'node_modules',
   'vendor',
   '.bundle',
+  'files/**/*.cr2',
+  'files/**/*.CR2',
+  'files/**/*.cr3',
+  'files/**/*.CR3',
+  'files/**/*.bak',
+  'files/**/*.log',
   'initpost.sh',
   'Gemfile',
   'Gemfile.lock',
