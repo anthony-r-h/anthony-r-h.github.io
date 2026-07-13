@@ -6,6 +6,7 @@ optimized_image: /files/ALIEXPRESS_ALLROAD/bike-1_5.jpg
 category: Bikes
 tags:
   - Bikes
+toc: true
 ---
 
 # Introduction
@@ -14,20 +15,20 @@ tags:
 
 I am not a serious cyclist, my interest in bikes comes mostly from appreciating them as machines and working on them.
 
-My first bike as an adult was a second-hand [Georgina Terry Chrom](https://sheldonbrown.com/harris/terry/history.html) steel road bike. It had Tange double-butted chromoly tubing, full Shimano 105 8-speed drivetrain with downtube shifters, and Shimano wheels. A few weeks after buying it, I rode my first metric century on it. It was an uncomfortable, grueling and prolonged experience.
+My first adult bike was a second-hand [Georgina Terry Chrom](https://sheldonbrown.com/harris/terry/history.html) steel road bike I bought in 2012. It was made in Japan in 1988 or 1989 with Tange double-butted chromoly tubing, Shimano 105 8-speed with downtube shifters, and Shimano wheels. A few weeks after buying it, I rode my first metric century. It was an uncomfortable, grueling and prolonged experience.
 
-At this point I had read the entirety of the late [Sheldon Brown's website](https://sheldonbrown.com) who is an important figure in bike mechanic canon on the Old Internet. Reading all of that made the bike feel less mysterious, and being generally mechanically inclined, I soon had it stripped down to the bare frame for what started as a complete service and turned into a drivetrain overhaul. Once I was that far in, I was no longer just trying to make the bike work. I was getting interested in the older, stranger, more opinionated side of road bikes. One name kept coming up: Campagnolo. Their reputation was hard to ignore: deeply tied to road cycling history, slightly impractical, and mechanically different. I sourced an early-2000s Chorus groupset from Ebay, but the shifters were in poor working condition. I considered rebuilding them, only to find that the replacement parts were either unavailable or unreasonably expensive. I returned the Chorus groupset and instead bought a 2012 Veloce groupset, along with Campagnolo Scirocco aluminium wheels.
+I was already fairly comfortable taking things apart, so before long I had the Terry stripped down to the bare frame. Around the same time, I was spending a lot of time on [Sheldon Brown's website](https://sheldonbrown.com), trying to figure out what all the different parts were called and what would fit, how they worked, and what to service. That reading sent me into a lot of old road bike stuff, and Campagnolo kept turning up. I liked that it was tied to cycling history, and that it was a little weird. So what started as a basic service turned into a drivetrain overall. I found an early-2000s Chorus groupset on eBay, but the shifters were in rough shape. I looked into rebuilding them, then realized the small parts were either unavailable or too expensive to make sense, which on brand for Campagnolo. I returned the Chorus group and bought a 2012 Veloce groupset instead, along with Campagnolo Scirocco aluminum wheels.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/campy_chorus_2003.png">
-   <figcaption>Campagnolo Chorus from [2003 Campagnolo catalog]("/files/ALIEXPRESS_ALLROAD/2003CampagnoloCatalogue.pdf")</figcaption>
+   <figcaption>2003 Campagnolo catalog</figcaption>
 </figure>
 
 [Retro roadies- old frames with STI's or Ergos](https://www.bikeforums.net/classic-vintage/361558-retro-roadies-old-frames-sti-s-ergos.html.)
 
-Since then, road bikes standards have progressively evolved. Today we have electronic shifting, hydraulic disc brakes, power meters, tire width has continually widened, and carbon frames are now normal rather than exotic. At the same time, Chinese manufacturers have become much more visible to Western buyers. Some sell directly through AliExpress or similar marketplaces; others appear to be closing the gap between factory, brand, and customer.
+Road bikes have changed a lot since then. Electronic shifting, hydraulic disc brakes, power meters, wider tires, and carbon frames are all much more normal now. Around the same time, Chinese manufacturers became a lot more visible to Western buyers. Some sell directly through AliExpress or similar marketplaces, and some seem to sit somewhere between factory, house brand, and conventional bike company.
 
-Chinese carbon bike frames have been around for years, but I was cautious about them when I first started paying attention. The reputation was uneven, information was harder to find, and buying one still felt like an experiment. That has changed, there are now plenty of examples of Chinese frames that are well-engineered and well-reviewed, while some established Western brands have had their own design and quality-control controversies (BMC, Cervelo, Canyon to name a few). 
+Chinese carbon frames have been around for years, but I was cautious about them when I first started paying attention. The reputation was uneven, good information was harder to find, and buying one still felt like a bit of an experiment. That has changed considerably. There are now plenty of Chinese frames with good reviews and decent engineering behind them, while established Western brands have had their own design and quality-control problems. BMC, Cervelo, and Canyon all come to mind.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/incolor_ssr.jpg">
@@ -36,19 +37,19 @@ Chinese carbon bike frames have been around for years, but I was cautious about 
 
 The same thing is happening with drivetrains and components. Shimano, SRAM, and Campagnolo are still the familiar names, but brands like Sensah, L-TWOO, Wheeltop, and Magene are now part of the conversation. They are not coming from nowhere. Many of these companies have roots in the same manufacturing ecosystem that has supported the major brands for years.
 
-I am more willing than most people to buy parts that require some research and mechanical sympathy. Moving from a 1990s steel road bike, modernized with 2010-era components, to a mostly Chinese parts build seems like a reasonable arc. I knew the tradeoffs: limited support, unclear long-term reliability, and some chance of paying to beta-test someone else’s product. But I also like tinkering, and I wanted to see what these parts are actually like to live with. This build is my documentation of affordable Chinese bike components sourced mainly through AliExpress.
+I am more willing than most people to buy parts that require some research and mechanical sympathy. Moving from a 1990s steel road bike, modernized with 2010-era components, to a mostly Chinese parts build seems like a reasonable arc. Limited support, unclear reliability, and the possibility of paying to beta-test someone else's product are real drawbacks, but the Chinese parts market is broad enough that there is also a real chance of finding incredible value.
 
-# Part List
+I also like tinkering, and I wanted to see what these parts are actually like to live with. This build is my documentation of affordable Chinese bike components sourced mainly through AliExpress.
 
-Overview of the parts used in the build.
+# Part Overview
 
 I have included what I paid (in CAD), background information, selection justification, and occassionally more indepth notes where relevant. 
 
 ## Frameset
 
-Brands like Incolor, Yoeleo, Winspace, Tavelo, and Serk have built real reputations, and are now discussed less as "cheap Chinese frames" and more as bike brands in their own right. There are also long-running OEM manufacturers, such as [FiberTek Composite in Xiamen](https://www.youtube.com/watch?v=p5EhSpZ3cug), that have produced carbon frames for international brands for years.
+Brands like Incolor, Yoeleo, Winspace, Tavelo, and Serk have built real reputations, and are now discussed less as "cheap Chinese frames" and more as bike brands in their own right. There are also long-running OEM manufacturers, such as [FiberTek Composite in Xiamen](https://www.youtube.com/watch?v=p5EhSpZ3cug), that have produced carbon frames for international brands and are now becoming more visible under their own names.
 
-Spcycle sits in a different part of the market. They sell affordable carbon frames, but they do not belong on the same playing field. They also have a fairly mixed reputation. I bought the Spcycle SP-053D which is heavily inspired by the Cipollini Dolomia.
+Spcycle sits in a different part of the market: affordable carbon frames, a much more mixed reputation, and none of the credibility of the brands above. I bought the SP-053D, which is heavily inspired by the Cipollini Dolomia.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/spcycle1.png">
@@ -73,24 +74,24 @@ The 2023 version is listed with the following specifications:
 
 I paid $743.63 for the frameset which included the fork, seatpost, headset, handlebar, and thru axles. I later received a $78.96 refund, for reasons I will get into below.
 
-## Groupset
+## Drivetrain
 
 ### L-TWOO RX 12-speed mechanical groupset
 
 The RX series is L-TWOO's flagship 12-speed road groupset. It uses mechanical cable-actuated shifting with hydraulic disc brakes.
 
-I purchased the original RX release for $374.83, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has iterated on the shifters, rear derailleur and brake calipers. The shifters are now also available with a Shimano-style shift option.
+I purchased the original RX release for $374.83, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has released newer versions of the shifters, rear derailleur, and brake calipers. The shifters are now available in both the original Campagnolo-style layout and a Shimano-style option.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/canvas.png">
    <figcaption></figcaption>
 </figure>
 
-One thing to note: the cable pull ratio is compatible with Shimano 12-speed road derailleurs and cassettes, so it can be mixed with Shimano-compatible parts. It is also compatible with L-TWOO's GRT rear derailleur, which opens up wider cassette options. Although the RX rear derailleur officially supports up to a 32T cassette, I am running a 34T cassette with no issues.
+One thing to note: the cable pull ratio is compatible with Shimano 12-speed road derailleurs and cassettes, so it can be mixed with Shimano-compatible parts. It is also compatible with L-TWOO's GRT rear derailleur, which opens up wider cassette options. Although the RX rear derailleur officially supports up to a 32T cassette, I am able to run a 34T cassette due to frame geometry.
 
 ### Crankset
 
-For the crank assembly, I used a ThinkRider PP5 spider-based power meter, 165mm carbon crank arms (24mm Shimano-standard titanium spindle), and ZRACE Unchained 50/34T chainrings. The PP5 uses an Easton-style four-bolt 110 BCD interface: the spider mounts to the drive-side crank arm, and the chainrings mount to the spider.
+For the crank assembly, I used a ThinkRider PP5 spider-based power meter, 165 mm carbon crank arms with a 24 mm Shimano-standard titanium spindle, and ZRACE Unchained 50/34T chainrings. The PP5 uses an Easton-style four-bolt 110 BCD setup, with the spider mounted to the drive-side crank arm and the chainrings mounted to the spider.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.png">
@@ -99,7 +100,7 @@ For the crank assembly, I used a ThinkRider PP5 spider-based power meter, 165mm 
 
 The PP5 power meter spider itself is around $100, which was close enough to the cost of a non-power-meter spider that it seemed worth trying. The complete crank assembly, including the crank arms, was $252.09.
 
-[Shane Miller (GPLama) reviewed the PP5 power meter](https://gplama.com/2026/02/18/thinkrider-pp5-power-meter-review/) and found accuracy problems, especially after hard efforts where the zero offset can drift and make the unit read high for the rest of the ride. For my use, as a non-serious cyclist, having rough power reference sure beats vibes.
+[Shane Miller (GPLama) reviewed the PP5 power meter](https://gplama.com/2026/02/18/thinkrider-pp5-power-meter-review/) and found accuracy problems, especially after hard efforts where the zero offset can drift and make the unit read high for the rest of the ride. That's not a problem for me, as a non-serious cyclist, having rough power reference sure beats vibes.
 
 The chainring is a ZRACE Unchained 50/34T set. These are machined out of 7075 aluminium and are heavily profiled for weight reduction. The chainrings were $67.30.
 
@@ -120,7 +121,7 @@ The chainring is a ZRACE Unchained 50/34T set. These are machined out of 7075 al
 
 ### Brakes 
 
-In the original 2023 build, I used L-TWOO RX hydraulic calipers which worked wonderfully, but I didn't like how they looked. I replaced them with ZRACE XG4 four-piston hydraulic calipers. Some L-TWOO RX groupsets are now sold with these calipers, but that option was not available when I bought mine.
+In the original 2023 build, I used L-TWOO RX hydraulic calipers which worked great, but I didn't like how they looked. I replaced them with ZRACE XG4 four-piston hydraulic calipers. Some L-TWOO RX groupsets are now sold with these calipers, but that option was not available when I bought mine.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/zrace_XG4_1.png">
@@ -132,7 +133,7 @@ In the original 2023 build, I used L-TWOO RX hydraulic calipers which worked won
    <figcaption></figcaption>
 </figure>
 
-The calipers are a one-piece machined aluminium construction and they feel very high quality in hand. ZRACE offers them in several colours, and the same calipers are also sold under brands like IIIPro and ONIRII with even more finish options. The design is heavily inspired by the Hope RX4 calipers. The ZRACE XG4 also share the same brakepads as the Hope RX4.
+The calipers are machined from a single piece of aluminum and feel surprisingly high quality in hand. ZRACE sells them in several colors, and the same calipers also show up under brands like IIIPro and ONIRII with even more finish options. The design is _heavily inspired_ by the Hope RX4, and the XG4 uses the same brake pads.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Hope_RX4+.png">
@@ -147,28 +148,12 @@ I am using a ZRACE 12-speed 11-34T cassette. It is a very utilitarian cassette: 
 
 ## Wheels
 
-Elitewheels are no longer an obscure AliExpress wheel brand. Their higher-end Drive line is well regarded, but this build uses their entry-level ENT gravel wheels.
+Elitewheels has broken out of the "cheap AliExpress wheels" category. Their better wheelsets are taken seriously on their own merits now. I did not buy one of those, I bought their entry-level ENT gravel wheels instead, for $562.02: 45mm deep carbon rims, centerlock disc mounts, basic aluminum hubs, and generic bearings.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/elitewheels_ent_gravel_2.png">
    <figcaption></figcaption>
 </figure>
-
-These are carbon gravel wheels with centerlock rotor mounts, basic aluminium hubs, and NBK bearings. I chose the gravel version because this build aspires to be for some light all-road use. My assumption was that a gravel wheelset would be less fragile than a lightweight road wheelset.
-
-## Other parts
-
-Lizard Skins DSP bar tape
-
-Fizik  Arione VS saddle
-
-Shimano SPD pedals
-
-
-
-
-
-
 
 
 
@@ -176,7 +161,7 @@ Shimano SPD pedals
 
 # Assembly Notes
 
-I also needed a few new specialized tools for assembly: bottom bracket and lockring tools, a bleed kit, a hydraulic hose cutter and barb/olive fitting tool, an internal routing kit, and a bottom bracket press.
+I needed a few new specialized tools for assembly: bottom bracket and lockring tools, a bleed kit, a hydraulic hose cutter and barb/olive fitting tool, an internal routing kit, and a bottom bracket press.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8738.jpg">
@@ -185,35 +170,35 @@ I also needed a few new specialized tools for assembly: bottom bracket and lockr
 
 ## Bottom bracket
 
-Originally, I installed a thread-together press-fit bottom bracket, but the non-drive side bearing did not turn freely once installed, whereas the bearing felt fine outside the frame. That suggests the bearing or cup was being squeezed by the shell after installation. The likely issue is not just left/right alignment. Because the roughness appears even with one side installed, the stronger suspicion is local bore distortion: the shell may be undersized or oval enough to compress the cup or bearing race.
+I originally installed a thread-together press-fit bottom bracket. The non-drive side bearing felt fine before installation, but once it was pressed into the frame it no longer turned freely. That points to the shell squeezing the cup or bearing after installation. Since the roughness showed up even with only one side installed, I suspect the problem is local bore distortion rather than left/right alignment. Part of the shell is probably undersized or slightly oval, enough to compress the cup and load the bearing race.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8702.jpg">
    <figcaption>Removal of the ZTTO thread-together bottom bracket. Since the splines are so shallow, I am using a bearing press tool to apply pressure to the bottom bracket tool to ensure engagement.</figcaption>
 </figure>
 
-I measured this shell with a digital caliper. These are reference measurements, but they are useful enough to compare against the symptom. Several areas measured below 40.95mm, especially on the drive side, suggesting that parts of the shell are undersized and possibly out of round. Nominally, a BB86 shell measures 41mm in diameter. Common fit guidance puts the acceptable bore range at approximately 40.95mm to 41.00mm.
+I measured the shell with a digital caliper. These measurements are not perfect, but they are good enough to match against what I was seeing. A BB86 shell is nominally 41mm in diameter, with common fit guidance putting the acceptable bore range around 40.95mm to 41.00mm. Several spots on this frame measured below 40.95mm, especially on the drive side, which lines up with the bearing feeling tight once installed. The shell is probably undersized in places and may also be slightly out of round.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/bottom_bracket_problem.png">
    <figcaption></figcaption>
 </figure>
 
-Not great, my options are:
+At that point I had a few options:
 
 - Leave it alone and treat the bottom bracket as a wear item.
 - Try a different bottom bracket design that tolerates the shell better.
 - Modify the bottom bracket cup slightly so it is not squeezed as much.
 - Correct the frame shell.
 
-Correcting the frame shell is the most direct fix, but it is also the most permanent and the easiest to get wrong without proper piloted tooling. A hand hone can remove material, but it will not reliably correct coaxial alignment, roundness, or parallelism. It can also make the shell oversized if used carelessly.
+Correcting the frame shell is the most direct fix, but it is also the most permanent and the easiest to get wrong without proper piloted tooling. A hand hone can remove material, but it will not reliably correct coaxial alignment, roundness, or parallelism.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Cylinder Hone Kit.png">
    <figcaption></figcaption>
 </figure>
 
-Modifying the bottom bracket cup is less risky because the cup is sacrificial and replaceable. It may reduce the interference fit enough to stop the bearing from being squeezed. However, that does not fix the underlying shell geometry.
+Modifying the bottom bracket cup is less risky because the cup is sacrificial and replaceable. It may reduce the interference fit enough to stop the bearing from being squeezed.
 
 The main implications are premature bottom bracket wear, small power loss and possible future creaking. Itself, that is not catastrophic, press-fit bottom brackets and bearings are replaceable wear parts. But it is still a useful quality signal of the overall frame.
 
@@ -222,7 +207,7 @@ The main implications are premature bottom bracket wear, small power loss and po
    <figcaption></figcaption>
 </figure>
 
-I pursued an unsuccessful claim with AliExpress. The seller offered a refund on the frame, but I would have to pay return shipping, which would have cost more than the frame, so I decided to keep it. I think that's a very appropriate outcome for having bought an alarmingly low priced carbon frame from an unknown company.
+I pursued an unsuccessful claim with AliExpress. The seller offered a refund on the frame, but I would have to pay return shipping, which would have cost more than the frame, so I decided to keep it.
 
 ### Deep Dive
 
@@ -286,17 +271,16 @@ I cut the steerer tube approximately 1 to 2mm longer than ideal, so I added a 2m
 
 ## L-TWOO RX Groupset
 
-Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is still to be determined, but so far the shifting has been as good as anything I have used. The rubber hoods feel high quality and grippy I like the Campagnolo-style thumb lever, and overall, the shifters feel great.
+Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is still unknown, but so far the shifting has been as good as anything I have used. The rubber hoods feel high quality and have a grippy texture. I also like the Campagnolo-style thumb lever. The shifters are probably the best part of the groupset.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/ltwoo_rx_new.png">
    <figcaption></figcaption>
 </figure>
 
+The main place the L-TWOO feels less refined is the lever action. There is a little free play before the shift mechanism engages. It is not mushy exactly, but there is some slop, and it is noticeable compared with higher-end groupsets. The thumb lever appears to be nylon, and the shift paddle is some sort of plastic. None of this has affected function, but it is where the shifters could be improved.
 
-Where the L-TWOO feels less refined is in the lever action. There is a little free play before the shift mechanism engages, It is not mushy, but there is some slop, and it is noticeable compared with higher-end groupsets.  The thumb lever appears to be nylon, and the shift paddle is some sort of plastic. None of this affects function, but they are obvious places where the feel could be improved.
-
-On my version, the brake levers are forged carbon fiber, though the standard version has aluminium levers. The pre-travel adjustment (which comes up again later with bleeding) allows one to fine-tune the responsiveness of the brakes.
+My version has forged carbon fiber brake levers, while the standard version uses aluminium levers. The levers also have pre-travel adjustment, which lets you fine-tune where the brakes start to engage.
 
 The derailleurs are less exciting than the shifters. Functionally, they're fine, but just a bit pedestrian. I replaced the high/low limit, adjustment, and pinch bolt screws with titanium fasteners becaused the originals felt low quality.
 
@@ -305,12 +289,13 @@ The derailleurs are less exciting than the shifters. Functionally, they're fine,
    <figcaption></figcaption>
 </figure>
 
-Mechanically, installation was straightforward. The only part that was new to me was setting up and bleeding hydraulic road brakes.
+Mechanically, installation was straightforward, with a few caveats.
 
-1. Routing fully internal cables
-2. Installing hydraulic brakes
+### Routing fully internal cables
 
-With routing tools, magnets, and gravity, routing the cable housing and hydraulic hoses was easy. The result is very clean, but at the cost of serviceability. Because the lines run through the handlebar and stem spacers, many future changes require pulling and rerouting them, including changing stem height, servicing the headset, or replacing the handlebar.
+With routing tools, magnets, and gravity, running the cable housing and hydraulic hoses was easy. The result is very clean, but it comes with a real serviceability penalty. Because the lines run through the handlebar and stem, then through the headset and into the frame, even routine front-end work can turn into a full hose-and-housing reroute. Changing the spacer stack, replacing headset bearings, removing the fork, or swapping the bar or stem all become much bigger jobs.
+
+### Installing hydraulic brakes
 
 Installing hydraulic brakes was a bit more work. The [manual provides guidance](/files/ALIEXPRESS_ALLROAD/Disc-Series_User-Manual_V2.0_EN.pdf).
 
@@ -355,12 +340,7 @@ The four titanium chainring bolts thread into titanium nuts.  Titanium-on-titani
 
 [For future reference, here is the manual for the Thinkrider PP5 power meter.](/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.pdf)
 
-
-### Gearing
-
-This is a compact 50/34T crankset paired with an 11-34T cassette. The result is a wide but conventional road/all-road range: a 4.55 top gear and a 1:1 lowest gear for climbing.
-
-Coming from 10-speed, I get why 12-speed exists, but I do not think the extra gears are consequential (to me). Mechanically, 12-speed uses a thinner chain and narrower spacing between cassette cogs which in theory aremore fragile, and harder to index due to tighter tollerance. So far, I have had had no issues with locking in the indexing.
+The combination of a compact 50/34T crankset paired with an 11-34T cassette gives a wide gearing range: a 4.55 top gear and a 1:1 lowest gear for climbing.
 
 | Combination | Gear ratio | Speed at 100 RPM (km/h) |
 | ----------: | ---------: | -----------: |
@@ -388,27 +368,75 @@ Coming from 10-speed, I get why 12-speed exists, but I do not think the extra ge
 |      50 x 34 |       1.47 |         18.8 |
 
 
-What I would value is wider gearing. Since the L-TWOO RX cable pull length is compatible with Shimano 12-speed and L-TWOO gravel groupsets, it is possible to use a long cage derailleur with a larger cassette.
 
-<figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/ltwoo-grt-2.png">
-   <figcaption></figcaption>
-</figure>
+## Dialing In the Shifting
+
+Coming from 10-speed, I had more trouble dialing in this drivetrain than I expected. The job is conceptually the same, but 12-speed gives you less room to be sloppy. The chain is narrower, the cassette spacing is tighter, and adjustments that would have been close enough on a 10-speed setup were not close enough here.
+
+Coming at it from first principles, the useful way to think about derailleur adjustment is in terms of the control variables that govern shifting.
+
+Front derailleur:
+
+- Height relative to the chainring
+- Rotation relative to the chainring
+- Low and high limit screws
+- Cable tension
+
+Rear derailleur:
+
+- Low and high limit screws
+- B-screw position, which sets the upper jockey wheel distance from the cassette
+- Cable tension
+
+### Front Derailleur Mounting
+
+The front derailleur height and rotation are the easy variables. The outer cage plate needs to sit close to the big ring so it can start controlling the chain almost immediately as the shift begins, but not so close that the teeth can hit the cage under frame flex or vibration. In practice that usually means about 1-2 mm above the tallest teeth on the big ring. If the derailleur is mounted too high, the cage has to push the chain farther before the chain can engage the shift ramps and pickup pins on the large ring, which makes upshifts slower and less decisive.
+
+The cage also needs to be parallel to the chainrings so it guides the chain sideways with a nearly uniform gap along the length of the cage. If the derailleur is rotated inward or outward, one end of the cage reaches the chain before the other. That can cause rubbing, hesitation, or a messy shift where the chain is pushed sideways without climbing cleanly onto the big ring.
+
+### Rear Derailleur B-Screw
+
+The LTWOO RX rear derailleur has a B-screw that sets the derailleur body's starting angle relative to the cassette. More B-tension rotates the derailleur backward and increases the gap between the upper jockey wheel and the cassette; less B-tension lets it sit closer. That gap matters because the upper jockey wheel is what tracks the cassette and presents the chain to each cog during a shift. If it is too far away, the chain has more room to wander before engaging the next sprocket, so shifts become slower and less precise. If it is too close, the jockey wheel can crowd the larger cogs, causing noise, drag, or outright interference. The goal is not a universal distance, but the smallest gap that still gives safe clearance in the largest cassette cog.
+
+### Limit Screws and Cable Tension
+
+One thing I had not really thought about before was the derailleur's default position and what the cable is actually doing. Both derailleurs are spring-loaded, and the shift cable pulls against that spring.
+
+- Rear derailleur: the spring pulls the cage toward the smallest cog, and cable tension moves it inward toward the larger cogs.
+- Front derailleur: the spring leaves it at the small ring, and cable tension moves it outward to the big ring.
+
+At that spring-loaded default position, the cable should be just taut enough to move the derailleur immediately, but not tight enough to pull it off its stop.
+
+- Too little tension: there is slack in the system, so the first click is partly wasted taking that up.
+- Too much tension: the derailleur gets pulled away from its resting stop, which shifts the whole indexed position.
+
+The opposite limit screw is just a mechanical safety stop. It should be set far enough to let the derailleur reach the end gear, but no farther.
+
+- Rear derailleur: enough inward travel to reach the largest cog, but not enough to send the chain into the spokes.
+- Front derailleur: enough travel to shift cleanly onto each chainring, but not enough to throw the chain off either side.
+
+### Chainline
+
+I had originally centered the crank spindle left to right, but that turned out to leave the chainline slightly too far inboard. In the small chainring and smaller rear cogs, the chain would brush the big ring, usually on the shift pins. At low speed it was occasional and at higher speed vibration turned it into a constant pinging noise.
+
+That gear range should be usable, so the amount of rubbing suggested the chainline was off. The fix was to move the crankset about 0.5 mm toward the drive side using spacers.
 
 
 
-### Fasteners and Torque
+> https://www.sheldonbrown.com/derailer-adjustment.html
 
-Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected. My original plan was to replace all the screws with 316 stainless steel. The problem was buying them in sensible quantities. I needed several sizes, lengths, and head types, and most suppliers sold them in packs of 50 to 100.
 
-So I ended up sourcing specialty titanium fasteners from AliExpress. Weight savings wasn't a factor, I just did not want hundreds of spare screws sitting around, I like titanium, and have a strong preference for Torx heads. So paying silly prices for titanium bling was justifiably practical.
+## Fasteners and Torque
+
+Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected. My original plan was to replace all the screws with 316 stainless steel, but the problem was sourcing them in sensible quantities. I needed several sizes, lengths, and head types, and that would mean pacs of 50 to 100 for each.  So I ended up buying specialty titanium fasteners from AliExpress. Weight savings wasn't a factor, I just did not want hundreds of spare screws sitting around. Also, I like titanium, and have a strong preference for Torx heads. So paying silly prices for titanium bling was justifiably practical.
 
 This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
 
 - Galling: metal-to-metal adhesion under pressure. Threads feel rough, bind, then can tear or seize. Titanium and aluminium are more prone than plain steel.
 - Corrosion: chemical/electrochemical attack. Mixed metals can create galvanic corrosion, especially with water/salt. Aluminium usually loses that fight against steel or titanium.
 
-This table is a simple reference for static threaded metal joints on the bike. It compares common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly.
+Here is a simple reference for static threaded metal joints on the bike comparing common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly. [Further reference from Park Tools.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
+
 
 <style>
   .risk-table {
@@ -501,15 +529,44 @@ This table is a simple reference for static threaded metal joints on the bike. I
   </tbody>
 </table>
 
+### Fastener list
 
-[Further reference.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
+These are the fasteners, tools, torque targets, and compounds I used during assembly.
 
+Abbreviations: AS = anti-seize, TL = threadlocker, FM = flat mount, FD = front derailleur, RD = rear derailleur.
+
+| Location | Fastener | Tool | Torque | Prep |
+| --- | --- | --- | --- | --- |
+| Lever clamp | Band clamp | 5mm hex | 6-8 Nm | No grip paste |
+| Fork steerer | Expander plug | 5mm hex | 5-6 Nm | No grip paste |
+| Top cap | M6x30 Ti | T30 | Preload | AS |
+| Stem clamp | Ti pinch bolts | 4mm hex | 4-5 Nm | AS |
+| Caliper-FM | M5x12 304 SS | 4mm hex | 5-8 Nm | TL threads<br>AS head |
+| Rear FM-frame | M5x35 Ti + washer | T25 | 5-6 Nm | TL threads<br>AS head |
+| Fork FM-frame | M5x12 Ti + washer | T25 | 5-6 Nm | TL threads<br>AS head |
+| Saddle-seatpost | M6x30 Ti | T30 | 5 Nm | AS |
+| Seatpost clamp |  | T30 | 5-6 Nm | AS |
+| Chainring | Chainring bolts | 5mm hex | 10 Nm | AS |
+| FD adjustment | M4x15 Ti | 3mm hex |  | TL minimal |
+| FD cable pinch | M5x12 Ti + washer | T25 | 6-7 Nm | AS |
+| FD mount | M5x10 Ti | T25 | 6-7 Nm | AS |
+| RD adjustment | M4x15 Ti | 3mm hex |  | TL minimal |
+| RD cable pinch | M5x12 Ti + washer | T25 | 6-7 Nm | AS |
+| RD mount | Mount bolt | 5mm hex | 6-7 Nm | AS |
+| Bottle mount | M5x15 Ti | T25 |  | AS |
+| Rear thru-axle | M12x168 (P1.5, 16L) 7075 Al | 6mm hex | 9-13 Nm | AS |
+| Front thru-axle | M12x121 (P1.5, 17L) 7075 Al | 6mm hex | 9-13 Nm | AS |
+| Cassette | Lockring | Cassette tool | 40 Nm | AS |
+| Brake rotor | Lockring | 16-notch BB tool | 40 Nm | AS |
+| Crank bolt | Self-extracting bolt | Cassette tool<br>20-tooth BB tool | Varies | AS |
+| Brake hose | Hose fitting | 5mm spanner<br>8mm spanner | 8-9 Nm | AS |
+| Pedal | Spindle | 8mm hex | 35-40 Nm | AS |
 
 ## Tube or tubeless?
 
-Initially I was running tubeless. Setup was not as bad as its reputation suggested, and riding tubeless was genuinely amazing. Being able to run lower pressure without worrying about pinch flats made the bike feel more comfortable and more capable on rough surfaces.
+I initially set the bike up tubeless. The setup was not as bad as I expected, and the ride was a huge improvement. Coming from 23C tires at around 105 PSI, 32C gravel tires at around 40 PSI felt incredible. The bike was more comfortable, had more grip, and felt a lot more capable on trails.
 
-The problem was storage and maintenance. I do not ride this bike consistently year-round, and tubeless sealant does not like sitting. It dries out, congeals, and can pool at the bottom of the tire, which makes the wheel feel unbalanced. You can remove the sealant before long storage, but at that point the convenience starts to disappear.
+The downside was storage and maintenance. I do not ride this bike consistently year-round, and tubeless sealant does not like sitting. It dries out, congeals, and can pool at the bottom of the tire, which can make the wheel feel unbalanced. Cleaning out the sealant before storage would solve that, but at that point I am doing more maintenance than I want from tubeless.
 
 I am now using RideNow TPU tubes.
 
