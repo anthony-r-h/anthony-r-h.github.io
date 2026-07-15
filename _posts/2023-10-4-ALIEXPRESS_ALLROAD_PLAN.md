@@ -43,7 +43,6 @@ Ultimately, I like tinkering, and I wanted to see what these components are actu
 
 # Part Overview
 
-
 I have included background information, selection justification, and occassionally more indepth notes where relevant.
 
 ## Parts and Prices
@@ -498,39 +497,39 @@ Here is a simple reference for static threaded metal joints on the bike comparin
   <tbody>
     <tr>
       <td>Aluminium, aluminium</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
     </tr>
     <tr>
       <td>Aluminium, titanium</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
-      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
     </tr>
     <tr>
       <td>Aluminium, steel</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
     </tr>
     <tr>
       <td>Titanium, titanium</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
     </tr>
     <tr>
       <td>Titanium, steel</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-high" title="High risk">galling</span><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
     </tr>
     <tr>
       <td>Steel, steel</td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-low" title="Low risk">galling</span><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
-      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
+      <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
     </tr>
   </tbody>
 </table>
@@ -622,7 +621,72 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 
 
 
+
+
+
+# Conclusion
   
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--2.jpg">
+  <figcaption>Drivetrain rear: LTWOO RX derailleur, 12-speed ZRACE cassette.</figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--4.jpg">
+  <figcaption>Drivetrain front: </figcaption>
+</figure>
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--5.jpg">
+  <figcaption>Drivetrain front:</figcaption>
+</figure>
+
+
+
+
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--6.jpg">
+  <figcaption>Hydraulic brakes.</figcaption>
+</figure>
+
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--8.jpg">
+  <figcaption>Ryet 3D printed saddle.</figcaption>
+</figure>
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--7.jpg">
+  <figcaption>Ryet 3D printed saddle.</figcaption>
+</figure>
+
+
+
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--9.jpg">
+  <figcaption>LTWOO RX brake lever and shifter.</figcaption>
+</figure>
+
+
+
+
+
+
+
 
 
 
@@ -638,3 +702,4 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/bike-1.jpg">
    <figcaption>2023 build out with Senicx PR3 34/50T crankset, tubeless tires, L-TWOO RX hyd
+</figure>
