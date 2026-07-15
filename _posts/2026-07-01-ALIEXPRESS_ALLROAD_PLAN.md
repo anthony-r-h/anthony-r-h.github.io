@@ -617,8 +617,57 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 
 
 
-
 # Conclusion
+
+The build was successful overall, but with one major caveat. Most of the components are easy to recommend. The frame is not.
+
+## Groupset, drivetrain and brakes
+
+The L-TWOO RX groupset is the biggest win. I would put it roughly at or just below Shimano 105, although it lacks some refinement. There is more play in the shift action, some of the smaller parts feel cheaper, and Shimano's decades-long head start surely counts for something. Even if 105 were sold at L-TWOO RX prices, I would probably still choose the RX simply because it is something different.
+
+I did not consider electronic shifting at all until writing this section. I accept that it shifts better, but batteries, firmware, electronics, and the likelihood that the whole thing eventually becomes e-waste are unappealing to me. Of course, mechanical shifters are not necessarily repairable either, but I think the point still stands.
+
+Hydraulic disc brakes are another interesting change. Objectively, they are more powerful and consistent than rim brakes, but I am not heavy enough, fast enough, or regularly riding in conditions where caliper brakes would be inadequate. Hydraulic braking comes with the territory with a modern groupset, 12x100mm and 12x142mm thru-axle spacing, and carbon wheels. I still prefer the appearance and simplicity of caliper brakes.
+
+I also remain unconvinced by 12-speed. I do not think the extra cogs meaningfully improves my experience. The continued addition of gears feels more like a product-cycle requirement than a response to a real problem.
+
+The inexpensive ZRACE cassette has been great. It is heavier than higher-end AliExpress options, but it shifts reliably, has steel cogs, and was super affordable.
+
+I am happy with the YBN chain. YBN is the OEM for Campagnolo's chains. Waxing was worthwhile mainly because the drivetrain stays clean; any reduction in maintenance or friction is secondary.
+
+## Wheels
+
+Admittedly, I chose carbon wheels purely for the aesthetics and curiosity. Coming from aluminium wheels on a steel frame, it is not a direct comparison, but they are nice. They are basic by current standards, and there are much better direct-from-China wheelsets available now, but I am happy with them. They have done exactly what I wanted.
+
+## Saddle
+
+The Ryet saddle may be the most surprising individual component. Its construction is genuinely impressive, and it feels like a real step forward from my previous Fizik saddle.
+
+## Frame
+
+The frame is where the value proposition falls apart. The undersized and out-of-round bottom bracket shell, rough flat-mount interfaces, and generally inconsistent finishing are disappointing. None of these problems alone suggest that the frame will fail. I expect it will probably be fine in normal use. Collectively, however, they are a strong indication of the level of care that went into its construction.
+
+I still expect the frame to be fine on the merits of the material and basic manufacturing process, despite the poor workmanship in these areas. That is not the same as having confidence in it. There are better-established Chinese carbon frames available for not much more money, which makes this kind of workmanship difficult to justify.
+
+The case for carbon is straightforward: it is lighter than steel and can be formed into complex shapes that are not possible with conventional steel tubes. That gives designers more freedom to reduce weight, tune compliance, and improve aerodynamics. I just do not make much use of those advantages. A good modern steel frame might add around a kilogram, which is a meaningful difference but not especially important to me. The aerodynamic shaping probably matters even less to me, although I admit that it looks cool.
+
+The bike feels good, but attributing that entirely to carbon would be difficult. The geometry, dropped seatstays, seatpost design, wheels, and 32mm tires all contribute to how it rides. Those design choices matter at least as much as the frame material itself. I am therefore underusing most of carbon's advantages while still dealing with its main disadvantage for me: feeling like I have to baby it.
+
+With the advent of monocoque 3D printed titanium frames... <todo>
+
+## Other Details
+
+A few other choices also worked out well.
+
+- Adhesive-free silicone bar tape is nice. Wrapping it in reverse eliminates the need for finishing tape.
+
+- Reusable cable ends with grub screws are much nicer. Previously, I would prevent the cable from fraying with solder or glue and otherwise leave the end uncovered, instead of using crimp-on cable ends.
+
+- Titanium fasteners are not practical in any objective sense, but I do appreciate them. They are precisely machined, have cleanly formed heads, and driver engagement is *tight*. None of that matters much at bicycle torque levels, but it makes the finished bike feel considered.
+
+## Final Thoughts
+
+The groupset, cassette, wheels, saddle, and many of the smaller components range from good value to genuinely impressive. The frame demonstrates the other side of the marketplace: the low price can come with poor execution, and there is no generally practical recourse when returning it costs more than the product itself.
 
 # Gallery
 
