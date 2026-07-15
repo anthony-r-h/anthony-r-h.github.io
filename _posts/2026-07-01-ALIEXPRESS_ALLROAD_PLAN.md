@@ -651,7 +651,7 @@ The bike feels good, but attributing that entirely to carbon would be difficult.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/laget_aero_one.jpg">
-  <figcaption>Laget Aero One single-piece 3D printed titanium frame. Shanghai Bike Show 2026.</figcaption>
+  <figcaption>Laget Aero One single-piece 3D printed titanium frame.</figcaption>
 </figure>
 
 That is what makes emerging 3D-printed titanium frames exciting. Bikes like the No. 22 Reactor Aero and the monocoque Laget Aero One, shown at the 2026 Shanghai Bike Show, combine the durability of a metal frame with some of the complex shaping and structural optimization associated with carbon. They begin to blur the choice between low weight and freedom of form on one side, and durability on the other.
