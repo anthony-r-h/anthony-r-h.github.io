@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "AliExpress All-Road Bike"
-subtitle: "" 
+title: "Direct-from-AliExpress All-Road Bike"
+subtitle: "This post was originally published in October 2023 and revisited in July 2026." 
 optimized_image: /files/ALIEXPRESS_ALLROAD/bike-1_5.jpg
 category: Bikes
 tags:
@@ -10,8 +10,6 @@ toc: true
 ---
 
 # Introduction
-
-> This post was originally published in October 2023 and revisited in July 2026.
 
 I am not a serious cyclist; my interest in bikes comes mostly from appreciating them as machines and working on them. My first adult bike was a second-hand, late-80s Georgena Terry steel road bike that I bought in 2012. It was built with Tange double-butted chromoly tubing, Shimano 105 8-speed downtube shifters, and Shimano wheels. A few weeks after buying it, I rode my first metric century. It was an uncomfortable, grueling and prolonged experience.
 
