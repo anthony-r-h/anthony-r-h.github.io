@@ -661,7 +661,7 @@ A few other choices also worked out well.
 
 - Adhesive-free silicone bar tape is nice. Wrapping it in reverse eliminates the need for finishing tape.
 
-- Reusable cable ends with grub screws are much nicer. Previously, I would prevent the cable from fraying with solder or glue and otherwise leave the end uncovered, instead of using crimp-on cable ends.
+- Reusable cable ends with grub screws are great. Previously, I would prevent the cable from fraying with solder or glue and otherwise leave the end uncovered, instead of using crimp-on cable ends.
 
 - Titanium fasteners are not practical in any objective sense, but I do appreciate them. They are precisely machined, have cleanly formed heads, and driver engagement is *tight*. None of that matters much at bicycle torque levels, but it makes the finished bike feel considered.
 
