@@ -52,7 +52,7 @@ First, all prices are in CAD and represent the final all-in cost, including tax 
 | SP-053D frameset | $743.63 |
 | Frameset refund | -$78.96 |
 | L-TWOO RX groupset | $374.83 |
-| ThinkRider PP5 power meter and crank arms | $252.09 |
+| ThinkRider PP5 and crank arms | $252.09 |
 | ZRACE Unchained 50/34T chainrings | $67.30 |
 | ZRACE XG4 brake calipers, pair | $83.64 |
 | ZRACE 160mm centerlock disc rotors | $10.02 |
@@ -342,7 +342,7 @@ The chainrings are affixed to the spider with titanium chainring bolts. Titanium
 
 The combination of a compact 50/34T crankset paired with an 11-34T cassette gives a wide gearing range: a 4.55 top gear and a 1:1 lowest gear for climbing.
 
-| Combination | Gear ratio | Speed at 100 RPM (km/h) |
+| Combination | Gear ratio | m/h at 100 RPM |
 | ----------: | ---------: | -----------: |
 |      34 x 11 |       3.09 |         39.6 |
 |      34 x 13 |       2.62 |         33.5 |
@@ -437,6 +437,7 @@ This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into
 
 Here is a simple reference for static threaded metal joints on the bike comparing common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly. [Further reference from Park Tools.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
 
+> Al (aluminium), Ti (Titanium), Ss (steel), AS (anti-seize/grease), TL (threadlocker).
 
 <style>
   .risk-table {
@@ -484,8 +485,8 @@ Here is a simple reference for static threaded metal joints on the bike comparin
   <thead>
     <tr>
       <th>Metal pair</th>
-      <th>Anti-seize</th>
-      <th>Threadlocker</th>
+      <th>AS</th>
+      <th>TL</th>
       <th>Dry</th>
     </tr>
   </thead>
@@ -503,7 +504,7 @@ Here is a simple reference for static threaded metal joints on the bike comparin
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Al, steel</td>
+      <td>Al, ss</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
@@ -515,13 +516,13 @@ Here is a simple reference for static threaded metal joints on the bike comparin
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Ti, steel</td>
+      <td>Ti, ss</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Steel, steel</td>
+      <td>Ss, ss</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
@@ -529,17 +530,13 @@ Here is a simple reference for static threaded metal joints on the bike comparin
   </tbody>
 </table>
 
+
 ### Fastener list
 
 These are the fasteners, tools, torque targets, and compounds I used during assembly.
 
-Abbreviations: 
+> AS (anti-seize), TL (threadlocker), FM (flat mount), FD (front derailleur), RD (rear derailleur)
 
-- AS: anti-seize, Park Tools ASC-1
-- TL: threadlocker, Loctite 242
-- FM: flat mount
-- FD: front derailleur
-- RD: rear derailleur
 
 | Location | Fastener | Tool | Torque | Prep |
 | --- | --- | --- | --- | --- |
@@ -560,15 +557,17 @@ Abbreviations:
 | RD cable pinch | M5x12 Ti + washer | T25 | 6-7 Nm | AS |
 | RD mount | Mount bolt | 5mm hex | 6-7 Nm | AS |
 | Bottle mount | M5x15 Ti | T25 |  | AS |
-| Rear thru-axle | M12x168 (P1.5, 16L) 7075 Al | 6mm hex | 9-13 Nm | AS |
-| Front thru-axle | M12x121 (P1.5, 17L) 7075 Al | 6mm hex | 9-13 Nm | AS |
+| Rear thru-axle | M12x168 (P1.5, 16L)<br>7075 Al | 6mm hex | 9-13 Nm | AS |
+| Front thru-axle | M12x121 (P1.5, 17L)<br>7075 Al | 6mm hex | 9-13 Nm | AS |
 | Cassette | Lockring | Cassette tool | 40 Nm | AS |
-| Brake rotor | Lockring | 16-notch BB tool | 40 Nm | AS |
-| Crank bolt | Self-extracting bolt | Cassette tool<br>20-tooth BB tool | Varies | AS |
+| Brake rotor | Lockring | 16-notch BB | 40 Nm | AS |
+| Crank bolt | Retention bolt | Cassette tool<br>20-tooth BB | Varies | AS |
 | Brake hose | Hose fitting | 5mm spanner<br>8mm spanner | 8-9 Nm | AS |
 | Pedal | Spindle | 8mm hex | 35-40 Nm | AS |
 
-## Tube or tubeless?
+
+
+## Tube/ tubeless
 
 I initially set the bike up tubeless. Setup went smoother than expected. Coming from 23c tires at 105 PSI, running 32c gravel tires at 40 PSI felt incredible.
 
@@ -620,7 +619,8 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 
 
 # Conclusion
-  
+
+# Gallery
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--2.jpg">
