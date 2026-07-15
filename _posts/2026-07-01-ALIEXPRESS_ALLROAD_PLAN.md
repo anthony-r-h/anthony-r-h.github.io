@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Direct-from-AliExpress All-Road Bike"
+title: "Direct-from-AliExpress Carbon Road Bike"
 subtitle: "This post was originally published in October 2023 and revisited in July 2026." 
 optimized_image: /files/ALIEXPRESS_ALLROAD/bike-1_5.jpg
 category: Bikes
@@ -11,9 +11,9 @@ toc: true
 
 # Introduction
 
-I am not a serious cyclist; my interest in bikes comes mostly from appreciating them as machines and working on them. My first adult bike was a second-hand, late-80s Georgena Terry steel road bike that I bought in 2012. It was built with Tange double-butted chromoly tubing, Shimano 105 8-speed downtube shifters, and Shimano wheels. A few weeks after buying it, I rode my first metric century. It was an uncomfortable, grueling and prolonged experience.
+I am not a serious cyclist; my interest in bikes comes mostly from appreciating them as machines and working on them. My first adult bike was a second-hand, late-80s Georgena Terry steel road bike that I bought in 2012. It was built with Tange double-butted chromoly tubing, Shimano 105 8-speed downtube shifters, and Shimano wheels. A few weeks after buying it, I rode my first metric century. It was an uncomfortable, gruelling, and prolonged experience.
 
-I am fairly mechanically competent, and enjoy taking things part, so before long I had the Terry stripped down to the bare frame. Around the same time, I was spending a lot of time on [Sheldon Brown's website](https://sheldonbrown.com), trying to figure out what all the different parts were called and what would fit, how they worked, and what to service. That reading introduced me to cycing history and Campagnolo kept turning up. I liked that they were tied to cycling history and a bit weird.
+I am fairly mechanically competent and enjoy taking things apart, so before long I had the Terry stripped down to the bare frame. Around the same time, I was spending a lot of time on [Sheldon Brown's website](https://sheldonbrown.com), trying to figure out what all the different parts were called, what would fit, how they worked, and what to service. That reading introduced me to cycling history, and Campagnolo kept turning up. I liked its ties to cycling history and the fact that it was a bit weird.
 
 What started as a basic service turned into a full drivetrain overhaul. I found an early-2000s Chorus groupset on eBay, but the shifters were in rough shape. When I looked into rebuilding them, I realized the small internal parts were either unavailable or too expensive to make sense, which is very on-brand for Campagnolo. I ended up returning the Chorus components and bought a 2012 Veloce groupset along with Campagnolo Scirocco aluminum wheels.
 
@@ -22,9 +22,9 @@ What started as a basic service turned into a full drivetrain overhaul. I found 
    <figcaption>2003 Campagnolo catalog</figcaption>
 </figure>
 
-[Retro roadies- old frames with STI's or Ergos](https://www.bikeforums.net/classic-vintage/361558-retro-roadies-old-frames-sti-s-ergos.html.)
+[Retro roadies—old frames with STIs or Ergos](https://www.bikeforums.net/classic-vintage/361558-retro-roadies-old-frames-sti-s-ergos.html)
 
-Road bikes have changed a lot since then. Electronic shifting, hydraulic disc brakes, power meters, wide tires, and carbon frames are now the norm. Alongside these technical shifts, the landscape of Chinese manufacturing also evolved. Chinese manufacturers have gained a lot more visible to Western buyers. Some sell directly through AliExpress or similar marketplaces, and some seem to sit somewhere between factory, house brand, and conventional bike company.
+Road bikes have changed a lot since then. Electronic shifting, hydraulic disc brakes, power meters, wide tires, and carbon frames are now the norm. Alongside these technical shifts, Chinese manufacturing has also evolved. Chinese manufacturers have become much more visible to Western buyers. Some sell directly through AliExpress or similar marketplaces, and some seem to sit somewhere between factory, house brand, and conventional bike company.
 
 When I first started paying attention to Chinese carbon frames, I was cautious. The reputation was uneven, good information was harder to find, and buying one still felt like a bit of an experiment. That has changed considerably. Today, many Chinese manufacturers offer solid engineering and proprietary designs, while established Western brands like BMC, Cervélo, and Canyon have dealt with their own high-profile design and quality-control issues.
 
@@ -35,13 +35,13 @@ When I first started paying attention to Chinese carbon frames, I was cautious. 
 
 The same shift is happening with drivetrains and components. Shimano, SRAM, and Campagnolo remain the dominant names, but brands like Sensah, L-Twoo, Wheeltop, and Magene are now part of the conversation. They aren't appearing out of nowhere; many of these companies have deep roots in the same manufacturing ecosystems that have supported the major brands for decades.
 
-I am more willing than most to buy parts that require research and a bit of mechanical sympathy. Moving from a late-80s steel road bike retrofitted with modern components to a build comprised mostly of Chinese parts is reasonable plot progression for me. There are some obvious drawbacks: limited support, unproven long-term reliability, and paying to beta-test a product. But China operates on a massive scale. Both the absolute best and the absolute worst manufacturing happen there. Within that massive ecosystem, my belief is that there is a genuine chance of finding incredible value. Navigating that variance is part of the process.
+I am more willing than most to buy parts that require research and a bit of mechanical sympathy. Moving from a late-80s steel road bike retrofitted with modern components to a build made up mostly of Chinese parts is reasonable plot progression for me. There are some obvious drawbacks: limited support, unproven long-term reliability, and paying to beta-test a product. But China operates on a massive scale. Both the absolute best and the absolute worst manufacturing happen there. Within that massive ecosystem, my belief is that there is a genuine chance of finding incredible value. Navigating that variance is part of the process.
 
 Ultimately, I like tinkering, and I wanted to see what these components are actually like to live with. This blog is my documentation of building and maintaining a bike with affordable Chinese components sourced mainly through AliExpress.
 
 # Part Overview
 
-I have included background information, selection justification, and occassionally more indepth notes where relevant.
+I have included background information, reasons for each selection, and occasionally more in-depth notes where relevant.
 
 ## Parts and Prices
 
@@ -114,7 +114,7 @@ The crank assembly consists of a ThinkRider PP5 spider-based power meter, carbon
    <figcaption></figcaption>
 </figure>
 
-[Shane Miller (GPLama) reviewed the PP5 power meter](https://gplama.com/2026/02/18/thinkrider-pp5-power-meter-review/) and found accuracy problems, especially after hard efforts where the zero offset can drift and make the unit read high for the rest of the ride. I am not of the demographic where that matters. For me, having rough power reference beats vibes. Plus, the PP5 power meter spider was close enough to the cost of a non-power-meter spider that it seemed worth trying.
+[Shane Miller (GPLama) reviewed the PP5 power meter](https://gplama.com/2026/02/18/thinkrider-pp5-power-meter-review/) and found accuracy problems, especially after hard efforts where the zero offset can drift and make the unit read high for the rest of the ride. I am not in the demographic where that matters. For me, having a rough power reference beats vibes. Plus, the PP5 power meter spider was close enough to the cost of a non-power-meter spider that it seemed worth trying.
 
 The ZRACE chainrings are machined out of 7075 aluminium and are heavily profiled for weight reduction.
 
@@ -135,7 +135,7 @@ The ZRACE chainrings are machined out of 7075 aluminium and are heavily profiled
 
 ### Brakes 
 
-In the original 2023 build, I used L-TWOO RX hydraulic calipers.  They worked very well, but I didn't like how they looked. I replaced them with ZRACE XG4 four-piston hydraulic calipers. Some L-TWOO RX groupsets are now sold with these calipers, but that option was not available when I bought mine.
+In the original 2023 build, I used L-TWOO RX hydraulic calipers. They worked very well, but I didn't like how they looked. I replaced them with ZRACE XG4 four-piston hydraulic calipers. Some L-TWOO RX groupsets are now sold with these calipers, but that option was not available when I bought mine.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/zrace_XG4_1.png">
@@ -160,7 +160,7 @@ I am using a ZRACE 12-speed 11-34T cassette. It is a very utilitarian cassette: 
 
 ## Wheels
 
-Elitewheels has broken out of the "cheap AliExpress wheels" category. Their better wheelsets are considered serious wheels now. But, I did not buy one of those. Instead, I bought their entry-level, AliExpress-special ENT gravel wheels. They are basic 45mm carbon wheels with centerlock disc mounts, basic aluminum hubs, and generic bearings.
+Elitewheels has broken out of the "cheap AliExpress wheels" category. Their better wheelsets are considered serious wheels now. But I did not buy one of those. Instead, I bought their entry-level, AliExpress-special ENT gravel wheels. They are basic 45mm carbon wheels with centerlock disc mounts, basic aluminum hubs, and generic bearings.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/elitewheels_ent_gravel_2.png">
@@ -185,7 +185,7 @@ I originally installed a thread-together press-fit bottom bracket, but the non-d
    <figcaption>Removal of the ZTTO thread-together bottom bracket. Due to the shallow splines, I am using a bearing press tool to apply pressure to the bottom bracket tool to ensure engagement.</figcaption>
 </figure>
 
-I checked the shell with digital calipers, not the right tool for the job, but the numbers corroborate the physical symptoms. A BB86 shell is nominally 41.00 mm, with standard press-fit tolerances calling for a 40.95 mm to 41.00 mm bore. Several spots on this frame measured below 40.95 mm, particularly on the drive side. This confirms that the shell is undersized in places and likely out-of-round, which explains why the bearing pinched the moment it was pressed home.
+I checked the shell with digital calipers. Not the right tool for the job, but the numbers corroborate the physical symptoms. A BB86 shell is nominally 41.00 mm, with standard press-fit tolerances calling for a 40.95 mm to 41.00 mm bore. Several spots on this frame measured below 40.95 mm, particularly on the drive side. This confirms that the shell is undersized in places and likely out-of-round, which explains why the bearing pinched the moment it was pressed home.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/bottom_bracket_problem.png">
@@ -208,7 +208,7 @@ Correcting the frame shell is the most direct fix, but it is also permanent and 
 
 Modifying the bottom bracket cup is less risky because the cup is sacrificial and replaceable. It may reduce the interference fit enough to stop the bearing from being squeezed.
 
-The main risks of not doing anything are: premature bottom bracket wear, small power loss and possible future creaking. Itself, that is not catastrophic, press-fit bottom brackets and bearings are replaceable wear parts. But it is still a useful quality signal of the overall frame.
+The main risks of not doing anything are premature bottom bracket wear, a small power loss, and possible future creaking. In itself, that is not catastrophic; press-fit bottom brackets and bearings are replaceable wear parts. But it is still a useful quality signal for the frame overall.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/spcycle2.png">
@@ -221,7 +221,7 @@ I pursued an unsuccessful claim with AliExpress. The seller offered a refund on 
 
 The bottom bracket is the bearing assembly that lets the crankset rotate inside the bicycle frame. It supports the crank spindle, carries pedaling loads from both legs, and transfers those loads into the frame while keeping the crank aligned and spinning smoothly. In practice, a bottom bracket is also an interface between the crank, the frame shell, and the manufacturing tolerances of both. Most bottom bracket problems come from that interface: how accurately the bearings are positioned, how securely the cups are held, and whether the frame shell distorts or misaligns the bearing seats.
 
-The mechanical problem the bottom bracket is trying to solve is a mix of bearing alignment, shell tolerance, serviceability, and frame manufacturing tollerance. Different bottom bracket systems have different opinions about where alignment comes from.
+The mechanical problem the bottom bracket is trying to solve is a mix of bearing alignment, shell tolerance, serviceability, and frame manufacturing tolerance. Different bottom bracket systems have different opinions about where alignment comes from.
 
 | Design                         | Main alignment datum                                     |
 | ------------------------------ | -------------------------------------------------------- |
@@ -246,7 +246,7 @@ Manufacturing press-fit apertures to tight tolerances is notoriously difficult, 
    <figcaption>Example of angular misalignment</figcaption>
 </figure>
 
-One strategy is to link the two sides together. In a **thread-together** press-fit bottom bracket, the cups still sit inside a press-fit shell, but the two sides thread into each other through the center. That turns two independent cups into a semi-joined assembly. This tries to solve: 
+One strategy is to link the two sides together. In a **thread-together** press-fit bottom bracket, the cups still sit inside a press-fit shell, but the two sides thread into each other through the center. That turns two independent cups into a semi-joined assembly. This helps address:
 
 - Cups walking or moving independently
 - Poor retention or creaking at the cup-frame interface
@@ -263,7 +263,7 @@ I replaced the original expander plug with a longer 55mm unit. The new plug exte
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8721.jpg">
-   <figcaption>55mm expander plug which extends past the stem clamping zone for the top and bottom pinch bolts.</figcaption>
+   <figcaption>55 mm expander plug that extends past the stem clamping zone for the top and bottom pinch bolts.</figcaption>
 </figure>
 
 The area near the upper headset bearing is also highly loaded, but for a different reason. That area sees bending and bearing reaction loads as the fork transmits braking and road impacts into the head tube. The expander plug does not usually need to extend into the head tube itself. The more important requirement is that it supports the stem clamp area and that the spacer stack remains within the fork or frame manufacturer’s limit.
@@ -273,16 +273,16 @@ I cut the steerer tube approximately 1 to 2mm longer than ideal, so I added a 2m
 
 ## L-TWOO RX Groupset
 
-Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is still unknown, but so far the shifting has been as good as anything I have had experience with. The shifters are probably the best part of the groupset. The rubber hoods feel high quality, I like the Campagnolo-style thumb lever, and the levers also have pre-travel adjustment, which lets you fine-tune braking engagement. 
+Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is still unknown, but so far the shifting has been as good as anything else I have used. The shifters are probably the best part of the groupset. The rubber hoods feel high quality, and I like the Campagnolo-style thumb lever. The levers also have pre-travel adjustment, which lets you fine-tune braking engagement.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/ltwoo_rx_new.png">
    <figcaption></figcaption>
 </figure>
 
-The main place the levers feels less refined is the shift action. There is some free play before the shifting mechanism engages. It is not mushy exactly, but there is some slop, and it is noticeable compared with higher-end groupsets. Then thumb lever and shift paddle can also be improved. The thumb lever is nylon, and the shift paddle is some sort of plastic. None of this has affected function, but it is where the shifters could be improved. On my version, the brake lever is forged carbon fiber. The standard version has aluminium levers.
+The main place the levers feel less refined is the shift action. There is some free play before the shifting mechanism engages. It is not exactly mushy, but there is some slop, and it is noticeable compared with higher-end groupsets. The thumb lever and shift paddle could also be improved. The thumb lever is nylon, and the shift paddle is some sort of plastic. None of this has affected function, but it is where the shifters could be improved. On my version, the brake lever is forged carbon fiber. The standard version has aluminium levers.
 
-The derailleurs are boring, pedestrian, but function. I replaced the high/low limit, adjustment, and pinch bolt screws with titanium becaused the original fasteners felt soft. 
+The derailleurs are boring and pedestrian, but functional. I replaced the high/low limit, adjustment, and pinch bolt screws with titanium because the original fasteners felt soft.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/R1212_rd.jpg">
@@ -310,39 +310,39 @@ Bleeding the brakes means pushing mineral oil through the system while giving tr
 
 ## Crankset
 
-The crank arms are torqued to the titanium spindle and retained in place via a larger reverse-thread bolt and lockring. Preload is set using a threaded collar on the non-drive side.
+The crank arms are torqued to the titanium spindle and held in place by a larger reverse-thread bolt and lockring. Preload is set using a threaded collar on the non-drive side.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8704.jpg">
    <figcaption>The lockring is installed using a 20-tooth bottom bracket tool.</figcaption>
 </figure>
 
-Here's how that all looks like:
+Here's what that all looks like:
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/crank_installation_diagram_transparent_1x.png">
    <figcaption></figcaption>
 </figure>
 
-With the bottom bracket installed, the frame measured 91.5mm from cup to cup. Since the spindle is 95mm, that leaves leaves 3.5mm of total spacing to account for. I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
+With the bottom bracket installed, the frame measured 91.5mm from cup to cup. Since the spindle is 95mm, that leaves 3.5mm of total spacing to account for. I used 1.7mm of spacers on the drive side and 1.5mm on the non-drive side, then used the preload adjuster to take up the remaining difference. I applied Park Tool ASC-1 anti-seize compound to the splined and threaded interfaces during assembly.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8728.jpg">
    <figcaption></figcaption>
 </figure>
 
-The chainrings are affixed to the spider with titanium chainring bolts. Titanium-on-titanium galling is a concern, but mostly during installation or removal rather than normal riding. Here,retention matters more than easy future disassembly, therefore, I used retaining compound. Stainless steel bolts probably would have been the more sensible choice here. 
+The chainrings are affixed to the spider with titanium chainring bolts. Titanium-on-titanium galling is a concern, but mostly during installation or removal rather than normal riding. Here, retention matters more than easy future disassembly, so I used retaining compound. Stainless steel bolts probably would have been the more sensible choice here.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8714.jpg">
    <figcaption></figcaption>
 </figure>
 
-[For future reference, here is the manual for the Thinkrider PP5 power meter.](/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.pdf)
+[For future reference, here is the manual for the ThinkRider PP5 power meter.](/files/ALIEXPRESS_ALLROAD/thinkrider_pp5.pdf)
 
-The combination of a compact 50/34T crankset paired with an 11-34T cassette gives a wide gearing range: a 4.55 top gear and a 1:1 lowest gear for climbing.
+A compact 50/34T crankset paired with an 11-34T cassette gives a wide gearing range: a 4.55 top gear and a 1:1 lowest gear for climbing.
 
-| Combination | Gear ratio | m/h at 100 RPM |
+| Combination | Gear ratio | km/h at 100 RPM |
 | ----------: | ---------: | -----------: |
 |      34 x 11 |       3.09 |         39.6 |
 |      34 x 13 |       2.62 |         33.5 |
@@ -371,7 +371,7 @@ The combination of a compact 50/34T crankset paired with an 11-34T cassette give
 
 ## Dialing In the Shifting
 
-I had more trouble dialing in this drivetrain than I expected. 12-speed gives you less room to be sloppy: the chain is narrower, the cassette spacing is tighter, and adjustments that would have been close enough on a 10-speed setup were not close enough here.
+I had more trouble dialing in this drivetrain than I expected. A 12-speed setup gives you less room to be sloppy: the chain is narrower, the cassette spacing is tighter, and adjustments that would have been close enough on a 10-speed setup were not close enough here.
 
 Coming at it from first principles, the useful way to think about derailleur adjustment is in terms of the control variables that govern shifting.
 
@@ -390,13 +390,13 @@ Rear derailleur:
 
 ### Front Derailleur Mounting
 
-The front derailleur height and rotation are the easy variables. The outer cage plate needs to sit close to the big ring so it can start controlling the chain almost immediately as the shift begins, but not so close that the teeth can hit the cage under frame flex or vibration. In practice that usually means about 1-2 mm above the tallest teeth on the big ring. If the derailleur is mounted too high, the cage has to push the chain farther before the chain can engage the shift ramps and pickup pins on the large ring, which makes upshifts slower and less decisive.
+The front derailleur height and rotation are the easy variables. The outer cage plate needs to sit close to the big ring so it can start controlling the chain almost immediately as the shift begins, but not so close that the teeth can hit the cage under frame flex or vibration. In practice, that usually means about 1–2 mm above the tallest teeth on the big ring. If the derailleur is mounted too high, the cage has to push the chain farther before the chain can engage the shift ramps and pickup pins on the large ring, which makes upshifts slower and less decisive.
 
 The cage also needs to be parallel to the chainrings so it guides the chain sideways with a nearly uniform gap along the length of the cage. If the derailleur is rotated inward or outward, one end of the cage reaches the chain before the other. That can cause rubbing, hesitation, or a messy shift where the chain is pushed sideways without climbing cleanly onto the big ring.
 
 ### Rear Derailleur B-Screw
 
-The L-TWOO RX rear derailleur has a B-screw that sets the derailleur body's starting angle relative to the cassette. More B-tension rotates the derailleur backward and increases the gap between the upper jockey wheel and the cassette; less B-tension lets it sit closer. That gap matters because the upper jockey wheel is what tracks the cassette and presents the chain to each cog during a shift. If it is too far away, the chain has more room to wander before engaging the next sprocket, so shifts become slower and less precise. If it is too close, the jockey wheel can crowd the larger cogs, causing noise, drag, or outright interference. The goal is not a universal distance, but the smallest gap that still gives safe clearance in the largest cassette cog.
+The L-TWOO RX rear derailleur has a B-screw that sets the derailleur body's starting angle relative to the cassette. More B-tension rotates the derailleur backward and increases the gap between the upper jockey wheel and the cassette; less B-tension lets it sit closer. The upper jockey wheel is what tracks the cassette and presents the chain to each cog during a shift. If it is too far away, the chain has more room to wander before engaging the next sprocket, so shifts become slower and less precise. If it is too close, the jockey wheel can crowd the larger cogs, causing noise, drag, or outright interference. The objective is to find the smallest gap that still gives safe clearance in the largest cassette cog.
 
 ### Limit Screws and Cable Tension
 
@@ -417,7 +417,7 @@ The opposite limit screw is just a mechanical safety stop. It should be set far 
 
 ### Chainline
 
-I had originally centered the crank spindle left to right, but that turned out to leave the chainline slightly too far inboard. In the small chainring and smaller rear cogs, the chain would brush the big ring, usually on the shift pins. At low speed it was occasional and at higher speed vibration turned it into a constant pinging noise.
+I had originally centered the crank spindle left to right, but that turned out to leave the chainline slightly too far inboard. In the small chainring and smaller rear cogs, the chain would brush the big ring, usually on the shift pins. At low speed, it was occasional; at higher speed, vibration turned it into a constant pinging noise.
 
 That gear range should be usable, so the amount of rubbing suggested the chainline was off. The fix was to move the crankset about 0.5 mm toward the drive side using spacers.
 
@@ -428,16 +428,16 @@ That gear range should be usable, so the amount of rubbing suggested the chainli
 
 ## Fasteners and Torque
 
-Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot, they make an otherwise well-maintained bike look neglected. My original plan was to replace all the screws with 316 stainless steel, but the problem was sourcing them in sensible quantities. I needed several sizes, lengths, and head types, and that would mean pacs of 50 to 100 for each.  So I ended up buying specialty titanium fasteners from AliExpress. Weight savings wasn't a factor, I just did not want hundreds of spare screws sitting around. Also, I like titanium, and have a strong preference for Torx heads. So paying silly prices for titanium bling was justifiably practical.
+Bikes are exposed to water, sweat, road salt, grit, and repeated washing. Internal parts usually have some protection from seals, grease, or assembly compounds, but external fastener heads are much more exposed. Rusty fasteners bother me a lot; they make an otherwise well-maintained bike look neglected. My original plan was to replace all the screws with 316 stainless steel, but sourcing them in sensible quantities was a problem. I needed several sizes, lengths, and head types, which would have meant packs of 50 to 100 of each. So I ended up buying specialty titanium fasteners from AliExpress. Weight savings weren't a factor; I just did not want hundreds of spare screws sitting around. I also like titanium and have a strong preference for Torx heads. Paying silly prices for titanium bling was therefore justifiably practical.
 
 This bike has a mix of titanium, aluminium, steel, and metal inserts bonded into carbon parts. Mixed-metal joints bring two main risks: galling and corrosion.
 
 - Galling: metal-to-metal adhesion under pressure. Threads feel rough, bind, then can tear or seize. Titanium and aluminium are more prone than plain steel.
 - Corrosion: chemical/electrochemical attack. Mixed metals can create galvanic corrosion, especially with water/salt. Aluminium usually loses that fight against steel or titanium.
 
-Here is a simple reference for static threaded metal joints on the bike comparing common metal pairings and the relative risk of galling or corrosion with anti-seize, threadlocker, or dry assembly. [Further reference from Park Tools.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
+This simple reference for static threaded joints on the bike compares common metal pairings and the relative risks of galling and corrosion with anti-seize, threadlocker, or dry assembly. [Further reference from Park Tools.](https://www.parktool.com/en-int/blog/repair-help/the-park-tool-guide-to-bicycle-lubricants-and-compounds)
 
-> Al (aluminium), Ti (Titanium), Ss (steel), AS (anti-seize/grease), TL (threadlocker).
+> Al (aluminium), Ti (titanium), St (steel), AS (anti-seize/grease), TL (threadlocker).
 
 <style>
   .risk-table {
@@ -504,7 +504,7 @@ Here is a simple reference for static threaded metal joints on the bike comparin
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Al, ss</td>
+      <td>Al, St</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
@@ -516,13 +516,13 @@ Here is a simple reference for static threaded metal joints on the bike comparin
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Ti, ss</td>
+      <td>Ti, St</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-high" title="High risk">galling</span><br><span class="risk-badge risk-medium" title="Medium risk">corrosion</span></td>
     </tr>
     <tr>
-      <td>Ss, ss</td>
+      <td>St, St</td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-low" title="Low risk">galling</span><br><span class="risk-badge risk-low" title="Low risk">corrosion</span></td>
       <td><span class="risk-badge risk-medium" title="Medium risk">galling</span><br><span class="risk-badge risk-high" title="High risk">corrosion</span></td>
@@ -567,26 +567,26 @@ These are the fasteners, tools, torque targets, and compounds I used during asse
 
 
 
-## Tube/ tubeless
+## Tubes and tubeless
 
 I initially set the bike up tubeless. Setup went smoother than expected. Coming from 23c tires at 105 PSI, running 32c gravel tires at 40 PSI felt incredible.
 
-The downside was maintenance. I don't ride this bike year-round. When the sealant is left sitting, it pools up, clumps and dries out at the bottom of the tire. This throws off the wheel balance. Cleaning it out before storage fixes the issue, but that's way more babysitting than I want.
+The downside was maintenance. I don't ride this bike year-round. When the sealant is left sitting, it pools, clumps, and dries out at the bottom of the tire. This throws off the wheel balance. Cleaning it out before storage fixes the issue, but that's way more babysitting than I want.
 
 I've since switched to RideNow TPU tubes.
 
 ## Chain Wax
 
-Chain waxing promises a clean, grime-free drivetrain. Since I was starting with a drivetrain that already had a few hundred kilometers on it, it was necessary to strip out old oil and contamination before waxing. The chain and cassette both fit in my 2L ultrasonic cleaner. The jockey wheels on the rear derailleur use press-fit bearings and I wasn't prepared to replace them, so I cleaned those by hand instead of putting them in the ultrasonic.
+Chain waxing promises a clean, grime-free drivetrain. Since I was starting with a drivetrain that already had a few hundred kilometers on it, it was necessary to strip out old oil and contamination before waxing. The chain and cassette both fit in my 2L ultrasonic cleaner. The jockey wheels on the rear derailleur use press-fit bearings, and I wasn't prepared to replace them, so I cleaned those by hand instead of putting them in the ultrasonic cleaner.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8729.jpg">
    <figcaption>Slightly chewed up derailleur cage due to circumstances unrelated to this adventure.</figcaption>
 </figure>
 
-I ran the cassette and chain for an hour at 50 degrees Celsius in a 50% dilution of Simple Green Aircraft. To keep the ultrasonic clean, I put the parts and degreaser in a Ziploc bag, then placed the bag in the ultrasonic with water. 
+I ran the cassette and chain for an hour at 50 degrees Celsius in a 50% dilution of Simple Green Aircraft. To keep the ultrasonic cleaner clean, I put the parts and degreaser in a Ziploc bag, then placed the bag in the cleaner with water.
 
-For the chain, I followed with acetone: an overnight soak in a glass jar, a wipe-down, then in the ultrasonic in a sealed glass jar.
+For the chain, I followed with an overnight acetone soak in a glass jar. I then wiped it down and put it in the ultrasonic cleaner in a sealed glass jar.
 
 For wax, I used Silca Secret Chain Blend [(SDS)](/files/ALIEXPRESS_ALLROAD/MSDS_SILCA_Hot_Wax.pdf), which is paraffin wax with tungsten disulfide [(SDS)](/files/ALIEXPRESS_ALLROAD/tungsten_disulfide.pdf) and other additives. It comes in a sous-vide bag, so I heated the bag directly in the ultrasonic cleaner. I set the cleaner to 75 degrees Celsius, but even after 1.5 hours, the ultrasonic was only able to hit 67 degrees. That's probably due to two things: not being able to close the lid and the heating element being optimistically sized.
 
@@ -595,7 +595,7 @@ For wax, I used Silca Secret Chain Blend [(SDS)](/files/ALIEXPRESS_ALLROAD/MSDS_
    <figcaption>Melting the wax in the ultrasonic cleaner</figcaption>
 </figure>
 
-Measured with an IR thermometer, the wax looked melted around 63 degrees Celsius. That is not a perfect measurement, but close enough for this. There was still a large unmelted clump in the middle of the bag, but enough wax had liquefied to use.
+According to an IR thermometer, the wax appeared to melt around 63 degrees Celsius. That is not a perfect measurement, but close enough for this. There was still a large unmelted clump in the middle of the bag, but enough wax had liquefied to use.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8734.jpg">
@@ -608,9 +608,9 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 
 ### Other notes
 
-- PVD or DLC coated chains (the ones with fun colours) are not ideal for wax adhesion
-- It is possible to apply too much or too little wax.  Excess wax will flake off, and gum up the rear derailleur and cassette, cleaning off excess from exterior plates when drying is OK.  Too little is ineffective.
-- Single application is good up to around 500km in most circumstances.
+- PVD- or DLC-coated chains (the ones with fun colours) are not ideal for wax adhesion.
+- It is possible to apply too much or too little wax. Excess wax will flake off and gum up the rear derailleur and cassette, so cleaning it from the exterior plates while the chain dries is fine. Too little is ineffective.
+- A single application is good for up to around 500 km in most circumstances.
 
 
 
@@ -696,5 +696,5 @@ After that, I turned the heat off and let the wax cool toward 60 degrees Celsius
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/bike-1.jpg">
-   <figcaption>2023 build out with Senicx PR3 34/50T crankset, tubeless tires, L-TWOO RX hyd
+   <figcaption>2023 build out with Senicx PR3 34/50T crankset, tubeless tires, L-TWOO RX hyd<figcaption>
 </figure>
