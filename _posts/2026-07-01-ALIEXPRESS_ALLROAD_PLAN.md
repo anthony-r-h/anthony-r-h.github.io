@@ -33,7 +33,7 @@ When I first started paying attention to Chinese carbon frames, I was cautious. 
    <figcaption>Incolor SSR frameset</figcaption>
 </figure>
 
-The same shift is happening with drivetrains and components. Shimano, SRAM, and Campagnolo remain the dominant names, but brands like Sensah, L-Twoo, Wheeltop, and Magene are now part of the conversation. They aren't appearing out of nowhere; many of these companies have deep roots in the same manufacturing ecosystems that have supported the major brands for decades.
+The same shift is happening with drivetrains and components. Shimano, SRAM, and Campagnolo remain the dominant names, but brands like Sensah, L-TWOO, Wheeltop, and Magene are now part of the conversation. They aren't appearing out of nowhere; many of these companies have deep roots in the same manufacturing ecosystems that have supported the major brands for decades.
 
 I am more willing than most to buy parts that require research and a bit of mechanical sympathy. Moving from a late-80s steel road bike retrofitted with modern components to a build made up mostly of Chinese parts is reasonable plot progression for me. There are some obvious drawbacks: limited support, unproven long-term reliability, and paying to beta-test a product. But China operates on a massive scale. Both the absolute best and the absolute worst manufacturing happen there. Within that massive ecosystem, my belief is that there is a genuine chance of finding incredible value. Navigating that variance is part of the process.
 
@@ -94,7 +94,7 @@ The frameset included the fork, seatpost, headset, handlebar, and thru axles. I 
 
 ### L-TWOO RX 12-speed mechanical groupset
 
-The RX series is L-Twoo's flagship 12-speed road groupset. It uses mechanical cable-actuated shifting with hydraulic disc brakes.
+The RX series is L-TWOO's flagship 12-speed road groupset. It uses mechanical cable-actuated shifting with hydraulic disc brakes.
 
 I purchased the original RX release, which included shifters, brake calipers, and front/rear derailleurs. Its shift logic follows Campagnolo, with a separate thumb lever. Since then, L-TWOO has released newer versions of the shifters, rear derailleur, and brake calipers. The shifters are now available in both the original Campagnolo-style layout and a Shimano-style option.
 
