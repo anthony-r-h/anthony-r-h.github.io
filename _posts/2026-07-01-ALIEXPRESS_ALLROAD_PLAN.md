@@ -665,7 +665,7 @@ A few other choices also worked out well.
 
 - Reusable cable ends with grub screws are great. Previously, I would prevent the cable from fraying with solder or glue and otherwise leave the end uncovered, instead of using crimp-on cable ends.
 
-- Titanium fasteners are not practical in any objective sense, but I do appreciate them. They are precisely machined, have cleanly formed heads, and driver engagement is *tight*. None of that matters much at bicycle torque levels, but it makes the finished bike feel considered.
+- Titanium fasteners are not practical in any objective sense, but I do appreciate them. The ones I sourced are precisely machined, have cleanly formed heads, and driver engagement is *tight*. None of that matters much at bicycle torque levels, but it makes the finished bike feel considered.
 
 ## Final thoughts
 
