@@ -83,10 +83,10 @@ The 2023 version is listed with the following specifications:
 - Press-fit BB86 bottom bracket
 - Claimed weight: 900g frame, 370g fork, 220g seatpost
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/SP-053D_frame.png">
    <figcaption></figcaption>
-</figure>
+</figure> -->
 
 The frameset included the fork, seatpost, headset, handlebar, and thru axles. I later received a partial refund, for reasons I will get into below.
 
@@ -123,7 +123,7 @@ The ZRACE chainrings are machined out of 7075 aluminium and are heavily profiled
    <figcaption></figcaption>
 </figure>
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Zrace Unchained_2.png">
    <figcaption></figcaption>
 </figure>
@@ -131,7 +131,7 @@ The ZRACE chainrings are machined out of 7075 aluminium and are heavily profiled
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Zrace Unchained_3.png">
    <figcaption></figcaption>
-</figure>
+</figure> -->
 
 ### Brakes
 
@@ -142,17 +142,17 @@ In the original 2023 build, I used L-TWOO RX hydraulic calipers. They worked ver
    <figcaption></figcaption>
 </figure>
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/zrace_XG4_3.png">
    <figcaption></figcaption>
-</figure>
+</figure> -->
 
 The calipers are machined from a single piece of aluminum and feel surprisingly high quality in hand. ZRACE sells them in several colors, and the same calipers also show up under brands like IIIPro and ONIRII with even more finish options. The design is _heavily inspired_ by the Hope RX4, and the XG4 uses the same brake pads.
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Hope_RX4+.png">
    <figcaption></figcaption>
-</figure>
+</figure> -->
 
 ### Cassette
 
@@ -201,10 +201,10 @@ At that point I had a few options:
 
 Correcting the frame shell is the most direct fix, but it is also permanent and easy to get wrong. A hand hone can remove material, but it will not reliably correct coaxial alignment, roundness, or parallelism.
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/Cylinder Hone Kit.png">
    <figcaption></figcaption>
-</figure>
+</figure> -->
 
 Modifying the bottom bracket cup is less risky because the cup is sacrificial and replaceable. It may reduce the interference fit enough to stop the bearing from being squeezed.
 
@@ -310,14 +310,13 @@ Bleeding the brakes means pushing mineral oil through the system while giving tr
 
 ## Crankset
 
-The crank arms are torqued to the titanium spindle and held in place by a larger reverse-thread bolt and lockring. Preload is set using a threaded collar on the non-drive side.
+The crank arms are torqued to the titanium spindle and held in place by a larger reverse-thread bolt and lockring. Preload is set using a threaded collar on the non-drive side. Here's what that all looks like:
 
-<figure>
+<!-- <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8704.jpg">
    <figcaption>The lockring is installed using a 20-tooth bottom bracket tool.</figcaption>
 </figure>
-
-Here's what that all looks like:
+ -->
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/crank_installation_diagram_transparent_1x.png">
@@ -673,79 +672,58 @@ The groupset, cassette, wheels, saddle, and many of the smaller components range
 
 # Gallery
 
+AI disclaimer: No AI or generative imaging tools were used to create or enhance these photos. This is an intentional exercise in conventional photo editing, controlled lighting, and camera work.
+
 <figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--2.jpg">
-  <figcaption>Drivetrain rear: L-TWOO RX derailleur, 12-speed ZRACE cassette.</figcaption>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8878.jpg">
+  <figcaption>The fully integrated cockpit.</figcaption>
 </figure>
 
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/bike-1_5.jpg">
+   <figcaption>Profile view of the cockpit.</figcaption>
+</figure>
 
-
-
-
-
-
-
-
-
-
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--8.jpg">
+  <figcaption>Ryet 3D-printed carbon fiber saddle.</figcaption>
+</figure>
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--4.jpg">
-  <figcaption>Drivetrain front: </figcaption>
+  <figcaption>L-TWOO RX front derailleur over the ZRACE chainrings and ThinkRider PP5 power meter </figcaption>
+</figure>
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--2.jpg">
+  <figcaption>L-TWOO RX rear derailleur with the 12-speed ZRACE cassette.</figcaption>
 </figure>
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--5.jpg">
-  <figcaption>Drivetrain front:</figcaption>
+  <figcaption>ThinkRider PP5 power meter with ZRACE Unchained chainrings.</figcaption>
 </figure>
-
-
-
-
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--6.jpg">
-  <figcaption>Hydraulic brakes.</figcaption>
+  <figcaption>ZRACE XG4 four-piston rear caliper.</figcaption>
 </figure>
 
-
-<figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--8.jpg">
-  <figcaption>Ryet 3D printed saddle.</figcaption>
-</figure>
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--7.jpg">
-  <figcaption>Ryet 3D printed saddle.</figcaption>
+  <figcaption>A closer look at the open lattice on the Ryet 3D-printed saddle.</figcaption>
 </figure>
-
-
 
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress--9.jpg">
-  <figcaption>L-TWOO RX brake lever and shifter.</figcaption>
+  <figcaption>L-TWOO RX carbon fiber brake lever with Campagnolo-style thumb shifter.</figcaption>
 </figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure>
-  <img src="/files/ALIEXPRESS_ALLROAD/bike-1_5.jpg">
-   <figcaption></figcaption>
-</figure>
+## Archives
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/bike-1.jpg">
-   <figcaption>2023 build out with Senicx PR3 34/50T crankset, tubeless tires, L-TWOO RX hyd<figcaption>
+   <figcaption>The original 2023 build with a Senicx PR3 50/34T crankset, tubeless tires, and L-TWOO RX hydraulic calipers.</figcaption>
 </figure>
