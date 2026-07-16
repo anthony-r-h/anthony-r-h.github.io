@@ -37,7 +37,7 @@ The same shift is happening with drivetrains and components. Shimano, SRAM, and 
 
 I am more willing than most to buy parts that require research and a bit of mechanical sympathy. Moving from a late-80s steel road bike retrofitted with modern components to a build made up mostly of Chinese parts is reasonable plot progression for me. There are some obvious drawbacks: limited support, unproven long-term reliability, and paying to beta-test a product. But China operates on a massive scale. Both the absolute best and the absolute worst manufacturing happen there. Within that massive ecosystem, my belief is that there is a genuine chance of finding incredible value. Navigating that variance is part of the process.
 
-Ultimately, I like tinkering, and I wanted to see what these components are actually like to live with. This blog is my documentation of building and maintaining a bike with affordable Chinese components sourced mainly through AliExpress.
+I like tinkering, and I wanted to see what these components are actually like to live with. This post documents my experience building and maintaining a bike with affordable Chinese components sourced mainly through AliExpress. It also became a loose survey of the broader market, a reflection on jumping from an old steel road bike into current bike technology, and whatever else accumulated along the way.
 
 # Part overview
 
