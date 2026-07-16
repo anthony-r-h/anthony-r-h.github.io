@@ -37,7 +37,7 @@ The same shift is happening with drivetrains and components. Shimano, SRAM, and 
 
 I am more willing than most to buy parts that require research and a bit of mechanical sympathy. Moving from a late-80s steel road bike retrofitted with modern components to a build made up mostly of Chinese parts is reasonable plot progression for me. There are some obvious drawbacks: limited support, unproven long-term reliability, and paying to beta-test a product. But China operates on a massive scale. Both the absolute best and the absolute worst manufacturing happen there. Within that massive ecosystem, my belief is that there is a genuine chance of finding incredible value. Navigating that variance is part of the process.
 
-I like tinkering, and I wanted to see what these components are actually like to live with. This post documents my experience building and maintaining a bike with affordable Chinese components sourced mainly through AliExpress. It also became a loose survey of the broader market, a reflection on jumping from an old steel road bike into current bike technology, and whatever else accumulated along the way.
+I like tinkering, and I wanted to see what these components are actually like to live with. This post documents my experience building and maintaining a bike with affordable Chinese components sourced mainly through AliExpress. It also became a loose survey of the broader market, and whatever else accumulated along the way.
 
 # Part overview
 
@@ -280,7 +280,7 @@ Overall, I am very happy with the L-TWOO RX groupset. Long-term reliability is s
    <figcaption></figcaption>
 </figure>
 
-The main place the levers feel less refined is the shift action. There is some free play before the shifting mechanism engages. It is mushy, but there is some slop, and it is noticeable compared with higher-end groupsets. The thumb lever and shift paddle could also be improved. The thumb lever is nylon, and the shift paddle is some sort of plastic. None of this has affected function, but it is where the shifters could be improved. On my version, the brake lever is forged carbon fiber. The standard version has aluminium levers.
+The main place the levers feel less refined is the shift action. There is some free play before the shifting mechanism engages. It isn't mushy, but there is some slop, and it is noticeable compared with higher-end groupsets. The thumb lever and shift paddle could also be improved. The thumb lever is nylon, and the shift paddle is some sort of plastic. None of this has affected function, but it is where the shifters could be improved. On my version, the brake lever is forged carbon fiber. The standard version has aluminium levers.
 
 The derailleurs are boring and pedestrian, but functional. I replaced the high/low limit, adjustment, and pinch bolt screws with titanium because the original fasteners felt soft.
 
@@ -628,7 +628,7 @@ I also remain unconvinced by 12-speed. I do not think the extra cogs meaningfull
 
 The inexpensive ZRACE cassette has been great. It is heavier than higher-end AliExpress options, but it shifts reliably, has steel cogs, and was super affordable.
 
-I am happy with the YBN chain. YBN is the OEM for Campagnolo's chains. Waxing was worthwhile mainly because the drivetrain stays clean; any reduction in maintenance or friction is secondary.
+I am happy with the YBN chain. YBN is the OEM for Campagnolo's chains. Waxing was worthwhile (to me) mainly because the drivetrain stays clean; any reduction in maintenance or friction is secondary.
 
 ## Wheels
 
