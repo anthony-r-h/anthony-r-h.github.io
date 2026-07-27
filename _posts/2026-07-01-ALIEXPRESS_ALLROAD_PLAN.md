@@ -43,7 +43,7 @@ I like tinkering, and I wanted to see what these components are actually like to
 
 I have included background information, reasons for each selection, and more in-depth notes where relevant.
 
-## Partlist
+## Part list
 
 All prices are in CAD and represent the final all-in cost, including tax and shipping.
 
