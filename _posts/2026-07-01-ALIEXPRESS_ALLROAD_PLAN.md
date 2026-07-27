@@ -60,7 +60,7 @@ All prices are in CAD and represent the final all-in cost, including tax and shi
 | Elitewheels ENT gravel wheels | $562.02 |
 | **Total** | **$2,050.53** |
 
-The total weight is just under 7.5 kg. At nearly 1.7 kg, the wheels offer the most obvious opportunity for further weight savings.
+The total weight (with pedals and bottle cage) is just under 7.25 kg, which respectable falls into weight weenie territory. At nearly 1.7 kg, the wheels offer the most obvious opportunity for further weight savings.
 
 ## Frameset
 
