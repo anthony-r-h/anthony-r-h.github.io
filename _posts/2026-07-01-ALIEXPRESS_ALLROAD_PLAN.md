@@ -43,9 +43,9 @@ I like tinkering, and I wanted to see what these components are actually like to
 
 I have included background information, reasons for each selection, and more in-depth notes where relevant.
 
-## Parts and prices
+## Partlist
 
-First, all prices are in CAD and represent the final all-in cost, including tax and shipping.
+All prices are in CAD and represent the final all-in cost, including tax and shipping.
 
 | Part | Price |
 | --- | ---: |
@@ -60,6 +60,7 @@ First, all prices are in CAD and represent the final all-in cost, including tax 
 | Elitewheels ENT gravel wheels | $562.02 |
 | **Total** | **$2,050.53** |
 
+The total weight is just under 7.5 kg. At nearly 1.7 kg, the wheels offer the most obvious opportunity for further weight savings.
 
 ## Frameset
 
