@@ -322,9 +322,9 @@ The caliper's lateral adjustment comes from play in the mounting bracket. Its po
   <figcaption>Rear brake caliper mount before facing</figcaption>
 </figure>
 
-The problem was that the caliper was being forced into the same misaligned position every time I tightened the screws because the mounting faces weren't coplanar. No matter how carefully I centered it, torquing the screws shifted it back to the same side. The caliper had enough adjustment range, but the mount geometry was overriding that adjustment as the bolts were tightened.
+The problem was that the caliper was being forced into the same misaligned position every time I tightened the screws because the mounting faces weren't coplanar. No matter how carefully I centered it, torquing the screws shifted it back to the same side. The caliper had enough adjustment range, but the mount geometry was overriding that adjustment as the screws were tightened.
 
-Since no matter how I aligned the caliper, it would rub on the same side once the bolts were torqued. My first instinct was to move the rotor outboard using shims. I progressively added 0.1mm thick M36 shims and found that I had to move the rear rotor a total of 1.6mm before the caliper stopped rubbing. The shims worked because they moved the rotor over to meet the position the caliper was being forced into. This lead me to realize that the root problem was that the mounting surfaces were not flat.
+My first instinct was to move the rotor outboard using shims. I progressively added 0.1mm thick M36 shims and found that I had to move the rear rotor a total of 1.6mm before the caliper stopped rubbing. The shims worked because they moved the rotor over to meet the position the caliper was being forced into. This lead me to realize that the root problem: the mounting surfaces were not flat.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/2026-08-11 11-05-15.jpeg">
