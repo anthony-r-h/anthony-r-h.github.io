@@ -331,7 +331,14 @@ Since no matter how I aligned the caliper, it would rub on the same side once th
    <figcaption>AliExpress brake mount facing tool.</figcaption>
 </figure>
 
-A tool such as the DT-5.2 Disc Brake Mount Facing Set costs $600 USD. That makes sense for a shop, but it isn't realistic at home. I could have brought the frame to a shop, but intead, I found a cheaper and less sophisticated tool that does the same job.
+A tool such as the DT-5.2 Disc Brake Mount Facing Set costs $600 USD. That makes sense for a shop, but it isn't realistic at home. I could have brought the frame to a shop, but intead, I found a cheaper and less sophisticated tool that does the same job. 
+
+My opinion is that the additional complexity in Park Tool's version is about clearance and universality. The core functionality is the same, in the sense that both tools produce mounting surfaces that are coplanar and parallel to the rotor plane. Here is what the DT-5.2 does differently:
+
+- The offset drive head provides significantly more clearance, especially in the rear triangle.
+- The small cutting head, combined with a swinging arm, machines one mounting surface at a time.
+
+I think the significant difference here is the cutting head. The AliExpress version achieves this with a single large disc. By cutting both mounting surfaces at the same time, coplanarity is guaranteed. The AliExpress tool simplifies the mechanism by accepting a larger working envelope and facing both mounts with one broad abrasive surface. Actually, in this case, since the mounting surface is one continuous plane, the DT-5.2 would have been the wrong tool because the area between the mounting holes needed to be machined as well.
 
 <figure>
   <img src="/files/ALIEXPRESS_ALLROAD/2026-08-11 12-31-38.jpeg">
