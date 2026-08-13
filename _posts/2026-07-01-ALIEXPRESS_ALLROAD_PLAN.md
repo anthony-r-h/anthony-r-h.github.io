@@ -294,9 +294,13 @@ Mechanically, installation was straightforward, with a few caveats.
 
 With routing tools, magnets, and gravity, running the cable housing and hydraulic hoses was easy. The result is very clean, but it comes with a real serviceability penalty. Because the lines run through the handlebar and stem, then through the headset and into the frame, even routine front-end work can turn into a full hose-and-housing reroute. Changing the spacer stack, replacing headset bearings, removing the fork, or swapping the bar or stem all become much bigger jobs requiring full disassembly of the cockpit.
 
-### Installing hydraulic brakes
+### Hydraulic brakes
 
-Installing hydraulic brakes was a bit more work. For future reference, [here is the manual](/files/ALIEXPRESS_ALLROAD/Disc-Series_User-Manual_V2.0_EN.pdf).
+The hydraulic brakes were a bit of work. There was a bit of a learning curve and some difficulty resulting from the frame's brake caliper mounting surface.
+
+#### Installation
+
+For future reference, [here is the manual](/files/ALIEXPRESS_ALLROAD/Disc-Series_User-Manual_V2.0_EN.pdf).
 
 One detail worth emphasizing: the pre-travel screw on the shift lever needs to be backed out before bleeding. It does not need to be backed out completely, but it does need to be open enough for the bleed procedure to work properly.
 
@@ -306,6 +310,44 @@ Bleeding the brakes means pushing mineral oil through the system while giving tr
   <img src="/files/ALIEXPRESS_ALLROAD/aliexpress-8708.jpg">
    <figcaption></figcaption>
 </figure>
+
+#### Alignment
+
+With rim brakes, caliper alignment is fairly simple because there is plenty of clearance between the pads and the rim. With disc brakes, there is only around 0.1mm to 0.3mm of clearance on each side of the rotor.
+
+The caliper's lateral adjustment comes from play in the mounting bracket. Its position is fixed once the mounting screws are torqued down.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/2026-08-11 10-57-21.jpeg">
+  <figcaption>Rear brake caliper mount before facing</figcaption>
+</figure>
+
+The problem was that the caliper was being forced into the same misaligned position every time I tightened the screws because the mounting faces weren't coplanar. No matter how carefully I centered it, torquing the screws shifted it back to the same side. The caliper had enough adjustment range, but the mount geometry was overriding that adjustment as the bolts were tightened.
+
+Since no matter how I aligned the caliper, it would rub on the same side once the bolts were torqued. My first instinct was to move the rotor outboard using shims. I progressively added 0.1mm thick M36 shims and found that I had to move the rear rotor a total of 1.6mm before the caliper stopped rubbing. The shims worked because they moved the rotor over to meet the position the caliper was being forced into. This lead me to realize that the root problem was that the mounting surfaces were not flat.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/2026-08-11 11-05-15.jpeg">
+   <figcaption>AliExpress brake mount facing tool.</figcaption>
+</figure>
+
+A tool such as the DT-5.2 Disc Brake Mount Facing Set costs $600 USD. That makes sense for a shop, but it isn't realistic at home. I could have brought the frame to a shop, but intead, I found a cheaper and less sophisticated tool that does the same job.
+
+<figure>
+  <img src="/files/ALIEXPRESS_ALLROAD/2026-08-11 12-31-38.jpeg">
+   <figcaption>Rear brake caliper mount after facing</figcaption>
+</figure>
+
+Before facing, the perimeter around each mounting hole was exposed below the paint, suggesting that the painted area between the holes stood proud of the mounting surfaces. While facing the mount, I had to remove the paint between the holes before the cutter even reached the surfaces around them. It was no surprise that I couldn't center the caliper properly. I faced both the front and rear brake mounts.
+
+After facing, aligning the calipers was trivial:
+
+1. Loosen the mounting bolts enough for the caliper to move laterally.
+2. Insert rotor spacing shim.
+3. Squeeze the brake lever to align the caliper with the rotor.
+4. Alternately tighten the mounting bolts.
+
+This may take a few iterations if the rotor isn't perfectly true. The first pass gets the caliper roughly parallel to the rotor, making any lateral runout easier to see. From there, adjust the caliper around the rotor's most extreme points.
 
 ## Crankset
 
