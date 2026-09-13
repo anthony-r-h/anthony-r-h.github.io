@@ -333,7 +333,9 @@ My first instinct was to move the rotor outboard using shims. I progressively ad
 
 A tool such as the DT-5.2 Disc Brake Mount Facing Set costs $600 USD. That makes sense for a shop, but it isn't realistic at home. I could have brought the frame to a shop, but intead, I found a cheaper and less sophisticated tool that does the same job. 
 
-My opinion is that the additional complexity in Park Tool's version is about clearance and universality. The core functionality is the same, in the sense that both tools produce mounting surfaces that are coplanar and parallel to the rotor plane. Here is what the DT-5.2 does differently:
+My opinion is that the additional complexity in Park Tool's version is about clearance and universality. The core functionality is the same, in the sense that both tools produce mounting surfaces that are coplanar and parallel to the rotor plane. They do so via setting the wheel axel as datum and traversing to the brake mounts in  
+  
+Here is what the DT-5.2 does differently:
 
 - The offset drive head provides significantly more clearance, especially in the rear triangle.
 - The small cutting head, combined with a swinging arm, machines one mounting surface at a time.
