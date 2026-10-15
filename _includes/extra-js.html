@@ -1,0 +1,44 @@
+<script type="module">
+    const blocks = document.querySelectorAll('.language-mermaid');
+
+    if (blocks.length) {
+        const { default: mermaid } = await import(
+            'https://cdn.jsdelivr.net/npm/mermaid@12.2.0/dist/mermaid.esm.min.mjs'
+        );
+
+        const diagrams = Array.from(blocks, block => {
+            const diagram = document.createElement('div');
+            diagram.className = 'mermaid';
+            diagram.textContent = block.textContent;
+            (block.closest('pre') || block).replaceWith(diagram);
+            return diagram;
+        });
+
+        const styles = getComputedStyle(diagrams[0]);
+        const color = name => styles.getPropertyValue(`--mermaid-${name}`).trim();
+        mermaid.initialize({
+            startOnLoad: false,
+            theme: 'base',
+            look: 'classic',
+            themeVariables: {
+                fontFamily: styles.fontFamily,
+                fontSize: '16px',
+                background: color('background'),
+                primaryColor: color('surface'),
+                primaryTextColor: color('on-surface'),
+                primaryBorderColor: color('accent'),
+                secondaryColor: color('muted'),
+                secondaryTextColor: color('text'),
+                secondaryBorderColor: color('accent'),
+                tertiaryColor: color('background'),
+                tertiaryTextColor: color('text'),
+                tertiaryBorderColor: color('accent'),
+                lineColor: color('accent'),
+                textColor: color('text'),
+                edgeLabelBackground: color('background')
+            }
+        });
+        await document.fonts.ready;
+        await mermaid.run({ nodes: diagrams });
+    }
+</script>

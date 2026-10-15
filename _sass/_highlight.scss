@@ -1,5 +1,7 @@
-.highlight {
-  @include center(rem(1080px));
+.highlight,
+.post-content > pre {
+  @include center(var(--post-content-max-width, 1080px));
+  box-sizing: border-box;
   background: #282a36;
   border-radius: rem(6px);
   overflow-x: auto;
@@ -17,18 +19,19 @@
     padding: 0;
     overflow-x: auto;
 
-    code {
-      background: none;
-      padding: 0;
-      display: block;
-      font-size: rem(16px);
-      color: $accentDark;
-    }
-
     span {
       line-height: 1.5rem;
       font-family: "Monaco", "Consolas", "Menlo", monospace;
     }
+  }
+
+  code {
+    background: none;
+    padding: 0;
+    display: block;
+    font-size: rem(16px);
+    line-height: 1.5rem;
+    color: $accentDark;
   }
 
   .hll { background-color: #282a36; }
