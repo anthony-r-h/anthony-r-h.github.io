@@ -37,8 +37,6 @@ This walkthrough replaces identifying names and values with descriptive aliases.
 | `#Name` | Literal, selector, key, field, route, offset, state, or notification alias | `#WarningOperation` |
 | `*` inside a value | An undisclosed portion of the original value | `0xC******9` |
 
-Unless marked as an alias or redaction, the assembly instructions, registers, control flow, and patch bytes come from the examined build. Virtual addresses, file offsets, executable names, product names, and other identifying details are omitted.
-
 ## How the startup system works
 
 Startup brings together sign-in work and core initialization. Sign-in work uses saved information, chooses whether to ask for login, and can issue success or exit notifications. Core initialization prepares the rest of the application. A completion check combines their recorded progress and decides whether to run the final startup work or enter cleanup.
@@ -667,7 +665,7 @@ When the record is read, the application reverses the outer encoding, separates 
 
 # Conclusion
 
-This walkthrough uses a licensing-control case study to demonstrate something broader: modifying software without its source code. The same ability to trace a decision and change its outcome can support bug fixes, compatibility patches, altered workflows, and repairs to abandoned applications.
+This article uses a licensing-control case study to demonstrate something broader: modifying software without its source code. The same ability to trace a decision and change its outcome can support bug fixes, compatibility patches, altered workflows, and repairs to abandoned applications.
 
 Compiled software has always been modifiable. Doing so required expertise that most users could never justify acquiring. AI lowers that barrier by helping reconstruct how a program works and translating an intended change into specific edits. A user can increasingly begin with a description of the behavior they want.
 
