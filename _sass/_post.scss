@@ -349,6 +349,32 @@
     margin: 0;
   }
 
+  > table {
+    width: calc(100% - 2 * var(--post-content-padding-mobile, 20px));
+    max-width: var(--post-content-max-width, 1080px);
+    line-height: 1.5;
+
+    @include media(">=sm") {
+      width: calc(100% - 2 * var(--post-content-padding-desktop, 20px));
+    }
+
+    th,
+    td {
+      white-space: normal;
+      overflow-wrap: anywhere;
+      vertical-align: top;
+    }
+
+    th {
+      overflow-wrap: normal;
+
+      @include media("<sm") {
+        min-width: 4em;
+        overflow-wrap: anywhere;
+      }
+    }
+  }
+
   td.gutter.gl {
     padding-right: rem(25px);
     line-height: rem(24px);
@@ -385,6 +411,51 @@
     &:hover .anchor,
     .anchor:hover {
       opacity: 1;
+    }
+  }
+}
+
+.mermaid {
+  --mermaid-background: #{$contentBg};
+  --mermaid-surface: #{$primaryDark};
+  --mermaid-on-surface: #{$accentDark};
+  --mermaid-muted: #{mix($themeColor, $contentBg, 12%)};
+  --mermaid-accent: #{$themeColor};
+  --mermaid-text: #{$texts};
+
+  @include mainFont(400);
+  width: calc(100% - 2 * var(--post-content-padding-mobile, 20px));
+  max-width: var(--post-content-max-width, 1080px);
+  margin: rem(30px) auto;
+  overflow-x: auto;
+  font-size: rem(16px);
+  line-height: 1.5;
+
+  @include media(">=sm") {
+    width: calc(100% - 2 * var(--post-content-padding-desktop, 20px));
+    margin: rem(50px) auto;
+  }
+
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .edgeLabel p {
+    color: var(--mermaid-text);
+  }
+
+  // Diagram labels must not inherit the article's paragraph layout.
+  p {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    font: inherit;
+    color: inherit;
+    letter-spacing: normal;
+
+    &::after {
+      content: none;
     }
   }
 }
