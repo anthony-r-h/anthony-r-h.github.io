@@ -877,7 +877,7 @@ html[data-home-theme="apricot-mesh"] .post-content {
 }
 
 .post-content .csv-table-status.error {
-  color: #a63535;
+  color: var(--site-error);
 }
 
 .post-content .csv-table-grid .gridjs-wrapper {
@@ -961,18 +961,17 @@ html[data-home-theme="apricot-mesh"] .post-content {
 
 .post-content .csv-table-grid .gridjs-pages button {
   border: none;
-  background: var(--csv-table-bg, #{$accentDark});
-  color: var(--csv-table-text-color, #{$texts});
+  // Grid.js marks disabled/hover button colors important in its bundled theme.
+  background: var(--csv-table-bg, #{$accentDark}) !important;
+  color: var(--csv-table-text-color, #{$texts}) !important;
   border-radius: rem(4px);
   min-width: rem(34px);
   box-shadow: none;
-  background-color: var(--csv-table-bg, #{$accentDark}) !important;
-  color: var(--csv-table-text-color, #{$texts}) !important;
 }
 
 .post-content .csv-table-grid .gridjs-pages button.gridjs-currentPage {
-  background: var(--csv-table-header-bg, #{$primaryDark});
-  color: var(--csv-table-header-color, #{$accentDark});
+  background: var(--csv-table-header-bg, #{$primaryDark}) !important;
+  color: var(--csv-table-header-color, #{$accentDark}) !important;
 }
 
 .post-content .csv-table-grid button.gridjs-sort {

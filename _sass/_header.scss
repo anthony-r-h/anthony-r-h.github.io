@@ -148,8 +148,8 @@ body.site-themed .bar-header {
   border-bottom-color: var(--home-subtle);
   background-color: var(--home-background-color);
   background-image: var(--home-background);
-  background-attachment: fixed;
   background-position: top left;
+  background-repeat: no-repeat;
   background-size: 100vw 100vh;
 
   .logo a {
