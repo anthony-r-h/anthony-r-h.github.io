@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Github Pages and Jekyll Notes"
+title: "GitHub Pages and Jekyll Notes"
 subtitle: "" 
 category: Tech
 tags:
@@ -17,7 +17,6 @@ This is the site operating manual for this repo.
   - merging YAML config files,
   - compiling theme values into SCSS,
   - bundling JS,
-  - optimizing images,
   - launching local dev server.
 
 ## Folder Structure (Practical View)
@@ -29,12 +28,15 @@ This is the site operating manual for this repo.
 |- _layouts/            # Page/post/list layout templates
 |- _includes/           # Reusable partials (header, footer, cards, etc.)
 |- _sass/               # SCSS partials
+|- _plugins/            # Custom Liquid tags and filters
 |- assets/              # Built/static assets served by Jekyll
+|- files/               # Post media and downloadable project files
 |- src/
 |  |- yml/              # Source config split into multiple yml files
 |  |- js/main/          # Source JS bundled into assets/js/scripts.min.js
 |  |- js/preview/       # Preview/admin widget JS copied as-is
-|  `- img/              # Source images for optimization task
+|  `- img/              # Legacy image sources; not processed by the current build
+|- scripts/preview.mjs  # Lightweight server for an existing _site build
 |- index.html           # Home page front matter entrypoint
 |- contact.html         # Contact page front matter entrypoint
 |- tags.html            # Tags page front matter entrypoint
@@ -43,6 +45,8 @@ This is the site operating manual for this repo.
 |- _config.yml          # Generated final Jekyll config (do not hand-edit)
 `- gulpfile.js          # Build orchestration
 ```
+
+Jekyll publishes `files/` directly, except for camera raw files, `.bak` files, and `.log` files excluded in `src/yml/_config.yml`. The current Gulp build does not copy or optimize anything from `src/img/`; put new published media in `files/` or `assets/`.
 
 ## Which Layouts Exist and When to Use Them
 
@@ -67,6 +71,8 @@ Current layouts in `_layouts/`:
   - Base wrappers that higher layouts inherit from.
 - `404.html`
   - Not-found page layout.
+- `webring.html`
+  - Web ring page layout.
 
 ## Where Config Lives
 
@@ -82,7 +88,7 @@ Authoritative source config files are in `src/yml/`:
 - `src/yml/theme.yml`
   - Core theme colors used by SCSS.
 - `src/yml/advanced.yml`
-  - Base URL, site URL, analytics, language.
+  - Base URL, site URL, and language.
 - `src/yml/_config.yml`
   - Includes all files above + Jekyll build/plugin settings.
 
@@ -114,7 +120,6 @@ From `src/yml/advanced.yml`:
 
 - `baseurl`: subpath deployment (usually `""` for root domain).
 - `url`: full production URL.
-- `google_analytics`: tracking id.
 - `language`: site language code.
 
 From `src/yml/theme.yml`:
@@ -139,8 +144,11 @@ tags:
 image: /files/path/to/image.jpg
 optimized_image: /assets/img/optimized.jpg
 math: true
+toc: true
 ---
 ```
+
+Post cards prefer `optimized_image` when both image fields exist. Social metadata uses `image` first, then falls back to `optimized_image` and the site default.
 
 Common page front matter:
 
@@ -160,6 +168,7 @@ List page front matter (`layout: list_view`):
 layout: list_view
 title: Project Planning
 permalink: /plan/
+planning_sections: true
 include_tags:
   - Plan
 exclude_tags: []
@@ -197,9 +206,29 @@ Per-post UI overrides (`layout: post`):
 - `post_line_height_desktop`
 - `post_title_size_mobile`
 - `post_title_size_desktop`
+- `post_section_title_size_mobile`
+- `post_section_title_size_desktop`
+- `post_section_heading_space_mobile`
+- `post_section_heading_space_desktop`
+- `post_heading_body_gap_mobile`
+- `post_heading_body_gap_desktop`
+- `post_paragraph_spacing_mobile`
+- `post_paragraph_spacing_desktop`
+- `post_list_spacing_mobile`
+- `post_list_spacing_desktop`
+- `post_list_item_spacing_mobile`
+- `post_list_item_spacing_desktop`
+- `post_list_indent`
+- `post_section_scroll_margin_mobile`
+- `post_section_scroll_margin_desktop`
+- `post_toc_spacing_mobile`
+- `post_toc_spacing_desktop`
+- `post_toc_item_spacing_mobile`
+- `post_toc_item_spacing_desktop`
 - `post_subtitle_color`
 - `post_meta_color`
 - `post_meta_icon_color`
+- `post_link_hover_color`
 - `post_tag_color`
 - `post_tag_hover_bg`
 - `post_tag_hover_color`
@@ -212,7 +241,50 @@ toc_title: Contents # optional
 ```
 
 - Do not add manual ToC markdown (`* toc`, `{:toc}`) or HTML headings.
-- The post layout now renders ToC via `_includes/toc.html` when `toc` is not `false`.
+- The post layout renders the ToC via `_includes/toc.html` only when `toc: true`.
+
+Math in posts:
+
+```yaml
+math: true
+```
+
+- This loads MathJax for that page.
+- Use `$...$` for inline math and `$$...$$` for display math.
+
+Mermaid diagrams:
+
+````md
+```mermaid
+flowchart LR
+    A[Idea] --> B[Build]
+    B --> C[Post]
+```
+````
+
+- No front matter flag is needed.
+- Mermaid is loaded from the CDN only when the page contains a `mermaid` code block.
+- The diagram inherits the site's colors and typography.
+
+Local video embeds:
+
+{% raw %}
+```liquid
+{% include video.html src="/files/MYPROJECT/demo.mp4" caption="Test run" %}
+```
+{% endraw %}
+
+Optional include values are `type`, `preload`, `autoplay`, `loop`, `muted`, `controls`, `playsinline`, and `class`. Controls and inline playback are enabled by default. Autoplay also forces the video to be muted.
+
+Image galleries:
+
+{% raw %}
+```liquid
+{% include image-gallery.html folder="/files/MYPROJECT/post" %}
+```
+{% endraw %}
+
+The gallery include finds JPEG files under that folder in `site.static_files`.
 
 CSV table support in posts:
 
@@ -237,6 +309,8 @@ csv_tables:
 
 - `csv_table_page_size`
 - `csv_table_max_height`
+- `csv_table_font_size`
+- `csv_chart_aspect_ratio`
 - `csv_table_background_color`
 - `csv_table_text_color`
 - `csv_table_border_color`
@@ -247,6 +321,7 @@ csv_tables:
 - `csv_table_target` (CSS selector anchor for table block position)
 - `csv_chart_target` (CSS selector anchor for chart position)
 - `csv_show_table` (`false` = chart-only mode)
+- `csv_filter` (page-level row filter; `csv_chart.filter` also works)
 
 Chart config (optional):
 
@@ -339,7 +414,9 @@ csv_chart:
 
 - Home currently excludes `Plan` by default via `home_listing.exclude_tags`.
 - Plan page includes only `Plan` via `pages/plan.md`.
+- `planning_sections: true` groups the plan page into `Ideation`, `Planning`, `In Progress`, and `On Hold`. Set a post's `planning_tag` to one of those values; unknown or missing values fall back to `Ideation`.
 - Tags are case-insensitive in filtering logic, but keep naming consistent anyway.
+- The exact tag `Hidden` keeps a post out of home/list pages, tags, search, the sitemap, post pagination, and related-post links. The post is still available at its direct URL.
 - Avoid empty tag values.
 
 ## Markdown Refresher
@@ -385,6 +462,15 @@ console.log("hello");
 ```
 ````
 
+Tables:
+
+```md
+| Part | Status |
+|---|---|
+| Frame | Done |
+| Fork | Waiting |
+```
+
 Blockquote:
 
 ```md
@@ -395,15 +481,19 @@ Blockquote:
 
 Use these for safe URLs:
 
+{% raw %}
 ```liquid
 {{ "/assets/css/styles.css" | relative_url }}
 {{ "/assets/css/styles.css" | absolute_url }}
 ```
+{% endraw %}
 
 In templates, use:
 
+{% raw %}
 - `{{ site.baseurl }}` for root-relative links.
 - `{{ site.url }}{{ site.baseurl }}` for absolute links.
+{% endraw %}
 
 ## Build / Dev Commands
 
@@ -411,7 +501,7 @@ Install deps:
 
 ```bash
 bundle install
-npm install
+npm ci
 ```
 
 Run local dev:
@@ -424,6 +514,18 @@ One-off build:
 
 ```bash
 npm run build
+```
+
+Preview an existing build at `http://127.0.0.1:4000`:
+
+```bash
+npm run preview
+```
+
+Build and then preview:
+
+```bash
+npm run preview:build
 ```
 
 If Jekyll fails on Windows with `_site` file permission errors, close apps/processes locking files under `_site/files/` and run build again.
