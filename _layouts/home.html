@@ -59,7 +59,6 @@ layout: main
 <main class="home" role="main">
     {% assign home_grid = site.home_grid %}
     {% capture home_grid_vars %}
-      --home-grid-min-card-width: {{ page.home_grid_min_card_width | default: home_grid.min_card_width | default: "315px" }};
       --home-grid-column-gap: {{ page.home_grid_column_gap | default: home_grid.column_gap | default: "40px" }};
       --home-grid-row-gap: {{ page.home_grid_row_gap | default: home_grid.row_gap | default: "100px" }};
       --home-grid-mobile-padding: {{ page.home_grid_mobile_padding | default: home_grid.mobile_padding | default: "23px" }};

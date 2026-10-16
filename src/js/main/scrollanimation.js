@@ -74,6 +74,10 @@
             var image = new Image();
             image.onload = function () {
                 img.src = image.src;
+                var loader = img.parentNode.querySelector('.loader');
+                if (loader) {
+                    loader.style.display = 'none';
+                }
             };
             image.src = img.getAttribute('data-url');
         }

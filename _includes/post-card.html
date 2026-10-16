@@ -1,7 +1,5 @@
 {% assign post = include.post %}
 <article class="box-item">
-  <span class="category"><span>{{ post.category }}</span></span>
-
   <div class="box-body">
     <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
       {% include loader.html %}
@@ -22,20 +20,25 @@
         </noscript>
       {% endif %}
       {% include new-post-tag.html date=post.date %}
-      {% include read-icon.html %}
     </a>
     <div class="box-info">
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-        {% include date.html date=post.date %}
-      </time>
+      <div class="post-meta">
+        <span class="category">{{ post.category }}</span>
+        <span class="post-meta-separator" aria-hidden="true">/</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+          {% include date.html date=post.date %}
+        </time>
+      </div>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
           {{ post.title }}
         </h2>
       </a>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-        <p class="description">{{ post.description }}</p>
-      </a>
+      {% if post.description %}
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <p class="description">{{ post.description }}</p>
+        </a>
+      {% endif %}
       <div class="tags">
         {% for tag in post.tags %}
           {% if tag != "" %}

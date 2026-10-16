@@ -35,10 +35,9 @@ home_listing:
 
 # Home grid layout defaults
 # Override per-page in front matter with:
-# home_grid_min_card_width, home_grid_column_gap, home_grid_row_gap,
+# home_grid_column_gap, home_grid_row_gap,
 # home_grid_mobile_padding, home_grid_desktop_padding
 home_grid:
-  min_card_width: "315px"
   column_gap: "60px"
   row_gap: "100px"
   mobile_padding: "23px"
@@ -50,11 +49,11 @@ list_view_ui:
   mobile_padding: "23px"
   desktop_padding: "40px"
   item_spacing: "28px"
-  divider_color: "rgba(255, 255, 255, 0.2)"
+  divider_color: "var(--home-subtle)"
   title_size: "30px"
-  title_color: "#efe7de"
-  title_hover_color: "#efe7de"
-  meta_color: "#f2f2f2"
-  description_color: "#f2f2f2"
+  title_color: "var(--home-ink)"
+  title_hover_color: "var(--home-accent)"
+  meta_color: "var(--home-muted)"
+  description_color: "var(--home-muted)"
 
 

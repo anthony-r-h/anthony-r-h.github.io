@@ -27,12 +27,17 @@
     line-height: rem(30px);
     @include mainFont(300);
     font-size: rem(20px);
-    color: $primaryDark;
-    background-color: $accentDark;
-    border: 0;
+    color: var(--home-ink, #{$primaryDark});
+    background-color: var(--site-surface-strong, #{$accentDark});
+    border: 1px solid var(--home-subtle, transparent);
     border-radius: rem(20px);
     padding: rem(5px) rem(25px);
     outline: 0;
+
+    &::placeholder {
+      color: var(--home-muted, #777);
+      opacity: 0.9;
+    }
   }
 
   &.active {
@@ -70,23 +75,23 @@
     }
 
     a {
-      color: $accentDark;
+      color: var(--home-ink, #{$accentDark});
       text-decoration: none;
       display: block;
       padding: rem(15px) 0;
       width: 100%;
-      border-bottom: 1px solid darken($accentDark, 80%);
+      border-bottom: 1px solid var(--home-subtle, #{darken($accentDark, 80%)});
       transition: all 0.3s;
       line-height: rem(25px);
 
       &:hover {
-        color: $accentDark;
+        color: var(--home-accent, #{$accentDark});
         opacity: 0.85;
       }
     }
 
     .search-no-results {
-      color: $accentDark;
+      color: var(--home-ink, #{$accentDark});
       padding: rem(15px) 0;
       margin: 0;
     }
@@ -100,8 +105,8 @@
     width: rem(26px);
     height: rem(26px);
     padding: rem(5px);
-    fill: $accentDark;
-    background-color: $themeColor;
+    fill: var(--site-on-accent, #{$accentDark});
+    background-color: var(--site-accent-fill, #{$themeColor});
     border-radius: rem(13px);
     margin: rem(7px);
     cursor: pointer;
@@ -120,7 +125,11 @@
     width: 100%;
     height: 100%;
     min-height: 100%;
-    background-color: $primaryDark;
+    background-color: var(--home-background-color, #{$primaryDark});
+    background-image: var(--home-background, none);
+    background-attachment: fixed;
+    background-position: top left;
+    background-size: 100vw 100vh;
     content: "";
     z-index: 18;
   }
