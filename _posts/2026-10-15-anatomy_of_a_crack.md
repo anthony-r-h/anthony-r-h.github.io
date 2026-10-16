@@ -652,7 +652,7 @@ Here's how that works with a single field.
 4. Append the checksum without encoding it separately:
 
    ```text
-   a9aa7fa9 f165ec9e97ddaa3985491b452fff809c
+   a9aa7fa9\sf165ec9e97ddaa3985491b452fff809c
    ```
 
 5. Encode that complete string again:

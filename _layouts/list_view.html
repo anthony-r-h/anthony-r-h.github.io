@@ -56,7 +56,7 @@ layout: main
     {% endif %}
 {% endfor %}
 
-<main class="home list-view" role="main">
+<main class="home list-view{% if page.planning_sections %} planning-archive{% endif %}" role="main">
     {% assign list_cfg = site.list_view_ui %}
     {% capture list_view_vars %}
       --list-mobile-padding: {{ page.list_mobile_padding | default: list_cfg.mobile_padding | default: "23px" }};
@@ -89,31 +89,49 @@ layout: main
                     {% endif %}
                 {% endfor %}
 
-                <div class="section-post-group">
-                    <h2 class="section-post-group-title">{{ section_name }}</h2>
+                {% if section_posts.size > 0 %}
+                <section class="section-post-group" aria-labelledby="planning-section-{{ section_key }}">
+                    <header class="section-post-group-header">
+                        <h2 id="planning-section-{{ section_key }}" class="section-post-group-title">{{ section_name }}</h2>
+                    </header>
                     <ul class="section-post-list">
                         {% for post in section_posts %}
                             <li class="section-post-item">
                                 <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
                                     {% include date.html date=post.date %}
                                 </time>
-                                <h2>
-                                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                                </h2>
-                                {% if post.description %}
-                                    <p>{{ post.description }}</p>
-                                {% endif %}
-                                <div class="tags">
+                                <div class="section-post-body">
+                                    <h3>
+                                        <a href="{{ post.url | prepend: site.baseurl }}">
+                                            <span>{{ post.title }}</span>
+                                        </a>
+                                    </h3>
+                                    {% if post.description %}
+                                        <p>{{ post.description }}</p>
+                                    {% endif %}
+                                    {% assign visible_tag_count = 0 %}
                                     {% for tag in post.tags %}
-                                        {% if tag != "" %}
-                                            <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                                        {% assign tag_down = tag | downcase %}
+                                        {% if tag != "" and tag_down != "plan" %}
+                                            {% assign visible_tag_count = visible_tag_count | plus: 1 %}
                                         {% endif %}
                                     {% endfor %}
+                                    {% if visible_tag_count > 0 %}
+                                    <div class="tags">
+                                        {% for tag in post.tags %}
+                                            {% assign tag_down = tag | downcase %}
+                                            {% if tag != "" and tag_down != "plan" %}
+                                                <a href="{{ site.baseurl}}/tags/#{{tag | slugify }}">#{{ tag }}</a>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
                                 </div>
                             </li>
                         {% endfor %}
                     </ul>
-                </div>
+                </section>
+                {% endif %}
             {% endfor %}
         {% else %}
             <ul class="section-post-list">

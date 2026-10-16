@@ -586,6 +586,87 @@
 
                                 var datasets = [];
                                 var labels = [];
+                                function parseThemeColor(value) {
+                                    var hex = String(value || '').trim().match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/i);
+                                    if (hex) {
+                                        var digits = hex[1];
+                                        if (digits.length === 3) {
+                                            digits = digits.split('').map(function (digit) { return digit + digit; }).join('');
+                                        }
+                                        return {
+                                            r: parseInt(digits.slice(0, 2), 16),
+                                            g: parseInt(digits.slice(2, 4), 16),
+                                            b: parseInt(digits.slice(4, 6), 16)
+                                        };
+                                    }
+
+                                    var rgb = String(value || '').trim().match(/^rgba?\(\s*([\d.]+)[,\s]+([\d.]+)[,\s]+([\d.]+)/i);
+                                    if (!rgb) return null;
+                                    return { r: Number(rgb[1]), g: Number(rgb[2]), b: Number(rgb[3]) };
+                                }
+
+                                function rgbToHsl(rgb) {
+                                    var r = rgb.r / 255;
+                                    var g = rgb.g / 255;
+                                    var b = rgb.b / 255;
+                                    var max = Math.max(r, g, b);
+                                    var min = Math.min(r, g, b);
+                                    var delta = max - min;
+                                    var hue = 0;
+                                    var lightness = (max + min) / 2;
+                                    var saturation = delta === 0 ? 0 : delta / (1 - Math.abs(2 * lightness - 1));
+
+                                    if (delta !== 0) {
+                                        if (max === r) hue = 60 * (((g - b) / delta) % 6);
+                                        else if (max === g) hue = 60 * (((b - r) / delta) + 2);
+                                        else hue = 60 * (((r - g) / delta) + 4);
+                                    }
+                                    if (hue < 0) hue += 360;
+
+                                    return { h: hue, s: saturation * 100, l: lightness * 100 };
+                                }
+
+                                function getChartTheme() {
+                                    var styles = getComputedStyle(chartCanvas);
+                                    function color(name, fallback) {
+                                        return styles.getPropertyValue(name).trim() || fallback;
+                                    }
+                                    var accent = color('--home-accent', '#584064');
+                                    var fallbackFill = color('--home-subtle', 'rgba(88, 64, 100, 0.15)');
+                                    var accentRgb = parseThemeColor(accent);
+
+                                    function series(hueShift) {
+                                        if (!accentRgb) return { line: accent, fill: fallbackFill };
+                                        var hsl = rgbToHsl(accentRgb);
+                                        var shifted = hueShift !== 0;
+                                        var hue = (hsl.h + hueShift + 360) % 360;
+                                        var saturation = shifted ? Math.max(hsl.s, 55) : hsl.s;
+                                        var lightness = hsl.l;
+                                        if (shifted) {
+                                            lightness = hsl.l > 65 ? hsl.l - 18 : hsl.l + 8;
+                                        }
+                                        var values = [hue, saturation, lightness].map(function (number) {
+                                            return Math.round(number * 10) / 10;
+                                        });
+                                        return {
+                                            line: 'hsl(' + values[0] + ', ' + values[1] + '%, ' + values[2] + '%)',
+                                            fill: 'hsla(' + values[0] + ', ' + values[1] + '%, ' + values[2] + '%, 0.15)'
+                                        };
+                                    }
+
+                                    return {
+                                        text: color('--home-muted', '#666'),
+                                        grid: color('--home-subtle', 'rgba(0, 0, 0, 0.1)'),
+                                        palette: [
+                                            series(0),
+                                            series(120),
+                                            series(-120),
+                                            series(180)
+                                        ]
+                                    };
+                                }
+                                var chartTheme = getChartTheme();
+                                var palette = chartTheme.palette;
 
                                 if (yAgg.length) {
                                     var groupBy = String(chartConfig.group_by || '').toLowerCase();
@@ -619,13 +700,6 @@
                                         return buckets[a].sortTs - buckets[b].sortTs;
                                     });
                                     labels = bucketKeys;
-
-                                    var palette = [
-                                        { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
-                                        { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
-                                        { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
-                                        { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
-                                    ];
 
                                     var aggSeriesValues = {};
 
@@ -677,6 +751,9 @@
                                             type: dsType,
                                             yAxisID: axisId,
                                             _unit: unit,
+                                            _themeColorIndex: dsIdx,
+                                            _hasCustomLineColor: !!series.color,
+                                            _hasCustomFillColor: !!series.fill_color,
                                             label: label,
                                             data: seriesData,
                                             borderColor: lineColor,
@@ -696,19 +773,15 @@
                                         return (label === null || typeof label === 'undefined' || String(label).trim() === '') ? String(idx + 1) : String(label);
                                     });
 
-                                    var palette = [
-                                        { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
-                                        { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
-                                        { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
-                                        { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
-                                    ];
-
                                     datasets = yExprs.map(function (exprObj, dsIdx) {
                                         var color = palette[dsIdx % palette.length];
                                         return {
                                             type: chartConfig.type || 'scatter',
                                             yAxisID: 'y',
                                             _unit: chartConfig.y_unit || '',
+                                            _themeColorIndex: dsIdx,
+                                            _hasCustomLineColor: false,
+                                            _hasCustomFillColor: false,
                                             label: exprObj.label || exprObj.expr,
                                             data: rows.map(function (r) {
                                                 var n = evaluateExpression(exprObj.expr, r, fields);
@@ -733,19 +806,15 @@
                                             return (label === null || typeof label === 'undefined' || String(label).trim() === '') ? String(idx + 1) : String(label);
                                         });
 
-                                        var palette = [
-                                            { line: 'rgba(28, 51, 41, 1)', fill: 'rgba(28, 51, 41, 0.15)' },
-                                            { line: 'rgba(45, 92, 76, 1)', fill: 'rgba(45, 92, 76, 0.15)' },
-                                            { line: 'rgba(128, 86, 40, 1)', fill: 'rgba(128, 86, 40, 0.15)' },
-                                            { line: 'rgba(91, 64, 122, 1)', fill: 'rgba(91, 64, 122, 0.15)' }
-                                        ];
-
                                         datasets = yIndexes.map(function (yIdx, dsIdx) {
                                             var color = palette[dsIdx % palette.length];
                                             return {
                                                 type: chartConfig.type || 'scatter',
                                                 yAxisID: 'y',
                                                 _unit: chartConfig.y_unit || '',
+                                                _themeColorIndex: dsIdx,
+                                                _hasCustomLineColor: false,
+                                                _hasCustomFillColor: false,
                                                 label: fields[yIdx],
                                                 data: rows.map(function (r) {
                                                     var n = Number(r[fields[yIdx]]);
@@ -796,6 +865,9 @@
                                                 type: 'scatter',
                                                 yAxisID: ds.yAxisID || 'y',
                                                 _unit: ds._unit || '',
+                                                _themeColorIndex: ds._themeColorIndex,
+                                                _hasCustomLineColor: ds._hasCustomLineColor,
+                                                _hasCustomFillColor: ds._hasCustomFillColor,
                                                 label: ds.label,
                                                 data: ds.data.map(function (val, idx) {
                                                     return Number.isFinite(val) ? { x: labels[idx], y: val } : null;
@@ -813,7 +885,7 @@
                                         block.style.display = 'none';
                                     }
 
-                                    new Chart(chartCanvas, {
+                                    var chart = new Chart(chartCanvas, {
                                         type: chartType,
                                         data: {
                                             labels: labels,
@@ -825,9 +897,10 @@
                                             scales: {
                                                 x: {
                                                     type: chartType === 'scatter' ? 'category' : undefined,
-                                                    grid: { display: showGridlines },
+                                                    grid: { display: showGridlines, color: chartTheme.grid },
                                                     border: { display: false },
                                                     ticks: {
+                                                        color: chartTheme.text,
                                                         maxRotation: 0,
                                                         autoSkip: true,
                                                         callback: function (value, index) {
@@ -845,32 +918,40 @@
                                                 },
                                                 y: {
                                                     beginAtZero: false,
-                                                    grid: { display: showGridlines },
+                                                    grid: { display: showGridlines, color: chartTheme.grid },
                                                     border: { display: false },
-                                                    ticks: { display: showYTicks },
+                                                    ticks: { display: showYTicks, color: chartTheme.text },
                                                     title: {
                                                         display: showAxisTitles && !!yTitle,
-                                                        text: yTitle
+                                                        text: yTitle,
+                                                        color: chartTheme.text
                                                     }
                                                 },
                                                 y1: {
                                                     display: hasRightAxis,
                                                     position: 'right',
                                                     beginAtZero: false,
-                                                    grid: { display: false },
+                                                    grid: { display: false, color: chartTheme.grid },
                                                     border: { display: false },
-                                                    ticks: { display: showYTicks },
+                                                    ticks: { display: showYTicks, color: chartTheme.text },
                                                     title: {
                                                         display: showAxisTitles && !!y2Title,
-                                                        text: y2Title
+                                                        text: y2Title,
+                                                        color: chartTheme.text
                                                     }
                                                 }
                                             },
                                             plugins: {
-                                                legend: { display: !insideBottomRightLegend, position: legendPosition, align: legendAlign },
+                                                legend: {
+                                                    display: !insideBottomRightLegend,
+                                                    position: legendPosition,
+                                                    align: legendAlign,
+                                                    labels: { color: chartTheme.text }
+                                                },
                                                 title: {
                                                     display: showTitle && !!chartConfig.title,
-                                                    text: chartConfig.title || ''
+                                                    text: chartConfig.title || '',
+                                                    color: chartTheme.text
                                                 },
                                                 tooltip: {
                                                     callbacks: {
@@ -915,6 +996,39 @@
 
                                         chartWrap.appendChild(legendEl);
                                     }
+
+                                    document.addEventListener('site-theme-change', function () {
+                                        var nextTheme = getChartTheme();
+                                        chart.data.datasets.forEach(function (dataset, index) {
+                                            var paletteIndex = Number.isInteger(dataset._themeColorIndex) ? dataset._themeColorIndex : index;
+                                            var color = nextTheme.palette[paletteIndex % nextTheme.palette.length];
+                                            if (!dataset._hasCustomLineColor) {
+                                                dataset.borderColor = color.line;
+                                            }
+                                            if (dataset.type === 'scatter') {
+                                                if (!dataset._hasCustomLineColor) dataset.backgroundColor = color.line;
+                                            } else if (!dataset._hasCustomFillColor) {
+                                                dataset.backgroundColor = color.fill;
+                                            }
+                                        });
+
+                                        chart.options.scales.x.grid.color = nextTheme.grid;
+                                        chart.options.scales.x.ticks.color = nextTheme.text;
+                                        chart.options.scales.y.grid.color = nextTheme.grid;
+                                        chart.options.scales.y.ticks.color = nextTheme.text;
+                                        chart.options.scales.y.title.color = nextTheme.text;
+                                        chart.options.scales.y1.grid.color = nextTheme.grid;
+                                        chart.options.scales.y1.ticks.color = nextTheme.text;
+                                        chart.options.scales.y1.title.color = nextTheme.text;
+                                        chart.options.plugins.legend.labels.color = nextTheme.text;
+                                        chart.options.plugins.title.color = nextTheme.text;
+                                        chart.update();
+
+                                        var swatches = chartWrap.querySelectorAll('.csv-chart-legend-swatch');
+                                        chart.data.datasets.forEach(function (dataset, index) {
+                                            if (swatches[index]) swatches[index].style.backgroundColor = dataset.borderColor;
+                                        });
+                                    });
                                 } else {
                                     chartWrap.style.display = 'none';
                                 }
