@@ -16,13 +16,26 @@ body.site-themed {
   --site-code-ink: #fff8f2;
   --site-on-accent: #fff8f2;
   --site-shadow: rgba(53, 31, 49, 0.2);
+  --site-error: #a63535;
   min-height: 100%;
+  isolation: isolate;
   color: var(--home-ink);
   background-color: var(--home-background-color);
+}
+
+// A fixed layer keeps mobile browsers from scrolling or tiling the gradient.
+body.site-themed:not(.webring-page)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
   background-image: var(--home-background);
-  background-attachment: fixed;
-  background-position: top left;
-  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 html[data-home-theme="iris-light"] body.site-themed {
@@ -40,6 +53,7 @@ html[data-home-theme="iris-light"] body.site-themed {
   --site-code-ink: #fff7ef;
   --site-on-accent: #41364f;
   --site-shadow: rgba(32, 26, 47, 0.28);
+  --site-error: #ffd0d0;
   --reading-background: #756d91;
   --reading-ink: #fffaf3;
   --reading-muted: #e4ddec;
@@ -47,15 +61,10 @@ html[data-home-theme="iris-light"] body.site-themed {
 
 // Stable reading colors retain each palette without variable gradient contrast.
 html[data-home-theme] body.site-themed.post-page {
-  --site-surface-strong: #dedbd6;
   --home-background-color: var(--reading-background);
   --home-background: linear-gradient(var(--reading-background), var(--reading-background));
   --home-ink: var(--reading-ink);
   --home-muted: var(--reading-muted);
-}
-
-html[data-home-theme="iris-light"] body.site-themed.post-page {
-  --site-surface-strong: #35343b;
 }
 
 .home {

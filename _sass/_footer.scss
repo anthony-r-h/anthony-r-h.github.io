@@ -11,7 +11,7 @@
 .site-footer {
   @include center(rem(1080px));
   @include mainFont(400);
-  border-top: 1px solid rgba(28, 51, 41, 0.35);
+  border-top: 1px solid var(--home-subtle);
   background: transparent;
   padding: rem(20px) rem(23px) rem(24px);
   margin-top: rem(64px);
@@ -24,13 +24,13 @@
 
   a {
     text-decoration: none;
-    color: $primaryDark;
+    color: var(--home-muted);
   }
 }
 
 .site-footer .footer-tagline {
   margin: 0 0 rem(12px);
-  color: rgba(28, 51, 41, 0.9);
+  color: var(--home-muted);
   font-size: rem(15px);
   line-height: 1.5;
 }
@@ -50,44 +50,18 @@
   justify-content: center;
   width: rem(34px);
   height: rem(34px);
-  border: 1px solid rgba(28, 51, 41, 0.45);
+  border: 1px solid var(--home-subtle);
   border-radius: rem(999px);
-  color: $primaryDark;
-  fill: $primaryDark;
+  color: var(--home-ink);
+  fill: currentColor;
   transition: border-color 0.2s ease, color 0.2s ease, fill 0.2s ease;
 
   &:hover {
-    border-color: $primaryDark;
-    color: $primaryDark;
-    fill: $primaryDark;
+    border-color: var(--home-ink);
+    color: var(--home-ink);
   }
 }
 
 .site-footer .footer-social svg {
   @include size(18, 18);
 }
-
-.site-themed .site-footer {
-  border-top-color: var(--home-subtle);
-}
-
-.site-themed .site-footer .footer-tagline,
-.site-themed .site-footer a {
-  color: var(--home-muted);
-}
-
-.site-themed .site-footer .footer-social a {
-  border-color: var(--home-subtle);
-  color: var(--home-ink);
-  fill: var(--home-ink);
-
-  &:hover {
-    border-color: var(--home-ink);
-    color: var(--home-ink);
-    fill: var(--home-ink);
-  }
-}
-
-
-
-

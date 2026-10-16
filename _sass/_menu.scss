@@ -36,7 +36,6 @@ aside.sidebar {
   left: rem(-240px);
   color: var(--home-ink, #{$primaryDark});
   background: var(--site-surface-strong, #{$contentBg});
-  box-shadow: rem(18px) 0 rem(48px) var(--site-shadow, rgba(0, 0, 0, 0.18));
   z-index: 20;
 
   @include media(">=sm") {
@@ -45,6 +44,7 @@ aside.sidebar {
 
   &.open {
     left: 0;
+    box-shadow: rem(18px) 0 rem(48px) var(--site-shadow, rgba(0, 0, 0, 0.18));
   }
 
   h2 {

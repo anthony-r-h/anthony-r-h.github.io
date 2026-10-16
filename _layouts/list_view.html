@@ -62,12 +62,12 @@ layout: main
       --list-mobile-padding: {{ page.list_mobile_padding | default: list_cfg.mobile_padding | default: "23px" }};
       --list-desktop-padding: {{ page.list_desktop_padding | default: list_cfg.desktop_padding | default: "40px" }};
       --list-item-spacing: {{ page.list_item_spacing | default: list_cfg.item_spacing | default: "28px" }};
-      --list-divider-color: {{ page.list_divider_color | default: list_cfg.divider_color | default: "rgba(255, 255, 255, 0.2)" }};
+      --list-divider-color: {{ page.list_divider_color | default: list_cfg.divider_color | default: "var(--home-subtle)" }};
       --list-title-size: {{ page.list_title_size | default: list_cfg.title_size | default: "30px" }};
-      --list-title-color: {{ page.list_title_color | default: list_cfg.title_color | default: "#efe7de" }};
-      --list-title-hover-color: {{ page.list_title_hover_color | default: list_cfg.title_hover_color | default: "#efe7de" }};
-      --list-meta-color: {{ page.list_meta_color | default: list_cfg.meta_color | default: "#f2f2f2" }};
-      --list-description-color: {{ page.list_description_color | default: list_cfg.description_color | default: "#f2f2f2" }};
+      --list-title-color: {{ page.list_title_color | default: list_cfg.title_color | default: "var(--home-ink)" }};
+      --list-title-hover-color: {{ page.list_title_hover_color | default: list_cfg.title_hover_color | default: "var(--home-accent)" }};
+      --list-meta-color: {{ page.list_meta_color | default: list_cfg.meta_color | default: "var(--home-muted)" }};
+      --list-description-color: {{ page.list_description_color | default: list_cfg.description_color | default: "var(--home-muted)" }};
     {% endcapture %}
     <section class="row" style="{{ list_view_vars | strip_newlines | strip }}">
         {% if page.planning_sections %}
