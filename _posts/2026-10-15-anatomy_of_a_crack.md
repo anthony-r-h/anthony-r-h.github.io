@@ -23,7 +23,7 @@ That lowers the skill floor for cracking. A user can describe the change they wa
 
 Software vendors have long relied partly on the cost of reverse engineering. Licensing rules enforced on the user's machine can be found and changed, but the required time and expertise have kept that work out of reach for most people. Agentic reverse engineering reduces that cost and makes those rules accessible to a much larger group.
 
-> This fictional walkthrough is intended as an illustration. Names and identifying values are replaced with aliases, while the target's identity, addresses, and file offsets are omitted. It is not a turnkey patch. The purpose is to explain the technical ideas. Please respect software licenses and applicable laws.
+> This fictional walkthrough is intended as an illustration. Names and identifying values are replaced with aliases, while the target's identity, addresses, and file offsets are omitted. This is not a turnkey patch. The purpose is to explain the technical ideas. Please respect software licenses and applicable laws.
 
 ### Aliases and redactions
 
@@ -610,7 +610,7 @@ swap_position = ((table[position % 20] + position) & 0xffffffff) % length
 
 The table repeats after twenty positions. `& 0xffffffff` reproduces the program's 32-bit unsigned addition, while `% length` keeps the calculated position inside the string.
 
-`DecodeStoredString()` reverses the swaps, starting with the last one, and then applies the hexadecimal substitution again. Reversing the swap order restores the earlier character positions before the original digits are reconstructed. The [function and code-label appendix](#appendix) lists both functions and the permutation table by alias.
+`DecodeStoredString()` reverses the swaps, starting with the last one, and then applies the hexadecimal substitution again. Reversing the swap order restores the earlier character positions before the original digits are reconstructed.
 
 ### Complete record format
 
@@ -667,15 +667,15 @@ When the record is read, the application reverses the outer encoding, separates 
 
 This article uses a licensing-control case study to demonstrate something broader: modifying software without its source code. The same ability to trace a decision and change its outcome can support bug fixes, compatibility patches, altered workflows, and repairs to abandoned applications.
 
-Compiled software has always been modifiable. Doing so required expertise that most users could never justify acquiring. AI lowers that barrier by helping reconstruct how a program works and translating an intended change into specific edits. A user can increasingly begin with a description of the behavior they want.
+Compiled software has always been modifiable. However, doing so required expertise that most users could never justify acquiring. AI lowers that barrier by helping reconstruct how a program works and translating an intended change into specific changes.
 
-Software distributed as a finished product becomes material that its users can examine and reshape. The practical lifespan of an application could extend beyond its vendor's support. A small community could maintain changes that never made commercial sense for the original developer. Personal modifications could become ordinary.
+Software distributed as a finished product becomes material that its users can examine and reshape. The practical lifespan of an application could extend beyond its vendor's support, and small community could maintain changes that never made commercial sense for the original developer. Personal modifications could become ordinary.
 
 As these tools improve, users may come to expect greater control over the applications they run. That changes the relationship between software creators and software users. Shipping an executable gives people a working implementation. AI makes it easier for them to decide what that implementation should do next.
 
 # Appendix
 
-The application-specific aliases used in the walkthrough are listed below. They describe inferred roles, not original source names. Generic names used only in teaching examples are omitted. Build-specific addresses and file offsets are also omitted.
+The application-specific aliases used in the walkthrough are listed below. They describe inferred roles, not original source names. Build-specific addresses and file offsets are also omitted.
 
 ## Function aliases
 
