@@ -1,5 +1,7 @@
 .highlight,
-.post-content > pre {
+.post-content > pre,
+.post-content > ol > li > pre,
+.post-content > ul > li > pre {
   @include center(var(--post-content-max-width, 1080px));
   box-sizing: border-box;
   background: var(--site-code-surface, #282a36);
@@ -56,4 +58,23 @@
   .ld, .s, .sb, .sc, .sd, .s2, .sh, .si,
   .sx, .sr, .s1, .ss, .vglnk    { color: #f1fa8c; }
   .na, .nc, .nd, .ne, .nf       { color: #50fa7b; }
+}
+
+// Keep fenced blocks in top-level lists aligned with other post code blocks.
+.post-content > ol > li > .highlighter-rouge > .highlight,
+.post-content > ul > li > .highlighter-rouge > .highlight,
+.post-content > ol > li > pre,
+.post-content > ul > li > pre {
+  width: calc(100% + var(--post-list-indent, 2rem) - var(--post-content-padding-mobile, 20px));
+  margin-left: calc(var(--post-content-padding-mobile, 20px) - var(--post-list-indent, 2rem));
+
+  @include media(">=sm") {
+    width: calc(100% + var(--post-list-indent, 2rem) - var(--post-content-padding-desktop, 20px));
+    margin-left: calc(var(--post-content-padding-desktop, 20px) - var(--post-list-indent, 2rem));
+  }
+
+  @media (min-width: 70rem) {
+    width: calc(100% + var(--post-list-indent, 2rem) + var(--post-content-padding-desktop, 20px));
+    margin-left: calc(-1 * var(--post-list-indent, 2rem));
+  }
 }

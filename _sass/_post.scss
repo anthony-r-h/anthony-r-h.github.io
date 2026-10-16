@@ -39,6 +39,151 @@
     }
   }
 
+  .post-gallery {
+    @include center(var(--post-content-max-width, 1080px));
+    padding-left: var(--post-content-padding-mobile, 20px);
+    padding-right: var(--post-content-padding-mobile, 20px);
+    margin: rem(32px) auto rem(40px);
+
+    @include media(">=sm") {
+      padding-left: var(--post-content-padding-desktop, 20px);
+      padding-right: var(--post-content-padding-desktop, 20px);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--home-accent, #{$themeColor});
+      outline-offset: 3px;
+    }
+  }
+
+  html:not(.no-js) & .post-gallery__viewport {
+    display: grid;
+  }
+
+  html:not(.no-js) & .post-gallery__item {
+    grid-area: 1 / 1;
+    visibility: hidden;
+    pointer-events: none;
+
+    &.is-active {
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  .post-gallery__item {
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-gallery__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    &:focus-visible {
+      outline: 3px solid var(--home-accent, #{$themeColor});
+      outline-offset: 3px;
+    }
+
+    @include media(">=sm") {
+      aspect-ratio: 16 / 10;
+    }
+  }
+
+  .post-gallery__image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: contain;
+  }
+
+  .post-gallery__caption {
+    margin-top: rem(8px);
+    text-align: center;
+    font-size: rem(17px);
+    line-height: 1.45;
+  }
+
+  .post-gallery--enhanced .post-gallery__item.is-active {
+    animation: gallery-slide-in 180ms ease-out both;
+  }
+
+  .post-gallery__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16px);
+    margin-top: rem(12px);
+
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  .post-gallery__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(44px);
+    height: rem(44px);
+    padding: 0;
+    border: 2px solid var(--home-accent, #{$themeColor});
+    border-radius: 0;
+    color: var(--home-accent, #{$themeColor});
+    background: transparent;
+    font: inherit;
+    font-size: rem(22px);
+    line-height: 1;
+    cursor: pointer;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+
+    &:hover {
+      color: var(--site-on-accent, #fff);
+      background: var(--home-accent, #{$themeColor});
+      border-color: var(--home-accent, #{$themeColor});
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--home-accent, #{$themeColor});
+      outline-offset: 3px;
+    }
+  }
+
+  .post-gallery__status {
+    min-width: rem(52px);
+    color: var(--home-muted, #{lighten($texts, 30%)});
+    text-align: center;
+    font-size: rem(14px);
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-gallery--enhanced .post-gallery__item.is-active {
+      animation: none;
+    }
+
+    .post-gallery__button {
+      transition: none;
+    }
+  }
+
+  @keyframes gallery-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(rem(4px));
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .video-embed {
     video {
       display: block;
@@ -171,18 +316,19 @@
   p,
   li {
     color: var(--home-ink, #{$texts});
+  }
 
-    // This is for inline code denoted by `abc`
-    code {
-      font-size: rem(15px);
-      background: var(--site-surface-strong, #282a36);
-      color: var(--home-ink, #fff);
-      word-wrap: break-word;
-      padding: rem(3px) rem(5px);
-      border-radius: 3px;
-      @include media(">=sm") {
-        font-size: rem(17px);
-      }
+  // Inline code denoted by `abc`; direct-child selectors exclude fenced blocks.
+  p > code,
+  li > code {
+    font-size: rem(15px);
+    background: var(--site-surface-strong, #282a36);
+    color: var(--home-ink, #fff);
+    word-wrap: break-word;
+    padding: rem(3px) rem(5px);
+    border-radius: 3px;
+    @include media(">=sm") {
+      font-size: rem(17px);
     }
   }
 

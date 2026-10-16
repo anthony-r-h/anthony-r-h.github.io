@@ -14,25 +14,23 @@ planning_tag: In Progress
 
 Winning Japan
 
-<figure>
-  <img src="/files/Boxing Glove/Winning_Red_Lace-up_Boxing_Gloves_I_1024x1024.jpg">
-  <figcaption>Winning</figcaption>
-</figure>
+{% gallery %}
+- image: "/files/Boxing Glove/Winning_Red_Lace-up_Boxing_Gloves_I_1024x1024.jpg"
+  alt: "Red lace-up Winning boxing gloves"
+  caption: "Winning"
 
-<figure>
-  <img src="/files/Boxing Glove/Screenshot 2026-09-12 at 23-14-08 Select Lace-Up Boxing Gloves Leather Training &amp; Sparring Gloves – MK1.png">
-  <figcaption>MK1</figcaption>
-</figure>
+- image: "/files/Boxing Glove/Screenshot 2026-09-12 at 23-14-08 Select Lace-Up Boxing Gloves Leather Training & Sparring Gloves – MK1.png"
+  alt: "MK1 lace-up boxing gloves"
+  caption: "MK1"
 
-<figure>
-  <img src="/files/Boxing Glove/mrkt-cphz4-t2-04.jpg">
-  <figcaption>Rouge H, Rouge Casaque, and White Swift Boxing Gloves</figcaption>
-</figure>
+- image: "/files/Boxing Glove/mrkt-cphz4-t2-04.jpg"
+  alt: "Rouge H, Rouge Casaque, and White Swift boxing gloves"
+  caption: "Rouge H, Rouge Casaque, and White Swift Boxing Gloves"
 
-<figure>
-  <img src="/files/Boxing Glove/win1 royal blue.png">
-  <figcaption>Top Boxer Win1</figcaption>
-</figure>
+- image: "/files/Boxing Glove/win1 royal blue.png"
+  alt: "Royal blue Top Boxer Win1 boxing gloves"
+  caption: "Top Boxer Win1"
+{% endgallery %}
 
 
 # Construction Hints
