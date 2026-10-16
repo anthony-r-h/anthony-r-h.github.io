@@ -5,3 +5,48 @@ a {
 h1, h2, h3, h4 {
   @include mainFont();
 }
+
+@font-face {
+  font-family: "Oxanium";
+  src: url("../fonts/oxanium/font.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+body.site-themed {
+  @include mainFont(400);
+
+  .bar-header .logo a,
+  .box-body h2,
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6,
+  .section-post-group-title {
+    letter-spacing: -0.02em;
+  }
+
+  .bar-header .logo a {
+    font-size: clamp(20px, 5.1vw, 30px);
+  }
+
+  .post-content .post-info,
+  .post-content .tags,
+  .sidebar nav li a {
+    font-weight: 500;
+  }
+
+  .post-info time,
+  .post-meta time,
+  .entry-date {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .search-form .search-field,
+  .search-form .search-list {
+    font-weight: 400;
+  }
+}

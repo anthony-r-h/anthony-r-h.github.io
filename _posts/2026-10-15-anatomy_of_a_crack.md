@@ -25,7 +25,7 @@ Software vendors have long relied partly on the cost of reverse engineering. Lic
 
 > This fictional walkthrough is intended as an illustration. Names and identifying values are replaced with aliases, while the target's identity, addresses, and file offsets are omitted. This is not a turnkey patch. The purpose is to explain the technical ideas. Please respect software licenses and applicable laws.
 
-### Aliases and redactions
+## Aliases and redactions
 
 This walkthrough replaces identifying names and values with descriptive aliases. The aliases describe what the recovered code does; they are not names from the original source code.
 

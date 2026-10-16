@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title description">
+  <title id="title">Abstract text</title>
+  <desc id="description">A dark square with transparent shapes suggesting a heading and body text.</desc>
+  <defs>
+    <radialGradient id="surface" cx="50%" cy="44%" r="72%">
+      <stop offset="0" stop-color="#202223"/>
+      <stop offset="0.62" stop-color="#1a1c1d"/>
+      <stop offset="1" stop-color="#141617"/>
+    </radialGradient>
+    <mask id="text-cutouts" maskUnits="userSpaceOnUse" x="0" y="0" width="1080" height="1080">
+      <rect width="1080" height="1080" fill="#fff"/>
+      <g fill="#000">
+        <rect x="92" y="168" width="18" height="704"/>
+
+        <rect x="142" y="210" width="790" height="82"/>
+        <rect x="142" y="342" width="640" height="70"/>
+        <rect x="142" y="466" width="490" height="62"/>
+        <rect x="142" y="576" width="322" height="54"/>
+
+        <rect x="142" y="678" width="230" height="5"/>
+        <rect x="142" y="724" width="765" height="9"/>
+        <rect x="142" y="782" width="710" height="9"/>
+        <rect x="142" y="840" width="486" height="9"/>
+        <rect x="142" y="898" width="665" height="9"/>
+      </g>
+    </mask>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#surface)" mask="url(#text-cutouts)"/>
+</svg>

@@ -17,16 +17,16 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      background-color: #fff;
-      color: $themeColor;
+      background-color: var(--site-surface, #fff);
+      color: var(--home-accent, #{$themeColor});
       padding: 0 rem(15px);
-      border: 1px solid $themeColor;
+      border: 1px solid var(--home-accent, #{$themeColor});
       border-radius: 5px;
       transition: all 0.3s;
 
       @include media(">=sm") {
         font-size: rem(17px);
-        border: 2px solid $themeColor;
+        border: 2px solid var(--home-accent, #{$themeColor});
       }
 
       &:hover {
@@ -37,7 +37,7 @@
       .arrow {
         width: rem(14px);
         height: rem(14px);
-        fill: $themeColor;
+        fill: var(--home-accent, #{$themeColor});
         margin-right: rem(10px);
       }
 

@@ -9,36 +9,80 @@
         const diagrams = Array.from(blocks, block => {
             const diagram = document.createElement('div');
             diagram.className = 'mermaid';
+            diagram.tabIndex = 0;
+            diagram.setAttribute('role', 'region');
+            diagram.setAttribute('aria-label', 'Diagram; scroll horizontally to explore');
             diagram.textContent = block.textContent;
             (block.closest('pre') || block).replaceWith(diagram);
             return diagram;
         });
 
-        const styles = getComputedStyle(diagrams[0]);
-        const color = name => styles.getPropertyValue(`--mermaid-${name}`).trim();
-        mermaid.initialize({
-            startOnLoad: false,
-            theme: 'base',
-            look: 'classic',
-            themeVariables: {
-                fontFamily: styles.fontFamily,
-                fontSize: '16px',
-                background: color('background'),
-                primaryColor: color('surface'),
-                primaryTextColor: color('on-surface'),
-                primaryBorderColor: color('accent'),
-                secondaryColor: color('muted'),
-                secondaryTextColor: color('text'),
-                secondaryBorderColor: color('accent'),
-                tertiaryColor: color('background'),
-                tertiaryTextColor: color('text'),
-                tertiaryBorderColor: color('accent'),
-                lineColor: color('accent'),
-                textColor: color('text'),
-                edgeLabelBackground: color('background')
+        const sources = diagrams.map(diagram => diagram.textContent);
+        let requested = 0;
+        let rendering = false;
+
+        async function renderDiagrams() {
+            requested += 1;
+            if (rendering) return;
+            rendering = true;
+            try {
+                let version;
+                do {
+                    version = requested;
+                    const styles = getComputedStyle(diagrams[0]);
+                    /* Load the selected face before Mermaid measures its labels. */
+                    await document.fonts.load(`400 16px ${styles.fontFamily}`);
+                    const color = name => styles.getPropertyValue(`--${name}`).trim();
+                    const apricot = document.documentElement.dataset.homeTheme === 'apricot-mesh';
+                    const nodeSurface = color(apricot ? 'site-code-surface' : 'site-surface-strong');
+                    const nodeInk = color(apricot ? 'site-code-ink' : 'home-ink');
+                    mermaid.initialize({
+                        startOnLoad: false,
+                        theme: 'base',
+                        look: 'classic',
+                        themeVariables: {
+                            fontFamily: styles.fontFamily,
+                            fontSize: '16px',
+                            background: color('home-background-color'),
+                            primaryColor: nodeSurface,
+                            primaryTextColor: nodeInk,
+                            primaryBorderColor: color('home-muted'),
+                            secondaryColor: nodeSurface,
+                            secondaryTextColor: nodeInk,
+                            secondaryBorderColor: color('home-muted'),
+                            tertiaryColor: nodeSurface,
+                            tertiaryTextColor: nodeInk,
+                            tertiaryBorderColor: color('home-muted'),
+                            lineColor: color('home-accent'),
+                            textColor: color('home-ink'),
+                            edgeLabelBackground: color('home-background-color')
+                        }
+                    });
+                    const rendered = [];
+                    for (let index = 0; index < diagrams.length; index += 1) {
+                        rendered.push(await mermaid.render(`site-diagram-${version}-${index}`, sources[index]));
+                    }
+                    /* Discard a stale render if the reader switched themes while it was running. */
+                    if (version === requested) {
+                        diagrams.forEach((diagram, index) => {
+                            diagram.innerHTML = rendered[index].svg;
+                            const svg = diagram.querySelector('svg');
+                            /* Preserve label size on narrow screens; the container scrolls instead. */
+                            const width = svg.viewBox.baseVal.width;
+                            if (width > 0) svg.style.minWidth = `${width}px`;
+                            rendered[index].bindFunctions?.(diagram);
+                        });
+                    }
+                } while (version !== requested);
+            } catch (error) {
+                console.error('Could not render Mermaid diagrams:', error);
+            } finally {
+                rendering = false;
             }
-        });
+        }
+
+        document.addEventListener('site-theme-change', renderDiagrams);
         await document.fonts.ready;
-        await mermaid.run({ nodes: diagrams });
+        await renderDiagrams();
     }
 </script>
