@@ -67,27 +67,24 @@
   @include size(18, 18);
 }
 
-.footer-on-dark .site-footer {
-  border-top-color: rgba(255, 255, 255, 0.16);
+.site-themed .site-footer {
+  border-top-color: var(--home-subtle);
 }
 
-.footer-on-dark .site-footer .footer-tagline {
-  color: rgba(255, 255, 255, 0.82);
+.site-themed .site-footer .footer-tagline,
+.site-themed .site-footer a {
+  color: var(--home-muted);
 }
 
-.footer-on-dark .site-footer a {
-  color: $accentDark;
-}
-
-.footer-on-dark .site-footer .footer-social a {
-  border-color: rgba(255, 255, 255, 0.35);
-  color: $accentDark;
-  fill: $accentDark;
+.site-themed .site-footer .footer-social a {
+  border-color: var(--home-subtle);
+  color: var(--home-ink);
+  fill: var(--home-ink);
 
   &:hover {
-    border-color: $accentDark;
-    color: $accentDark;
-    fill: $accentDark;
+    border-color: var(--home-ink);
+    color: var(--home-ink);
+    fill: var(--home-ink);
   }
 }
 

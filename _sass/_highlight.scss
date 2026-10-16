@@ -2,19 +2,24 @@
 .post-content > pre {
   @include center(var(--post-content-max-width, 1080px));
   box-sizing: border-box;
-  background: #282a36;
+  background: var(--site-code-surface, #282a36);
+  border: 1px solid var(--home-subtle, transparent);
+  width: calc(100% - 2 * var(--post-content-padding-mobile, 20px));
   border-radius: rem(6px);
   overflow-x: auto;
   padding: rem(20px);
   margin: rem(30px) auto;
 
   @include media(">=sm") {
+    width: calc(100% - 2 * var(--post-content-padding-desktop, 20px));
     padding: rem(30px);
     margin: rem(50px) auto;
   }
 
   pre {
     margin: 0;
+    width: auto;
+    border: 0;
     background: none;
     padding: 0;
     overflow-x: auto;
@@ -31,12 +36,12 @@
     display: block;
     font-size: rem(16px);
     line-height: 1.5rem;
-    color: $accentDark;
+    color: var(--site-code-ink, #{$accentDark});
   }
 
   .hll { background-color: #282a36; }
 
-  .c, .cm, .cp, .c1, .cs         { color: #6272a4; }
+  .c, .cm, .cp, .c1, .cs         { color: var(--site-code-ink, #a8a4b3); opacity: 0.7; }
   .err                          { color: #ff5555; background-color: #282a36; }
   .kc, .kp, .kr, .kt, .no       { color: #66d9ef; }
   .l, .mf, .mh, .mi, .mo, .se, .il { color: #ae81ff; }
