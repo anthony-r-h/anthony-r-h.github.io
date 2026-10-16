@@ -14,6 +14,7 @@
 .post-content {
   overflow-x: visible;
   padding: 0;
+  color: var(--home-ink, #{$texts});
 
   &.fullwidth {
     padding: rem(60px) rem(10px) 0;
@@ -55,7 +56,7 @@
   figcaption,
   img + em {
     display: block;
-    color: lighten($texts, 30%);
+    color: var(--home-muted, #{lighten($texts, 30%)});
     text-align: center;
     font-size: rem(17px);
     // @include mainFont(300);
@@ -78,7 +79,7 @@
     font-size: var(--post-font-size-mobile, 17px);
     line-height: rem(30px);
     line-height: var(--post-line-height-mobile, 30px);
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.01em;
     max-width: var(--post-content-max-width, 1080px);
     padding: 0 rem(20px);
     padding-left: var(--post-content-padding-mobile, 20px);
@@ -107,7 +108,8 @@
   h1.post-title {
     font-size: rem(36px);
     font-size: var(--post-title-size-mobile, 36px);
-    line-height: 1.2;
+    line-height: 1.22;
+    letter-spacing: -0.025em;
     margin: rem(5px) auto rem(10px);
     padding-top: 0;
 
@@ -168,13 +170,13 @@
 
   p,
   li {
-    color: $texts;
+    color: var(--home-ink, #{$texts});
 
     // This is for inline code denoted by `abc`
     code {
       font-size: rem(15px);
-      background: #282a36;
-      color: #fff;
+      background: var(--site-surface-strong, #282a36);
+      color: var(--home-ink, #fff);
       word-wrap: break-word;
       padding: rem(3px) rem(5px);
       border-radius: 3px;
@@ -210,8 +212,10 @@
 
   // Link properties
   a {
-    color: $themeColor;
+    color: var(--home-accent, #{$themeColor});
     text-decoration: underline;
+    text-decoration-thickness: 0.07em;
+    text-underline-offset: 0.18em;
 
     &:hover {
       color: var(--post-link-hover-color, #a9a9a9);
@@ -289,21 +293,29 @@
 
   blockquote {
     @include center(var(--post-content-max-width, 1080px));
-    border-left: rem(5px) solid $texts;
-    padding: 0 rem(10px);
+    border-left: rem(3px) solid var(--home-accent, #{$texts});
+    background: var(--site-surface-strong, transparent);
+    border-radius: 0 rem(6px) rem(6px) 0;
+    padding: rem(18px) rem(20px);
     margin: rem(30px) auto;
-    width: 100%;
+    width: calc(100% - 2 * var(--post-content-padding-mobile, 20px));
 
     @include media(">=sm") {
-      width: 100%;
+      width: calc(100% - 2 * var(--post-content-padding-desktop, 20px));
       margin: rem(50px) auto;
-      padding: 0 rem(30px);
+      padding: rem(24px) rem(30px);
     }
 
     p {
       font-size: rem(17px);
-      color: rgba(0, 0, 0, 0.6);
+      color: var(--home-ink, #{$texts});
       margin: 0;
+      padding: 0;
+      line-height: 1.65;
+
+      + p {
+        margin-top: 1em;
+      }
       @include media(">=sm") {
         font-size: rem(20px);
       }
@@ -312,7 +324,7 @@
 
   hr {
     @include center(rem(760px));
-    border: 1px solid $lightGray;
+    border: 1px solid var(--home-subtle, #{$lightGray});
     margin: rem(50px) auto;
   }
 
@@ -324,7 +336,7 @@
     @include mainFont(400);
     font-size: rem(17px);
     line-height: rem(35px);
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.01em;
     margin: rem(50px) auto;
     border-collapse: collapse;
 
@@ -334,11 +346,11 @@
 
     th,
     td {
-      border: rem(1px) solid #ccc;
+      border: rem(1px) solid var(--home-subtle, #ccc);
       padding: rem(5px) rem(10px);
 
       @include media(">=sm") {
-        border: rem(2px) solid #ccc;
+        border: rem(2px) solid var(--home-subtle, #ccc);
         padding: rem(10px) rem(20px);
       }
     }
@@ -416,20 +428,21 @@
 }
 
 .mermaid {
-  --mermaid-background: #{$contentBg};
-  --mermaid-surface: #{$primaryDark};
-  --mermaid-on-surface: #{$accentDark};
-  --mermaid-muted: #{mix($themeColor, $contentBg, 12%)};
-  --mermaid-accent: #{$themeColor};
-  --mermaid-text: #{$texts};
-
   @include mainFont(400);
   width: calc(100% - 2 * var(--post-content-padding-mobile, 20px));
   max-width: var(--post-content-max-width, 1080px);
   margin: rem(30px) auto;
   overflow-x: auto;
+  padding: rem(8px) 0;
+  background: transparent;
+  color: var(--home-ink, #{$texts});
   font-size: rem(16px);
   line-height: 1.5;
+
+  &:focus-visible {
+    outline: 2px solid var(--home-focus, #{$themeColor});
+    outline-offset: 3px;
+  }
 
   @include media(">=sm") {
     width: calc(100% - 2 * var(--post-content-padding-desktop, 20px));
@@ -441,8 +454,21 @@
     margin: 0 auto;
   }
 
-  .edgeLabel p {
-    color: var(--mermaid-text);
+  .edgeLabel p,
+  .nodeLabel p {
+    color: var(--home-ink, #{$texts});
+  }
+
+  .flowchart-link {
+    // Mermaid's generated ID selectors otherwise override these line weights.
+    stroke-width: 2px !important;
+  }
+
+  .node rect,
+  .node polygon,
+  .node circle {
+    stroke: var(--home-muted) !important;
+    stroke-width: 1.5px !important;
   }
 
   // Diagram labels must not inherit the article's paragraph layout.
@@ -460,6 +486,19 @@
   }
 }
 
+html[data-home-theme="apricot-mesh"] .post-content {
+  p code,
+  li code {
+    background: var(--site-code-surface);
+    color: var(--site-code-ink);
+  }
+
+  .mermaid .nodeLabel,
+  .mermaid .nodeLabel p {
+    color: var(--site-code-ink);
+  }
+}
+
 /* See also */
 
 .see-also {
@@ -473,7 +512,7 @@
   h2 {
     font-size: rem(24px);
     font-weight: bold;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid var(--home-subtle, #{$lightGray});
     padding: rem(10px) 0;
     @include media(">=sm") {
       padding: rem(48px) 0 rem(20px);
@@ -495,12 +534,12 @@
 
       a {
         font-weight: normal;
-        color: $primaryDark;
+        color: var(--home-ink, #{$primaryDark});
         text-decoration: none;
         transition: all 0.3s;
 
         &:hover {
-          color: rgba(0, 0, 0, 0.5);
+          color: var(--home-accent, rgba(0, 0, 0, 0.5));
           img {
             -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
@@ -519,15 +558,15 @@
   width: 100%;
   height: rem(38px);
   padding: rem(30px) 0;
-  border-bottom: 1px solid $themeColor;
-  background-color: #fff;
+  border-bottom: 1px solid var(--home-accent, #{$themeColor});
+  background-color: var(--site-surface, #fff);
   transition: bottom 0.5s;
 
   .bar {
     position: relative;
     flex: 1;
     height: rem(10px);
-    background-color: $themeColor;
+    background-color: var(--site-accent-fill, #{$themeColor});
     opacity: 0.2;
   }
 
@@ -535,7 +574,7 @@
     opacity: 1;
 
     &:last-child {
-      border-right: 1px solid #fff;
+      border-right: 1px solid var(--site-on-accent, #fff);
     }
   }
 
@@ -573,7 +612,12 @@
   margin-top: rem(10px);
   letter-spacing: 0.025rem;
   line-height: rem(40px);
-  padding: 1.5rem;
+  padding: 1.5rem var(--post-content-padding-mobile, 20px);
+
+  @include media(">=sm") {
+    padding-left: var(--post-content-padding-desktop, 20px);
+    padding-right: var(--post-content-padding-desktop, 20px);
+  }
 
   a {
     color: var(--post-tag-color, #{$primaryDark});
@@ -584,6 +628,13 @@
       var(--post-tag-hover-color, #{$accentDark}),
       var(--post-tag-hover-bg, #{$primaryDark})
     );
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+    // Optically center Oxanium's letterforms within the existing pill height.
+    padding-top: rem(3px);
     text-decoration: none;
   }
 }
@@ -597,9 +648,9 @@
 
   span {
     padding: rem(3px) rem(10px);
-    background-color: $themeColor;
+    background-color: var(--site-accent-fill, #{$themeColor});
     border-radius: rem(5px);
-    color: #fff;
+    color: var(--site-on-accent, #fff);
   }
 
   @include media(">=sm") {
@@ -630,7 +681,7 @@
   a {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid darken($lightGray, 10%);
+    border-bottom: 1px solid var(--home-subtle, #{darken($lightGray, 10%)});
     padding: rem(10px) 0;
     text-decoration: none;
     font-size: rem(18px);
@@ -832,7 +883,7 @@
   position: absolute;
   right: rem(14px);
   bottom: rem(12px);
-  background: rgba(239, 231, 222, 0.85);
+  background: var(--site-surface-strong, rgba(239, 231, 222, 0.85));
   border-radius: rem(6px);
   padding: rem(6px) rem(8px);
   display: flex;
@@ -845,7 +896,7 @@
   display: flex;
   align-items: center;
   gap: rem(6px);
-  color: #1c3329;
+  color: var(--home-ink, #1c3329);
   font-size: rem(12px);
   line-height: 1.2;
 }
@@ -891,7 +942,14 @@
   }
 
   a {
+    color: var(--home-ink, #{$texts});
     text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--home-accent, #{$themeColor});
+    }
   }
 }
 

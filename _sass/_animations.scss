@@ -7,16 +7,38 @@
 }
 
 .flex-grid article.animate {
-  animation: moveUp 0.65s;
+  animation: moveUp 0.5s ease-out;
   opacity: 1;
 }
 
 @keyframes moveUp {
   from {
-    transform: translateY(200px);
+    opacity: 0;
+    transform: translateY(rem(24px));
   }
   to {
+    opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flex-grid article,
+  .flex-grid article.shown,
+  .flex-grid article.animate {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .box-item,
+  .box-item img,
+  .box-item h2,
+  .bar-header,
+  .bar-header .icon-menu,
+  .bar-header .dosearch,
+  .home-theme-switcher {
+    transition: none;
   }
 }
 

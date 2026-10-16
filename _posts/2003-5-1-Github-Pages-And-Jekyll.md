@@ -189,7 +189,6 @@ Per-page list styling overrides:
 
 Per-page home grid overrides (`layout: home`):
 
-- `home_grid_min_card_width`
 - `home_grid_column_gap`
 - `home_grid_row_gap`
 - `home_grid_mobile_padding`

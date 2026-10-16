@@ -1,11 +1,71 @@
+body.site-themed {
+  --home-background-color: #f2dfa2;
+  --home-background: linear-gradient(135deg, #f6e7b1, #f2dfa2);
+  --home-ink: #351f31;
+  --home-muted: #56404f;
+  --home-subtle: rgba(53, 31, 49, 0.22);
+  --home-accent: #584064;
+  --site-accent-fill: var(--home-accent);
+  --home-focus: var(--home-accent);
+  --site-surface: rgba(247, 234, 193, 0.8);
+  --site-surface-strong: #f3e3b1;
+  --reading-background: #f2dfa2;
+  --reading-ink: #2b1d29;
+  --reading-muted: #56404f;
+  --site-code-surface: #302e33;
+  --site-code-ink: #fff8f2;
+  --site-on-accent: #fff8f2;
+  --site-shadow: rgba(53, 31, 49, 0.2);
+  min-height: 100%;
+  color: var(--home-ink);
+  background-color: var(--home-background-color);
+  background-image: var(--home-background);
+  background-attachment: fixed;
+  background-position: top left;
+  background-size: 100vw 100vh;
+}
+
+html[data-home-theme="iris-light"] body.site-themed {
+  --home-background-color: #756d91;
+  --home-background: linear-gradient(125deg, #858bb8 0%, #756d91 47%, #967d9b 100%);
+  --home-ink: #fff7ef;
+  --home-muted: #e1d9e5;
+  --home-subtle: rgba(255, 247, 239, 0.24);
+  --home-accent: #f5edcf;
+  --site-accent-fill: #e5d8ae;
+  --home-focus: var(--home-accent);
+  --site-surface: rgba(69, 61, 91, 0.52);
+  --site-surface-strong: #5f5877;
+  --site-code-surface: #292830;
+  --site-code-ink: #fff7ef;
+  --site-on-accent: #41364f;
+  --site-shadow: rgba(32, 26, 47, 0.28);
+  --reading-background: #756d91;
+  --reading-ink: #fffaf3;
+  --reading-muted: #e4ddec;
+}
+
+// Stable reading colors retain each palette without variable gradient contrast.
+html[data-home-theme] body.site-themed.post-page {
+  --site-surface-strong: #dedbd6;
+  --home-background-color: var(--reading-background);
+  --home-background: linear-gradient(var(--reading-background), var(--reading-background));
+  --home-ink: var(--reading-ink);
+  --home-muted: var(--reading-muted);
+}
+
+html[data-home-theme="iris-light"] body.site-themed.post-page {
+  --site-surface-strong: #35343b;
+}
+
 .home {
   @include mainFont(400);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: rem(80px);
+  padding-top: rem(104px);
 
   @include media(">=sm") {
-    padding-top: rem(100px);
+    padding-top: rem(128px);
   }
 
   &.no-padding {
@@ -18,140 +78,137 @@
   margin: 0 rem($rowMargin);
 }
 
-.flex-grid {
-  display: flex;
-  flex-flow: row wrap;
-}
-
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--home-grid-min-card-width, 315px)), 1fr));
-  column-gap: var(--home-grid-column-gap, 40px);
-  row-gap: var(--home-grid-row-gap, 100px);
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: clamp(rem(28px), 4vw, var(--home-grid-column-gap, 60px));
+  row-gap: clamp(rem(64px), 8vw, var(--home-grid-row-gap, 100px));
+  width: 100%;
+  max-width: rem(1180px);
+  margin: 0 auto;
   padding: 0 var(--home-grid-mobile-padding, 23px);
 
   @include media(">=sm") {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0 var(--home-grid-desktop-padding, 40px);
+  }
+
+  @media (min-width: 67.5rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 .box-item {
-  flex: 1 0 $itemMinWidth;
-  margin: 0 0 rem(100px);
-  display: inline-block;
-  min-height: rem(285px);
-  transition: all 0.3s;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  transition: transform 0.3s ease;
   position: relative;
   z-index: 1;
 
-  @include media(">=sm") {
-    margin: 0 rem($itemMargin) rem(100px);
-  }
-
-  // Note 1: This complex calc right here is what makes the leftover box items
-  // have the same width than their siblings.
-  @for $n from 2 through $maxItemsPerRow {
-    $resolution: (2 * $rowMargin) + ($n * $itemMinWidth);
-    @include media(">=#{$resolution}") {
-      max-width: calc(100%/#{$n} - #{$itemMargin * 2});
-    }
-  }
-
-  // Note 2: This sets the maximum number of box items per row.
-  @include media(">=#{(2 * $rowMargin) + ($maxItemsPerRow * $itemMinWidth)}") {
-    flex: 1 0 calc(100%/#{$maxItemsPerRow} - #{$itemMargin * 2});
-  }
-
   &:hover {
     z-index: 2;
+    transform: translateY(rem(-5px));
 
     img {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%);
+      -webkit-filter: saturate(1.12) contrast(1.06);
+      filter: saturate(1.12) contrast(1.06);
+      transform: scale(1.035);
     }
 
-    .box-body {
-      time,
-      p {
-        color: $accentDark;
-      }
-
-      .cover {
-        .new-post-tag {
-          background-color: #000;
-        }
-
-        .read-icon {
-          opacity: 0;
-        }
-      }
-    }
   }
 
   a {
     text-decoration: none;
     display: block;
+
+    &:focus-visible {
+      outline: 3px solid var(--home-focus);
+      outline-offset: rem(4px);
+    }
   }
 
   .category {
-    display: block;
-    height: rem(36px);
-    line-height: rem(36px);
+    display: inline-block;
+    line-height: inherit;
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: rem(18px);
-    padding: 0;
-    color: $accentDark;
-
+    font-weight: 700;
   }
 
   .box-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     width: 100%;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       margin: 0 auto;
-      transition: all 0.2s ease-in-out;
+      object-fit: cover;
+      -webkit-filter: saturate(1.04) contrast(1.03);
+      filter: saturate(1.04) contrast(1.03);
+      transition: transform 0.45s ease, filter 0.3s ease;
     }
 
     time {
-      font-weight: 300;
-      font-size: rem(16px);
-      color: darken($lightGray, 0%);
+      font-weight: 500;
+      color: inherit;
       pointer-events: none;
     }
 
     h2 {
-      margin: rem(10px) 0;
-      font-size: rem(24px);
-      @include mainFont(800);
-      color: $accentDark;
-      line-height: rem(30px);
+      margin: rem(10px) 0 rem(14px);
+      font-size: clamp(rem(23px), 2vw, rem(30px));
+      @include mainFont(700);
+      color: var(--home-ink);
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
+      transition: color 0.2s ease;
     }
 
     p {
       margin: 0 0 rem(30px);
-      color: darken($lightGray, 0%);
-      font-size: rem(17px);
-      line-height: rem(26px);
+      color: var(--home-muted);
+      font-size: rem(15px);
+      line-height: rem(23px);
     }
 
     .tags a {
       @include tagPillLinks();
       z-index: 50;
+      height: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      margin: 0 rem(14px) rem(7px) 0;
+      color: var(--home-muted);
+      font-size: rem(13px);
+      font-weight: 550;
+      line-height: 1.45;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--home-accent);
+        background: transparent;
+      }
     }
 
     .cover {
       position: relative;
       display: block;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: rgba(18, 16, 20, 0.82);
 
       .loader {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
-        color: $themeColor;
+        color: var(--home-accent, #{$themeColor});
         z-index: 1;
       }
 
@@ -162,66 +219,65 @@
 
       .new-post-tag {
         text-transform: uppercase;
-        display: inline-block;
-        background: #000;
-        color: #fff;
-        font-size: rem(13px);
-        font-weight: 700;
-        line-height: rem(24px);
-        padding: 0 rem(8px);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: rem(25px);
+        background: var(--site-accent-fill);
+        color: var(--site-on-accent);
+        font-size: rem(12px);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        // Balance Oxanium's unused descender space in this uppercase label.
+        padding: rem(3px) rem(11px) 0;
         position: absolute;
-        bottom: rem(8px);
-        left: 0;
+        bottom: rem(10px);
+        left: rem(10px);
         z-index: 3;
       }
 
-      .read-icon {
-        opacity: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        content: "";
-        width: rem(80px);
-        height: rem(80px);
-        border-radius: rem(40px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: rem(-40px);
-        margin-left: rem(-40px);
-        border: 2px solid #fff;
-        color: $themeColor;
-        z-index: 4;
-
-        svg {
-          width: rem(48px);
-        }
-      }
     }
   }
 
   .box-info {
-    padding: rem(15px) 0 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: rem(17px) 0 0;
   }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: rem(8px);
+    color: var(--home-muted);
+    font-size: rem(12px);
+    line-height: 1.35;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+  }
+
+  .post-meta-separator {
+    opacity: 0.65;
+  }
+
 }
 
-.home-grid .box-item {
-  flex: none;
-  margin: 0;
-  max-width: none;
-  min-height: 0;
+.box-item .post-link:hover h2 {
+  color: var(--home-accent);
 }
 
 .list-view {
   .section-post-group {
     margin: 0 0 rem(42px);
     padding: rem(22px) 0 rem(8px);
-    border: 1px solid rgba($lightGray, 0.12);
-    border-left: rem(4px) solid rgba($accentDark, 0.72);
+    border: 1px solid var(--home-subtle, rgba($lightGray, 0.12));
+    border-left: rem(4px) solid var(--home-accent, rgba($accentDark, 0.72));
     border-radius: rem(6px);
-    background: linear-gradient(180deg, rgba($lightGray, 0.06), rgba($lightGray, 0.02));
-    box-shadow: 0 rem(8px) rem(24px) rgba(0, 0, 0, 0.08);
+    background: var(--site-surface, linear-gradient(180deg, rgba($lightGray, 0.06), rgba($lightGray, 0.02)));
+    box-shadow: 0 rem(8px) rem(24px) var(--site-shadow, rgba(0, 0, 0, 0.08));
 
     @include media(">=sm") {
       padding: rem(26px) 0 rem(10px);
@@ -232,8 +288,8 @@
     @include mainFont(700);
     margin: 0 0 rem(22px);
     padding: 0 var(--list-mobile-padding, 23px) rem(14px);
-    border-bottom: 1px solid rgba($lightGray, 0.14);
-    color: $accentDark;
+    border-bottom: 1px solid var(--home-subtle, rgba($lightGray, 0.14));
+    color: var(--home-ink, #{$accentDark});
     font-size: rem(18px);
     line-height: rem(24px);
     letter-spacing: 0.08em;
