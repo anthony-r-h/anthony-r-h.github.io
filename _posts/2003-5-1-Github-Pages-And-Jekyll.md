@@ -107,7 +107,6 @@ From `src/yml/site.yml`:
   - Default filtering for home feed.
 - `home_grid.*`:
   - Grid behavior for home cards.
-  - `min_card_width` controls auto-fit columns as viewport changes.
 - `list_view_ui.*`:
   - Styling defaults for list pages.
 
@@ -409,6 +408,41 @@ csv_chart:
       fill: false
 ```
 
+## Including Markdown From Another Repository
+
+I can keep a README or other documentation in its project repo and include it in a post at build time:
+
+{% raw %}
+```liquid
+{% remote_markdown "https://raw.githubusercontent.com/OWNER/REPO/main/README.md" %}
+```
+{% endraw %}
+
+I put the tag on its own line, with blank lines above and below it. It can sit between my own sections, or be the whole body after the post's front matter.
+
+The URL must point to a public file on `raw.githubusercontent.com`, in the form `OWNER/REPO/REF/path/to/file.md`. I can use `main`, a tag, or a commit SHA as the reference. For branches containing `/`, I use a commit SHA to avoid ambiguity between the branch and file path. Private repositories and GitHub `blob` page URLs are not supported.
+
+The build fetches the file and renders it with the site's Kramdown/GFM Markdown engine. Imported front matter is removed; the blog post keeps its own metadata. Remote Liquid tags and variables are treated as text rather than executed. HTML in the source is preserved, so I only include content I trust.
+
+Relative paths are resolved from the imported file, including files in subdirectories:
+
+| Source in `docs/README.md` | Result |
+| --- | --- |
+| `![Photo](images/photo.png)` | Raw image at `docs/images/photo.png` in the source repo |
+| `[Guide](../guide.md#setup)` | GitHub file page for `guide.md#setup` at the same reference |
+| `![Cover](/assets/cover.png)` | Raw image at `assets/cover.png` from the repo root |
+| `[Section](#assembly)` | Anchor in the current blog page |
+
+Inline and reference-style Markdown links/images work, along with HTML `href`, `src`, `poster`, and `srcset` attributes. Absolute URLs, protocol-relative URLs, and fragment-only links are left as written. CSS `url(...)` paths are not rewritten. Links to other Markdown files lead to GitHub; they do not import those files too. Imported headings keep their generated IDs, so repeated heading names across the post and included files can conflict.
+
+The Markdown becomes part of the built page. Images and other linked media stay hosted in the source repo; they are not downloaded into this site. Each file is fetched once per build. A branch reference picks up changes on the next build, while a commit SHA pins the source and its rewritten media paths to that version. Changes in the other repo do not trigger a blog build automatically.
+
+A missing file, failed download, invalid UTF-8, or file over 2 MiB fails the build with a `remote_markdown` error. There is no stale offline fallback. The plugin is `_plugins/tags/remote_markdown.rb`; its regression tests run with:
+
+```bash
+bundle exec ruby _tests/remote_markdown_test.rb
+```
+
 ## Tag Strategy Reminder
 
 - Home currently excludes `Plan` by default via `home_listing.exclude_tags`.
@@ -496,10 +530,13 @@ In templates, use:
 
 ## Build / Dev Commands
 
+Use Ruby `3.2.11` and Bundler `2.4.19`, matching `.ruby-version` and `Gemfile.lock`. With mise, prefix Ruby commands with `mise exec ruby --`; Gulp detects mise automatically. Audit the npm lockfile and resolve vulnerabilities before installing dependencies.
+
 Install deps:
 
 ```bash
 bundle install
+npm audit
 npm ci
 ```
 
@@ -528,6 +565,14 @@ npm run preview:build
 ```
 
 If Jekyll fails on Windows with `_site` file permission errors, close apps/processes locking files under `_site/files/` and run build again.
+
+## Deployment
+
+`.github/workflows/pages.yml` builds and deploys to GitHub Pages on pushes to `master` or a manual workflow run. Feature branches do not deploy automatically.
+
+The workflow runs Jekyll directly, including the custom plugins. It does not run Gulp, so after changing source YAML, theme values, or JavaScript I run `npm run build` locally and commit the relevant generated `_config.yml`, `_sass/_theme.scss`, and `assets/js/` files with the source changes.
+
+The shorter repository guides are in `docs/`, starting with `docs/README.md`. Netlify CMS files in `admin/` are legacy configuration, not the current deployment workflow.
 
 ## Content Workflow (Quick)
 

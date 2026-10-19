@@ -1,108 +1,45 @@
-# Setup
+# Setup and deployment
 
 ## Environment
 
-Before starting, make sure you have [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [NodeJS](https://nodejs.org/) installed.
+Use Ruby **3.2.11**, as specified in `.ruby-version` and `Gemfile`, and Bundler **2.4.19**, as recorded in `Gemfile.lock`. Node.js is also needed for Gulp; `package.json` declares Node >=16.
 
-Then install Jekyll:
+Use the repository's locked dependencies; global Jekyll and Gulp installations are unnecessary. Before installing or changing npm dependencies, run `npm audit` against the lockfile and resolve reported vulnerabilities. Pin any added package to an exact audited version.
 
-```
-$ gem install jekyll
-```
-
-And install Gulp client:
-
-```
-$ npm install gulp-cli -g
+```sh
+bundle install
+npm audit
+npm ci
 ```
 
-## Installing template
+If Ruby is managed through mise, prefix Ruby commands with `mise exec ruby --`. The Gulp build detects mise automatically when available.
 
-1. Fork the [Jekflix Template](https://github.com/thiagorossener/jekflix-template/fork)
-2. Clone the repo you just forked:
-```
-$ git clone https://github.com/<your-github-username>/jekflix-template.git
-```
-3. Access the local project:
-```
-$ cd path/to/jekyll-template
-```
-4. Install npm packages:
-```
-$ npm install
-```
-5. Install Ruby dependencies:
-```
-$ bundle install
-```
-6. Build Jekyll:
-```
-$ bundle exec jekyll build
-```
-7. Then run Gulp:
-```
-$ gulp
+## Local commands
+
+```sh
+npm run dev            # Build, serve with BrowserSync, and watch local source files
+npm run build          # Generate config/theme/JS, then build Jekyll
+npm run preview        # Serve the existing _site at http://127.0.0.1:4000
+npm run preview:build  # Build, then start that preview server
 ```
 
-## Running local
+BrowserSync prints its development URL when it starts. The separate preview server uses port 4000 by default; set `PORT` to change it. Preview alone does not rebuild files.
 
-After the steps above, to run Jekyll locally, you'll just need to run Gulp:
+Edit configuration in `src/yml/`; see [Settings](settings.md). Put published media in `files/` or `assets/`. The current build does not process `src/img/`.
+
+## Validation
+
+```sh
+bundle exec ruby _tests/remote_markdown_test.rb
+npm run build
 ```
-$ gulp
-```
 
-## Customization
+The remote Markdown tests use simulated HTTP responses and temporary Jekyll sites. They need no network access. Actual posts containing `remote_markdown` require access to GitHub during the build.
 
-*Jekflix Template* allows you to personalize your site with several settings. See the [docs](settings.md#settings) for more details.
+## GitHub Pages deployment
 
-For advanced theme customization, check the directory `_sass` for style files.
+`.github/workflows/pages.yml` builds and deploys on pushes to `master`, or when manually run through GitHub Actions. Feature branches do not deploy automatically.
 
-## Translations
+The workflow runs `bundle exec jekyll build` directly and uploads `_site`. It does **not** run Gulp. After changing configuration, theme values, or JavaScript sources, run `npm run build` locally and include the relevant generated `_config.yml`, `_sass/_theme.scss`, and `assets/js/` changes in the commit.
 
-In order to translate texts throughout the theme, create a `translations.yml` file in `src/yml` and add the settings below.
-
-> **Note:** If you're using the `gem`, just add it into your `_config.yml`.
-
-```
-translations:
-  text:
-    new_post: "New Post"
-    see_also: "See also"
-    search: "Search"
-    author: "Author"
-    share: "Share"
-    comments: "Comments"
-  button:
-    read_now: "Read Now"
-    share_on_twitter: "Share on Twitter"
-    share_on_facebook: "Share on Facebook"
-  pagination:
-    page: "Page"
-    of: "of"
-    next_page: "Next Page"
-    next_post: "Previous Page"
-  recommendation:
-    text: "Why don't you read something next?"
-    back_btn: "Go back to top"
-  error_404:
-    title: "Page not found :("
-    message: "I'm sorry. We couldn't find the page you are looking for."
-    image_alt: "404 - Page not found"
-  contact:
-    title: "Talk to me"
-    subject: "New contact!"
-    submit_btn: "Send"
-    placeholders:
-      name: "Your name"
-      email: "Your e-mail"
-      message: "Your message"
-    errors:
-      locale: "en"
-      empty_name: "Name is required"
-      empty_email: "Email is required"
-      invalid_email: "Email is invalid"
-      empty_message: "Message is required"
-    after_send:
-      title: "Message sent!"
-      message: "Thank you for sending me a message. I'm going to answer ASAP."
-```
+Custom plugins in `_plugins/` run during this Actions build. No Netlify deployment is needed. Changes in a repository referenced by `remote_markdown` appear on the next site build; there is no cross-repository update trigger.
