@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Adapting the Wiha Centrofix"
+title: "Building a Btter Ratcheting Bit Driver"
 subtitle: "" 
 optimized_image: /files/Centrofix/title.png
 category: Tools
@@ -11,7 +11,11 @@ math: true
 
 # About
 
-We outline creating a hybrid bit driver with high mechanical precision and bit stability by integrating the CentroFix bit holder into a high-tolerance handle. PB Swiss and Anex/Tamiya handles provide feasible platforms for mechanical adaptation. Two pathways: interference fit and cavity modification are viable depending on preferred handle characteristics and ratcheting requirements. 
+This is a review of the current options for a high-quality ratcheting bit holder. We are mainly concerned with two parts: the ratchet mechanism (high tooth engagement, low play, and manageable backdrag) and the fit of the bit holder.
+
+None of the current options gets both parts right. There are several compelling ratcheting drivers, but none match the bit retention of the Wiha CentroFix. Wiha, meanwhile, does not offer the CentroFix in a ratcheting handle.
+
+We explore the available options and investigate how we can assemble a driver that combines a high-quality ratchet with the CentroFix bit holder.
 
 ## The Grail
 
@@ -31,16 +35,17 @@ This configuration does not currently exist as a single commercial product but c
   <img src="/files/Centrofix/centrofix.jpg">
 </figure>
 
-## Handle Candidates
+## Driver Candidates
 
-The goal is to permanently install a CentroFix bit holder into a high-quality handle. The candidates are:
-
-- Non-ratcheting: PB 8215.A (SwissGrip), PB 215.A (Acetate)
-- Ratcheting: Anex 397, Tamiya 74152
+The goal is to permanently install a CentroFix bit holder into a suitable driver handle.
 
 ### PB Swiss
 
-PB Swiss makes a very nice ratcheting screwdriver, with possibly the best ratchet mechanism here in terms of lock-up and play. The main tradeoff is higher back drag. The handles are available in SwissGrip, an elastomer-over-polypropylene design, as well as acetate. Bit retention is standard magnetic retention: the magnets are strong, but because the bits are not locked into place, some axial and radial slop remains. Separating bit holder from the rest of the driver doesn't seem like a viable path forward.
+PB Swiss makes a very nice ratcheting screwdriver, with possibly the best ratchet mechanism here in terms of lock-up and play. The main tradeoff is higher back drag. 
+
+The handles are available in SwissGrip, an elastomer-over-polypropylene design, as well as acetate. Bit are held by standard magnetic retention: the magnets are strong, but because the bits are not mechanically locked into place.
+
+It does not seem possible to separate the bit holder from the ratchet mechanism.
 
 <figure>
   <img src="/files/Centrofix/Keyvisual_Shadow-Stage_1660x830.jpg">
@@ -48,7 +53,15 @@ PB Swiss makes a very nice ratcheting screwdriver, with possibly the best ratche
 
 ### Anex
 
-The Anex 397 ratcheting mechanism is comparable to PB Swiss in play and lock-up. Its Japanese ball-style grip gives useful ergonomic torque assistance, which helps reduce the practical impact of back drag during use. The handle material is utilitarian and boring, but it works. There is a rebranded Tamiya 74152 which appears to have some glass-fiber content. The ratchet direction switch is better than the one on the Vessel 2200. The bit holder is deep, with about 45 mm of insertion depth, so bits need to be at least 65 mm long to fit properly. It is designed around Japanese blade-style driver bits, which means standard ISO 1173 C6.3 and E6.3 bits are too short. That depth, however, also creates several possible ways to accommodate a CentroFix bit holder.
+The Anex 397 ratcheting mechanism seems comparable to PB Swiss in play and lock-up, but has a lighter action.
+
+This is a compelling handle because it has a Japanese ball-style grip. A ball-style handle rests in the palm of the hand, which is ergonomically different from a standard driver. It also helps reduce the practical impact of back drag during use.
+
+There is also a lesser-known rebranded Anex: the Tamiya 74152. At first, I thought the Tamiya-branded one appeared to have more glass-fiber content in the handle, but that wasn't the case. It's just a blue-colored Anex 397.
+
+Uniquely, the Anex/Tamiya handles are excellent candidates for accepting the CentroFix bit holder. These driver handles are designed around Japanese blade-style driver bits. The bit holder is 45 mm deep, which means standard ISO 1173 C6.3 and E6.3 bits are too short; bits have to be at least 65 mm long to be usable.
+
+That depth, however, means that the Wiha CentroFix can be fully inserted into the handle.
 
 <figure>
   <img src="/files/Centrofix/Anex397.png">
@@ -56,7 +69,13 @@ The Anex 397 ratcheting mechanism is comparable to PB Swiss in play and lock-up.
 
 ### Vessel
 
-In comparison, the Vessel 2200 series has a similar form factor, and it is convertible to a stubby, which gives it a useful bit of flexibility. The ratchet mechanism itself is average, and the ratchet direction switch is infuriating. However, the front end cannot be detached, so the bit holder cannot be changed.
+In comparison, the Vessel 2200 series has a similar form factor and can be converted into a stubby, which gives it a useful bit of flexibility.
+
+The key differences between the Vessel and the Anex are:
+
+- The Anex has more ratchet teeth
+- The Vessel's ratchet direction switch is "backwards" and gets in the way
+- The Vessel's front end cannot be detached, so the bit holder cannot be changed
 
 <figure>
   <img src="/files/Centrofix/2200MBH_01.jpg">

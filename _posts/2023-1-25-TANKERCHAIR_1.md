@@ -2,7 +2,7 @@
 layout: post
 title: "Goodform General Fireproofing Tanker Chair"
 subtitle: "" 
-optimized_image: /files/TANKERCHAIR/1/post/chair-2.jpg
+optimized_image: /files/TANKERCHAIR/1/post/chair-1-black-thumbnail.png
 category: Leather
 tags:
   - Furniture
