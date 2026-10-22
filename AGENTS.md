@@ -28,6 +28,7 @@
 - Improve flow without adding a tidy lesson, takeaway, joke, punchline, or reader-facing advice.
 - Avoid review-site, marketing, sales, or "engagement" language.
 - Avoid performative skepticism and self-important framing.
+- No curly punctuation - ASCII only
 
 ## Final output
 - Summarize what changed.
