@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Btter Ratcheting Bit Driver"
+title: "Building a Better Ratcheting Bit Driver"
 subtitle: "" 
 optimized_image: /files/Centrofix/title.png
 category: Tools
