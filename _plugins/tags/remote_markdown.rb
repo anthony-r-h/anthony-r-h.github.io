@@ -26,7 +26,7 @@ module Jekyll
       )
       document = Kramdown::Document.new(markdown, options)
       rewrite_links(document.root, uri)
-      "\n\n#{document.to_html}\n\n"
+      "\n\n<div class=\"remote-markdown\">\n#{document.to_html}</div>\n\n"
     rescue StandardError => error
       raise Jekyll::Errors::FatalException, "remote_markdown #{@url}: #{error.message}"
     end
