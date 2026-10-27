@@ -231,7 +231,8 @@ toc_title: Contents # optional
 ```
 
 - Do not add manual ToC markdown (`* toc`, `{:toc}`) or HTML headings.
-- The post layout renders the ToC via `_includes/toc.html` only when `toc: true`.
+- The post layout renders the full ToC via `_includes/toc.html` when `toc: true`.
+- Limit a post's ToC depth with `toc: true -2` for headings through H2, `toc: true -3` for headings through H3, and so on through H6.
 
 Math in posts:
 

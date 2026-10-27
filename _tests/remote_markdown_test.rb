@@ -148,6 +148,30 @@ class RemoteMarkdownTest
     end
   end
 
+  def test_display_math_delimiters
+    markdown = <<~'MD'
+      Inline math $x^2$.
+
+      $$
+      v_0^{\mathrm{DROP}} = \sqrt{2gH^{\mathrm{DROP}}}
+      $$
+
+      ```text
+      $$
+      This is a code sample.
+      $$
+      ```
+    MD
+    with_http(URL => [200, markdown]) do
+      embedded = render
+      html = Kramdown::Document.new(embedded, input: 'GFM').to_html
+      includes(html, '$x^2$')
+      includes(html, '\\[v_0^{\\mathrm{DROP}} = \\sqrt{2gH^{\\mathrm{DROP}}}\\]')
+      includes(html, "$$\nThis is a code sample.\n$$\n")
+      assert(!html.include?('<p>[v_0'), 'Display math was parsed as escaped Markdown')
+    end
+  end
+
   def test_source_validation_and_syntax
     ['http://raw.githubusercontent.com/a/b/main/README.md',
      'https://example.com/a/b/main/README.md', 'file:///etc/passwd',

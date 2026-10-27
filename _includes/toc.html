@@ -1,4 +1,18 @@
+{% assign toc_enabled = false %}
+{% assign toc_max_level = 6 %}
 {% if page.toc == true %}
+  {% assign toc_enabled = true %}
+{% else %}
+  {% assign toc_setting_parts = page.toc | split: " -" %}
+  {% assign toc_setting_name = toc_setting_parts | first %}
+  {% assign toc_setting_level = toc_setting_parts | last | plus: 0 %}
+  {% if toc_setting_parts.size == 2 and toc_setting_name == "true" and toc_setting_level >= 1 and toc_setting_level <= 6 %}
+    {% assign toc_enabled = true %}
+    {% assign toc_max_level = toc_setting_level %}
+  {% endif %}
+{% endif %}
+
+{% if toc_enabled %}
   {% assign toc_title = page.toc_title | default: "Contents" %}
   {% assign rendered_toc_source = page.content | markdownify %}
   {% assign heading_parts = rendered_toc_source | split: "<h" %}
@@ -9,7 +23,7 @@
       {% for heading_part in heading_parts offset:1 %}
         {% assign heading_level_text = heading_part | slice: 0, 1 %}
         {% assign heading_level = heading_level_text | plus: 0 %}
-        {% if "123456" contains heading_level_text and heading_part contains 'id="' %}
+        {% if "123456" contains heading_level_text and heading_level <= toc_max_level and heading_part contains 'id="' %}
           {% assign heading_id = heading_part | split: 'id="' | last | split: '"' | first %}
           {% assign heading_close = "</h" | append: heading_level_text | append: ">" %}
           {% assign heading_text = heading_part | split: heading_close | first | split: ">" | last | strip_html | strip %}
