@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Simulating the impact response of layered boxing-glove padding"
+title: "A Simulation Approach for Benchmarking Boxing Glove Foam Performance"
 subtitle: "" 
 optimized_image: /files/Boxing%20Glove/foam-simulation-thumbnail.png
-category: Writings
+category: Research
 tags:
   - Boxing
   - Simulation

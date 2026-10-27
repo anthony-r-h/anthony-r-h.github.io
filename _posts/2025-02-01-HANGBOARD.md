@@ -3,10 +3,10 @@ layout: post
 title: "Finger Training"
 subtitle: "" 
 optimized_image: /files/Hangboard/Intro.png
-category: Climbing
+category: Research
 tags:
   - Training
-  - Edcuation
+  - Climbing
 toc: true
 ---
 
