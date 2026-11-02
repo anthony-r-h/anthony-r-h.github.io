@@ -17,6 +17,15 @@ h1, h2, h3, h4 {
 body.site-themed {
   @include mainFont(400);
 
+  .post-title,
+  .section-post-item h2,
+  .section-post-item h3,
+  .post-content ul.post-list > li > a,
+  .search-list a,
+  .see-also h3 {
+    text-transform: capitalize;
+  }
+
   .bar-header .logo a,
   .box-body h2,
   .post-content h1,

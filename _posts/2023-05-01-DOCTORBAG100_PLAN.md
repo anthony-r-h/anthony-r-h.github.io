@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Doctor bag plan"
+title: "Doctor Bag"
 subtitle: "" 
 optimized_image: 
 category: Leather
@@ -8,6 +8,7 @@ tags:
   - Plan
   - DOCTORBAG100
 planning_tag: Planning
+planning_tag: Ideation
 ---
 
 

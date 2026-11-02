@@ -71,7 +71,7 @@ layout: main
     {% endcapture %}
     <section class="row" style="{{ list_view_vars | strip_newlines | strip }}">
         {% if page.planning_sections %}
-            {% assign planning_sections = "Ideation|Planning|In Progress|On Hold" | split: "|" %}
+            {% assign planning_sections = "Ideation|Planning|In Progress|On Hold|Library" | split: "|" %}
             {% for section_name in planning_sections %}
                 {% assign section_key = section_name | downcase | replace: " ", "-" %}
                 {% assign section_posts = "" | split: "" %}
@@ -80,7 +80,7 @@ layout: main
                     {% assign raw_planning_tag = post.planning_tag | default: post.tags.first | default: "" %}
                     {% assign planning_key = raw_planning_tag | downcase | strip | replace: "_", "-" | replace: " ", "-" %}
 
-                    {% unless planning_key == "ideation" or planning_key == "planning" or planning_key == "in-progress" or planning_key == "on-hold" %}
+                    {% unless planning_key == "ideation" or planning_key == "planning" or planning_key == "in-progress" or planning_key == "on-hold" or planning_key == "library" %}
                         {% assign planning_key = "ideation" %}
                     {% endunless %}
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DIY Torque"
+title: "DIY Torque Adapter"
 subtitle: ""
 optimized_image:
 category: Tools
@@ -9,6 +9,7 @@ tags:
   - Plan
 toc: true
 math: true
+planning_tag: On Hold
 ---
 
 Most digital torque adapters are built around 1/2 inch square drive. This project is for smaller 1/4 inch hex bit work, where the usual automotive adapters are too bulky.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Service boots planning"
+title: "Service Boots"
 subtitle: "" 
 optimized_image: \files\SERVICEBOOTS100\plan.jpg
 category: Project Planning

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Laptop clutch-style sleeve planning"
+title: "CLUTCH-280 Laptop Sleeve"
 subtitle: "" 
 optimized_image: 
 category: Leather
 tags:
   - Plan
   - LAPTOPSLEEVE100
-planning_tag: Planning
+planning_tag: Ideation
 ---
 
 

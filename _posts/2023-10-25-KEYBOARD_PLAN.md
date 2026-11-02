@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Keyboard Plan"
+title: "Aluminum-Leather-Acrylic Keyboard Build"
 subtitle: "" 
 optimized_image: /files/CYBER60/thumb.png
 category: Keyboard
@@ -11,6 +11,7 @@ tags:
   - CNC
 toc: true
 math: true
+planning_tag: On Hold
 ---
 
 This project uses readily available, open-source components as the starting point to bridge the the requisite skills to design and build a completely custom keyboard, starting from the the PCB design phase. The goal of this project is to build a premium, wireless, split spacebar keyboard powered by ZMK.

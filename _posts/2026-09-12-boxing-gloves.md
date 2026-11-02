@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Boxing gloves"
+title: "Boxing Gloves"
 subtitle: ""
 optimized_image:
 category:
