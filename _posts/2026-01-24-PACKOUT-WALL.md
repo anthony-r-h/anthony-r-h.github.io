@@ -7,7 +7,7 @@ category:
 tags:
   - Plan
 math: true
-planning_tag: In Progress
+planning_tag: On Hold
 ---
 
 # Priorities
