@@ -181,10 +181,10 @@ Lots of options for design, style, and materials. Selection for larger clasps th
 Angular 32mm x 40mm stainless steel option sold by several vendors.
 
 {% gallery %}
-- image: "/files/acc-175 DULLES/hardware/wuta-lock-1.png"
+- image: "/files/acc-175 DULLES/Hardware/wuta-lock-1.png"
   alt: ""
   caption: ""
-- image: "/files/acc-175 DULLES/hardware/wuta-lock-2.png"
+- image: "/files/acc-175 DULLES/Hardware/wuta-lock-2.png"
   alt: ""
   caption: ""
 {% endgallery %}
