@@ -37,7 +37,7 @@ Shoemaking shares plenty of tools and techniques with other leatherwork, but som
   caption: "Pattern pieces."
 {% endgallery %}
 
-So as it happened, the MacNeils coming apart at the sole gave me a chance to try sole construction by means of repair. Despite their age, the uppers were in great shape and the sole itself was still sound. It had simply come away from the welt and needed to be resewn.
+So as it happened, the MacNeils coming apart at the sole gave me a chance to sample shoemaking by means of repair. Despite their age, the uppers were in great shape and the sole itself was still sound. It had simply come away from the welt and needed to be resewn.
 
 # Rebuild
 
@@ -49,13 +49,13 @@ The MacNeil is a welted shoe with a double leather sole. The layers had separate
   <img src="/files/Allen Edmond Full Wing Resole/1.png" alt="">
 </figure>
 
-Peeling apart the sole was confusing at first. The stitching had clearly been cut at the seam between the midsole and outsole, but the outsole itself was original. Despite the work having been presented as a resole, it appeared to have been abandoned after the outsole, and possibly the midsole, was removed.
+Peeling apart the sole was confusing at first. The stitching had clearly been cut at the seam between the midsole and outsole, but the outsole itself was original. Despite the work having been presented as a resole, it appeared to have been abandoned after the outsole was removed.
 
 <figure>
   <img src="/files/Allen Edmond Full Wing Resole/2.png" alt="">
 </figure>
 
-The shoes were never restitched. The original layers were simply glued back together, leaving the old stitching in the welt. A plastic sole protector covered the bottom of the outsole, hiding the incomplete work.
+The shoes were never restitched, instead, the original layers were simply glued back together, leaving the old stitching in the welt. A plastic sole protector covered the bottom of the outsole, hiding the incomplete work.
 
 
 ## Deconstruction
@@ -76,7 +76,7 @@ I started by removing the cut thread, which was tedious but otherwise straightfo
   caption: "Plastic shank, cork filler, and old thread embedded in the outsole."
 {% endgallery %}
 
-A handful of stitches had already been removed, which makes me think whoever worked on the shoes before me started cleaning out the old thread, realized how daunting the job would be, and took the easy way out. Removing the old thread was only necessary if the existing sole material was going to be reused and restitched. They seemingly decided to reuse the welt, midsole, and outsole without restitching them, so they stopped cleaning the holes and glued everything back together instead.
+A handful of stitches had already been removed, which makes me think whoever worked on the shoes before me started cleaning out the old thread, realized how daunting the job would be, and took the easy way out. Removing the old thread was only necessary if the existing sole material was going to be reused and restitched. They seemingly decided to reuse original sole material without restitching them, so they stopped cleaning the holes and glued everything back together instead.
 
 {% gallery %}
 
