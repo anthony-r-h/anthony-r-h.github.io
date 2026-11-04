@@ -29,6 +29,14 @@
 - Avoid review-site, marketing, sales, or "engagement" language.
 - Avoid performative skepticism and self-important framing.
 - No curly punctuation - ASCII only
+- Do not invent feelings, memories, motivations, intentions, or personal growth.
+- Let affection come through in specific details. Avoid generic declarations like "I've always loved" or "I keep coming back to."
+- Assume an informed reader. Skip definitions, obvious visual descriptions, and background that the narrative does not need.
+- Connect ideas into a narrative. Do not simply turn each requested topic into a separate paragraph.
+- Do not impose a lesson, takeaway, inspirational arc, or tidy conclusion.
+- Avoid marketing language, exaggerated significance, clever punchlines, and sentences written to sound quotable.
+- Preserve the original meaning, specificity, and level of enthusiasm.
+- Use ASCII punctuation only.
 
 ## Final output
 - Summarize what changed.
