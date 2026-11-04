@@ -52,6 +52,11 @@ collections:
         name: "subtitle"
         widget: "string"
         required: false
+      - label: "Planning Status"
+        name: "planning_status"
+        widget: "text"
+        required: false
+        hint: "A short project reminder, shown below the title on /plan/ and the post while it has the Plan tag."
       - label: "Description"
         name: "description"
         hint: "This will be used across the pages and for search engines."

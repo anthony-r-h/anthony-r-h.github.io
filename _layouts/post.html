@@ -105,6 +105,20 @@
                     </div>
                 {% endif %}
 
+                {% assign planning_status = page.planning_status | default: "" | strip %}
+                {% if planning_status != "" %}
+                    {% for tag in page.tags %}
+                        {% assign tag_down = tag | downcase %}
+                        {% if tag_down == "plan" %}
+                            <div class="planning-status" role="note" aria-label="Update">
+                                <span class="planning-status-label">Update</span>
+                                <p>{{ planning_status | escape }}</p>
+                            </div>
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
 
 
                 {% include pagination-post.html progressBar=true %}

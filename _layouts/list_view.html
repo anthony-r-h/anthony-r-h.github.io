@@ -126,6 +126,16 @@ layout: main
                                         {% endfor %}
                                     </div>
                                     {% endif %}
+                                    {% assign planning_status = post.planning_status | default: "" | strip %}
+                                    {% if planning_status != "" %}
+                                        {% for tag in post.tags %}
+                                            {% assign tag_down = tag | downcase %}
+                                            {% if tag_down == "plan" %}
+                                                <p class="planning-status"><strong>Update:</strong> {{ planning_status | escape }}</p>
+                                                {% break %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
                                 </div>
                             </li>
                         {% endfor %}

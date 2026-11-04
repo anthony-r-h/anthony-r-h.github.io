@@ -8,6 +8,7 @@ tags:
   - Plan
   - CHALKBUCKET100
 planning_tag: Ideation
+planning_status: "Initial pattern work."
 ---
 
 ## About

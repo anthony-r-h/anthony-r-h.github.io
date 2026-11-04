@@ -7,7 +7,8 @@ category: Leather
 tags:
   - Plan
   - LAPTOPSLEEVE100
-planning_tag: Ideation
+planning_tag: Planning
+planning_status: "Pattern revisions and material selection."
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Packout Wall"
+title: "Milwaukee Packout Wall"
 subtitle: "" 
 optimized_image: 
 category: 
@@ -8,6 +8,7 @@ tags:
   - Plan
 math: true
 planning_tag: On Hold
+planning_status: "Deprioritized."
 ---
 
 # Priorities

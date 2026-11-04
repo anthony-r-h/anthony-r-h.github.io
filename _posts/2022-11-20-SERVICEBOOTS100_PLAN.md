@@ -8,6 +8,7 @@ tags:
   - Plan
   - SERVICEBOOTS100
 planning_tag: On Hold
+planning_status: "Blocked by lasting and sole construction. Pattern design complete."
 ---
 
 ## About

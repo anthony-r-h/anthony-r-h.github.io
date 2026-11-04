@@ -441,6 +441,7 @@ The tests use simulated HTTP responses and temporary Jekyll sites, so they need 
 - Home currently excludes `Plan` by default via `home_listing.exclude_tags`.
 - Plan page includes only `Plan` via `pages/plan.md`.
 - `planning_sections: true` groups the plan page into `Ideation`, `Planning`, `In Progress`, `On Hold`, and `Library`. Set a post's `planning_tag` to one of those values; unknown or missing values fall back to `Ideation`.
+- Optional `planning_status: "Waiting on leather samples before cutting"` adds a plain-text reminder below the title on `/plan/` and a labeled callout below the post title. It is hidden when blank or when the post has no `Plan` tag. Existing subtitles and descriptions are preserved.
 - Tags are case-insensitive in filtering logic, but keep naming consistent anyway.
 - The exact tag `Hidden` keeps a post out of home/list pages, tags, search, the sitemap, post pagination, and related-post links. The post is still available at its direct URL.
 - Avoid empty tag values.

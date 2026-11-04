@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DIY Torque Adapter"
+title: "EPS32 Torque Wrench Adapter"
 subtitle: ""
 optimized_image:
 category: Tools
@@ -10,6 +10,7 @@ tags:
 toc: true
 math: true
 planning_tag: On Hold
+planning_status: "Blocked by difficulty sourcing torsion element. Hardware design complete."
 ---
 
 Most digital torque adapters are built around 1/2 inch square drive. This project is for smaller 1/4 inch hex bit work, where the usual automotive adapters are too bulky.

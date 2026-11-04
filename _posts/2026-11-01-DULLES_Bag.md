@@ -6,8 +6,10 @@ optimized_image:
 category: 
 tags:
   - Plan
+  - Bag making
 math: true
 planning_tag: In Progress
+planning_status: "Pattern work, selecting materials and sourcing hardware."
 ---
 
 # Introduction

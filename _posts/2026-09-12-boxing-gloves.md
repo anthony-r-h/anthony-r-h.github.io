@@ -8,6 +8,7 @@ tags:
   - Plan
 math: true
 planning_tag: In Progress
+planning_status: "Patterning work and material sourcing."
 ---
 
 # Inspiration

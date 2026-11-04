@@ -502,6 +502,13 @@ html[data-home-theme] body.site-themed.post-page {
       line-height: 1.55;
     }
 
+    p.planning-status {
+      margin-top: rem(8px);
+      font-size: clamp(rem(15px), 1.4vw, rem(17px));
+      font-weight: 400;
+      overflow-wrap: anywhere;
+    }
+
     .tags {
       margin-top: rem(12px);
 
