@@ -6,9 +6,9 @@ optimized_image:
 category: 
 tags:
   - Plan
-planning_tag: On Hold
+planning_tag: Ideation
 math: true
-planning_status: "Blocked by levelling up machine sewing. Existing pattern work superceded by textile CAD software."
+planning_status: "Beyond current machine sewing skills. Existing pattern work superseded by textile CAD software."
 ---
 
 # Skill Tree
