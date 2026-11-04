@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Allen Edmond MacNeil Longwing Blucher Rebuild"
+title: "Allen Edmonds MacNeil Longwing Blucher Rebuild"
 subtitle: "" 
 optimized_image: "/files/Allen Edmond Full Wing Resole/g-8914.jpg"
 category: Leather
@@ -30,7 +30,7 @@ Shoemaking shares plenty of tools and techniques with other leatherwork, but som
 
 {% gallery %}
 - image: "/files/Allen Edmond Full Wing Resole/service-boot-outer.png"
-  caption: "Service boot pattern for 20055 last."
+  caption: "Service boot pattern for the 20055 last."
 - image: "/files/Allen Edmond Full Wing Resole/service-boot-liner.png"
   caption: "Fully lined construction."
 - image: "/files/Allen Edmond Full Wing Resole/service-boot-assembly.png"
@@ -60,7 +60,7 @@ The shoes were never restitched. The original layers were simply glued back toge
 
 ## Deconstruction
 
-I started by removing the cut thread. Pulling it from the welt was tedious but otherwise straightforward. The outsole, however, was more difficult. Between the deteriorated cotton thread and the adhesive, the thread separated into its individual strands as I tried to pull it out.
+I started by removing the cut thread, which was tedious but otherwise straightforward on the welt. The outsole was more difficult: between the deteriorated cotton thread and the adhesive, the thread separated into its individual strands as I tried to pull it out.
 
 {% gallery %}
 - image: "/files/Allen Edmond Full Wing Resole/3.png"
@@ -73,7 +73,7 @@ I started by removing the cut thread. Pulling it from the welt was tedious but o
 
 - image: "/files/Allen Edmond Full Wing Resole/7.png"
   alt: ""
-  caption: "Plastic shank, cork filler, and entrenched needle thread in the outsole."
+  caption: "Plastic shank, cork filler, and old thread embedded in the outsole."
 {% endgallery %}
 
 A handful of stitches had already been removed, which makes me think whoever worked on the shoes before me started cleaning out the old thread, realized how daunting the job would be, and took the easy way out. Removing the old thread was only necessary if the existing sole material was going to be reused and restitched. They seemingly decided to reuse the welt, midsole, and outsole without restitching them, so they stopped cleaning the holes and glued everything back together instead.
@@ -86,7 +86,7 @@ A handful of stitches had already been removed, which makes me think whoever wor
 
 {% endgallery %}
 
-Removing the old thread from the welt was necessary because it would remain visible; sewing over it would be messy and inappropriate. On the outsole, the stitching is visible only through the arch. The rest is covered by the heel and sole protector. Since the bobbin thread had, for all intents and purposes, become one with the outsole, I removed what remained with an abrasive.
+Removing the old thread from the welt was necessary because it would remain visible; sewing over it would be messy and inappropriate. On the outsole, the stitching is visible only through the arch, with the rest covered by the heel and sole protector. Since the bobbin thread had, for all intents and purposes, become one with the outsole, I removed what remained with an abrasive.
 
 ## Restitching
 
@@ -100,7 +100,7 @@ I repositioned the plastic shank, then glued the sole back together with Renia C
 
 {% endgallery %}
 
-Then came the sewing. I am no stranger to hand sewing, and I can confidently say that sole leather was by far the most difficult material I have ever sewn. Even though I managed to line up the vast majority of the existing stitching holes, sole leather, cut from the bend, is incredibly dense and the holes tended to close back up. I frequently had to reopen them with an awl and pull the needles through with pliers.
+Then came the sewing. I am no stranger to hand sewing, and I can confidently say that sole leather was by far the most difficult material I have ever sewn. Even though I managed to line up the vast majority of the existing stitching holes, they tended to close back up in the dense leather. I frequently had to reopen them with an awl and pull the needles through with pliers.
 
 Because the stitching holes overlap the upper, especially through the arch, flexible or curved needles are better suited to the work. Traditionally, shoemakers attached the thread to [boar bristles](https://www.shoesbyrobert.com/pennsic/2019/boar-bristles.pdf); twisted wire is a modern substitute. Both are flexible and carry the thread without a conventional eye, allowing them to follow the path opened by the awl.
 
@@ -112,7 +112,7 @@ Because the stitching holes overlap the upper, especially through the arch, flex
 
 - image: "/files/Allen Edmond Full Wing Resole/17.png"
   alt: ""
-  caption: "Visible stitch line on the shoe arch."
+  caption: "Exposed stitching through the arch."
 
 - image: "/files/Allen Edmond Full Wing Resole/19.png"
   alt: ""
@@ -120,17 +120,17 @@ Because the stitching holes overlap the upper, especially through the arch, flex
 
 - image: "/files/Allen Edmond Full Wing Resole/18.png"
   alt: ""
-  caption: "Preparing the stitch hole with an awl."
+  caption: "Reopening a stitching hole with an awl."
 
 {% endgallery %}
 
-I had neither, so I bent a slight curve into a pair of ordinary straight needles. The MacNeil's characteristic gunboat proportions and chunky, exposed welt made hand stitching somewhat easier, but the arch was still difficult. There, the upper overlapped the stitching holes, so I had to take care not to pierce it.
+I had neither bristles nor wire, so I bent a slight curve into a pair of ordinary straight needles. The MacNeil's characteristic gunboat proportions and chunky, exposed welt made hand stitching somewhat easier, but the arch was still difficult. There, the upper overlapped the stitching holes, so I had to take care not to pierce it.
 
 {% gallery %}
 
 - image: "/files/Allen Edmond Full Wing Resole/10.png"
   alt: ""
-  caption: "The completed stitching, far from perfect but complete."
+  caption: "Completed outsole stitching, far from perfect."
 
 {% endgallery %}
 
@@ -149,12 +149,12 @@ I put a slight bend in the nails used to affix the heel block. As they are drive
 
 ## Edge finishing
 
-*Dear reader, be brave, because it will necessarily get worse before it gets better.*
+*Dear reader, the edges will look worse before they look better.*
 
 
-Finishing started with truing the edges. Because I was reusing the existing welt, midsole, outsole, and heel, there was no new shaping to do.
+With the original welt, soles, and heel back together, I sanded the edges to even out any slight misalignment between the layers.
 
-I sanded first, applied dye, and sanded again. I repeated the process with progressively finer abrasives, using the dye almost like a burnishing agent to smooth the edge. I could only take this so far. The previous repair had already left very little material between the stitching holes and the edge, and I did not want to sand into the stitch line. I filled the remaining imperfections with a Tarrago hard wax compound.
+I applied dye, then worked through repeated rounds of sanding and dyeing with progressively finer abrasives, using the dye almost like a burnishing agent to smooth the edge. I could only take this so far because the previous repair had already left very little material between the stitching holes and the edge, and I did not want to sand into the stitch line. I filled the remaining imperfections with a Tarrago hard wax compound.
 
 {% gallery %}
 
