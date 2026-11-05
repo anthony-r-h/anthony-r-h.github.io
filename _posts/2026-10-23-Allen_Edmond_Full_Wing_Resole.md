@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Allen Edmonds MacNeil Longwing Blucher Rebuild"
+title: "Allen Edmonds MacNeil Longwing Blucher Repair"
 subtitle: "" 
 optimized_image: "/files/Allen Edmond Full Wing Resole/g-8914.jpg"
 category: Leather
