@@ -3,7 +3,7 @@
 
 Short, actionable notes to be immediately productive in this repository.
 
-- **Big picture:** This repo is a Jekyll-based static site using the "jekflix-template" theme. HTML is authored in `_layouts`, `_includes`, and `_posts`. A Node/Gulp pipeline compiles theme variables, JS and images into `assets/` and then triggers `bundle exec jekyll build` to produce the final `_site` output.
+- **Big picture:** This repo is a Jekyll-based static site using a custom theme. HTML is authored in `_layouts`, `_includes`, and `_posts`. A Node/Gulp pipeline compiles theme variables, JS and images into `assets/` and then triggers `bundle exec jekyll build` to produce the final `_site` output.
 
 - **Key build / dev commands (exact):**
   - Install Ruby gems: `bundle install` (uses the `Gemfile`)
