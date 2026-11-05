@@ -149,8 +149,7 @@ I put a slight bend in the nails used to affix the heel block. As they are drive
 
 ## Edge finishing
 
-*Dear reader, the edges will look worse before they look better.*
-
+*My dear reader, things will look **a lot worse** before they look better.*
 
 With the original welt, soles, and heel back together, I sanded the edges to even out any slight misalignment between the layers.
 
@@ -189,11 +188,11 @@ I finished the welt with a fudge wheel, adding definition around each stitch and
 
 # Conclusion
 
-I chose to reuse the original sole because it kept the project manageable while still giving me a useful introduction to soling work. Preparing the existing layers and stitching them back to the welt gave me plenty to contend with, without also taking on the separate job of cutting and shaping new sole leather. The outsole stitching is far from perfect, but the sole is properly attached again, and enough material remains to carry the MacNeils another five to ten years before a full resole.
+I chose to reuse the original sole because it kept the project manageable while still giving me a useful introduction to soling work. Preparing the existing layers and stitching them back to the welt gave me plenty to contend with, without also taking on the separate job of cutting and shaping new sole leather. The outsole stitching is far from perfect, but the sole is properly attached again, and enough material remains to carry the MacNeils another few years before a full resole.
 
 <figure>
   <img src="/files/Allen Edmond Full Wing Resole/g-8914.jpg">
-   <figcaption>Left shoe complete.</figcaption>
+   <figcaption></figcaption>
 </figure>
 
-
+Now I just need to do the other shoe.
