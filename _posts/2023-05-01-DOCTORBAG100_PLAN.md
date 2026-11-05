@@ -10,7 +10,7 @@ tags:
   - ACC-175
   - Dulles
 planning_tag: Ideation
-planning_status: "Pattern revisions and material selection."
+planning_status: "Initial investigation."
 ---
 
 

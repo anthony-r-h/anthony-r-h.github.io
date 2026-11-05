@@ -9,6 +9,7 @@ tags:
   - Repair
 math: true
 planning_status: "Left shoe complete, right shoe not started."
+toc: true
 ---
 
 # Introduction
