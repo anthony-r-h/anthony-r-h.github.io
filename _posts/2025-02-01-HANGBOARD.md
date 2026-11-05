@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Finger Training"
+title: "Finger Training: From C4HP Research to Practice"
 subtitle: "" 
-optimized_image: /files/Hangboard/Intro.png
+optimized_image: /files/Hangboard/Thumb.png
 category: Research
 tags:
   - Training
