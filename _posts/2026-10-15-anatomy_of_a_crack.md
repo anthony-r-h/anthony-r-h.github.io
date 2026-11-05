@@ -3,7 +3,7 @@ layout: post
 title: "Anatomy of a Software Crack: Agentic Reverse Engineering Illustrated"
 subtitle: "" 
 optimized_image: /files/MISC/anatomy_of_a_crack.png
-category: Writings
+category: Research
 tags:
   - Education
   - AI
