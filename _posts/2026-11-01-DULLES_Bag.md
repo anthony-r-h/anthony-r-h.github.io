@@ -9,7 +9,7 @@ tags:
   - Bag making
 math: true
 planning_tag: In Progress
-planning_status: "Materials have been ordered. Pattern revisions on the way."
+planning_status: "Sample hardware pieces ordered. Working on pattern validation and experimenting with handle construction."
 ---
 
 # Introduction
