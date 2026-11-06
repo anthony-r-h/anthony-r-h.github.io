@@ -9,7 +9,7 @@ tags:
   - Bag making
 math: true
 planning_tag: In Progress
-planning_status: "Pattern work, selecting materials and sourcing hardware."
+planning_status: "Materials have been ordered. Pattern revisions on the way."
 ---
 
 # Introduction
@@ -176,6 +176,8 @@ The generic English term appears to be briefcase handle mounting bracket or hand
 | AliExpress | Coated Zinc | |
 | [Leather Craft Pattern](https://www.leathercraftpattern.com/Dulles-bag-hardware-kit) | Coated Brass | |
 
+> 2026/11/05: Ordered from from LCP and a pure brass option from Taibao.
+
 ## Clasp/Lock
 
 Lots of options for design, style, and materials. Selection for larger clasps that are either brass or stainless steel, then plated is more narrow. 
@@ -197,6 +199,8 @@ More traditional round options like this, measuring 47mm x 55mm, are available i
   <img src="/files/acc-175 DULLES/Hardware/wuta-lock-3.png">
    <figcaption></figcaption>
 </figure>
+
+> 2026/11/05: Ordered WUTA stainless steel (gold plated) and Durex brass clone.
 
 ## Bag Feet
 
@@ -222,4 +226,12 @@ Leather Craft Pattern also has some nicely finished feet.
   <img src="/files/acc-175 DULLES/Hardware/lcp-hardware.jpg">
   <figcaption></figcaption>
 </figure>
+
+> 2026/11/05: Ordered from from LCP and gold plated variant from Taibao.
+
+
+# BOM
+
+
+# Patterning
 
