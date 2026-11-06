@@ -28,16 +28,12 @@ The Dulles name originated in postwar Japan, following a visit by John Foster Du
    <figcaption>The Book of Dulles Bag Making (2013). A Japanese leathercraft manual documenting the traditional construction of a Dulles briefcase, from material preparation and pattern making to hand-stitching and final assembly. The book translates the methods of an experienced craftsman into an illustrated, step-by-step guide. Published October 5, 2013. 208 pages, hardcover. ISBN 978-4-88393-628-1.</figcaption>
 </figure>
 
-The same hinged frame turns up in doctor's bags, surgeon's bags and lawyer's bags, as well as men's and women's everyday bags derived from these designs.
-
-
-
-
+The hinged frame bag archetype also turns up in doctor's bags, surgeon's bags and lawyer's bags. For men's, design variation is fairly narrow. For women's bag, hinged frame bags are incredibly diverse.
 
 
 # References
 
-## Leather Craft Pattern
+## LCP
 
 Classic Dulles bag inspired design with briefcase handle and clasp lock. `ACC-175` is sized for 30cm x 20cm x 14cm.
 
@@ -149,6 +145,19 @@ A vintage take on the Dulles bag, swapping the briefcase handle for a luggage-st
 - image: "/files/acc-175 DULLES/Inspiration/genroyal_dullesbag_04.png"
   alt: ""
   caption: ""
+{% endgallery %}
+
+## Others
+
+Miscellaneous collection.
+
+{% gallery %}
+- image: "/files/acc-175 DULLES/Inspiration/cimabue-1.jpg"
+  alt: ""
+  caption: "Cima. Conservative, classic styling with detail around the lock."
+- image: "/files/acc-175 DULLES/Inspiration/thombrowne-mr-thom-bag.png"
+  alt: ""
+  caption: "Thom Browne Mr. Thom bag. Uses tubular handles instead of briefcase handle."
 {% endgallery %}
 
 # Hardware
