@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solving the Geometry of Manufacturability-Constrained Stitch Placement"
+title: "Solving the Geometry of Manufacture-Constrained Stitch Placement"
 subtitle: "" 
 optimized_image: /files/Autostitch/emblem.svg
 category: Research
