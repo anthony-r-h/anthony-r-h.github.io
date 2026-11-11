@@ -13,7 +13,7 @@ planning_tag: In Progress
 planning_status: "Beta testing BricsCAD plugin."
 ---
 
-{% remote_markdown "https://raw.githubusercontent.com/anthony-r-h/Autostitch-cad/refs/heads/main/docs/PITCH_authored.md" %}
+{% remote_markdown "https://raw.githubusercontent.com/anthony-r-h/Autostitch-cad/refs/heads/main/docs/PITCH_authored.md" gif_to_video: true autoplay: true loop: true muted: true video_width: 600 %}
 
 # Autostitch Plugin
 

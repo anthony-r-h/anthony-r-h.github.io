@@ -3,22 +3,28 @@
 {% assign video_preload = include.preload | default: "metadata" %}
 {% assign video_autoplay = include.autoplay | default: false %}
 {% assign video_loop = include.loop | default: false %}
+{% assign video_muted = include.muted %}
+{% if video_muted == nil %}{% assign video_muted = video_autoplay %}{% endif %}
+{% assign video_wrapper = "figure" %}
+{% if include.inline %}{% assign video_wrapper = "span" %}{% endif %}
 
 {% if video_src != "" %}
-<figure class="video-embed{% if include.class %} {{ include.class }}{% endif %}">
+<{{ video_wrapper }} class="video-embed{% if include.class %} {{ include.class }}{% endif %}">
   <video
+    {% if include.width %}style="width: {{ include.width | escape }}px; max-width: 100%;"{% endif %}
+    {% if include.label %}aria-label="{{ include.label | escape }}"{% endif %}
     {% unless include.controls == false %}controls{% endunless %}
     preload="{{ video_preload }}"
     {% if video_autoplay %}autoplay{% endif %}
     {% if video_loop %}loop{% endif %}
-    {% if include.muted or video_autoplay %}muted{% endif %}
+    {% if video_muted %}muted{% endif %}
     {% unless include.playsinline == false %}playsinline{% endunless %}
   >
-    <source src="{{ video_src | relative_url }}" type="{{ video_type }}">
-    <a href="{{ video_src | relative_url }}">Download the video</a>
+    <source src="{{ video_src | relative_url | escape }}" type="{{ video_type }}">
+    <a href="{{ video_src | relative_url | escape }}">Download the video</a>
   </video>
   {% if include.caption %}
     <figcaption>{{ include.caption }}</figcaption>
   {% endif %}
-</figure>
+</{{ video_wrapper }}>
 {% endif %}

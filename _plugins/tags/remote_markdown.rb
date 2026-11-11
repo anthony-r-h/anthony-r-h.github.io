@@ -7,13 +7,24 @@ require 'kramdown-parser-gfm'
 module Jekyll
   class RemoteMarkdownTag < Liquid::Tag
     MAX_BYTES = 2 * 1024 * 1024
+    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted):\s*(?:true|false)|video_width:\s*[1-9]\d*)/
 
     def initialize(tag_name, input, tokens)
       super
-      match = input.strip.match(/\A(["'])(.+)\1\z/)
-      raise ArgumentError, 'remote_markdown expects one quoted GitHub raw URL' unless match
+      match = input.strip.match(/\A(["'])(.+?)\1((?:\s+#{OPTION_SYNTAX})*)\z/)
+      unless match
+        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted options, or a positive integer video_width'
+      end
 
       @url = match[2]
+      @options = { 'gif_to_video' => false, 'autoplay' => true, 'loop' => true, 'muted' => true }
+      seen = []
+      match[3].scan(/(\w+):\s*(\w+)/) do |name, value|
+        raise ArgumentError, "remote_markdown repeats option #{name}" if seen.include?(name)
+
+        seen << name
+        @options[name] = name == 'video_width' ? value.to_i : value == 'true'
+      end
     end
 
     def render(context)
@@ -26,12 +37,54 @@ module Jekyll
       )
       document = Kramdown::Document.new(markdown, options)
       rewrite_links(document.root, uri)
+      replace_gifs(document.root, context) if @options['gif_to_video']
       "\n\n<div class=\"remote-markdown\">\n#{document.to_html}</div>\n\n"
     rescue StandardError => error
       raise Jekyll::Errors::FatalException, "remote_markdown #{@url}: #{error.message}"
     end
 
     private
+
+    def gif_image?(element)
+      image = element.type == :img || (element.type == :html_element && element.value == 'img')
+      path = element.attr['src'].to_s.split(/[?#]/, 2).first.to_s
+      image && path.match?(/\.gif\z/i)
+    end
+
+    def replace_gifs(element, context)
+      element.children.map! do |child|
+        # A standalone image becomes a figure outside its Markdown paragraph.
+        standalone = child.type == :p && child.children.length == 1 && gif_image?(child.children.first)
+        if standalone || gif_image?(child)
+          image = standalone ? child.children.first : child
+          inline = !standalone && child.options[:category] != :block
+          html = render_video(image, context, inline)
+          Kramdown::Element.new(:raw, html, nil, category: inline ? :span : :block)
+        else
+          replace_gifs(child, context)
+          child
+        end
+      end
+      replace_gifs(element.value, context) if element.type == :footnote
+    end
+
+    def render_video(image, context, inline)
+      @video_template ||= Liquid::Template.parse(
+        '{% include video.html src=remote_video.src label=remote_video.label inline=remote_video.inline autoplay=remote_video.autoplay loop=remote_video.loop muted=remote_video.muted width=remote_video.width %}'
+      )
+      context.stack do
+        context['remote_video'] = {
+          'src' => image.attr['src'].sub(/\.gif(?=[?#]|\z)/i, '.mp4'),
+          'label' => image.attr['alt'],
+          'inline' => inline,
+          'autoplay' => @options['autoplay'],
+          'loop' => @options['loop'],
+          'muted' => @options['muted'],
+          'width' => @options['video_width']
+        }
+        @video_template.render!(context).strip
+      end
+    end
 
     def source_uri(url)
       uri = URI.parse(url)
