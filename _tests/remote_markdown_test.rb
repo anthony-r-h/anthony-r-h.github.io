@@ -119,12 +119,55 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
       default_html = render_remote(site, markdown, 'gif_to_video: true')
       assert(!default_html.match?(/<video[^>]*style=/m), 'Omitted width changed the default layout')
     end,
+    'image loading and dimensions are opt-in and reset for each render' => lambda do
+      markdown = "![Opening](images/opening.svg)\n\n![Later](images/later.svg)"
+      ['', 'lazy_images: false'].each do |options|
+        html = render_remote(site, markdown, options)
+        assert(!html.match?(/<img[^>]*(?:loading|width|height)=/), 'Default image behavior changed')
+      end
+      2.times do
+        html = render_remote(site, markdown, 'lazy_images: true image_width: 600 image_height: 750')
+        images = html.scan(/<img\b[^>]*>/)
+        assert(images.first.include?('loading="eager"'), 'Opening image was deferred')
+        assert(images.last.include?('loading="lazy"'), 'Later image was not deferred')
+        assert(images.all? { |image| image.include?('width="600"') && image.include?('height="750"') }, 'Image dimensions missing')
+      end
+    end,
+    'image options preserve source attributes and skip converted videos and code' => lambda do
+      markdown = <<~MARKDOWN
+        ![Video](images/demo.gif)
+
+        ![Opening][opening]
+
+        [opening]: images/opening.svg
+
+        <img src="images/custom.svg" width="300" height="200" loading="eager">
+
+        <img src="images/width-only.svg" width="200">
+
+        `![Code](images/code.svg)`
+
+        Footnote[^demo].
+
+        [^demo]: ![Footnote](images/footnote.svg)
+      MARKDOWN
+      html = render_remote(site, markdown, 'gif_to_video: true lazy_images: true image_width: 600 image_height: 750')
+      images = html.scan(/<img\b[^>]*>/)
+      assert(images.length == 4, 'Expected reference, HTML and footnote images only')
+      assert(images.first.include?('loading="eager"'), 'Converted video consumed the eager image slot')
+      assert(images[1].include?('width="300" height="200" loading="eager"'), 'Explicit source attributes changed')
+      assert(!images[2].include?('height='), 'Default height overrode the source proportions')
+      assert(images.last.include?('loading="lazy"') && images.last.include?('height="750"'), 'Footnote image was skipped')
+      assert(!html[/<video\b[^>]*>/m].match?(/\b(?:loading|width|height)=/), 'Image options affected a video')
+    end,
     'invalid options fail explicitly' => lambda do
       ['gif_to_video: yes', 'gif_to_video: "true"', 'unknown: true',
        'gif_to_video: true autoplay: yes', 'loop: "false"', 'muted: falsejunk',
        'autoplay: true autoplay: false', 'video_width: 0', 'video_width: -20',
        'video_width: 1.5', 'video_width: 600px', 'video_width: true',
-       'video_width: 600 video_width: 400'].each do |option|
+       'video_width: 600 video_width: 400', 'lazy_images: yes',
+       'image_width: 0', 'image_height: -1', 'image_height: 750px',
+       'lazy_images: true lazy_images: false'].each do |option|
         begin
           Liquid::Template.parse("{% remote_markdown '#{SOURCE_URL}' #{option} %}")
         rescue ArgumentError

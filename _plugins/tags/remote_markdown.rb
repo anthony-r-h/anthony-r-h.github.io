@@ -7,13 +7,13 @@ require 'kramdown-parser-gfm'
 module Jekyll
   class RemoteMarkdownTag < Liquid::Tag
     MAX_BYTES = 2 * 1024 * 1024
-    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted):\s*(?:true|false)|video_width:\s*[1-9]\d*)/
+    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted|lazy_images):\s*(?:true|false)|(?:video_width|image_width|image_height):\s*[1-9]\d*)/
 
     def initialize(tag_name, input, tokens)
       super
       match = input.strip.match(/\A(["'])(.+?)\1((?:\s+#{OPTION_SYNTAX})*)\z/)
       unless match
-        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted options, or a positive integer video_width'
+        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted/lazy_images options, or positive integer video_width/image_width/image_height options'
       end
 
       @url = match[2]
@@ -23,7 +23,7 @@ module Jekyll
         raise ArgumentError, "remote_markdown repeats option #{name}" if seen.include?(name)
 
         seen << name
-        @options[name] = name == 'video_width' ? value.to_i : value == 'true'
+        @options[name] = %w[video_width image_width image_height].include?(name) ? value.to_i : value == 'true'
       end
     end
 
@@ -38,12 +38,29 @@ module Jekyll
       document = Kramdown::Document.new(markdown, options)
       rewrite_links(document.root, uri)
       replace_gifs(document.root, context) if @options['gif_to_video']
+      configure_images(document.root)
       "\n\n<div class=\"remote-markdown\">\n#{document.to_html}</div>\n\n"
     rescue StandardError => error
       raise Jekyll::Errors::FatalException, "remote_markdown #{@url}: #{error.message}"
     end
 
     private
+
+    def configure_images(element, images = [])
+      if element.type == :img || (element.type == :html_element && element.value == 'img')
+        if @options['lazy_images']
+          element.attr['loading'] ||= images.empty? ? 'eager' : 'lazy'
+        end
+        # Existing dimensions describe the source image and take precedence over defaults.
+        unless element.attr.key?('width') || element.attr.key?('height')
+          element.attr['width'] = @options['image_width'].to_s if @options['image_width']
+          element.attr['height'] = @options['image_height'].to_s if @options['image_height']
+        end
+        images << element
+      end
+      element.children.each { |child| configure_images(child, images) }
+      configure_images(element.value, images) if element.type == :footnote
+    end
 
     def gif_image?(element)
       image = element.type == :img || (element.type == :html_element && element.value == 'img')

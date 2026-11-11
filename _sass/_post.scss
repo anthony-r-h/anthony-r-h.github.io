@@ -27,6 +27,10 @@
     //padding: 10px 0;
   }
 
+  .remote-markdown img[width][height] {
+    height: auto;
+  }
+
   figure {
     @include center(var(--post-content-max-width, 1080px));
     padding-left: var(--post-content-padding-mobile, 20px);

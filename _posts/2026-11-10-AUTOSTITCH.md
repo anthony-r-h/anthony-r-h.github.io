@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Solving the Geometry of Manufacturable Constrained Stitch Placement"
+title: "Solving the Geometry of Manufacturability-Constrained Stitch Placement"
 subtitle: "" 
 optimized_image: /files/Autostitch/emblem.svg
 category: Research
@@ -13,7 +13,7 @@ planning_tag: In Progress
 planning_status: "Beta testing BricsCAD plugin."
 ---
 
-{% remote_markdown "https://raw.githubusercontent.com/anthony-r-h/Autostitch-cad/refs/heads/main/docs/PITCH_authored.md" gif_to_video: true autoplay: true loop: true muted: true video_width: 600 %}
+{% remote_markdown "https://raw.githubusercontent.com/anthony-r-h/Autostitch-cad/refs/heads/main/docs/PITCH_authored.md" gif_to_video: true autoplay: true loop: true muted: true video_width: 600 lazy_images: true image_width: 600 image_height: 750 %}
 
 # Autostitch Plugin
 

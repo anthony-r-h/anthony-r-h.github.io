@@ -425,6 +425,8 @@ The optional `video_width` sets the width of converted players in pixels, using 
 
 The URL must point to a public file on `raw.githubusercontent.com`, in the form `OWNER/REPO/REF/path/to/file.md`. I can use `main`, a tag, or a commit SHA as the reference. For branches containing `/`, I use a commit SHA to avoid ambiguity between the branch and file path. Private repositories and GitHub `blob` page URLs are not supported.
 
+For image-heavy imports, add `lazy_images: true` to keep the first image eager and lazy-load subsequent images. Existing `loading` attributes are preserved. Optional positive integer `image_width` and `image_height` values reserve space for images without explicit dimensions; use them only when the imported images share those dimensions. Images with both dimensions scale proportionally on narrow screens. These options do not affect converted video players.
+
 The build fetches the file and renders it with the site's Kramdown/GFM Markdown engine. Imported front matter is removed; the blog post keeps its own metadata. Remote Liquid tags and variables are treated as text rather than executed. HTML in the source is preserved, so I only include content I trust.
 
 Relative paths are resolved from the imported file, including files in subdirectories:
