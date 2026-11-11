@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "A Geometric Algorithm for Manufacturable Constrained Stitch Placement"
+title: "Solving the Geometry of Manufacturable Constrained Stitch Placement"
 subtitle: "" 
-optimized_image: /files/Autostitch/emblem.png
+optimized_image: /files/Autostitch/emblem.svg
 category: Research
 tags:
     - Tools
