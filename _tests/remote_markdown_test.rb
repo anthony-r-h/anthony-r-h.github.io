@@ -38,6 +38,7 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
       assert(html.match?(/<video\s[^>]*\bcontrols\b/m), 'Missing playback controls')
       assert(html.include?('aria-label="Demo &amp; details"'), 'Alt text was not escaped and preserved')
       assert(html.include?('src="https://raw.githubusercontent.com/owner/repo/main/images/demo.mp4?raw=1&amp;v=2#t=1"'), 'Incorrect MP4 URL')
+      assert(html.include?('poster="https://raw.githubusercontent.com/owner/repo/main/images/demo.GIF?raw=1&amp;v=2#t=1"'), 'Original image missing as poster')
       %w[autoplay muted loop playsinline].each do |attribute|
         assert(html.match?(/<video[^>]*\b#{attribute}\b/m), "Missing #{attribute}")
       end
@@ -145,6 +146,7 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
       assert(html.include?('images/demo.gif"'), 'Cached Markdown was changed')
       assert(html.include?('src="/blog/local.mp4"'), 'Existing local include URL behavior changed')
       assert(html.scan(/aria-label=/).length == 1, 'Label leaked to subsequent include')
+      assert(html.scan(/poster=/).length == 1, 'Poster leaked to subsequent include')
       assert(html.scan(/<video[^>]*\bautoplay\b/m).length == 1, 'Autoplay leaked to subsequent include')
       assert(html.scan(/<figure class="video-embed">/).length == 2, 'Existing include wrapper changed')
     end

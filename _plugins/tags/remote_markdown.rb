@@ -70,11 +70,12 @@ module Jekyll
 
     def render_video(image, context, inline)
       @video_template ||= Liquid::Template.parse(
-        '{% include video.html src=remote_video.src label=remote_video.label inline=remote_video.inline autoplay=remote_video.autoplay loop=remote_video.loop muted=remote_video.muted width=remote_video.width %}'
+        '{% include video.html src=remote_video.src poster=remote_video.poster label=remote_video.label inline=remote_video.inline autoplay=remote_video.autoplay loop=remote_video.loop muted=remote_video.muted width=remote_video.width %}'
       )
       context.stack do
         context['remote_video'] = {
           'src' => image.attr['src'].sub(/\.gif(?=[?#]|\z)/i, '.mp4'),
+          'poster' => image.attr['src'],
           'label' => image.attr['alt'],
           'inline' => inline,
           'autoplay' => @options['autoplay'],

@@ -8,7 +8,7 @@ tags:
     - Tools
     - Autostitch plugin
 math: true
-toc: true
+toc: true -1
 planning_tag: In Progress
 planning_status: "Beta testing BricsCAD plugin."
 ---

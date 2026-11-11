@@ -13,6 +13,7 @@
   <video
     {% if include.width %}style="width: {{ include.width | escape }}px; max-width: 100%;"{% endif %}
     {% if include.label %}aria-label="{{ include.label | escape }}"{% endif %}
+    {% if include.poster %}poster="{{ include.poster | relative_url | escape }}"{% endif %}
     {% unless include.controls == false %}controls{% endunless %}
     preload="{{ video_preload }}"
     {% if video_autoplay %}autoplay{% endif %}

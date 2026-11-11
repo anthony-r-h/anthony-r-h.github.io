@@ -267,7 +267,7 @@ Local video embeds:
 {% include video.html src="/files/MYPROJECT/demo.mp4" caption="Test run" %}
 ```
 
-Optional include values are `type`, `preload`, `autoplay`, `loop`, `muted`, `controls`, `playsinline`, `width` (pixels), and `class`. Controls and inline playback are enabled by default. Autoplay defaults to muted unless `muted=false` is explicitly supplied.
+Optional include values are `type`, `preload`, `autoplay`, `loop`, `muted`, `controls`, `playsinline`, `width` (pixels), `poster` (image URL), and `class`. Controls and inline playback are enabled by default. Autoplay defaults to muted unless `muted=false` is explicitly supplied.
 
 Image galleries:
 
@@ -419,9 +419,9 @@ When the source repo has matching MP4s for its GIFs, I can show those images as 
 
 This replaces GIF image embeds (Markdown or HTML) with the existing `video.html` player, requesting muted, looping, inline autoplay with controls available if the browser blocks autoplay. Each MP4 must be alongside its GIF with the same filename, changing only `.gif` to `.mp4`. Query strings and fragments are preserved, and image alt text becomes the player's accessible label. Ordinary links, code examples, and other image formats are unchanged. The option defaults to `false`, and the source Markdown stays unchanged for GitHub. MP4 availability is not checked during the build; missing MP4s will leave unplayable videos.
 
-The `autoplay`, `loop`, and `muted` options each accept `true` or `false` and default to `true` for converted GIFs. They can appear in any order and only apply when `gif_to_video: true`. An explicit `muted: false` is honored even with autoplay enabled, but browsers may block autoplay with sound. Controls remain enabled.
+The `autoplay`, `loop`, and `muted` options each accept `true` or `false` and default to `true` for converted GIFs. They can appear in any order and only apply when `gif_to_video: true`. An explicit `muted: false` is honored even with autoplay enabled, but browsers may block autoplay with sound. The player also attempts autoplay once when it first enters view, leaving later manual pauses alone. Controls remain enabled if the browser declines playback.
 
-The optional `video_width` sets the width of converted players in pixels, using a positive integer such as `video_width: 600`. Players shrink to fit narrower containers and keep their aspect ratio. Omitting it keeps the full-width layout. It does not resize other images or existing video elements in the remote Markdown.
+The optional `video_width` sets the width of converted players in pixels, using a positive integer such as `video_width: 600`. Players are centered, shrink to fit narrower containers, and keep their aspect ratio. Omitting it keeps the full-width layout. It does not resize other images or existing video elements in the remote Markdown. The original GIF supplies the poster image and its proportions before video metadata loads, including when autoplay is blocked. This also downloads the GIF; it does not require a separate thumbnail file.
 
 The URL must point to a public file on `raw.githubusercontent.com`, in the form `OWNER/REPO/REF/path/to/file.md`. I can use `main`, a tag, or a commit SHA as the reference. For branches containing `/`, I use a commit SHA to avoid ambiguity between the branch and file path. Private repositories and GitHub `blob` page URLs are not supported.
 
