@@ -110,11 +110,15 @@
       button.setAttribute('aria-controls', svg.id);
       button.setAttribute('aria-label', 'Play animation');
       button.textContent = 'Play';
+      var started = false;
       button.addEventListener('click', function () {
         var playing = svg.animationsPaused();
         if (playing) {
-          svg.setCurrentTime(0);
-          svg.querySelectorAll(animationSelector).forEach(function (animation) { animation.beginElement(); });
+          if (!started) {
+            svg.setCurrentTime(0);
+            svg.querySelectorAll(animationSelector).forEach(function (animation) { animation.beginElement(); });
+            started = true;
+          }
           svg.unpauseAnimations();
         } else {
           svg.pauseAnimations();
