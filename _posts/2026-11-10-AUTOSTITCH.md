@@ -5,7 +5,6 @@ subtitle: ""
 optimized_image: /files/Autostitch/emblem.svg
 category: Research
 tags:
-    - Plan
     - Tools
     - Autostitch plugin
 math: true
