@@ -32,6 +32,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Check remote Markdown imports
+        run: bundle exec ruby _tests/remote_markdown_test.rb
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
