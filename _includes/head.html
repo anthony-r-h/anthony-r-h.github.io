@@ -93,7 +93,7 @@
         })();
     </script>
 
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | prepend: site.baseurl }}?v={{ site.time | date: '%s' }}">
     <link rel="canonical" href="{{ url }}">
     <!-- Include extra styles -->
     {% include extra-css.html %}
