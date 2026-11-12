@@ -417,19 +417,19 @@ When the source repo has matching MP4s for its GIFs, I can show those images as 
 {% remote_markdown "https://raw.githubusercontent.com/OWNER/REPO/main/README.md" gif_to_video: true autoplay: true loop: true muted: true video_width: 600 %}
 ```
 
-This replaces GIF image embeds (Markdown or HTML) with the existing `video.html` player, requesting muted, looping, inline autoplay with controls available if the browser blocks autoplay. Each MP4 must be alongside its GIF with the same filename, changing only `.gif` to `.mp4`. Query strings and fragments are preserved, and image alt text becomes the player's accessible label. Ordinary links, code examples, and other image formats are unchanged. The option defaults to `false`, and the source Markdown stays unchanged for GitHub. MP4 availability is not checked during the build; missing MP4s will leave unplayable videos.
+This replaces GIF image embeds (Markdown or HTML) with the existing `video.html` player, requesting muted, looping, inline autoplay with controls available if the browser blocks autoplay. Each MP4 must be alongside its GIF with the same filename, changing only `.gif` to `.mp4`. Query strings and fragments are preserved, and image alt text becomes the player's accessible label. Linked images and responsive `picture`/`srcset` images retain their original behavior. Ordinary links, code examples, and other image formats are unchanged. The option defaults to `false`, and the source Markdown stays unchanged for GitHub. MP4 availability is not checked during the build; missing MP4s will leave unplayable videos.
 
 The `autoplay`, `loop`, and `muted` options each accept `true` or `false` and default to `true` for converted GIFs. They can appear in any order and only apply when `gif_to_video: true`. An explicit `muted: false` is honored even with autoplay enabled, but browsers may block autoplay with sound. The player also attempts autoplay once when it first enters view, leaving later manual pauses alone. Controls remain enabled if the browser declines playback.
 
 The optional `video_width` sets the width of converted players in pixels, using a positive integer such as `video_width: 600`. Players are centered, shrink to fit narrower containers, and keep their aspect ratio. Omitting it keeps the full-width layout. It does not resize other images or existing video elements in the remote Markdown. The original GIF supplies the poster image and its proportions before video metadata loads, including when autoplay is blocked. This also downloads the GIF; it does not require a separate thumbnail file.
 
-The URL must point to a public file on `raw.githubusercontent.com`, in the form `OWNER/REPO/REF/path/to/file.md`. I can use `main`, a tag, or a commit SHA as the reference. For branches containing `/`, I use a commit SHA to avoid ambiguity between the branch and file path. Private repositories and GitHub `blob` page URLs are not supported.
+The URL must point to a public file on `raw.githubusercontent.com`, in the form `OWNER/REPO/REF/path/to/file.md`. I can use `main`, a tag, or a commit SHA as the reference; explicit `refs/heads/main` and `refs/tags/v1` forms also work. For branches containing `/`, I use a commit SHA to avoid ambiguity between the branch and file path. Private repositories and GitHub `blob` page URLs are not supported.
 
 For image-heavy imports, add `lazy_images: true` to keep the first image eager and lazy-load subsequent images. Existing `loading` attributes are preserved. Optional positive integer `image_width` and `image_height` values reserve space for images without explicit dimensions; use them only when the imported images share those dimensions. Images with both dimensions scale proportionally on narrow screens. These options do not affect converted video players.
 
 Add `svg_controls: true` to give supported animated SVG diagrams a bottom-left Play/Pause overlay. The browser fetches SVG images from that import, checks their contents for native SMIL animation elements, and inserts animated drawings inline, paused until Play is pressed. Play after Pause resumes from the same point. Static SVGs remain ordinary images; no SVG source changes or special filenames are needed. This option is independent of the video `autoplay` setting.
 
-The player supports self-contained SVG drawings with native animations that begin together at zero. CSS/script animations, custom start/end events, linked images, and `picture`/`srcset` images retain their original image embeds. Inline content is restricted to supported drawing elements and attributes with local references; scripts, embedded HTML, styles, and external SVG references are not inserted. SVG URLs must allow browser fetches (same-origin files and GitHub raw URLs work). If loading or validation fails, the original image remains and a warning is logged. Without JavaScript, the original images remain. The player fetches candidates at page load even if their image tags use lazy loading.
+The player supports self-contained SVG drawings with native animations that begin together at zero. CSS/script animations, custom start/end events, linked images, and `picture`/`srcset` images retain their original image embeds. Inline content is restricted to supported drawing elements and attributes with references to IDs inside the same SVG; scripts, embedded HTML, styles, and external or missing references are not inserted. Each player gets distinct drawing IDs, while the original image's anchor ID and title remain on its wrapper. SVG URLs must allow browser fetches (same-origin files and GitHub raw URLs work). If loading or validation fails, the original image remains and a warning is logged. Without JavaScript, the original images remain. The player fetches candidates at page load even if their image tags use lazy loading, shares downloads for repeated URLs, and releases its source cache after initialization.
 
 The build fetches the file and renders it with the site's Kramdown/GFM Markdown engine. Imported front matter is removed; the blog post keeps its own metadata. Remote Liquid tags and variables are treated as text rather than executed. HTML in the source is preserved, so I only include content I trust.
 
@@ -452,7 +452,17 @@ A missing file, failed download, invalid UTF-8, or file over 2 MiB fails the bui
 bundle exec ruby _tests/remote_markdown_test.rb
 ```
 
-The tests use cached Markdown fixtures and a temporary Jekyll site, so they need no network access. Builds of posts that use `remote_markdown` need access to GitHub.
+The tests use cached Markdown fixtures and a temporary Jekyll site, so they need no network access. They run before the GitHub Pages build and share the build's Ruby glob compatibility helper for Windows. Builds of posts that use `remote_markdown` need access to GitHub.
+
+The SVG player has a browser regression suite for detection, fallbacks, ID isolation, keyboard controls, and pause/resume. With Playwright CLI and its WebKit browser already available, run from the repo root:
+
+```bash
+playwright-cli -s=svg-tests open --browser=webkit --mobile
+playwright-cli -s=svg-tests run-code --filename _tests/svg_player_test.js
+playwright-cli -s=svg-tests close
+```
+
+The suite supplies its own pages and SVG responses, so it needs no preview server, site build, or network access. It uses the real browser's SVG animation APIs. After changes to `src/js/main/svg-player.js`, run `npm run build` and commit the updated `assets/js/scripts.min.js` too; GitHub Pages builds Jekyll from the committed bundle.
 
 ## Tag Strategy Reminder
 

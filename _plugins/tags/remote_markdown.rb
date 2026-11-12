@@ -7,13 +7,15 @@ require 'kramdown-parser-gfm'
 module Jekyll
   class RemoteMarkdownTag < Liquid::Tag
     MAX_BYTES = 2 * 1024 * 1024
-    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted|lazy_images|svg_controls):\s*(?:true|false)|(?:video_width|image_width|image_height):\s*[1-9]\d*)/
+    BOOLEAN_OPTIONS = %w[gif_to_video autoplay loop muted lazy_images svg_controls].freeze
+    DIMENSION_OPTIONS = %w[video_width image_width image_height].freeze
+    OPTION_SYNTAX = /(?:(?:#{BOOLEAN_OPTIONS.join('|')}):\s*(?:true|false)|(?:#{DIMENSION_OPTIONS.join('|')}):\s*[1-9]\d*)/
 
     def initialize(tag_name, input, tokens)
       super
       match = input.strip.match(/\A(["'])(.+?)\1((?:\s+#{OPTION_SYNTAX})*)\z/)
       unless match
-        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted/lazy_images/svg_controls options, or positive integer video_width/image_width/image_height options'
+        raise ArgumentError, "remote_markdown expects a quoted GitHub raw URL, boolean #{BOOLEAN_OPTIONS.join('/')} options, or positive integer #{DIMENSION_OPTIONS.join('/')} options"
       end
 
       @url = match[2]
@@ -23,7 +25,7 @@ module Jekyll
         raise ArgumentError, "remote_markdown repeats option #{name}" if seen.include?(name)
 
         seen << name
-        @options[name] = %w[video_width image_width image_height].include?(name) ? value.to_i : value == 'true'
+        @options[name] = DIMENSION_OPTIONS.include?(name) ? value.to_i : value == 'true'
       end
     end
 
@@ -47,8 +49,12 @@ module Jekyll
 
     private
 
+    def image?(element)
+      element.type == :img || (element.type == :html_element && element.value == 'img')
+    end
+
     def configure_images(element, images = [])
-      if element.type == :img || (element.type == :html_element && element.value == 'img')
+      if image?(element)
         if @options['lazy_images']
           element.attr['loading'] ||= images.empty? ? 'eager' : 'lazy'
         end
@@ -64,12 +70,14 @@ module Jekyll
     end
 
     def gif_image?(element)
-      image = element.type == :img || (element.type == :html_element && element.value == 'img')
       path = element.attr['src'].to_s.split(/[?#]/, 2).first.to_s
-      image && path.match?(/\.gif\z/i)
+      image?(element) && !element.attr.key?('srcset') && path.match?(/\.gif\z/i)
     end
 
     def replace_gifs(element, context)
+      # A video would introduce nested controls in a link or break picture selection.
+      return if element.type == :a || (element.type == :html_element && %w[a picture].include?(element.value))
+
       element.children.map! do |child|
         # A standalone image becomes a figure outside its Markdown paragraph.
         standalone = child.type == :p && child.children.length == 1 && gif_image?(child.children.first)
@@ -111,10 +119,17 @@ module Jekyll
       unless uri.is_a?(URI::HTTPS) && uri.host == 'raw.githubusercontent.com' &&
              uri.port == 443 && !uri.userinfo && !uri.query && !uri.fragment &&
              parts.length >= 4 && parts.none?(&:empty?) &&
+             !repository_path(uri).last.empty? &&
              parts.none? { |part| ['.', '..'].include?(URI::DEFAULT_PARSER.unescape(part)) }
         raise ArgumentError, 'use https://raw.githubusercontent.com/OWNER/REPO/REF/path/to/file.md'
       end
       uri
+    end
+
+    def repository_path(uri)
+      owner, repo, *location = uri.path.split('/').drop(1)
+      reference_length = location.first == 'refs' && %w[heads tags].include?(location[1]) ? 3 : 1
+      [owner, repo, location.take(reference_length).join('/'), location.drop(reference_length)]
     end
 
     def fetch(uri, redirects = 3)
@@ -186,7 +201,7 @@ module Jekyll
     def resolve_url(value, uri, raw:)
       return value if value.empty? || value.start_with?('#', '//') || value.match?(/\A[a-z][a-z0-9+.-]*:/i)
 
-      owner, repo, ref, *path = uri.path.split('/').drop(1)
+      owner, repo, ref, path = repository_path(uri)
       root = if raw
                "https://raw.githubusercontent.com/#{owner}/#{repo}/#{ref}/"
              else

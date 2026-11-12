@@ -1,3 +1,4 @@
+require_relative '../scripts/ruby-glob-compat'
 require 'jekyll'
 require 'tmpdir'
 require 'fileutils'
@@ -10,9 +11,9 @@ def assert(condition, message)
   raise message unless condition
 end
 
-def render_remote(site, markdown, option = '')
-  site.instance_variable_set(:@remote_markdown_cache, { SOURCE_URL => [markdown, URI(SOURCE_URL)] })
-  template = Liquid::Template.parse("{% remote_markdown \"#{SOURCE_URL}\" #{option} %}")
+def render_remote(site, markdown, option = '', source_url: SOURCE_URL)
+  site.instance_variable_set(:@remote_markdown_cache, { source_url => [markdown, URI(source_url)] })
+  template = Liquid::Template.parse("{% remote_markdown \"#{source_url}\" #{option} %}")
   template.render!({}, registers: { site: site })
 end
 
@@ -25,6 +26,31 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
   ))
 
   checks = {
+    'explicit branch and tag references preserve repository-root paths' => lambda do
+      %w[heads tags].each do |kind|
+        source_url = "https://raw.githubusercontent.com/owner/repo/refs/#{kind}/release/docs/README.md"
+        markdown = "![Root](/images/root.svg)\n\n![Relative](images/relative.svg)\n\n[Guide](/guide.md)\n\n[Relative guide](../guide.md)"
+        html = render_remote(site, markdown, source_url: source_url)
+        assert(html.include?("src=\"https://raw.githubusercontent.com/owner/repo/refs/#{kind}/release/images/root.svg\""), 'Explicit reference was lost in root image URL')
+        assert(html.include?("src=\"https://raw.githubusercontent.com/owner/repo/refs/#{kind}/release/docs/images/relative.svg\""), 'Relative image URL changed')
+        assert(html.scan("href=\"https://github.com/owner/repo/blob/refs/#{kind}/release/guide.md\"").length == 2, 'GitHub links have an incorrect reference or path')
+      end
+    end,
+    'linked and responsive GIFs preserve their image behavior' => lambda do
+      markdown = <<~MARKDOWN
+        [![Linked](images/linked.gif)](guide.md)
+
+        <a href="guide.md"><img src="images/html.gif"></a>
+
+        <picture><source srcset="images/small.gif 1x, images/large.gif 2x"><img src="images/fallback.gif"></picture>
+
+        <img src="images/default.gif" srcset="images/large.gif 2x">
+      MARKDOWN
+      html = render_remote(site, markdown, 'gif_to_video: true')
+      assert(!html.include?('<video'), 'Converted a linked or responsive GIF into an interactive video')
+      assert(html.scan(/<img\b/).length == 4, 'Original GIF embeds were lost')
+      assert(html.include?('https://raw.githubusercontent.com/owner/repo/main/docs/images/large.gif 2x'), 'Responsive image paths were not rewritten')
+    end,
     'omitted and false options preserve GIFs' => lambda do
       ['', 'gif_to_video: false', 'autoplay: true loop: true muted: true'].each do |option|
         html = render_remote(site, '![Demo](images/demo.gif)', option)
