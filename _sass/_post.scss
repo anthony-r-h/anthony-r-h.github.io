@@ -1198,20 +1198,16 @@ html[data-home-theme="apricot-mesh"] .post-content {
     border-right: 3px solid currentColor;
   }
   @media (hover: hover) {
-    .svg-player__control:hover:not(:disabled) {
+    .svg-player__control:hover {
       background: #39424e;
     }
   }
-  .svg-player__control:active:not(:disabled) {
+  .svg-player__control:active {
     transform: scale(0.96);
   }
   .svg-player__control:focus-visible {
     outline: 3px solid #2478c5;
     outline-offset: 3px;
-  }
-  .svg-player__control:disabled {
-    opacity: 0.5;
-    cursor: wait;
   }
   @media (prefers-reduced-motion: reduce) {
     .svg-player__control {

@@ -429,7 +429,7 @@ For image-heavy imports, add `lazy_images: true` to keep the first image eager a
 
 Add `svg_controls: true` to give supported animated SVG diagrams a bottom-left Play/Pause overlay. The browser fetches SVG images from that import, checks their contents for native SMIL animation elements, and inserts animated drawings inline, paused until Play is pressed. Play after Pause resumes from the same point. Static SVGs remain ordinary images; no SVG source changes or special filenames are needed. This option is independent of the video `autoplay` setting.
 
-The player supports self-contained SVG drawings with native animations that begin together at zero. CSS/script animations, custom start/end events, linked images, and `picture`/`srcset` images retain their original image embeds. Inline content is restricted to supported drawing elements and attributes with local references; scripts, embedded HTML, styles, and external SVG references are not inserted. SVG URLs must allow browser fetches (same-origin files and GitHub raw URLs work). If loading or validation fails, the original image remains and a warning is logged. Without JavaScript, the original images remain. The player fetches candidates at page load even if their image tags use lazy loading.
+The player supports self-contained SVG drawings with native animations that begin together at zero. CSS/script animations, custom start/end events, linked images, and `picture`/`srcset` images retain their original image embeds. Inline content is restricted to supported drawing elements and attributes with references to IDs inside the same SVG; scripts, embedded HTML, styles, and external or missing references are not inserted. Each player gets distinct drawing IDs, while the original image's anchor ID and title remain on its wrapper. SVG URLs must allow browser fetches (same-origin files and GitHub raw URLs work). If loading or validation fails, the original image remains and a warning is logged. Without JavaScript, the original images remain. The player fetches candidates at page load even if their image tags use lazy loading, shares downloads for repeated URLs, and releases its source cache after initialization.
 
 The build fetches the file and renders it with the site's Kramdown/GFM Markdown engine. Imported front matter is removed; the blog post keeps its own metadata. Remote Liquid tags and variables are treated as text rather than executed. HTML in the source is preserved, so I only include content I trust.
 
@@ -453,6 +453,16 @@ bundle exec ruby _tests/remote_markdown_test.rb
 ```
 
 The tests use cached Markdown fixtures and a temporary Jekyll site, so they need no network access. They run before the GitHub Pages build and share the build's Ruby glob compatibility helper for Windows. Builds of posts that use `remote_markdown` need access to GitHub.
+
+The SVG player has a browser regression suite for detection, fallbacks, ID isolation, keyboard controls, and pause/resume. With Playwright CLI and its WebKit browser already available, run from the repo root:
+
+```bash
+playwright-cli -s=svg-tests open --browser=webkit --mobile
+playwright-cli -s=svg-tests run-code --filename _tests/svg_player_test.js
+playwright-cli -s=svg-tests close
+```
+
+The suite supplies its own pages and SVG responses, so it needs no preview server, site build, or network access. It uses the real browser's SVG animation APIs. After changes to `src/js/main/svg-player.js`, run `npm run build` and commit the updated `assets/js/scripts.min.js` too; GitHub Pages builds Jekyll from the committed bundle.
 
 ## Tag Strategy Reminder
 
