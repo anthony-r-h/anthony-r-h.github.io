@@ -22,9 +22,9 @@ planning_status: "Beta testing BricsCAD plugin."
 
 ## SVG animation comparison
 
-Temporary test: open this post at the top, wait a few seconds, then scroll down to these four samples. Scroll past each one and back again. Note which letters animate and which freeze. Each animation should repeat every 10 seconds.
+Temporary test: open this post at the top, then scroll down to these four samples. A and C should animate automatically. For B and D, press Play animation. Each animation should repeat every 10 seconds. Pause stops it; pressing Play again restarts it from the beginning.
 
-The image samples load an SVG as a separate image, like the diagrams above. The inline samples load the same file and place its drawing elements directly into this page. All four load without waiting for you to scroll to them.
+The image samples load an SVG as a separate image, like the diagrams above. The inline samples load the same file and place its drawing elements directly into this page. B and D stay still until you press Play.
 
 <style>
   .autostitch-svg-test {
@@ -42,6 +42,12 @@ The image samples load an SVG as a separate image, like the diagrams above. The 
   .autostitch-svg-test__drawing {
     aspect-ratio: 600 / 750;
   }
+  .autostitch-svg-test button {
+    margin: 1rem 0;
+    padding: 0.6rem 1rem;
+    font: inherit;
+    cursor: pointer;
+  }
 </style>
 
 ### A. Half - image
@@ -50,12 +56,13 @@ The image samples load an SVG as a separate image, like the diagrams above. The 
   <img src="{{ '/files/Autostitch/half.animated.svg' | relative_url }}" width="600" height="750" loading="eager" alt="Half geometry animation, embedded as an image">
 </div>
 
-### B. Half - inline
+### B. Half - inline, click to play
 
 <div class="autostitch-svg-test">
   <div class="autostitch-svg-test__drawing" id="autostitch-inline-half" data-svg-src="{{ '/files/Autostitch/half.animated.svg' | relative_url }}">
     <p>Loading inline animation...</p>
   </div>
+  <button type="button" aria-controls="autostitch-inline-half" disabled>Play animation</button>
   <noscript>JavaScript is needed to insert this inline sample.</noscript>
 </div>
 
@@ -65,12 +72,13 @@ The image samples load an SVG as a separate image, like the diagrams above. The 
   <img src="{{ '/files/Autostitch/vertex.animated.svg' | relative_url }}" width="600" height="750" loading="eager" alt="Vertex geometry animation, embedded as an image">
 </div>
 
-### D. Vertex - inline
+### D. Vertex - inline, click to play
 
 <div class="autostitch-svg-test">
   <div class="autostitch-svg-test__drawing" id="autostitch-inline-vertex" data-svg-src="{{ '/files/Autostitch/vertex.animated.svg' | relative_url }}">
     <p>Loading inline animation...</p>
   </div>
+  <button type="button" aria-controls="autostitch-inline-vertex" disabled>Play animation</button>
   <noscript>JavaScript is needed to insert this inline sample.</noscript>
 </div>
 
@@ -96,7 +104,29 @@ For comparison, open either file on its own: [half SVG]({{ '/files/Autostitch/ha
         svg.setAttribute('aria-labelledby', svg.getAttribute('aria-labelledby').split(/\s+/).map(function (id) {
           return container.id + '-' + id;
         }).join(' '));
-        container.replaceChildren(document.importNode(svg, true));
+        // Start only from the button's click handler, including after an offscreen load.
+        svg.querySelectorAll('animate').forEach(function (animation) {
+          animation.setAttribute('begin', 'indefinite');
+        });
+        svg = document.importNode(svg, true);
+        container.replaceChildren(svg);
+        svg.pauseAnimations();
+
+        var button = container.parentNode.querySelector('button');
+        button.addEventListener('click', function () {
+          if (svg.animationsPaused()) {
+            svg.setCurrentTime(0);
+            svg.querySelectorAll('animate').forEach(function (animation) {
+              animation.beginElement();
+            });
+            svg.unpauseAnimations();
+            button.textContent = 'Pause animation';
+          } else {
+            svg.pauseAnimations();
+            button.textContent = 'Play animation';
+          }
+        });
+        button.disabled = false;
       } catch (error) {
         container.textContent = 'Inline animation could not load: ' + error.message;
         console.error('Autostitch SVG comparison:', error);
