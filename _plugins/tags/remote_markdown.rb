@@ -7,13 +7,13 @@ require 'kramdown-parser-gfm'
 module Jekyll
   class RemoteMarkdownTag < Liquid::Tag
     MAX_BYTES = 2 * 1024 * 1024
-    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted|lazy_images):\s*(?:true|false)|(?:video_width|image_width|image_height):\s*[1-9]\d*)/
+    OPTION_SYNTAX = /(?:(?:gif_to_video|autoplay|loop|muted|lazy_images|svg_controls):\s*(?:true|false)|(?:video_width|image_width|image_height):\s*[1-9]\d*)/
 
     def initialize(tag_name, input, tokens)
       super
       match = input.strip.match(/\A(["'])(.+?)\1((?:\s+#{OPTION_SYNTAX})*)\z/)
       unless match
-        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted/lazy_images options, or positive integer video_width/image_width/image_height options'
+        raise ArgumentError, 'remote_markdown expects a quoted GitHub raw URL, boolean gif_to_video/autoplay/loop/muted/lazy_images/svg_controls options, or positive integer video_width/image_width/image_height options'
       end
 
       @url = match[2]
@@ -39,7 +39,8 @@ module Jekyll
       rewrite_links(document.root, uri)
       replace_gifs(document.root, context) if @options['gif_to_video']
       configure_images(document.root)
-      "\n\n<div class=\"remote-markdown\">\n#{document.to_html}</div>\n\n"
+      svg_controls = @options['svg_controls'] ? ' data-svg-controls="true"' : ''
+      "\n\n<div class=\"remote-markdown\"#{svg_controls}>\n#{document.to_html}</div>\n\n"
     rescue StandardError => error
       raise Jekyll::Errors::FatalException, "remote_markdown #{@url}: #{error.message}"
     end

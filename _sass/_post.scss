@@ -1143,3 +1143,79 @@ html[data-home-theme="apricot-mesh"] .post-content {
   font-size: rem(24px);
   line-height: 1.25;
 }
+
+// Click-to-play controls for native SVG animations imported by remote_markdown.
+.post-content .svg-player {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+
+  > svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .svg-player__control {
+    position: absolute;
+    bottom: 24px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 100px;
+    min-height: 44px;
+    margin: 0;
+    padding: 10px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: #20252c;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    touch-action: manipulation;
+    transition: background-color 150ms ease, transform 150ms ease;
+  }
+  .svg-player__control::before {
+    content: '';
+    box-sizing: border-box;
+    width: 10px;
+    height: 12px;
+    background: currentColor;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+  .svg-player__control[data-playing="true"]::before {
+    background: transparent;
+    clip-path: none;
+    border-left: 3px solid currentColor;
+    border-right: 3px solid currentColor;
+  }
+  @media (hover: hover) {
+    .svg-player__control:hover:not(:disabled) {
+      background: #39424e;
+    }
+  }
+  .svg-player__control:active:not(:disabled) {
+    transform: scale(0.96);
+  }
+  .svg-player__control:focus-visible {
+    outline: 3px solid #2478c5;
+    outline-offset: 3px;
+  }
+  .svg-player__control:disabled {
+    opacity: 0.5;
+    cursor: wait;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .svg-player__control {
+      transition: none;
+    }
+  }
+}

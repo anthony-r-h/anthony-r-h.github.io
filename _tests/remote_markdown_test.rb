@@ -160,6 +160,22 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
       assert(images.last.include?('loading="lazy"') && images.last.include?('height="750"'), 'Footnote image was skipped')
       assert(!html[/<video\b[^>]*>/m].match?(/\b(?:loading|width|height)=/), 'Image options affected a video')
     end,
+    'SVG playback is opt-in per import and preserves fallback images' => lambda do
+      markdown = "![Animated](images/demo.svg)\n\n![Static](images/static.svg)\n\n![Photo](images/photo.png)"
+      ['', 'svg_controls: false'].each do |options|
+        html = render_remote(site, markdown, options)
+        assert(!html.include?('data-svg-controls'), 'SVG controls enabled without opt-in')
+      end
+      html = render_remote(site, markdown, 'svg_controls: true lazy_images: true image_width: 600 image_height: 750')
+      assert(html.include?('<div class="remote-markdown" data-svg-controls="true">'), 'SVG opt-in marker missing')
+      assert(html.scan(/<img\b/).length == 3, 'Fallback images were removed')
+      assert(html.include?('src="https://raw.githubusercontent.com/owner/repo/main/docs/images/demo.svg"'), 'SVG URL not resolved')
+      assert(html.include?('loading="lazy"'), 'SVG option interfered with image loading options')
+      assert(html.include?('width="600"'), 'SVG option lost image dimensions')
+      template = Liquid::Template.parse("{% remote_markdown '#{SOURCE_URL}' svg_controls: true %}{% remote_markdown '#{SOURCE_URL}' %}")
+      html = template.render!({}, registers: { site: site })
+      assert(html.scan('data-svg-controls="true"').length == 1, 'SVG option leaked to another import')
+    end,
     'invalid options fail explicitly' => lambda do
       ['gif_to_video: yes', 'gif_to_video: "true"', 'unknown: true',
        'gif_to_video: true autoplay: yes', 'loop: "false"', 'muted: falsejunk',
@@ -167,7 +183,8 @@ Dir.mktmpdir('remote-markdown-test') do |directory|
        'video_width: 1.5', 'video_width: 600px', 'video_width: true',
        'video_width: 600 video_width: 400', 'lazy_images: yes',
        'image_width: 0', 'image_height: -1', 'image_height: 750px',
-       'lazy_images: true lazy_images: false'].each do |option|
+       'lazy_images: true lazy_images: false', 'svg_controls: yes',
+       'svg_controls: true svg_controls: false'].each do |option|
         begin
           Liquid::Template.parse("{% remote_markdown '#{SOURCE_URL}' #{option} %}")
         rescue ArgumentError
