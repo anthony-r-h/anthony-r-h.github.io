@@ -244,3 +244,6 @@ Leather Craft Pattern also has some nicely finished feet.
 
 # Patterning
 
+- Main panels: total thickness with stiffener and lining is 3.5mm
+- Gusset: no stiffener, total thickness with lining is 2mm
+- Buttom: no stiffener, total thickness with lining is 2mm
