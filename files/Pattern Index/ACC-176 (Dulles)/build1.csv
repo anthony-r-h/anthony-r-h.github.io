@@ -1,10 +1,10 @@
-Leather,Function,Thickness (mm),Area (sq. ft)
-Pueblo dark brown,Lining,0.85,4
-Pueblo olmo,Lining,0.9,6
-Pueblo blue,Lining,0.5,4
-Arif & Sons Dark Tan,Exterior,2,7
-Horween Burgundy,Exterior,1.2,17
-Horween Tan,Exterior,2.5,14
-Micro seude,Lining,0.5,10
-Salpa 1mm,Stiffener,1,10
-Salpa 0.5mm,Stiffener,0.5,10
+Leather,Function,Thickness (mm),Area (sq. ft),Note
+Pueblo dark brown,Lining,0.85,4,
+Pueblo olmo,Lining,0.9,6,
+Pueblo blue,Lining,0.5,4,
+Arif & Sons Dark Tan,Exterior,2,9,"Allocated, waiting for edge paint"
+Horween Burgundy,Exterior,1.2,17,OK
+Horween Tan,Exterior,2.5,14,
+Micro seude,Lining,0.5,10,
+Salpa 1mm,Stiffener,1,10,
+Salpa 0.5mm,Stiffener,0.5,10,

@@ -189,6 +189,8 @@ The generic English term appears to be briefcase handle mounting bracket or hand
 
 ## Clasp/Lock
 
+(Amiet)
+
 Lots of options for design, style, and materials. Selection for larger clasps that are either brass or stainless steel, then plated is more narrow. 
 
 Angular 32mm x 40mm stainless steel option sold by several vendors.
@@ -239,7 +241,28 @@ Leather Craft Pattern also has some nicely finished feet.
 > 2026/11/05: Ordered from from LCP and gold plated variant from Taibao.
 
 
-# BOM
+# Assembly notes
+
+## Handle
+
+- middle layer thin, reinforced
+- solvent based for sticking filler pieces to the middle reinfrocement
+- water based contact cement for outer layer - hard to get solvent based to not clump, and the clumps show
+  - or more thinner, wait for it to be MORE dry, so its less tacky
+- leather cut so that it stretches accross width of handle
+  - can be thicker, 1.2mm
+    - LCMC post handle part 2 28:00m
+- stretch for the inside of the handle, but dont stretch for the outside, otherwise it doesnt sit in the welt well
+- filler piece for the arch bridge - skive outer side so that it transitions into handle better, or leave it proudn for the definiton
+  - or... under the filler pieces
+
+## Divider
+
+- Luigi Carnevali - Micro Suede Lining -> stains easily - carful with glue
+- spray ahesive for cleanest appication (clumps)
+- cut to size, lining stretches and is hard to trim cut
+- wrap piece around the bottom side, top edge will be covered with trim
+
 
 
 # Patterning
