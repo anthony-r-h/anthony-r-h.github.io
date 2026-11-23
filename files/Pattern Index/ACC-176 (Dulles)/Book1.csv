@@ -1,24 +1,24 @@
 id,Description,Item,Count,Thickness,Notes,Group
-1,Front panel - leather,FP-01,1,3mm,"Lined, Skive 10mm",Front panel 
+1,Front panel - leather,FP-01,1,3mm,"Lined, Skive 10mm. Liner cut-to-size, glue edges only",Front panel 
 2,Front panel - stiffener,FP-02,1,0.5mm,Skive 5mm,Front panel 
-3,Back panel,BP-01,1,3mm,"Lined, Skive 10mm",Back panel
+3,Back panel,BP-01,1,3mm,"Lined, Skive 10mm. Liner cut-to-size, glue edges only",Back panel
 4,Back panel - stiffener,BP-02,1,0.5mm,Skive 5mm,Back panel
 5,Bottom panel,BOT-01,1,1.5mm,Skive 10mm,Bottom panel
-6,Bottom panel - lining,BOT-03,1,0.5mm,,Bottom panel
+6,Bottom panel - lining,BOT-03,1,0.5mm,"Cut-to-size, glue edges only",Bottom panel
 7,Interior base - board,BASE-01,2,1mm,,Interior
 8,Interior base - leather wrap,BASE-02,2,0.5mm,,Interior
 9,Partition - top trim,PART-02,2,0.5mm,Actually 3cm wide.  Folded edge on both sides,Divider
-10,Partition - leather,PART-01,2,1.5mm,Lined,Divider
+10,Partition - leather,PART-01,2,,"Salpa 0.5mm, lined - folded edge on bottom",Divider
 11,Frame leather wrap,FRAME-01,2,0.8mm,<<68cm long>>,Frame
 12,Misc,MISC-01,,0.8mm,,Notes
 13,Left gusset - leather,LG-01,1,1.5mm,Skive 10mm,Gusset
-14,Left gusset - lining,LG-02,1,0.5mm,Skive 10mm,Gusset
+14,Left gusset - lining,LG-02,1,0.5mm,"Skive 10mm. Liner cut-to-size, glue edges only",Gusset
 15,Right gusset - leather,RG-01,1,1.5mm,Skive 10mm,Gusset
-16,Right gusset - lining,RG-02,1,0.5mm,Skive 10mm,Gusset
+16,Right gusset - lining,RG-02,1,0.5mm,"Skive 10mm. Liner cut-to-size, glue edges only",Gusset
 17,Handle - stiffener,HND-01,2,9mm,Per side,Handle
 18,Handle - interface,HND-02,1,2mm,,Handle
 19,Handle - support,HND-03,1,3mm,,Handle
-20,Handle - leather wrap,HND-04,2,0.8mm,Butt join bottom seam,Handle
+20,Handle - leather wrap,HND-04,2,0.8mm,Butt join bottom seam. Ensure stretch direction.,Handle
 21,Interior base - pull tab,BASE-03,2,2mm,,Interior
 22,Front panel pull tab - leather,FP-04,1,1.5mm,Lined,Front panel 
 23,Front panel pull tab - stiffener,FP-05,1,1mm,,Front panel 

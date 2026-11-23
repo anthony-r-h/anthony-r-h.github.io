@@ -14,22 +14,19 @@ planning_status: "Sample hardware pieces ordered. Working on pattern validation 
 
 # Introduction
 
-A Dulles bag has a leather body and a hinged metal frame that opens wide at the top. From the side, it's roughly triangular, with a broad base narrowing toward the handles. The frame, front clasp and lock give the bag much of its character.
+The Dulles bag is a hinged, top frame bag also known as a doctor's.  From the side, it is triangular, with a broad base narrowing toward the handles. It is characterized by the frame, front clasp, and lock.
 
 <figure>
   <img src="/files/acc-175 DULLES/0170034.png">
    <figcaption>John Foster Dulles (right) arrives in New York with his brother Allen Dulles on October 4, 1948. A prominent American diplomat, he would later lead negotiations for the 1951 San Francisco Peace Treaty, restoring Japan's sovereignty and helping lay the foundations of the postwar U.S.-Japan alliance. Source: Granger Historical Picture Archive, No. 0170034. AI-upscaled and enhanced.</figcaption>
 </figure>
 
-The Dulles name originated in postwar Japan, following a visit by John Foster Dulles in 1951 as an American envoy working on the peace settlement. He carried a metal-framed briefcase, and Ginza Tanizawa developed its own version, which went on sale that year under his name.
+The Dulles name comes from John Foster Dulles, who visited Japan in 1951 to negotiate the San Francisco Peace Treaty, which would end the Allied occupation and restore Japan's sovereignty the following year. Ginza Tanizawa's second-generation owner, Koshichi Tanizawa, noticed his bag in a newspaper photograph and developed a version of his own. Released that year as the "Dulles bag," it was advertised as a "Symbol of Peace," tying the bag to the purpose of his visit. The style caught on and became an established part of Japanese business wear.
 
 <figure>
   <img src="/files/acc-175 DULLES/book2.png">
    <figcaption>The Book of Dulles Bag Making (2013). A Japanese leathercraft manual documenting the traditional construction of a Dulles briefcase, from material preparation and pattern making to hand-stitching and final assembly. The book translates the methods of an experienced craftsman into an illustrated, step-by-step guide. Published October 5, 2013. 208 pages, hardcover. ISBN 978-4-88393-628-1.</figcaption>
 </figure>
-
-The hinged frame bag archetype also turns up in doctor's bags, surgeon's bags and lawyer's bags. For men's, design variation is fairly narrow. For women's bag, hinged frame bags are incredibly diverse.
-
 
 # References
 
@@ -245,28 +242,214 @@ Leather Craft Pattern also has some nicely finished feet.
 
 ## Handle
 
-- middle layer thin, reinforced
-- solvent based for sticking filler pieces to the middle reinfrocement
-- water based contact cement for outer layer - hard to get solvent based to not clump, and the clumps show
-  - or more thinner, wait for it to be MORE dry, so its less tacky
-- leather cut so that it stretches accross width of handle
-  - can be thicker, 1.2mm
-    - LCMC post handle part 2 28:00m
-- stretch for the inside of the handle, but dont stretch for the outside, otherwise it doesnt sit in the welt well
-- filler piece for the arch bridge - skive outer side so that it transitions into handle better, or leave it proudn for the definiton
-  - or... under the filler pieces
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/HND-01.png"
+  alt: ""
+  caption: "Per side"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/HND-02.png"
+  alt: ""
+  caption: ""
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/HND-03.png"
+  alt: ""
+  caption: ""
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/HND-04.png"
+  alt: ""
+  caption: "Butt join bottom seam. Ensure stretch direction."
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/HND-05.png"
+  alt: ""
+  caption: "Skive join and interface seam"
+{% endgallery %}
+
+| Item | Details |
+| --- | --- |
+| `HND-01` | Handle - stiffener, 9mm, Qty 2<br>Per side |
+| `HND-02` | Handle - interface, 2mm, Qty 1 |
+| `HND-03` | Handle - support, 3mm, Qty 1 |
+| `HND-04` | Handle - leather wrap, 0.8mm, Qty 2<br>Butt join bottom seam. Ensure stretch direction. |
+| `HND-05` | Handle - bridge trim, 0.5mm, Qty 2<br>Skive join and interface seam |
+
+- Use solvent based adhesive to tack `HND-01` to `HND-02`
+- `HND-02` updated: 0.5mm Salpa with polyester reinforcement tape on both sides
+- Bridge trim `HND-05`, can go under `HND-01`, to hide it, or over to form a ridge
+- Setting of the handle wrap`HND-04` is critical
+  - Ensure stretch direction
+  - Clumping in the adhesive will show through. If using solvent adhesive, sufficiently thin the glue first
+  - Allow addequate dry time before attaching, so that the surface is *less* sticky
+  - When attaching, prestretch the inner curvature then attach in order: center line, inner curve, alignment with `HND-03`
+  - Progressively work the leather around the assembly
+  - Strech where needed, do not over stretch
+  - Strech minimally towards `HND-03` otherwise it will be hard to form clean edge
+  - Possible refinements: single piece, without center seam, and thicker, 1.2mm
+  
+  
+  
+
+
+## Main panels
+
+Total thickness is 3.5mm, made up of exterior leather, and if any: liner, stiffener.
+
+### Front panel
+
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/FP-01.png"
+  alt: ""
+  caption: "Lined, Skive 10mm. Liner cut-to-size, glue edges only"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/FP-04.png"
+  alt: ""
+  caption: "Lined"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/FP-05.png"
+  alt: ""
+  caption: ""
+{% endgallery %}
+
+| Item | Details |
+| --- | --- |
+| `FP-01` | Front panel - leather, 3mm, Qty 1<br>Lined, Skive 10mm. Liner cut-to-size, glue edges only |
+| `FP-02` | Front panel - stiffener, 0.5mm, Qty 1<br>Skive 5mm |
+| `FP-04` | Front panel pull tab - leather, 1.5mm, Qty 1<br>Lined |
+| `FP-05` | Front panel pull tab - stiffener, 1mm, Qty 1 |
+
+### Back panel
+
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/BP-01.png"
+  alt: ""
+  caption: "Lined, Skive 10mm. Liner cut-to-size, glue edges only"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/BP-04.png"
+  alt: ""
+  caption: "Lined, Skive 5mm"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/BP-05.png"
+  alt: ""
+  caption: ""
+{% endgallery %}
+
+
+| Item | Details |
+| --- | --- |
+| `BP-01` | Back panel, 3mm, Qty 1<br>Lined, Skive 10mm. Liner cut-to-size, glue edges only |
+| `BP-02` | Back panel - stiffener, 0.5mm, Qty 1<br>Skive 5mm |
+| `BP-04` | Back panel flap - leather, 1.5mm, Qty 1<br>Lined, Skive 5mm |
+| `BP-05` | Back panel flap - stiffener, 1mm, Qty 1 |
+
+## Bottom panel
+
+Bottom: no stiffener, total thickness with lining is 2mm
+
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/BOT-01.png"
+  alt: ""
+  caption: "Skive 10mm"
+{% endgallery %}
+
+| Item | Details |
+| --- | --- |
+| `BOT-01` | Bottom panel, 1.5mm, Qty 1<br>Skive 10mm |
+| `BOT-03` | Bottom panel - lining, 0.5mm, Qty 1<br>Cut-to-size, glue edges only |
+
+
+## Gusset
+
+Gusset: no stiffener, total thickness with lining is 2mm
+
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/LG-01.png"
+  alt: ""
+  caption: "Skive 10mm"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/LG-02.png"
+  alt: ""
+  caption: "Skive 10mm. Liner cut-to-size, glue edges only"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/RG-01.png"
+  alt: ""
+  caption: "Skive 10mm"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/RG-02.png"
+  alt: ""
+  caption: "Skive 10mm. Liner cut-to-size, glue edges only"
+{% endgallery %}
+
+| Item | Details |
+| --- | --- |
+| `LG-01` | Left gusset - leather, 1.5mm, Qty 1<br>Skive 10mm |
+| `LG-02` | Left gusset - lining, 0.5mm, Qty 1<br>Skive 10mm. Liner cut-to-size, glue edges only |
+| `RG-01` | Right gusset - leather, 1.5mm, Qty 1<br>Skive 10mm |
+| `RG-02` | Right gusset - lining, 0.5mm, Qty 1<br>Skive 10mm. Liner cut-to-size, glue edges only |
+
+
+
+
+
+
+
+
+
+
+
+## Interior
+
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/BASE-01.png"
+  alt: ""
+  caption: ""
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/ZP-01.png"
+  alt: ""
+  caption: "#3 zipper"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/ZP-02.png"
+  alt: ""
+  caption: "Interior pocket"
+{% endgallery %}
+
+| Item | Details |
+| --- | --- |
+| `BASE-01` | Interior base - board, 1mm, Qty 2 |
+| `BASE-02` | Interior base - leather wrap, 0.5mm, Qty 2 |
+| `BASE-03` | Interior base - pull tab, 2mm, Qty 2 |
+| `ZP-01` | Zipper trim, 1mm, Qty 1<br>#3 zipper |
+| `ZP-02` | Interior zip pocket, 1mm, Qty 1<br>Interior pocket |
 
 ## Divider
 
-- Luigi Carnevali - Micro Suede Lining -> stains easily - carful with glue
-- spray ahesive for cleanest appication (clumps)
-- cut to size, lining stretches and is hard to trim cut
-- wrap piece around the bottom side, top edge will be covered with trim
+{% gallery %}
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/PART-01.png"
+  alt: ""
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/PART-02.png"
+  alt: ""
+  caption: "Actually 3cm wide.  Folded edge on both sides"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/PART-03.png"
+  alt: ""
+  caption: "Salpa 0.5mm, lined - folded edge on bottom"
+- image: "/files/Pattern Index/ACC-176 (Dulles)/Pat/PART-04.png"
+  alt: ""
+  caption: "Actually 3cm wide.  Folded edge on one side. Other side, cut"
+{% endgallery %}
 
 
+| Item | Details |
+| --- | --- |
+| `PART-01` | Partition - leather, Qty 2<br>Salpa 0.5mm, lined - folded edge on bottom |
+| `PART-02` | Partition - top trim, 0.5mm, Qty 2<br>Actually 3cm wide. Folded edge on both sides |
+| `PART-03` | Accordian pannel, 0.5mm, Qty 1<br>Salpa, bend lines w/ v-groves |
+| `PART-04` | Accordian - top trim, 0.5mm, Qty 1<br>Actually 3cm wide. Folded edge on one side. Other side, cut |
 
-# Patterning
+- Divider assembly is 0.5mm Salpa covered with Luigi Carnevali micro suede lining 
+- Notes for the lining material
+  - Stretchy, so cut-to-size after gluing
+  - Shows glue stains and clumps easily
+  - 3M Super66 spray adhesive works great here
+- Wrap lining around the bottom edge of `PART-01`, `PART-03` so that the top edge is exposed
+- Trim pieces `PART-02`, `PART-04` require a lot of care
+  - The cut being square, centerline and the folded edge directly impact how the trim sits on the panel
+  - Which therefore impacts the stitch line
+  - Ideas:
+    - Apply masking tape to flesh side and clamp the piece down to mitigate warp when cutting
+    - Apply heat to define the folds
+    - Harder to execute with a double folded edge, would be easier with a single folded edge
+    - A thinner trim would be less durable
+  - Mark the alignment position of the trim pieces to the panel. That datum ensures the alignment in both edges of the trim and that the stitch line will be symetric. Prepunching and/or X-stitch is too complicated here.
 
-- Main panels: total thickness with stiffener and lining is 3.5mm
-- Gusset: no stiffener, total thickness with lining is 2mm
-- Buttom: no stiffener, total thickness with lining is 2mm
+## Frame
+
+| Item | Details |
+| --- | --- |
+| `FRAME-01` | Frame leather wrap, 0.8mm, Qty 2<br>&lt;&lt;68cm long; |
+
+
