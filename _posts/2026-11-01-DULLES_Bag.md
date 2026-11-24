@@ -9,7 +9,9 @@ tags:
   - Bag making
 math: true
 planning_tag: In Progress
-planning_status: "Sample hardware pieces ordered. Working on pattern validation and experimenting with handle construction."
+planning_status: "Sample hardware pieces ordered. Working on prototype build."
+math: true
+toc: "true -2"
 ---
 
 # Introduction
@@ -17,15 +19,15 @@ planning_status: "Sample hardware pieces ordered. Working on pattern validation 
 The Dulles bag is a hinged, top frame bag also known as a doctor's.  From the side, it is triangular, with a broad base narrowing toward the handles. It is characterized by the frame, front clasp, and lock.
 
 <figure>
-  <img src="/files/acc-175 DULLES/0170034.png">
-   <figcaption>John Foster Dulles (right) arrives in New York with his brother Allen Dulles on October 4, 1948. A prominent American diplomat, he would later lead negotiations for the 1951 San Francisco Peace Treaty, restoring Japan's sovereignty and helping lay the foundations of the postwar U.S.-Japan alliance. Source: Granger Historical Picture Archive, No. 0170034. AI-upscaled and enhanced.</figcaption>
+  <img src="/files/acc-175 DULLES/0170034_small.png">
+   <figcaption>John Foster Dulles (right) arrives in New York with his brother Allen Dulles on October 4, 1948. Source: Granger Historical Picture Archive, No. 0170034. AI-upscaled and enhanced.</figcaption>
 </figure>
 
 The Dulles name comes from John Foster Dulles, who visited Japan in 1951 to negotiate the San Francisco Peace Treaty, which would end the Allied occupation and restore Japan's sovereignty the following year. Ginza Tanizawa's second-generation owner, Koshichi Tanizawa, noticed his bag in a newspaper photograph and developed a version of his own. Released that year as the "Dulles bag," it was advertised as a "Symbol of Peace," tying the bag to the purpose of his visit. The style caught on and became an established part of Japanese business wear.
 
 <figure>
   <img src="/files/acc-175 DULLES/book2.png">
-   <figcaption>The Book of Dulles Bag Making (2013). A Japanese leathercraft manual documenting the traditional construction of a Dulles briefcase, from material preparation and pattern making to hand-stitching and final assembly. The book translates the methods of an experienced craftsman into an illustrated, step-by-step guide. Published October 5, 2013. 208 pages, hardcover. ISBN 978-4-88393-628-1.</figcaption>
+   <figcaption>The Book of Dulles Bag Making (2013). Published October 5, 2013. 208 pages, hardcover. ISBN 978-4-88393-628-1.</figcaption>
 </figure>
 
 # References
@@ -159,9 +161,13 @@ Miscellaneous collection.
 
 # Hardware
 
+The visual identity of the bag: briefcase handle, lock, top frame and darted gussets means we can't use conventional off-the-shelf hardware. 
+
 ## Bridge/Arch bridge/Post handle mount
 
-The generic English term appears to be briefcase handle mounting bracket or handle mounting bridge, although neither is a consistently standardized hardware name.
+The generic English term appears to be briefcase handle mounting bracket or handle mounting bridge, although neither is a consistently standardized hardware name. A conventional D-ring can not be used here because there is no room on the top frame to attach a handle chape (in the conventional sense). Instead, we need the chape built into the D-ring. Consequently, the functionality of the swivel and attachment point have to be a single assembly.
+
+Some terms that bring up results are:
 
 - 立てカン (tate-kan), also written 立カン, meaning roughly upright handle fitting.
 - ダレスバッグ用取っ手カン, meaning Dulles bag handle fitting.
@@ -174,23 +180,25 @@ The generic English term appears to be briefcase handle mounting bracket or hand
    <figcaption></figcaption>
 </figure>
 
-| Store | Material | MOQ |
-| --- | --- | --- |
-| [Hility](https://hilitybaghardware.com/products/handle-holder) | 316L | |
-| [MK Plus](https://mkplus.biz/item/R-337-B-20/) | Brass | |
-| [Carosung](https://www.carosung.com/product/fashionable-stainless-steel-bridge-for-briefcase/) | Stainless | True |
-| AliExpress | Coated Zinc | |
-| [Leather Craft Pattern](https://www.leathercraftpattern.com/Dulles-bag-hardware-kit) | Coated Brass | |
+| Store | Material |
+| --- | --- |
+| [Hility](https://hilitybaghardware.com/products/handle-holder) | 316L 
+| [MK Plus](https://mkplus.biz/item/R-337-B-20/) | Brass 
+| [Carosung](https://www.carosung.com/product/fashionable-stainless-steel-bridge-for-briefcase/) | Stainless 
+| AliExpress | Coated Zinc |
+| [Leather Craft Pattern](https://www.leathercraftpattern.com/Dulles-bag-hardware-kit) | Coated Brass 
 
 > 2026/11/05: Ordered from from LCP and a pure brass option from Taibao.
 
 ## Clasp/Lock
 
-(Amiet)
+There are plenty of options bag locks in various designs, materials and sizes. However, narrowing down the options to designs suitable for a Dulles bag, larger size and either brass or plated stainless steel is more narrow.
 
-Lots of options for design, style, and materials. Selection for larger clasps that are either brass or stainless steel, then plated is more narrow. 
+### WUTA stanless steel rectangular clasp
 
-Angular 32mm x 40mm stainless steel option sold by several vendors.
+This is a smaller size lock measuring 32mm x 40mm. Its sold by several vendors, but readily available from WUTA. It is available in stainless steel or in a polished gold plated finish.
+
+> Ordered: good quality option
 
 {% gallery %}
 - image: "/files/acc-175 DULLES/Hardware/wuta-lock-1.png"
@@ -201,18 +209,28 @@ Angular 32mm x 40mm stainless steel option sold by several vendors.
   caption: ""
 {% endgallery %}
 
+### WUTA brass Dulles lock
+
 More traditional round options like this, measuring 47mm x 55mm, are available in zinc, brass and stainless steel, with plated versions of the zinc and stainless steel options.
+
+> Incoming
 
 <figure>
   <img src="/files/acc-175 DULLES/Hardware/wuta-lock-3.png">
    <figcaption></figcaption>
 </figure>
 
-> 2026/11/05: Ordered WUTA stainless steel (gold plated) and Durex brass clone.
+### Taibao brass Dulles lock
+
+> I don't like how the attachment piece attaches to the flap. It has no plate backing and is intended to be rivetted to the leather.
+
+### Amiet lock
+
+TBD.
 
 ## Bag Feet
 
-The bag rests on the exposed edge of the bottom panel, so the feet need to mount over that edge.
+The bag rests on the lower edges of the front and back panels. The _bottom panel_ sits between them, folding inward like an accordion rather than forming a flat, rigid base for stud feet. I need C-shaped feet that wrap around those panel edges, putting the feet where the bag actually meets the ground.
 
 The AliExpress options I've found all seem to be plated zinc, with no solid brass or stainless steel versions. Plating seems like a poor choice for something that will get this much wear.
 
@@ -220,6 +238,8 @@ The AliExpress options I've found all seem to be plated zinc, with no solid bras
   <img src="/files/acc-175 DULLES/Hardware/alix-edge-1.png">
   <figcaption></figcaption>
 </figure>
+
+> Color tone is wrong. Not a strong option.
 
 One possibility is to modify bracelet components or beads. These are available in solid brass and stainless steel, but would need a channel cut into them to fit over the panel edge.
 
@@ -238,7 +258,17 @@ Leather Craft Pattern also has some nicely finished feet.
 > 2026/11/05: Ordered from from LCP and gold plated variant from Taibao.
 
 
-# Assembly notes
+
+
+### etc
+
+https://countless-river.net/?pid=84608460
+
+page 179 - hardwrae
+
+page 82 handle
+
+# Beta testing and assembly notes
 
 ## Handle
 
@@ -434,7 +464,7 @@ Gusset: no stiffener, total thickness with lining is 2mm
 - Notes for the lining material
   - Stretchy, so cut-to-size after gluing
   - Shows glue stains and clumps easily
-  - 3M Super66 spray adhesive works great here
+  - 3M Super77 spray adhesive works great here
 - Wrap lining around the bottom edge of `PART-01`, `PART-03` so that the top edge is exposed
 - Trim pieces `PART-02`, `PART-04` require a lot of care
   - The cut being square, centerline and the folded edge directly impact how the trim sits on the panel
